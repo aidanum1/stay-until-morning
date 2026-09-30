@@ -60,7 +60,11 @@ image (with or without references); kling3_0 5 s = 8.75 / clip; remove_backgroun
 
 | 145–154 | 10 cinematics (kling3_0 5 s 9:16, start_image = CG) | all | Phase C signature Memory Moments + opening + sunrise | 87.5 | 87.5 | ✔ | see jobs.json video |
 
-**Confirmed spent: ≈310 (+ bg-removal ×7 tbd) · Remaining: ≈ 240** (reserve 50 untouched)
+| 155–162 | 8 living-portrait idle loops (kling3_0 5 s, start_image = identity) | all | menu hero / animated character presence | 70.0 | 70.0 | ✔ | jobs.json idle |
+
+**Confirmed spent: ≈380 (+ bg-removal ×7 tbd) · Remaining: ≈ 170** (reserve 50 untouched → ≈120 usable)
+
+3D check (2026-09-30): textured + rigged image_to_3d preflights at **35 credits per character** (280 for eight) — over budget, and single-image meshes of faces are far below the quality of the reference-anchored renders. Not pursued.
 
 Model policy from here: gpt_image_2_5 medium 2K (1.0) for environments, gpt high (1.5 with reference) for character work and CGs. Background removal done locally with rembg (free).
 

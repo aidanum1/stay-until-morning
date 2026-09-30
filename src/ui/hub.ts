@@ -185,6 +185,7 @@ export class HubView {
               this.game.runHubScene(doorScene(m));
             },
           },
+          h('img', { src: `./assets/ui/hero_${m}.webp`, alt: '', loading: 'lazy' }),
           h('div', { class: 'sym' }, CHARACTERS[m].symbol),
           h('b', null, t(`name.${m}`)),
           h('span', null, done ? t('hub.door_done') : t(`route.${m}`)),

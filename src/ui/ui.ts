@@ -26,6 +26,8 @@ export class UI {
   private tapCatcher: HTMLElement;
   private letterboxEl: HTMLElement;
   private clockText: string | null = null;
+  private scrim!: HTMLElement;
+  private scrimTop!: HTMLElement;
 
   constructor(
     root: HTMLElement,
@@ -44,6 +46,9 @@ export class UI {
       }
       this.game.advance();
     });
+    this.scrim = h('div', { class: 'scrim' });
+    this.scrimTop = h('div', { class: 'scrim top' });
+    root.append(this.scrim, this.scrimTop);
     this.dialogue = new DialogueView(root, game);
     this.hub = new HubView(root, game);
     this.clockEl = h('div', { class: 'clock hidden' });
@@ -62,6 +67,8 @@ export class UI {
   // ------------------------------------------------------------ modes
 
   showMenu() {
+    this.scrim.classList.remove('on');
+    this.scrimTop.classList.remove('on');
     this.hud.classList.add('hidden');
     this.tapCatcher.classList.add('hidden');
     this.dialogue.hide();
@@ -81,10 +88,14 @@ export class UI {
   }
 
   enterHub() {
+    this.scrim.classList.remove('on');
+    this.scrimTop.classList.add('on');
+    this.hud.classList.add('in-hub');
     this.tapCatcher.classList.add('hidden');
     this.hub.enter();
   }
   leaveHub() {
+    this.hud.classList.remove('in-hub');
     this.hub.leave();
     this.tapCatcher.classList.remove('hidden');
   }
@@ -92,6 +103,8 @@ export class UI {
   // ------------------------------------------------------------ dialogue
 
   showLine(key: string, speaker: string, instant: boolean) {
+    this.scrim.classList.add('on');
+    this.scrimTop.classList.add('on');
     this.dialogue.show(key, speaker, instant);
   }
   hideLine() {
@@ -182,12 +195,13 @@ export class UI {
       this.quickbar.appendChild(b);
       return b;
     };
-    btn(t('qb.auto'), t('qb.auto_title'), () => this.game.setAuto(!this.game.auto), 'auto');
-    btn(t('qb.skip'), t('qb.skip_title'), () => this.game.setSkip(!this.game.skip), 'skip');
-    btn(t('qb.log'), t('qb.log_title'), () => this.panels.backlog());
-    btn(t('qb.save'), t('qb.save_title'), () => this.game.save('quick'));
-    btn(t('qb.hide'), t('qb.hide_title'), () => this.setHidden(true));
-    btn('≡', t('qb.menu_title'), () => this.panels.gameMenu());
+    const icon = (b: HTMLElement, path: string) => {
+      b.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true">${path}</svg>`;
+    };
+    icon(btn('', t('qb.auto_title'), () => this.game.setAuto(!this.game.auto), 'auto'), '<path d="M8 5.5v13l10.5-6.5z"/>');
+    icon(btn('', t('qb.skip_title'), () => this.game.setSkip(!this.game.skip), 'skip'), '<path d="M4 6v12l8-6zM13 6v12l8-6z"/>');
+    icon(btn('', t('qb.log_title'), () => this.panels.backlog()), '<path d="M5 7h14M5 12h14M5 17h9"/>');
+    icon(btn('', t('qb.menu_title'), () => this.panels.gameMenu()), '<circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/>');
     this.updateQuickBar();
   }
 
@@ -199,6 +213,7 @@ export class UI {
   setHidden(hidden: boolean) {
     this.game.hidden = hidden;
     this.hud.classList.toggle('hidden-ui', hidden);
+    this.scrim.classList.toggle('on', !hidden);
     this.dialogue.setHidden(hidden);
   }
 

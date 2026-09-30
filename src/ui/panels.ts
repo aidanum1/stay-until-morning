@@ -651,6 +651,14 @@ export class Panels {
       );
     body.append(
       item(t('menu.resume'), () => this.closeAll(), 'primary'),
+      item(t('qb.save_title'), () => {
+        this.closeAll();
+        this.game.save('quick');
+      }),
+      item(t('qb.hide_title'), () => {
+        this.closeAll();
+        this.game.ui.setHidden(true);
+      }),
       item(t('menu.save'), () => this.saves('save')),
       item(t('menu.load'), () => this.saves('load')),
       item(t('menu.log'), () => this.backlog()),

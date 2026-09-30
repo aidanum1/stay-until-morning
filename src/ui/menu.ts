@@ -7,6 +7,7 @@ import { audio } from '../audio/audio';
 import { MEMBERS } from '../narrative/types';
 import type { Game } from '../game/game';
 import type { Panels } from './panels';
+import { hasAsset, assetUrl } from '../rendering/assets';
 
 export class MainMenu {
   root: HTMLElement;
@@ -19,8 +20,44 @@ export class MainMenu {
     parent.appendChild(this.root);
   }
 
+  private heroTimer = 0;
+  private heroIndex = Math.floor(Math.random() * MEMBERS.length);
+
   hide() {
     this.root.classList.add('hidden');
+    clearInterval(this.heroTimer);
+    this.root.querySelectorAll('video').forEach((v) => v.pause());
+  }
+
+  /** Full-bleed living portrait of one member, cross-fading to the next every few seconds. */
+  private buildHero(): HTMLElement {
+    const hero = h('div', { class: 'menu-hero' });
+    const label = h('div', { class: 'menu-hero-name' });
+    const show = () => {
+      const m = MEMBERS[this.heroIndex % MEMBERS.length];
+      this.heroIndex++;
+      const vid = `assets/video/idle_${m}.mp4`;
+      const el = hasAsset(vid)
+        ? (h('video', { src: assetUrl(vid), poster: assetUrl(`assets/ui/hero_${m}.webp`), muted: true, loop: true, playsinline: true, autoplay: true, preload: 'auto' }) as HTMLVideoElement)
+        : h('img', { src: assetUrl(`assets/ui/hero_${m}.webp`), alt: '' });
+      if (el instanceof HTMLVideoElement) {
+        el.muted = true;
+        void el.play().catch(() => undefined);
+      }
+      hero.appendChild(el);
+      requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('show')));
+      const old = Array.from(hero.children).filter((c) => c !== el && c !== label) as HTMLElement[];
+      old.forEach((o) => {
+        o.classList.remove('show');
+        setTimeout(() => o.remove(), 1700);
+      });
+      label.textContent = t(`name.${m}`);
+    };
+    hero.appendChild(label);
+    show();
+    clearInterval(this.heroTimer);
+    this.heroTimer = window.setInterval(show, 9000);
+    return hero;
   }
 
   show() {
@@ -107,6 +144,7 @@ export class MainMenu {
     list.appendChild(item(t('menu.language'), () => this.panels.settings()));
 
     this.root.append(
+      this.buildHero(),
       h(
         'div',
         { class: 'title-block' },
@@ -114,8 +152,7 @@ export class MainMenu {
         h('div', { class: 'title-name' }, t('ui.title')),
         h('div', { class: 'title-sub' }, morning ? t('ui.subtitle_morning') : t('ui.subtitle')),
       ),
-      list,
-      h('div', { class: 'legal' }, t('ui.legal')),
+      h('div', { class: 'menu-bottom' }, list, h('div', { class: 'legal' }, t('ui.legal'))),
     );
     // nudge the stage so the lobby drifts
     this.game.stage.setShot(morning ? 'pan' : 'wide', []);

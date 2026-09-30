@@ -3,7 +3,7 @@
 
 usage: make-sprites.py [member ...]
 Reads  assets/generated/expr/<member>_<expr>.png
-Writes public/assets/characters/<member>/<expr>.webp  (576x1024, RGBA)
+Writes public/assets/characters/<member>/<expr>.webp  (752x1344, RGBA — full source resolution)
 
 Background removal runs locally with rembg (free), so no Higgsfield credits are used.
 All expressions of a member share the same source framing, so we never crop to the
@@ -16,7 +16,7 @@ from rembg import remove, new_session
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'assets' / 'generated' / 'expr'
 OUT = ROOT / 'public' / 'assets' / 'characters'
-W, H = 576, 1024
+W, H = 752, 1344
 
 members = sys.argv[1:] or sorted({p.name.split('_')[0] for p in SRC.glob('*.png')})
 session = new_session('isnet-general-use')
@@ -25,7 +25,7 @@ for m in members:
     for src in sorted(SRC.glob(f'{m}_*.png')):
         expr = src.stem.split('_', 1)[1]
         dst = OUT / m / f'{expr}.webp'
-        if dst.exists() and dst.stat().st_mtime > src.stat().st_mtime:
+        if dst.exists() and Image.open(dst).size == (W, H):
             continue
         img = Image.open(src).convert('RGBA')
         cut = remove(img, session=session, post_process_mask=True)

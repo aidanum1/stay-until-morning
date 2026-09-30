@@ -16,6 +16,17 @@ export function assetUrl(path: string) {
   return `./${path}`;
 }
 
+function blank(transparent: boolean) {
+  const c = document.createElement('canvas');
+  c.width = c.height = 2;
+  if (!transparent) {
+    const g = c.getContext('2d')!;
+    g.fillStyle = '#05060c';
+    g.fillRect(0, 0, 2, 2);
+  }
+  return c;
+}
+
 type Entry = { tex: THREE.Texture; used: number; pending?: Promise<THREE.Texture> };
 
 export class TextureStore {
@@ -41,17 +52,19 @@ export class TextureStore {
       hit.used = ++this.clock;
       return hit.tex;
     }
-    const tex = this.finish(new THREE.CanvasTexture(fallback()));
+    // when real art exists, wait for it behind a blank texture instead of flashing the procedural stand-in
+    const real = !!file && hasAsset(file);
+    const tex = this.finish(new THREE.CanvasTexture(real ? blank(key.startsWith('ch:')) : fallback()));
     const entry: Entry = { tex, used: ++this.clock };
     this.cache.set(key, entry);
     if (file && hasAsset(file)) {
       entry.pending = this.loader.loadAsync(assetUrl(file)).then((real) => {
         this.finish(real);
-        // swap image data into the same texture object so materials keep working
-        tex.image = real.image;
-        tex.needsUpdate = true;
-        (tex.userData as { real?: boolean }).real = true;
-        return tex;
+        // GPU storage of the placeholder is a different size, so hand materials the new texture object
+        entry.tex = real;
+        this.onSwap?.(tex, real);
+        tex.dispose();
+        return real;
       });
       entry.pending.catch(() => undefined);
     }
@@ -100,6 +113,9 @@ export class TextureStore {
       this.cache.delete(k);
     }
   }
+
+  /** set by the stage: replace `from` with `to` on every material that uses it */
+  onSwap?: (from: THREE.Texture, to: THREE.Texture) => void;
 
   /** set by the stage: reports textures currently bound to meshes */
   inUse?: (set: Set<THREE.Texture>) => void;

@@ -110,6 +110,8 @@ export class Stage {
   private viewW = 3.375;
   private hubOffset = 0;
   private hubTarget = 0;
+  private groupScale = 1;
+  private groupScaleNow = 1;
   reduceMotion = false;
   /** 0 disables the character aura (e.g. line-art scenes) */
   auraStrength = 1;
@@ -148,6 +150,14 @@ export class Stage {
     this.camera = new THREE.PerspectiveCamera(33.4, 9 / 16, 0.1, 100);
     this.camera.position.set(0, 0, 10);
     this.textures = new TextureStore(this.renderer, quality === 'low' ? 12 : 24);
+    this.textures.onSwap = (from, to) => {
+      const mats = [this.bgA.material, this.bgB.material, this.cgMesh.material, ...[...this.chars.values()].map((c) => c.mesh.material)];
+      for (const m of mats)
+        if (m.map === from) {
+          m.map = to;
+          m.needsUpdate = true;
+        }
+    };
     this.textures.inUse = (set) => {
       set.add(this.bgA.material.map!);
       set.add(this.bgB.material.map!);
@@ -288,6 +298,7 @@ export class Stage {
 
   syncCharacters(list: StageChar[], hub = false) {
     const wanted = new Map(list.map((c) => [c.id as CharId, c]));
+    this.groupScale = hub ? 1 : list.length <= 1 ? 1 : list.length === 2 ? 0.84 : 0.72;
     for (const [id, sp] of this.chars) {
       if (!wanted.has(id)) sp.targetAlpha = 0;
     }
@@ -334,6 +345,7 @@ export class Stage {
         sp.mesh.material.needsUpdate = true;
       }
       sp.at = c.at;
+      if (!hub) sp.scale = 1; // leaving the hub: back to story framing
       sp.targetX = this.slotX(c.at, hub);
       sp.targetAlpha = 1;
     });
@@ -346,8 +358,9 @@ export class Stage {
     const panoW = this.bgA.scale.x;
     sp.targetX = (x01 - 0.5) * panoW;
     sp.pose = pose;
-    sp.scale = scale * 0.6;
-    sp.floorY = -VIEW_H * 0.5 + y01 * VIEW_H + (pose === 'sit' ? -0.3 : 0);
+    // hub: people stand close to the camera; the knee cut sits below the bottom bar
+    sp.scale = scale * 0.82;
+    sp.floorY = -VIEW_H * 0.5 - 0.35 + (y01 - 0.18) * 1.5 + (pose === 'sit' ? -0.45 : 0);
     sp.mesh.position.z = 0.2;
   }
 
@@ -355,7 +368,7 @@ export class Stage {
     const base = SLOT_X[at] ?? 0;
     // on wide screens characters spread out a bit more
     const spread = hub ? 1 : Math.min(1.6, this.camera.aspect / (9 / 16));
-    return base * (this.viewW / 3.375) * 0.45 * spread;
+    return base * (this.viewW / 3.375) * 0.62 * spread;
   }
 
   /** Dim everyone except the speaker. */
@@ -464,6 +477,7 @@ export class Stage {
     this.bgB.position.x = this.bgB.scale.x > this.bgA.scale.x * 1.5 ? -this.hubOffset * panoOverflow : 0;
 
     // characters
+    this.groupScaleNow = lerp(this.groupScaleNow, this.groupScale, dt * 4);
     for (const [id, sp] of this.chars) {
       sp.alpha = lerp(sp.alpha, sp.targetAlpha, dt * 5);
       sp.dim = lerp(sp.dim, sp.targetDim, dt * 6);
@@ -478,13 +492,17 @@ export class Stage {
         continue;
       }
       const ch = CHARACTERS[id];
-      const h = VIEW_H * 0.72 * ch.height * sp.scale;
+      // story framing: one character fills the frame chest-up (face in the upper third); groups shrink a little
+      const h = sp.scale !== 1 ? VIEW_H * 0.72 * ch.height * sp.scale : VIEW_H * 1.02 * (0.97 + (ch.height - 1) * 0.6) * this.groupScaleNow;
       const breathe = this.reduceMotion ? 0 : Math.sin(t * 1.4 + sp.seed) * 0.004;
-      sp.mesh.scale.set(h * (576 / 1024) * (1 + breathe * 0.5), h * (1 + breathe), 1);
+      sp.mesh.scale.set(h * (752 / 1344) * (1 + breathe * 0.5), h * (1 + breathe), 1);
       sp.mesh.position.x = lerp(sp.mesh.position.x, sp.targetX, dt * 5);
       if (sp.scale !== 1) sp.mesh.position.y = sp.floorY + h * 0.5;
-      else sp.mesh.position.y = -VIEW_H * 0.5 + h * 0.5 - 0.6 + (this.reduceMotion ? 0 : Math.sin(t * 0.7 + sp.seed) * 0.02);
+      else sp.mesh.position.y = VIEW_H * 0.5 - VIEW_H * 0.09 - h * 0.5 - (1 - this.groupScaleNow) * 0.9 + (this.reduceMotion ? 0 : Math.sin(t * 0.7 + sp.seed) * 0.02);
       sp.mesh.material.opacity = sp.alpha;
+      // the speaker stands in front; listeners fall back a step
+      sp.mesh.renderOrder = sp.targetDim > 0 ? 10 : 12;
+      sp.aura.renderOrder = sp.targetDim > 0 ? 8 : 11;
       // ethereal aura: a soft additive glow in the member's colour, breathing slowly
       const pulse = this.reduceMotion ? 0.5 : 0.5 + 0.5 * Math.sin(t * 0.9 + sp.seed);
       sp.aura.position.set(sp.mesh.position.x, sp.mesh.position.y + h * 0.08, sp.mesh.position.z - 0.05);
