@@ -61,6 +61,7 @@ interface CharSprite {
   blink: number;
   nextBlink: number;
   targetDim: number;
+  back?: number;
   dim: number;
   pose: 'stand' | 'sit';
   scale: number;
@@ -299,6 +300,14 @@ export class Stage {
   syncCharacters(list: StageChar[], hub = false) {
     const wanted = new Map(list.map((c) => [c.id as CharId, c]));
     this.groupScale = hub ? 1 : list.length <= 1 ? 1 : list.length === 2 ? 0.84 : 0.72;
+    // on a phone the named slots are too close together: spread whoever is present evenly, keeping their left-to-right order
+    const spreadX = new Map<string, number>();
+    if (!hub && list.length > 1) {
+      const order = [...list].sort((p, q) => (SLOT_X[p.at ?? 'c'] ?? 0) - (SLOT_X[q.at ?? 'c'] ?? 0));
+      const n = order.length;
+      const step = (n === 2 ? 1.5 : n === 3 ? 1.08 : 3.0 / n) * (this.viewW / 3.375);
+      order.forEach((c, i) => spreadX.set(c.id, (i - (n - 1) / 2) * step));
+    }
     for (const [id, sp] of this.chars) {
       if (!wanted.has(id)) sp.targetAlpha = 0;
     }
@@ -337,7 +346,7 @@ export class Stage {
           floorY: 0,
         };
         this.chars.set(id, sp);
-        mesh.position.x = this.slotX(c.at, hub);
+        mesh.position.x = (spreadX.get(c.id) ?? this.slotX(c.at, hub));
       }
       if (sp.expr !== c.expr) {
         sp.expr = c.expr;
@@ -346,7 +355,7 @@ export class Stage {
       }
       sp.at = c.at;
       if (!hub) sp.scale = 1; // leaving the hub: back to story framing
-      sp.targetX = this.slotX(c.at, hub);
+      sp.targetX = (spreadX.get(c.id) ?? this.slotX(c.at, hub));
       sp.targetAlpha = 1;
     });
   }
@@ -493,7 +502,9 @@ export class Stage {
       }
       const ch = CHARACTERS[id];
       // story framing: one character fills the frame chest-up (face in the upper third); groups shrink a little
-      const h = sp.scale !== 1 ? VIEW_H * 0.72 * ch.height * sp.scale : VIEW_H * 1.02 * (0.97 + (ch.height - 1) * 0.6) * this.groupScaleNow;
+      // listeners stand a step behind the speaker
+      sp.back = lerp(sp.back ?? 0, sp.targetDim > 0 ? 1 : 0, dt * 4);
+      const h = sp.scale !== 1 ? VIEW_H * 0.72 * ch.height * sp.scale : VIEW_H * 1.02 * (0.97 + (ch.height - 1) * 0.6) * this.groupScaleNow * (1 - sp.back * 0.1);
       const breathe = this.reduceMotion ? 0 : Math.sin(t * 1.4 + sp.seed) * 0.004;
       sp.mesh.scale.set(h * (752 / 1344) * (1 + breathe * 0.5), h * (1 + breathe), 1);
       sp.mesh.position.x = lerp(sp.mesh.position.x, sp.targetX, dt * 5);

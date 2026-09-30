@@ -270,10 +270,14 @@ export class Panels {
         const canRead = mode === 'load' && !!meta;
         const thumb = h('div', { class: 'thumb' });
         if (meta) {
-          const c = paintBackground(meta.bg ?? 'studio_lobby');
-          c.style.width = '100%';
-          c.style.height = '100%';
-          thumb.appendChild(c);
+          const file = `assets/bg/${meta.bg ?? 'studio_lobby'}.webp`;
+          if (hasAsset(file)) thumb.appendChild(h('img', { src: assetUrl(file), alt: '', loading: 'lazy' }));
+          else {
+            const c = paintBackground(meta.bg ?? 'studio_lobby');
+            c.style.width = '100%';
+            c.style.height = '100%';
+            thumb.appendChild(c);
+          }
         }
         const info = h(
           'div',
@@ -326,10 +330,10 @@ export class Panels {
                   );
                 },
               },
-              t('saves.delete'),
+              '×',
             )
           : null;
-        body.appendChild(h('div', { class: 'row', style: { alignItems: 'stretch', gap: '4px' } }, btn, del));
+        body.appendChild(h('div', { class: 'slot-row' }, btn, del));
       }
     };
     render();
@@ -647,15 +651,15 @@ export class Panels {
             fn();
           },
         },
-        label,
+        h('span', null, label),
       );
     body.append(
       item(t('menu.resume'), () => this.closeAll(), 'primary'),
-      item(t('qb.save_title'), () => {
+      item(t('saves.quick'), () => {
         this.closeAll();
         this.game.save('quick');
       }),
-      item(t('qb.hide_title'), () => {
+      item(t('qb.hide_title').replace(/\s*[（(][^)）]*[)）]\s*$/, ''), () => {
         this.closeAll();
         this.game.ui.setHidden(true);
       }),
