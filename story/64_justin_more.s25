@@ -25,6 +25,7 @@ justin[thinking]: Is there a book? There was a book. I had to write my name in a
 > Second drawer from the bottom. It needs a hip, not a hand. You give it the hip.
 @sfx door
 > Inside: a stapler, a dead torch, a ring of keys with a cracked plastic 25 on the tag — and a green hardback ledger, soft at the corners.
+@cg cg_justin_x1
 > ROOM HIRE, it says on the cover, in marker. Underneath, in a different marker: *please write clearly. please.*
 justin: That's it. That's the book. I'm in there somewhere.
 justin[smile]: February. Three years ago. I want to see what I wrote. I was so nervous I think I spelled my own name wrong.
@@ -47,6 +48,7 @@ justin[smile]: February. Three years ago. I want to see what I wrote. I was so n
 > ROOM B. IN: 00:30. NAME: a J, and then a small, panicked scribble.
 > PURPOSE: *dance*, crossed out. *practice*, crossed out. And then, pressed hard enough to dent the paper: *nothing*.
 justin[neutral]: …I wrote "nothing."
+@cg off
 justin: I remember that. I didn't want anybody to read "dance" and come and look.
 justin[smile]: Great plan. Flawless. Nobody came to look. Except the one person with the keys.
 > He runs a finger along the line to the next column, and stops.
@@ -181,6 +183,7 @@ haruta[thinking]: I am?
 hyunjun: You're the only one here who's never taken anything from my bag.
 haruta[smile]: That's true. …All right. Court is open. Please sit.
 > Everyone sits. Haruta takes the armchair. It suits him. Justin holds the banana milk in front of him in both hands, like evidence, or an offering.
+@cg cg_justin_x2
 justin: Your honour. I'd like to make restitution. This is milk. It's the wrong milk. But it's *bought*. With money. By me.
 hyunjun: With whose money?
 justin[smile]: …It was a group effort.
@@ -204,6 +207,7 @@ hyunjun: {{playerName}}. You were with him. You're the witness.
 haruta: I have reached a verdict.
 haruta[smile]: Banana is accepted. Justin carries Hyunjun's bag to breakfast. And he has to say "excuse me" before he opens it, from now on.
 justin: "Excuse me"? To a *bag*?
+@cg off
 hyunjun[laugh]: To the bag. Every time. I'll be listening.
 > Hyunjun pushes the straw in and drinks. He makes a face like it's fine, which from him is a rave.
 > Then, to you, not quite quietly enough:
@@ -421,6 +425,7 @@ you: I'm holding the count. You're off duty.
 > He stares at the timer like it's a contract in a language he half-reads.
 justin[neutral]: …Nobody's ever taken the count off me. I didn't know you could just hand it to someone.
 > You fold your coat and put it at the end of the bench. He looks at the coat. He looks at you, in your sleeves, in the cold.
+@cg cg_justin_x3
 justin: You'll freeze.
 you: I worked a desk with one warm foot. I'm built for this.
 > He lies down, folding himself onto a bench that was built for shorter people. His sneakers hang off the end. You press start.
@@ -445,6 +450,7 @@ you: I worked a desk with one warm foot. I'm built for this.
     > His lips stop. After a moment his own hand, the one that's been tapping his ribs, goes flat too.
 > The timer runs. The city hums. Somewhere below, the laundromat sign buzzes in its sleep.
 > By the fifth minute he's stopped performing rest and is just resting. It looks different. His jaw has unclenched. One sneaker has tipped sideways.
+@cg off
 > He isn't asleep. He's looking at the sky like it's a ceiling he's only now noticed has been up there the whole time.
 justin[neutral]: Can I tell you what I want? It's a lot. It might be greedy.
 you: Tell me.
@@ -511,6 +517,7 @@ justin[smile]: It's load-bearing.
 you: New game. Every time a joke gets into the sentence, I put up a finger. You're aiming for zero.
 justin[smile]: Golf rules. Okay. I'm incredible at golf. I've never played golf.
 > One finger goes up.
+@cg cg_justin_x4
 justin[smile]: That wasn't even in the sentence.
 you: Warm-up counts.
 justin: Ladies and gentlemen, esteemed colleagues — I, the artist formerly known as fast, will be performing a *slow piece*, which I'm bad at, so please lower your expectations and also the lights—
@@ -531,6 +538,7 @@ justin[laugh]: Four. On the first go. That might be a personal best.
     justin[smile]: No notes. Just a hand. That's almost worse.
 > Second attempt. He does it in a newsreader voice, which is one finger, and then hears himself, and stops halfway.
 > Third attempt. He says it to the step between his sneakers.
+@cg off
 justin[neutral]: I'm doing a slow piece at the November showcase. A solo. I'm not good at it yet. I'd like help.
 > Your fist stays closed.
 justin[neutral]: Zero?
@@ -845,6 +853,7 @@ justin[neutral]: And after November. The bad days. The boring Tuesdays. I want t
     > It weighs almost nothing. You feel it land all the same.
     justin[smile]: That's a yes. I can read your yes now. It's very small, and it means it.
 justin[thinking]: It goes both ways, though. Fair's fair. What do you need a person for?
+@cg cg_justin_x5
 > You think about it honestly, because he'd know if you didn't.
 you: I have boxes. From the last move. And the one before. I've never finished unpacking anywhere.
 justin[thinking]: Never. Not once?
@@ -852,6 +861,7 @@ you: It always seemed like tempting fate.
 justin[smile]: Saturday. If you'll have me, I'll come over. I'm bad at slow; I'm very good at boxes.
 justin[laugh]: We'll do it in eights. Eight things out, then tea. Eight things, tea. You'll be unpacked by spring.
 > You tell him Saturday works. He says *spring* like it's obvious you'll both be there for it. You find that you believe him.
+@cg off
 justin[neutral]: Can I say what this is? Plainly.
 you: Zero fingers.
 justin: You're my person. The one I don't turn into anybody for.
@@ -897,6 +907,7 @@ daniel: "By mutual agreement"? ECHO, what did they say?
 @show songha smile at=l
 songha: It said it didn't log it. Leave the building alone. It's had a long night.
 > Songha's pen is moving, though. You catch the word *November* before he closes the notebook.
+@cg cg_justin_x6
 @hide all
 @show haruta smile at=l
 haruta: It's a good record. You can hear the counting, if you watch his mouth.
@@ -907,6 +918,7 @@ haruta[smile]: I would never. …Ichi.
 @sfx chime
 > A glass card slides out of a slot in the front desk you never knew was there. Warm. The size of a playing card. Inside it, very small, someone is dancing.
 justin: You hold it. I'd only keep checking my footwork.
+@cg off
 @call echo_farewell
 @time 05:40
 @bg dawn_rooftop t=slow

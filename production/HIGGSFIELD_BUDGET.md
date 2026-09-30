@@ -104,3 +104,18 @@ Image costs for the redo stills were not itemised; worst case (2.75 each × 4) p
 | 188–192 | 5 × sonilo_music 40 s (night, quiet, echo, fun, dawn) | — | recorded soundtrack replacing the procedural music | 12.5 | 12.5 | ✔ | jobs.json music |
 
 **Final: spent ≈ 543–548 of 550. Budget exhausted — no further Higgsfield generation.**
+
+## Bonus budget — 2026-09-30
+**Producer granted 150 bonus credits** ("I am giving you 150 bonus higgsfield credits"). New hard ceiling: 700 total. Bonus allocation:
+- 48 × gpt_image_2_5 high story pictures (6 per member, identity + real-photo refs, 1.5 each) = 72
+- 2 × kling3_0 5 s 16:9 establishing shots for the landscape trailer = 17.5
+- Trailers themselves are edited locally from existing footage (free).
+- Held back for redos: ≈ 60.
+| B1–B48 | 48 × gpt_image_2_5 high story pictures | all | cg_<member>_x1..x6 | 72 | 72 | submitted | jobs.json storyPictures |
+| B49–B50 | 2 × kling3_0 5 s 16:9 lobby shots | — | landscape trailer | 17.5 | 17.5 | submitted | jobs.json trailerShots |
+| B1–B48 | delivered ✔ | | | | 72 | | |
+| B49–B50 | delivered ✔ | | | | 17.5 | | |
+| B51–B55 | 5 × gpt_image_2_5 redo (hamin_x5 twice: anatomy, then strawberry milk; charlie_x3, charlie_x6, songha_x6: drink cans replaced with milk cartons / tea) | | producer: no alcohol-looking drinks | 7.5 | 7.5 | ✔ | jobs.json storyPictures |
+
+**Bonus used: 97 of 150 · bonus remaining ≈ 53.** Trailers were edited locally (tools/trailer.swift, tools/make-trailers.py) at no credit cost.
+Rule from the producer: drinks in art must not read as alcohol — use milk cartons, paper cups, tea.

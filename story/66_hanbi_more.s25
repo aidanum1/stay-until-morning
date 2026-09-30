@@ -38,6 +38,7 @@ hanbi: …I don't know. I've never had any. I give it to whoever's running late.
 > He lifts a corner the way you'd lift a blanket off a sleeping cat.
 @sfx page
 > A jigsaw. A thousand pieces, a harbour at dusk, almost finished. There's a gap in the sky the size of two open hands.
+@cg cg_hanbi_x1
 > The box lid is propped behind it. Taped to the lid, in marker gone brown with age: *DO NOT PUT AWAY. NEARLY DONE.*
 hanbi: …It was here. That winter. I remember people doing two pieces on their way to the door.
 you: Six years of nearly done.
@@ -45,6 +46,7 @@ hanbi[sad]: …Nobody put it away. They just covered it.
 hanbi: …Someone should finish it. Before the morning. It shouldn't go in a skip with a hole in it.
 you: We have an hour and forty-seven minutes.
 hanbi[smile]: …Forty-six.
+@cg off
 > The loose pieces are in the lid. Forty or so, and every one of them is sky.
 * [curious] "How do you tell them apart? They're all the same blue."
     @rel hanbi closeness+1
@@ -169,6 +171,7 @@ hanbi: …Any longer and I start being kind. Then it doesn't look like anyone.
 daniel[smile]: I'll time it. I'm a fair timekeeper. Go.
 @sfx pencil
 > Thirty seconds of Hanbi drawing is a different thing from an afternoon of it. No apologising. The pencil doesn't leave the page once.
+@cg cg_hanbi_x2
 daniel: Time.
 > Hyunjun: a great deal of hair, an easy grin, and a triangle kimbap in one hand, half unwrapped.
 hyunjun[smile]: That's me. No argument. How did the kimbap get in? I wasn't holding one.
@@ -176,6 +179,7 @@ hanbi[smile]: …You were about to be.
 > Daniel gets a level, stubborn brow and, in the corner, a tiny claw with a bear held firmly by one ear.
 daniel: …You gave me the bear.
 hanbi: …On paper, it holds.
+@cg off
 > Daniel looks at the page for a moment without saying anything. Then he nods, once, and sets it down with care.
 daniel[smile]: All right. New round. {{playerName}} draws hyung.
 you: Oh, no.
@@ -588,6 +592,7 @@ hanbi: Songha— Songha needs to be told he can stop. He won't. Tell him anyway.
 hanbi: …Ten minutes. Wake me if Charlie—
 > The sentence stops there.
 > It isn't a dash this time. He's asleep. It happened between one word and the next, like a lamp going off in another room.
+@cg cg_hanbi_x3
 @hide all
 @music stop
 > You don't move.
@@ -613,6 +618,7 @@ hanbi: …Ten minutes. Wake me if Charlie—
 @show hamin neutral at=l
 > Hamin. He has a triangle kimbap in one hand. He sees the sofa, and he stops where he is.
 hamin: …He's asleep?
+@cg off
 > He keeps his voice so low that you mostly read it off his face. You nod.
 hamin[smile]: …Good. That's good. He never does.
 > He crosses the room in three quiet steps, puts the kimbap on the arm of the sofa, and goes back to the door.
@@ -781,6 +787,7 @@ hanbi: "Don't put this away."
 > He folds the portrait back along its crease. Your face isn't finished yet on the front. On the back there's his handwriting.
 hanbi[smile]: …That's three. I'll write it in later.
 > He loosens the clamp, lifts the sharpener off its piece of desk, and puts it in your coat pocket. He tucks it in next to the hundred-won coin.
+@cg cg_hanbi_x4
 hanbi: …It's yours. You complained about it fifty-one times. You've earned it.
 you: What am I going to do with a desk sharpener?
 hanbi[smile]: …Put it somewhere you're staying. It needs to be clamped to something.
@@ -791,6 +798,7 @@ echo: All recipients to the lobby, please. There is one thing left to choose.
 @textbox normal
 > He puts the folded card under his arm. *FUTURE LETTER.* He isn't leaving that for the skip either.
 > Then he holds out his hand, as he did an hour and forty-seven minutes ago. He isn't leading you anywhere. It's there in case you want it.
+@cg off
 > This time there's no correction from the ceiling.
 @time 04:57
 @goto act4_choice
@@ -834,6 +842,7 @@ echo: The portrait is incomplete. I am preserving it as it is. Incomplete things
 @textbox normal
 @sfx echo
 > Light runs out of the wall and into the small rectangle of glass on the desk. The lounge draws itself, line by line. The rain. The figure at the letter desk. The orange sofa is the only colour.
+@cg cg_hanbi_x5
 @show hyunjun smile at=r
 hyunjun: Of course it's the sofa. Everything else in that room changed. That never did.
 @show daniel smile at=l
@@ -844,6 +853,7 @@ hanbi: …I'd like to ask for something.
 > Eight people stop talking at once.
 hanbi[smile]: …The sofa. The real one. It goes in the skip at nine. I'd like to keep it.
 hanbi: …I don't need it. I want it. I'm saying that on purpose.
+@cg off
 @show songha smile at=l
 songha: He asked for something. Somebody write down the time.
 @show justin smile at=r
@@ -932,6 +942,7 @@ echo: Status: in progress. I invented that status tonight. I am pleased to be us
 @textbox normal
 @sfx echo
 > Light runs out of the wall and into the small rectangle of glass on the desk. The lounge, the rain, the orange sofa. A figure at a desk, and on its face a single soft line.
+@cg cg_hanbi_x6
 @show daniel smile at=l
 daniel: There's a line on the face now. There wasn't one before. I'd call that progress.
 @show haruta smile at=r
@@ -944,6 +955,7 @@ haruta: For now. That's the good part.
 hanbi: …Keep it for me. I'd like to visit it.
 @show songha smile at=l
 songha: "Visit." He's making appointments. I'll leave room in the calendar.
+@cg off
 @hide all
 @call echo_farewell
 @bg dawn_street t=slow d=3

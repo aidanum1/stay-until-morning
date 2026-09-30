@@ -844,6 +844,7 @@ hamin: I read the sign. Twice.
 @music hamin
 > A week later. The laundromat behind Studio 25 is still open, because it is always still open.
 > Next door, the building is wrapped in green scaffold netting. Someone has taped a sign to the door: RENOVATION IN PROGRESS. PLEASE DO NOT KNOCK.
+@cg cg_hamin_x6
 > Someone else has written underneath it, very small, in pencil: *It's okay. It's resting.*
 > You are here to wash one coat. It is going as well as can be expected.
 @show hamin surprised at=c
@@ -852,6 +853,7 @@ hamin: {{playerName}}?
 hamin: Our machine broke. The dorm one. Justin put a hoodie in with a pen in the pocket. Everything I own is now slightly blue.
 hamin[smile]: I remembered this place never closes.
 > He looks into your machine. He looks at you. He looks back into your machine.
+@cg off
 hamin: There's a red sock in there with your coat.
 you: There's no red sock.
 hamin: There's a red sock.

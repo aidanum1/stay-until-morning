@@ -91,6 +91,7 @@ songha[thinking]: I could divide it. Six blocks, seventeen minutes each, five mi
 you: Are you trying to solve the hour?
 songha: Someone sh—
 > He stops. The pen stays in the air.
+@cg cg_songha_x1
 songha: No. I heard it. I heard it as it was leaving my mouth.
 songha: Here's my problem. If I don't plan it, I'll waste it. If I plan it, I'll spend all of it checking whether we're behind.
 songha[smile]: I've met me.
@@ -113,6 +114,7 @@ songha[smile]: I've met me.
 > Then a neat *1.* He looks at it. He crosses it out.
 songha: Numbers are times in disguise. I'm not falling for it.
 > He writes his line without one.
+@cg off
 > *Practice room. Teach somebody the eight-count.*
 songha: Year Three. "Make one eight-count that's mine." I made it. It's ticked. Nobody else has ever learned it.
 songha: I never scheduled that part. I'm not sure I knew it was a part.
@@ -182,6 +184,7 @@ songha[smile]: That's geography. Geography is allowed.
 songha: Right. Eight counts. It's short. It's not easy. Those are different things.
 songha: First, you watch. Then we break it down. Then—
 > He hears himself. He holds up one hand, palm out, to the mirror.
+@cg cg_songha_x2
 songha: That's not a schedule. That's teaching. Teaching has steps. I'm allowed steps.
 * [playful] "Break it down. Numbered. I know you want to."
     @rel songha closeness+1
@@ -198,6 +201,7 @@ songha: That's not a schedule. That's teaching. Teaching has steps. I'm allowed 
 > He just stands there for the whole of the count, arm still up, not moving.
 songha: That's it. Your turn. Left foot.
 > You try. The first three counts go fine. On four, your feet hold a brief meeting and fail to reach agreement.
+@cg off
 songha: Good. No, that was good. That's where everyone goes wrong. I went wrong there for nineteen months.
 you: Everyone? You said nobody's learned it.
 songha[thinking]: …Everyone being me. Several of me. Over time.
@@ -302,6 +306,7 @@ songha: So that's the cat.
 you: That's the cat. Don't open it. Daniel will sense it from two floors away.
 songha: I have a line about that. 00:47.
 > Lost and Found is one plastic crate and a hardback ledger tied to the shelf with string. He lifts the crate out as if it might be evidence.
+@cg cg_songha_x3
 > An umbrella with a duck's head for a handle. One glove. A harmonica. Four phone chargers, tangled into a single organism.
 @show hanbi smile at=r
 > Hanbi has appeared at the counter the way he appears anywhere, already there. He looks at the chargers.
@@ -310,6 +315,7 @@ songha: None of them are yours, hyung.
 hanbi: No. I've never lost one.
 > He puts two triangle kimbap on the counter, side by side, labels facing out.
 hanbi: Hamin says neither of you ate at half past one. He counted plates.
+@cg off
 songha[thinking]: I scheduled the food. I didn't schedule eating it. That's a gap in the method.
 hanbi[smile]: Mm. Eat.
 @hide hanbi
@@ -463,6 +469,7 @@ songha: I won't really sleep. I'll rest my eyes. It's a different thing.
 > You start a timer. Ten minutes. Your phone believes it is five past four. You've decided not to argue with it.
 @wait 1.2
 > Asleep, he looks like someone who has put something down. Not dropped it. Put it down, carefully, where he can find it again.
+@cg cg_songha_x4
 > The notebook sits closed on your knee. It has the whole night in it, and his tomorrow, and an untidy page. You keep it closed. That's the job.
 @sfx phone
 > On the table, his phone lights up. Then again. Then a third time.
@@ -473,6 +480,7 @@ charlie: hyung is it ok if i
 charlie: never mind
 @textbox normal
 > He doesn't stir. Every one of them, asking him. He called it at midnight. You wonder how many years he has been the person who knows.
+@cg off
 * [sincere] Answer in the group chat, as yourself. "He's off shift. Ask me."
     @rel songha trust+1 closeness+1
     @textbox phone
@@ -843,6 +851,7 @@ songha: For good.
 songha[smile]: That's a long shift. You should know what you're signing.
 you: I read every line. You turned the notebook so I could.
 > He opens it, right there, to the rota. He writes quickly, before the glass is ready. Then the last box on the Wall is the only light in the room.
+@cg cg_songha_x5
 @textbox echo
 echo: Record 03 selected. Owner: Songha. Writing to glass.
 echo: Contents: one page. Five items. Appended: one first draft, held in Lost and Found for five years by the recipient.
@@ -853,6 +862,7 @@ echo: Appended, at the owner's request: one change to the rota. I am told it is 
 > Above his own name, in the space that used to be the heading, he has written yours. And after it, the bracket that was always his. *(list)*.
 @show daniel laugh at=r
 daniel: He saved *two* to-do lists and a staff rota. Nobody has ever been more himself.
+@cg off
 songha: One of them is a draft.
 @show hyunjun thinking at=c
 hyunjun: There's a name above hyung's. In six years there has never been a name above hyung's.
@@ -1016,6 +1026,8 @@ songha: I don't shake on things without dates. This is just my hand. {p} If you'
 > The last star goes out in the south. The east stays empty, a clean strip of sky above the laundromat, with plenty of room in it.
 > Somewhere below that line, on nobody's schedule, a faint orange star is already on its way.
 > You know its real name now. You'll call it Gerald when it gets here. He'll let you.
+@cg cg_songha_x6
+@cg off
 @ending songha_someday
 @credits
 @end

@@ -85,6 +85,7 @@ hamin: You do this one.
     hamin: Nobody buys a torch this small for themselves. It's a torch you lend.
 > The box empties. The desk fills with small things wearing small paper sentences.
 > At the very bottom, under where the gloves were, there is a lanyard.
+@cg cg_hamin_x1
 > Blue cord. A plastic sleeve. A card inside: STUDIO 25 — FRONT DESK — VOLUNTEER. A name line, filled in with pencil, rubbed down to a grey smear.
 > You know whose it is before you've finished reading it.
 > One winter. Sixteen. You hung it on the hook behind this desk on the last day, because taking it home would have meant it had been yours.
@@ -92,6 +93,7 @@ hamin: You do this one.
 > Hamin's marker stops moving.
 hamin: You stopped humming.
 you: I wasn't humming.
+@cg off
 hamin: You were. Since the gloves. The laundromat one. {p}You stopped just now.
 > His eyes go to the stairs. To the third floor, the kettle, the cups. You can see the whole plan arrive in him: tea, a name on it, a problem with a cup-shaped answer.
 > Then he puts the marker down.
@@ -464,6 +466,7 @@ hamin[smile]: …You're going to be unbearable about that number.
     > He tips his head back against the sofa and folds his arms, and his eyes close before he has finished arranging himself.
     > His knee comes to rest against yours. You don't think he did it on purpose. You don't think he'd move it if he knew.
 > He is asleep in under a minute. Not deeply. Just gone under the surface, the way a swimmer goes.
+@cg cg_hamin_x2
 > You listen. That's the job. The kettle ticking. The draft in the window frame. The building, three floors of it, breathing out.
 > You had not understood, until now, how much there is to hear when you're hearing it for someone.
 @show charlie neutral at=l
@@ -486,6 +489,7 @@ charlie: He's asleep. {p}Hamin is actually asleep.
     charlie[smile]: …That's the best thing I've heard all night. And I heard a building talk.
 > You fill his cup. He holds it, and doesn't leave straight away.
 charlie: He remembered I hadn't eaten. At midnight. I didn't even know I hadn't eaten.
+@cg off
 charlie[smile]: He does it for everyone. I never know what to do back.
 > He sets his tea down. He takes the roll of paper towels off the counter, tears off three squares, folds them once, and lays them on the sofa arm by Hamin's hand.
 charlie: For the mustard.
@@ -588,6 +592,7 @@ hamin: I notice who's improving. I notice who's worn out. I've never once been a
     you: I'd start with the laundromat and work up.
 hamin: Your turn. Bigger. Those are the rules.
 > You look at the strip of river. It would be easy to say something kettle-sized again.
+@cg cg_hamin_x3
 you: I want to stop being good at leaving.
 you: I can pack a room in forty minutes. I know which friendships to let go quiet two weeks before a move, so it hurts less. I'm very efficient. I hate that I'm efficient.
 > He doesn't answer straight away. He doesn't reach for the coat, or a can, or the weather.
@@ -595,6 +600,7 @@ hamin: Forty minutes.
 you: Thirty-five, if I leave the kettle.
 hamin[thinking]: I'd like to be bad at something with you. You be bad at leaving. I'll be bad at not wanting things.
 hamin: We could be terrible. We could be the worst at it in Seoul.
+@cg off
 > You laugh. It goes out over the rooftops, and it doesn't come back, and he watches it go like a man recognising a bird.
 hamin: Last one. It's mine. Then we go down.
 > He turns from the river and looks at you directly. It still seems to cost him something. He still does it.
@@ -838,6 +844,7 @@ charlie[smile]: …That's fair. That's also true.
 @else
     hamin: Grape. I'm getting used to the colour.
 > You sit on the laundromat step. The wind comes down the alley from the left. He sits on the left.
+@cg cg_hamin_x4
 you: Swap with me.
 hamin: Why?
 you: No reason.
@@ -845,6 +852,7 @@ you: No reason.
 hamin[laugh]: …That's mine. You can't use that one. That's my line.
 you: You've sat in every draft in that building. It's my turn. That's what counting is.
 > He swaps. He sits out of the wind like someone trying on a coat in a shop: doubtful, then surprised at the fit.
+@cg off
 hamin: It's warmer here.
 you: I know. I've been sitting in it all night.
 > He takes out his phone and turns the screen to you. A new contact, mostly empty.
@@ -963,6 +971,7 @@ hamin: I want to get better at it. And I want you to be there while I do. Not wa
 hamin: I want it labelled. So it isn't just a feeling in a box.
 > He tears off a strip, presses it to the railing, and writes. Small square capitals. He isn't hiding this one with his arm.
 > JULY. BUSAN. THE BEACH BY THE SEAWALL. 23:41.
+@cg cg_hamin_x5
 hamin: That's when the recording starts. I'd like to start the next one at the same minute.
 hamin: Ten months. It's a long time. It isn't a test. I'll see you tomorrow, and on Tuesday, and I'll still know your order.
 hamin: But on that beach, at that minute, I'd like to say "stay a bit" first. Before the can. As someone who's had some practice.
@@ -978,6 +987,7 @@ you: What do I bring?
     > BRING: ONE GRAPE SODA. ONE CORN TEA. A COAT, BECAUSE YOU WON'T.
 hamin: I'll buy them. You just have to be shivering thirty metres down the beach. For accuracy.
 you: And you'll walk past me to the machine.
+@cg off
 hamin[smile]: And then I'll come back. {p}That's the part I'm changing.
 > He peels the label off the railing, carefully, so it doesn't tear, and sticks it to the back of your phone. He presses the edges flat with his thumb.
 hamin: NOT LOST. I ran out of room to write it. It's implied.

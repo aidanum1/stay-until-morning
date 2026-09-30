@@ -41,6 +41,7 @@ charlie: That's not a home. That's an escape room.
 @bg studio_lounge t=fade
 @sfx click
 > He tries the switch. Click. Nothing. Click, click. The bulb over the little sink stays dark, in the settled way of something that stopped months ago and sees no reason to start.
+@cg cg_charlie_x1
 charlie: Dead. All right. We have a hundred and seven minutes and a job to do.
 charlie[thinking]: Where does a closed building keep its spare bulbs?
 > It's a strange thing, knowing the answer.
@@ -60,6 +61,7 @@ charlie[thinking]: Where does a closed building keep its spare bulbs?
 > The handwriting is yours.
 charlie[laugh]: That's you. That's past you, being strict with a light bulb. "I mean it." Who were you *fighting*?
 you: The desk lamp. It kept winning.
+@cg off
 > There's one chair in the lounge that reaches. It has a short leg. It rocks when you look at it.
 charlie: Right. One climbs, one holds the chair. I'm good at both. I'm suspiciously good at both.
 * [sincere] "You climb. I'll hold the chair."
@@ -206,6 +208,7 @@ charlie[thinking]: …We don't have a stamp. That's a serious gap. We may not be
 > And for the second time tonight, it's a strange thing, knowing the answer.
 you: Front desk. Top drawer this time.
 > It's a wooden stamp with a worn handle and an ink pad gone pale at the middle. Charlie breathes on the pad like it's a cold window, and tries it on the corner of page four.
+@cg cg_charlie_x2
 @sfx click
 > Faint, purple, perfectly readable: STUDIO 25 — VISITOR.
 charlie[smile]: It works. Five years in a drawer, and it works.
@@ -214,6 +217,7 @@ charlie[thinking]: "Visitor." Hm. Well. It's a fine word. I've been a visitor in
 > Daniel takes the pen off the sofa without a word. He holds out his own hand, lets Charlie stamp the back of it, and then writes two small words above the purple.
 daniel[smile]: There. "NOT A VISITOR." Fixed. Took two seconds. You're welcome, nation.
 charlie: …Hyung.
+@cg off
 daniel: What? It was a typo. Buildings make typos.
 hyunjun[smile]: Mine next. I'd like the amendment as well, if it's going.
 > Charlie stamps Hyunjun. Charlie stamps Daniel's other hand, by request. Charlie stamps the shrimp chips, which makes it, officially, the flag.
@@ -314,6 +318,7 @@ charlie: I've never said that out loud. It sounds heavier out loud. It sounds li
     charlie[shy]: …That's a lot to say to someone who's lying on a floor.
     charlie: Okay. Then I'm asking. I want to be from here. There. I asked. Nothing fell over.
 > He sits up. Something has come unstuck. He pulls the tote into his lap and digs, and comes out with a paper napkin and the pen from the sofa.
+@cg cg_charlie_x3
 charlie[thinking]: I'm going to do the napkin. Properly. I've never done it for someone who said they'd follow the arrows.
 charlie: Can you stay while I do it? I don't need help. I just need somebody in the room.
 you: I'm in the room.
@@ -334,6 +339,7 @@ you: I'm in the room.
     > Kitchen. Hill. Corridor. A rectangle with a board full of tiny dashes, which can only be an airport. You trace the whole route, in order.
     charlie[smile]: …You're actually doing it. People look at the napkin. Nobody *travels* it.
 > The pen reaches the edge of the last drawing, a narrow building with a box next to it that must be a laundromat. It stops.
+@cg off
 > He holds it there. The arrow that should come next doesn't come.
 charlie[thinking]: Huh.
 charlie: Every arrow on this thing points away from somewhere. I never noticed. I've drawn it a hundred times, and every single one is leaving.
@@ -514,6 +520,7 @@ songha[smile]: Someone has to. Lobby at 04:57. I'm told the clock is sure this t
     > He presses two buttons without asking, and gets it right, because he watched what you picked the last time.
 @sfx can
 > The laundromat is open. It's always open. Behind the glass, under lights the colour of milk, one dryer in the long row is still turning.
+@cg cg_charlie_x4
 > There's nobody inside. Just the one machine, and in it a single yellow blanket, going round, falling, going round.
 > A red number glows on the dryer's door. 08.
 charlie[thinking]: Somebody's coming back for that. They've gone to get something and they're coming back.
@@ -529,6 +536,7 @@ charlie[thinking]: Somebody's coming back for that. They've gone to get somethin
 charlie: Okay. I've got a game. It's a bad game. It's got no points and nobody wins.
 charlie[thinking]: Eight minutes. Till the dryer stops. I sit here and I don't fill it. No bits. No surveys. No hosting.
 charlie: And you sit here and you don't plan the exit. I know you do. You've got your eye on the end of the alley right now.
+@cg off
 > You have. You take your eye off it.
 * [sincere] "Deal. I'm bad at it too. Let's be bad at it together."
     @rel charlie trust+1
@@ -783,6 +791,7 @@ echo: Thank you, Charlie. Thank you, {{playerName}}. It was a good record to kee
 @cam reveal
 > Breakfast is ten minutes away on foot. The others are half a street ahead, a loose, loud shape in the early light, and Songha is walking backwards to count them.
 > You and Charlie have fallen behind on purpose. There's a bus stop. It has a bench. It was always going to happen.
+@cg cg_charlie_x5
 @show charlie smile at=c
 charlie: You like these. You told me. A window over a bus stop. You used to guess where people were going.
 > Two people are waiting: someone in a bakery apron, and a student asleep on their feet with a cello case.
@@ -791,6 +800,7 @@ you: Cello's going home. That's the sleep of someone who's finished.
 charlie[smile]: You're much better at this than I am. I want everyone to be going somewhere exciting. You let them go home.
 > The sky over the low roofs is the colour of the card. He's holding it in one hand, turning it to catch the light, not quite able to put it away.
 charlie[thinking]: It's morning. I'm supposed to ask. Did you find it? The place you want to stay?
+@cg off
 * [sincere] "I found who I'm telling when I do."
     @rel charlie trust+1
     charlie[smile]: …That's better than a place. Places can't text back.
@@ -939,6 +949,7 @@ charlie: And that night, under the board, we'll each say the fast version. The t
 > He gets his phone out, remembers it's full, and shakes his head at the sky. You hand him yours.
 > He makes a calendar entry, thumbs going, unhurried, getting it right. He turns the screen to show you before he saves it.
 > DECEMBER. 23:52. ARRIVALS. Under "title," he's typed: GATE 31 — ON TIME.
+@cg cg_charlie_x6
 @sfx chime
 charlie[smile]: There. It's in your phone. It's the only thing in your calendar. That's legally binding. Ask any fridge.
 > The sun clears the low roofs to the east and lays itself across the crates, the vent, the paint can, both of you. Amber. Exactly amber.
@@ -949,6 +960,7 @@ charlie[smile]: …That's the best answer anyone's ever given that question. And
 @textbox phone
 songha: That was not two minutes.
 hamin: We ordered for you both. It'll keep.
+@cg off
 daniel: whatever you two are doing up there. congratulations. bring napkins
 @textbox normal
 charlie[laugh]: "Bring napkins." He doesn't even know. He has no idea how funny that is.

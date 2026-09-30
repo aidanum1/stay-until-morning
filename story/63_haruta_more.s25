@@ -20,6 +20,7 @@ haruta: Closing duties?
 songha: She asked us to turn off the lights when we go. I'm interpreting that broadly.
 songha: We leave this building the way we found it. Better, where possible. I've made a list.
 > He turns the notebook round. It is a real list. It has boxes to tick. Two of them are already ticked, in a different pen.
+@cg cg_haruta_x1
 @show hanbi smile at=r
 hanbi: …I did the mugs.
 songha[smile]: Hanbi did the mugs. Before I wrote "mugs." This is why I wrote it down and ticked it anyway.
@@ -40,6 +41,7 @@ songha: It goes back where it came from. With its case, its cap, and its cord. T
     songha[smile]: …Noted. In pen.
 hanbi: The cord's mine. {p} Leave it on the desk after.
 > Hanbi hands Haruta a phone torch that is already switched on. Then a second one, for you. It's not clear where the second one came from.
+@cg off
 @hide songha hanbi
 @sfx step
 @bg studio_lounge t=fade d=1.2
@@ -140,6 +142,7 @@ haruta[smile]: They had a house reel.
 haruta: Proper cinemas did that. A little film before the film. "Please don't smoke." "Visit our kiosk." The Dalbit had one about not putting your feet on the seats.
 haruta[smile]: I loved it more than some of the films.
 > He holds the reel up to the torch. Tiny frames. Something pale in each one. Too small to read.
+@cg cg_haruta_x2
 haruta: Forty seconds, maybe. {p} I want to see it.
 > No *if that's all right*. No *only if there's time*. It comes out whole, and he hears it come out, and lets it stand.
 * [playful] "That's three wants in twenty minutes. You're on a streak."
@@ -157,6 +160,7 @@ haruta: Forty seconds, maybe. {p} I want to see it.
 haruta[thinking]: Mrs Oh believes in us.
 you: Mrs Oh has never met us.
 haruta: That's when it's easiest to believe in people.
+@cg off
 > He pushes his sleeves up again. You hold the diagram. It is, Songha would be pleased to know, a two-person job after all.
 haruta: One. Reel on the front arm. Done. Two — film comes off the top. Or the bottom. Which way is the arrow pointing?
 * [playful] "Up. Definitely up. Probably."
@@ -280,6 +284,7 @@ haruta: What was it like? Sitting here.
 haruta: Good evening. Welcome to Studio 25. How may I—
 haruta[smile]: No. I'd be hopeless at it. Someone would ask which room, and I'd say whichever they preferred.
 > The roll of raffle tickets has come out of the drawer with your hand. Pink, numbered, perforated. He looks at it like a man who has just had an idea and has decided to keep it.
+@cg cg_haruta_x3
 haruta[thinking]: I'd like to suggest a game. I don't usually. Daniel runs that department.
 haruta: I ask you a this-or-that. You answer in three seconds. Then I'm allowed one follow-up question. Exactly one.
 haruta: Then we swap. Every answer earns a ticket.
@@ -287,6 +292,7 @@ you: And if somebody says "anything is fine"?
 haruta[smile]: Then somebody rings the bell. So the whole building knows.
 > He says *somebody* with the calm of a man who knows exactly who.
 haruta: I'll start easy. Rain on the window, or rain on an umbrella?
+@cg off
 * [sincere] "On the window. From inside, with nowhere to be."
     @rel haruta trust+1
     haruta: Follow-up. Do you often have nowhere to be?
@@ -460,6 +466,7 @@ haruta: I'm scared of that. {p} I'm saying it plainly. I'm scared I'm in the rig
 haruta[thinking]: I did choose it. Didn't I.
 haruta: I said "anything is fine" to a thousand small things, so nobody would notice the one enormous thing I wasn't fine about at all.
 haruta[laugh]: That's not easy-going. That's a smuggler.
+@cg cg_haruta_x4
 > It's the first time he has laughed up here. It's a small one. It counts.
 haruta: I need to ask you for something. I'm new at this part, so I'll say it plainly.
 haruta: I'm going to tell them. The seven. At breakfast, probably, when everyone's at one table and nobody has anywhere to be.
@@ -480,6 +487,7 @@ haruta: You don't have to answer it. You don't have to fix it. I only need someo
 @cam closeup haruta
 > He stands up. It seems to matter to him that it's said standing. He puts his hands at his sides, not in his pockets, not behind his back.
 haruta: I want to debut. With all of you. I've wanted it the whole time, and I let you think I was only happy to be included.
+@cg off
 haruta: I'm not only happy to be included. I want to be in it. I'd choose it again. I'm choosing it now.
 haruta[smile]: …And I want honey butter. The whole bag. That part's less important, but it's true.
 > Nothing falls down. The roof holds. The laundromat sign goes on humming.
@@ -787,6 +795,7 @@ echo: I have ninety seconds. I would like to run the credits. I was promised an 
 @fx film n=1
 @sfx projector
 > The lobby dims into the Dalbit, red seats laid over the old sofas like a double exposure. This time, nobody drifts towards the stairs.
+@cg cg_haruta_x5
 > Haruta sits down in the middle of the longest sofa and pats the place on either side. One for you. Then, looking up at the others —
 haruta: Please sit down. We are about to begin.
 > They do. All of them. Hyunjun takes the far end. Hanbi takes the arm. Charlie comes last, and room is made for him without anyone having to ask.
@@ -796,6 +805,7 @@ echo: SPECIAL THANKS: SEO YEONHWA. MRS OH, GUITAR. THE CAT, WHO DID NOT MOVE.
 @textbox normal
 > Nine people watch the names go by to the very end. Your shoulder is against his. It's the easiest thing in the room.
 > The screen goes white, then grey. Nobody stands up until somebody wants to.
+@cg off
 @fx off
 @bg studio_lobby t=fade d=1.4
 @call echo_farewell
@@ -948,11 +958,13 @@ haruta: You write mine. So we each have it in the other one's handwriting. Neith
 > You write it. The date. The time. After a moment, underneath: *I'm not going anywhere. Take your time.*
 haruta[smile]: That's my favourite line. {p} You knew that.
 > He holds his half up. You hold up yours. The torn edges meet, not straight, the way a ticket is torn at the door, and for a second it is one flyer again.
+@cg cg_haruta_x6
 > Then you each take back your own. The smaller half. The part they give you to keep.
 haruta[smile]: Breakfast? I've got an item at ten past six, and a whole bag of something I'm not sharing.
 haruta: Except with you. In March, and also now.
 > The sun comes up on a shuttered cinema with a schedule taped inside its window. You walk to the corner store side by side.
 > Neither of you hurries. It's a long film, and you've only seen the first reel.
+@cg off
 @ending haruta_someday
 @credits
 @end

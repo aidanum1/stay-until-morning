@@ -49,6 +49,7 @@ hyunjun[thinking]: Is that how it works? You stop holding on, and you get more? 
 hyunjun: Right. So. The roof, because the rain's stopped and you can see the bridge from the corner.
 hyunjun: And the practice room. And the store again, the cat'll be up. And the other store. And the bus stop, we didn't finish the bus stop.
 > He's patting his pockets. He comes up with the receipt from the convenience store. One item on it. Then a pen you've never seen before.
+@cg cg_hyunjun_x1
 you: Where did you get a pen?
 hyunjun: Front desk. Earlier. I was going to give it back. I'm still going to give it back.
 > He flattens the receipt against the wall and starts writing on the blank side. Fast. The pen skips where the paper is thermal and slippery.
@@ -57,6 +58,7 @@ hyunjun: The lounge. The vending machine, to say hi. The laundromat — we shoul
 > Then his hand stops.
 @expr hyunjun thinking
 hyunjun: ...Oh.
+@cg off
 hyunjun: I'm doing it again. It took me two minutes.
 > He holds the receipt out at arm's length and looks at it the way you'd look at a photo of yourself from a bad year.
 hyunjun: It gave me one good hour. One and a bit. And the first thing I do is try to fit nine nights into it.
@@ -172,6 +174,7 @@ songha: ...That's free time. That counts. Continue. I'll referee.
 > Hyunjun pulls his hood down over his eyes and holds out one hand, palm up, unhurried.
 hyunjun: {{playerName}}. You're on my side. Stand where I can hear you.
 > Justin unwraps three triangle kimbap and tears a corner off each. He holds the first one out.
+@cg cg_hyunjun_x2
 > Then he looks at you, and very slightly raises his eyebrows. He's pointing at the wrapper. The bridge store's logo.
 * [playful] Cough once. Meaningfully.
     @rel hyunjun closeness+1
@@ -191,6 +194,7 @@ justin: ...Correct.
 > The second one takes him two seconds.
 hyunjun: Bus stop store. Too much mayo. They always do that. The cat's a fan.
 songha[smile]: Correct. Two for two.
+@cg off
 > The third. He chews. He stops. Under the hood, his mouth does something complicated.
 hyunjun: This isn't any of them.
 hyunjun[thinking]: It's not the third store either. The seaweed's still crisp. Mine have been in a bag since midnight. This is new. Where's this from?
@@ -265,6 +269,7 @@ you: And?
 hyunjun: And I walk off on five.
 hyunjun[smile]: Every time. I don't decide to. I hit the pose, it's good, one, two, three, four — and then I'm already *going* somewhere. My feet leave without me.
 > He shows you. He snaps into a shape: one arm up, chin turned, weight on the back foot. It's good. Even at quarter effort, it's good.
+@cg cg_hyunjun_x3
 > Then, right on time, his heel lifts, his shoulders turn, and he's walking toward the door with his arm still half in the air.
 hyunjun: There. I didn't even feel that happen.
 * [curious] "What's at five? What happens in your head?"
@@ -284,6 +289,7 @@ hyunjun: I'll tell you why it's on my mind tonight. It's a real one. There's no 
 you: Say it.
 hyunjun[thinking]: Someday there's going to be a stage. A real one. Maybe. Nobody's promised. I know that. We all know that.
 hyunjun: And I can see it. I know exactly what I'll do. I'll get the best three minutes of my life, and I'll walk out of them on five.
+@cg off
 hyunjun[thinking]: I'll be thinking about the next thing. And the thing I've waited for since I was fourteen will be behind me, and I'll have *left early*.
 > He picks at the lace of one sneaker. It's pink. It's double-knotted.
 hyunjun: And there's a harder part. I'd like to say it to you.
@@ -384,6 +390,7 @@ hyunjun: Stop three's the roof. It's got no reason. You can have that one. I've 
 > The roof is still wet. The rain left a skin of water on the concrete, and the sky is lying in it, in pieces.
 > A few stars have come out where the cloud has torn. Not many. Seoul doesn't do many.
 > From the corner by the water tank you can see a slice of the river, and one lit span of the bridge, and nothing moving on it.
+@cg cg_hyunjun_x4
 @show hyunjun smile at=c
 hyunjun: No trains till half five. It's just a bridge right now. It's off duty.
 > He doesn't do a lap. You notice, because you were waiting for it.
@@ -392,6 +399,7 @@ hyunjun[thinking]: I'm going to try a thing. I'm going to try not talking. For a
 hyunjun: If I start a sentence, you're allowed to look at me.
 you: Just look?
 hyunjun[smile]: That's all it takes. Ask anyone.
+@cg off
 > So you stand at the wall beside him, and the city does what it does at four in the morning, which is almost nothing, beautifully.
 > A taxi, far off, with its light on. A window going yellow in a block of dark ones. The laundromat sign below, buzzing to itself.
 > He lasts a minute and ten seconds. You can feel him lasting. Then the quiet stops being an effort for him and turns into just quiet.
@@ -802,6 +810,7 @@ hyunjun[smile]: Same picture. I know who's in it now. They're on my ferry.
 @amb birds
 @fx light n=0.5
 > You don't take the first train. He suggests the bridge on foot, and for once it isn't stalling. It's just the way home.
+@cg cg_hyunjun_x5
 > The road bridge runs beside the rail one. The river underneath is the colour of the inside of a shell.
 @show hyunjun smile at=c
 > He has a small paper bag from the store with the cat. He bought one thing. He won't say what it is.
@@ -811,6 +820,7 @@ hyunjun: Two in one night. One thing each time. The clerk asked if I was feeling
 hyunjun: Hi, train.
 you: Hi, train.
 > It doesn't stop. Neither of you needed it to.
+@cg off
 @bg dawn_street t=fade d=1.4
 @time 06:05
 @amb birds
@@ -901,6 +911,8 @@ hyunjun[smile]: I'm choosing my words. It happens. Mark the date.
 @amb subway
 @fx light n=0.6
 > Hapjeong, before the first train. The platform is so clean and empty it looks like it's been set out for someone.
+@cg cg_hyunjun_x6
+@cg off
 @video vid_hyunjun_drama
 @unlock cg:cg_hyunjun_drama
 > The board says three minutes. Your stop is one past the river. His is a ten-minute walk the other way, and he has come down here anyway, and said so.

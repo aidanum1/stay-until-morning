@@ -43,6 +43,7 @@ daniel[neutral]: …Right. About that.
 songha[thinking]: You folded the corner.
 daniel: I folded *a* corner. To mark the page. The page is important.
 > Songha opens it to the fold. Eleven lines in Daniel's handwriting, all capitals, leaning forward like they're running.
+@cg cg_daniel_x1
 > Five ticks. Then nothing. Then, at the bottom, number eleven, with a tick so small it looks embarrassed.
 songha: One to five, done. Eleven, done. Six through ten, open.
 songha: I can't take this back with five open items in it. I'd know they were there. I'd feel them.
@@ -50,6 +51,7 @@ daniel[smile]: So tear it out. I'll keep the page.
 songha[neutral]: There's tomorrow's running order on the other side.
 daniel: …There's a running order for *tomorrow*?
 songha: There's one for every day. It's just that nobody asks.
+@cg off
 > They look at each other over the notebook. It is the most polite standoff you have ever seen.
 @show hyunjun smile at=r
 hyunjun: Did everyone hear? We got time back. That's one more of everything. I'm starting with the coffee, unless—
@@ -176,6 +178,7 @@ justin[laugh]: "Welcome back to the hall. Conditions tonight are: carpet."
     justin: "…I've got nothing. That was just correct."
     daniel[thinking]: You *looked at the floor*. I've walked down this hall since I was fifteen. I never looked at the floor.
 > Daniel's turn. He rolls his shoulders once, sights down the hall, and pushes like a man who has never doubted a chair.
+@cg cg_daniel_x2
 > The chair hits the skirting board, spins twice, and rolls back to him like a dog that's changed its mind.
 daniel[smile]: Lost, with conviction. Tick it off. Six is done.
 @sfx page
@@ -184,6 +187,7 @@ daniel: Seven. Basketball. The hoop is the coin cup. The ball is—
 justin[smile]: Receipts. Hyunjun's got about forty in his jacket. It's on the other sofa. He won't mind. He'll be honoured.
 > The receipts make good basketballs. Small, dense, a little sad. The coin cup goes on the low table, on top of the oldest ring.
 > Daniel shoots left-handed. Then backwards. Then with his eyes shut, calling his own shot in a low broadcast voice.
+@cg off
 > You get—
 * [playful] Shoot one over your shoulder without looking. Commit to it.
     @rel daniel closeness+1
@@ -323,6 +327,7 @@ you: Five. Six. Seven. Eight.
 @cam closeup daniel
 @fx off
 > Four counts of a person standing still. It is the longest part of the dance.
+@cg cg_daniel_x3
 > You don't clap. It's harder than you expected.
 daniel[neutral]: …That's it. That's the fourth ending.
 daniel: Don't be nice.
@@ -346,6 +351,7 @@ daniel: Don't be nice.
 > You get up, and find the paper cups by the water cooler in the hall, and bring one back. The cooler gurgles at you like a relative.
 > He drinks it in one go. He says thank you, and means it rather more than a paper cup deserves.
 daniel[thinking]: Can I tell you why nobody's seen it?
+@cg off
 you: Tell me.
 daniel: If I stop moving in front of people, they think I've forgotten the steps.
 daniel: Or they wait. For the thing. The face, the joke, the point at the camera. And when it doesn't come, they look at each other.
@@ -443,6 +449,7 @@ echo: RECORDS 08-A, 08-B, 08-C, 08-D. OWNER: DANIEL. TYPE: PHOTOGRAPH, FOUR FRAM
 @sfx chime
 > Four boxes on the lowest shelf light up, one after another, left to right. You both sit down on the cold floor to be level with them.
 > Four strips. Four Julys. A boy who gets a little taller in each one.
+@cg cg_daniel_x4
 > In the first he's fifteen and fills the frame like he's trying to get out of it. In the second there are sunglasses, two pairs, one on top of the other.
 > In the third there's the traffic cone, worn as a hat, with enormous dignity. In the fourth he's pretending to cry, holding up a sign that says PLEASE CLAP.
 daniel[smile]: Ah. The sign. I made that sign. I laminated it.
@@ -451,6 +458,7 @@ daniel[smile]: Ah. The sign. I made that sign. I laminated it.
 echo: The administrative matter. Every record in this archive is indexed by one word. The founder insisted. She said dates were for tax offices.
 echo: The word is supposed to be what the record felt like. The owner supplies it. You did not supply any. You wrote "lol" on the form four years running.
 echo: I cannot close an index with "lol" in it. I have tried.
+@cg off
 @textbox normal
 daniel[thinking]: What they felt like. …"Funny"? They're all "funny."
 * [curious] "Look at the last frame. In all four. You're not looking at the camera."
@@ -875,6 +883,7 @@ echo: You are welcome, Recipient Daniel. Your file now reads: CAN SIT STILL. I d
 @fx dust n=0.5
 @cam reveal
 > The breakfast place is four streets from the studio and has been open since five for taxi drivers. It has one long table, by the window, and this morning it has all of you.
+@cg cg_daniel_x5
 > You're last through the door. You stopped outside to look at the building once more from the pavement, because for once you wanted to see a place before you walked away from it, and not after.
 > It's very loud in here. Hyunjun is ordering one more of something. Songha is writing the orders down in a notebook with one page missing. Hamin is counting who hasn't got water.
 > Eight people, nine chairs.
@@ -883,6 +892,7 @@ echo: You are welcome, Recipient Daniel. Your file now reads: CAN SIT STILL. I d
 daniel: {{playerName}}. Here. I've been holding this for ten minutes. Justin tried for it twice. I had to use the jacket.
 > It's the chair next to his. Not the one facing him. He's turned his own a little, so that the two of them point the same way, out at the room.
 > You sit. The plush is already on the table between your places, leaning on the napkin holder, like somebody who got here early.
+@cg off
 @show songha smile at=l
 songha: For the record, I've put you both down for the soup. He said you'd want the soup. He was very sure.
 daniel[smile]: I guessed. You looked like soup.
@@ -1007,6 +1017,7 @@ you: Plus interest.
 daniel[smile]: I'll waive the interest. I'm not waiving the four thousand. It's the principle.
 > You take the pen out of your coat. It's still Songha's. You write it on the back of your half, under his arrow, where *FRAME NINE →* points off the edge of the paper.
 > *First rain of July. 9. The awning. ₩4,000.*
+@cg cg_daniel_x6
 > He reads it over your arm, and then holds out his own half for you to write it there too, so that both copies say the same thing.
 @if var.danielx_twelve == "blank"
     > On the folded page there's a twelve with two small words after it, in his writing: *a next one*. He takes the pen and, carefully, adds a date.
@@ -1018,6 +1029,7 @@ daniel[smile]: Done. Everything's closed. Songha's going to frame it.
 @show songha neutral at=l
 songha: I can hear you. I'm on the stairs. Breakfast is in nine minutes and I'm two people short.
 daniel: Five more minutes.
+@cg off
 songha[smile]: …You have four.
 @hide songha
 > Four minutes. You spend them doing nothing, side by side at a low wall, with the light coming across the roof and warming one half of each of you.
