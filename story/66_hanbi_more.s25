@@ -1,0 +1,1021 @@
+# HANBI — expansion: six chapters between hanbi_route and act4_choice, plus two endings.
+# Motifs carried over: saying things out loud, colour arriving when something is said, the orange sofa,
+# the broken sharpener, the owed pencil, "half is a lot, for me", sentences that stop at a dash.
+# Clock: the route's 04:57 summons is walked back by ECHO (time inside a reconstruction isn't charged to the night).
+# New state: flag.hanbix_potato, flag.hanbix_margin, flag.hanbix_said.
+
+=== hanbi_ch1
+@autosave
+@bg studio_lounge t=fade
+@music quiet
+@time 03:10
+@amb room
+@show hanbi neutral at=c
+> His hand is still held out. You haven't decided what to do about it yet when the ceiling clears its throat.
+@textbox echo
+echo: Correction.
+echo: I announced 04:57. It is 03:10. I apologise.
+echo: Time spent inside a reconstruction is not charged to the night. I counted it anyway. I was built to be early.
+echo: Please disregard the summons. You have one hour and forty-seven minutes.
+@textbox normal
+hanbi: …Oh.
+> He looks at his hand as if it belongs to someone who was very sure of himself a minute ago.
+* [playful] Take it, stand up, and sit straight back down. "False alarm."
+    @rel hanbi closeness+1
+    > He gets pulled down with you. The sofa makes a noise like an accordion being apologised to.
+    hanbi[smile]: …It's had a long night.
+* [sincere] "Good. I wasn't ready to go yet."
+    @rel hanbi trust+1
+    hanbi: …Me neither.
+    hanbi[smile]: I'd only just started saying things. I'd like to keep going.
+* [quiet] Stay where you are. Let the extra hour arrive.
+    @rel hanbi trust+1
+    > He lowers his hand slowly and sits back down beside you. Neither of you mentions it. It was a good hand. It'll keep.
+hanbi[thinking]: …An hour and forty-seven minutes.
+you: What do you usually do with extra time?
+hanbi: …I don't know. I've never had any. I give it to whoever's running late.
+> He looks around the lounge for something that needs doing. His eyes stop at the low table by the window, where the dust sheet sits oddly over a flat shape.
+> He lifts a corner the way you'd lift a blanket off a sleeping cat.
+@sfx page
+> A jigsaw. A thousand pieces, a harbour at dusk, almost finished. There's a gap in the sky the size of two open hands.
+> The box lid is propped behind it. Taped to the lid, in marker gone brown with age: *DO NOT PUT AWAY. NEARLY DONE.*
+hanbi: …It was here. That winter. I remember people doing two pieces on their way to the door.
+you: Six years of nearly done.
+hanbi[sad]: …Nobody put it away. They just covered it.
+hanbi: …Someone should finish it. Before the morning. It shouldn't go in a skip with a hole in it.
+you: We have an hour and forty-seven minutes.
+hanbi[smile]: …Forty-six.
+> The loose pieces are in the lid. Forty or so, and every one of them is sky.
+* [curious] "How do you tell them apart? They're all the same blue."
+    @rel hanbi closeness+1
+    hanbi: …They're not. Look.
+    > He lays three in a row on his palm. You look. They're the same blue.
+    hanbi: That one's tired. That one's got the sun behind it. That one's nearly a cloud.
+    > You look again. Annoyingly, he's right.
+* [playful] "I'll take the tired blues. You take the smug ones."
+    @rel hanbi closeness+1
+    hanbi[smile]: …Which ones are smug?
+    you: The ones near the sunset. They know what they've got.
+    > He sorts them into two piles without another word. He gives you the easier pile and thinks you haven't noticed.
+* [sincere] "I've never finished one of these."
+    @rel hanbi trust+1
+    hanbi: …Never?
+    you: They always went back in the box when we moved. Four cities. Four boxes of nearly.
+    hanbi[thinking]: …Then it's two people's first. That's better. Neither of us knows how it's supposed to feel.
+> You work. It's slow and it's easy. The lamp hums. His sleeve brushes yours when he reaches for the top corner. The first time, he glances over to check. After that he leaves his chair where it is, and so do you.
+> He talks more than you expected. It's all colours.
+hanbi: Not that one. That's— grey-blue. Rain colour. It goes lower.
+hanbi: …This is the last of the orange. Where the sun was.
+> You realise what he's doing a few pieces later. He's saying them out loud. Nobody asked him to.
+you: You're narrating.
+hanbi[smile]: …Practice. Tell me if you'd rather I stopped.
+you: Don't stop.
+> The gap closes from the edges in. Two open hands. One. A fist. A thumbprint.
+> Then the lid is empty, and there is one hole left in the sky.
+hanbi: …
+you: Tell me there's one in your sleeve.
+> There isn't. There isn't one under the table or inside the box, either. You both check twice.
+> You go down on your knees and feel under the orange sofa. You come up with a guitar pick, a hundred-won coin, and a great deal of dust.
+you: Guitar pick. From the man who was asleep on his case, probably.
+hanbi[smile]: …Keep the coin. It's been waiting longest.
+> You put the coin in your coat pocket. He looks at the hole in the sky the way he looks at a page.
+> Then he opens his sketchbook at the back, where the cover is stiff grey card, and lays it against the puzzle.
+@sfx pencil
+> He traces the hole. Four quick curves. He scores the line with his thumbnail and works the shape out of the card with slow, patient folds.
+> A jigsaw piece. Grey, and a little furry at the edges, and the right size.
+hanbi: …What colour was it? The sky. There.
+you: I've never seen this harbour.
+hanbi: …Neither have I. Somebody has to say.
+@if var.color == "yellow"
+    > He's already holding the tin open. The yellow pencil is the shortest one in it, by now. Laundromat yellow.
+    you: A lit window. Somebody left a light on, over the water.
+    hanbi[smile]: …It's always on.
+@elif var.color == "green"
+    > He's already holding the tin open. The green pencil is the shortest one in it, by now. Exit-sign green.
+    you: Green. One of those strange skies you get right after the sun goes.
+    hanbi[smile]: …Still doing its job.
+@elif var.color == "red"
+    > He's already holding the tin open. The red pencil is the shortest one in it, by now. Vending-machine red.
+    you: Red. The very last of the sunset. One dot of it.
+    hanbi[smile]: …Small. First thing you see.
+@else
+    > He's already holding the tin open. The blue pencil is the shortest one in it, by now. Archive Wall blue.
+    you: Blue. A bit brighter than the rest. Like something's glowing behind it.
+    hanbi[smile]: …Everyone looks there first.
+> He colours the card in small even strokes and holds it out to you, flat on his palm.
+hanbi: …You do it.
+* [sincere] Put two fingers on one edge of the piece. Wait for his. "Together."
+    @rel hanbi closeness+1 romance+1
+    > He looks at your fingers. Then he puts his own on the other edge, and you carry it over the harbour like something that could spill.
+    > It goes in with the small soft click that cardboard makes. Neither of you takes your hand away first.
+* [playful] Try it upside down first. Frown. Turn it. Try again.
+    @rel hanbi closeness+1
+    hanbi[smile]: …You're doing that on purpose.
+    you: I'm building suspense. Six years. It deserves a moment.
+    > It goes in. He tips his head to you, once, the way you'd acknowledge a good shot across a quiet room.
+* [quiet] "No. You. You never get to finish things."
+    @rel hanbi trust+1
+    > He holds the piece over the gap for a long time. His hand is steady. He isn't hesitating. He's taking his time over it.
+    > Then he presses it in with one finger, and lets out a breath like someone putting down shopping.
+> A harbour at dusk. Finished. One piece of the sky is the wrong colour, and it's the only part you can look at.
+hanbi[thinking]: …It's strange. I thought it would feel worse.
+you: Worse?
+hanbi: …I like things when they're almost done. You noticed.
+hanbi: When something's finished, people say "that's nice," and put it away. It goes in a box. It goes on a shelf.
+hanbi: If it's nearly done, it has to stay out. People have to keep coming back to it.
+> He touches the old note on the lid. *DO NOT PUT AWAY.*
+hanbi[sad]: …I think I've been this note. About a lot of things.
+hanbi: The portrait. I told you I wasn't ready to decide. That's true.
+hanbi: But I was also scared. That if I finished your face, tonight would be finished. And you'd go back in the box.
+> He says it plainly, to the puzzle, and then makes himself look up and say the last part to you.
+hanbi: …I was afraid of that. I'd rather you knew.
+* [sincere] "Then we leave it out. Finished, and out. Both."
+    @rel hanbi trust+1 romance+1
+    hanbi: …Both. I hadn't considered both.
+    you: I've packed a lot of boxes. I know what I put in them, and it was never the things I'd finished. It was the things I'd given up on.
+    hanbi[smile]: …Okay. Both.
+* [playful] "I'm much too awkward a shape for a box."
+    @rel hanbi closeness+1
+    hanbi[smile]: …You are. I've been trying to draw it all night.
+    hanbi: …Okay. No box.
+* [quiet] Turn the lid over and hold the marker out to him.
+    @rel hanbi trust+1
+    > There's a marker in the box, dried almost to nothing. You hold it out. He understands at once. He usually does.
+> He takes the pencil from behind his ear and writes on the lid, under the old note, in small careful capitals.
+> *DONE. DO NOT PUT AWAY ANYWAY.*
+hanbi[smile]: …There. Now it's somebody else's problem. In a good way.
+@goto hanbi_ch2
+
+=== hanbi_ch2
+@autosave
+@bg studio_lobby t=fade
+@music fun
+@time 03:28
+@amb room
+> The lobby is louder than you left it. The noise is coming from the claw machine.
+@show daniel neutral at=l
+daniel: It had the bear by the ear. You saw that. Then it let go, and I'd say it was deliberate.
+@show hyunjun smile at=r
+hyunjun: It didn't let go. It *released* it. There's a difference, and the bear knows it.
+> Hyunjun is sitting on the floor among the convenience-store bags, sorting what's left into eight fair piles.
+> Hanbi takes his corner of the sofa. The sketchbook comes out. Hyunjun notices at once.
+hyunjun: Hyung. Draw me. You drew Daniel's face when the building talked. I saw it over your shoulder, and it was good. I'd like one.
+daniel: You drew my face when, exactly?
+@show hanbi smile at=c
+hanbi: …It was a good face.
+hanbi[thinking]: …Thirty seconds. Each. That's the rule.
+you: Why thirty?
+hanbi: …Any longer and I start being kind. Then it doesn't look like anyone.
+daniel[smile]: I'll time it. I'm a fair timekeeper. Go.
+@sfx pencil
+> Thirty seconds of Hanbi drawing is a different thing from an afternoon of it. No apologising. The pencil doesn't leave the page once.
+daniel: Time.
+> Hyunjun: a great deal of hair, an easy grin, and a triangle kimbap in one hand, half unwrapped.
+hyunjun[smile]: That's me. No argument. How did the kimbap get in? I wasn't holding one.
+hanbi[smile]: …You were about to be.
+> Daniel gets a level, stubborn brow and, in the corner, a tiny claw with a bear held firmly by one ear.
+daniel: …You gave me the bear.
+hanbi: …On paper, it holds.
+> Daniel looks at the page for a moment without saying anything. Then he nods, once, and sets it down with care.
+daniel[smile]: All right. New round. {{playerName}} draws hyung.
+you: Oh, no.
+hyunjun: Seconded. Thirty seconds, same rule. It's only fair.
+> Hanbi goes still. He isn't reluctant. It's more that nobody has ever pointed that question at him before.
+> Then he turns the sketchbook round on his knee and holds out the pencil, the one from behind his ear.
+hanbi[smile]: …You don't have to be good. I told you. I'd just like to see it.
+daniel: Go.
+* [playful] Start with the pencil behind the ear. Get the important things down first.
+    @rel hanbi closeness+1
+    > You draw the pencil. It comes out well. It's a very good pencil. After that there are twenty-four seconds left and an entire person to fit round it.
+* [sincere] Start with the eyes. The way they look at a page.
+    @rel hanbi trust+1
+    > You look up to check. He's looking straight back, holding still the way he asked you to hold still. It costs you four seconds you don't have.
+* [curious] Start with the hair. Ask for the blue pencil.
+    @rel hanbi closeness+1
+    > He passes the tin without a word. You scribble a sea on top of where a head will shortly need to be. It's bold. You can't undo it now.
+> Thirty seconds turns out to be no time at all. You draw faster. It gets worse. You add a cardigan, because a cardigan is mostly rectangles.
+daniel: Time. Pencils down. Show the court.
+> You turn the sketchbook round.
+> Nobody says anything for a moment.
+> It's a potato. There's no way round it. A gentle, slightly lopsided potato in a cardigan, with a pencil behind where an ear would go.
+> It's smiling, though. You got that part. It has exactly his small closed smile.
+hyunjun[smile]: I like him. He looks like someone you'd trust with your keys.
+daniel: That's him. I mean it. That's what he's like to be around. Frame it.
+> You risk a look at the subject.
+@cam closeup hanbi
+> Hanbi is laughing the way he does. No sound at all, shoulders going, one hand flat over his eyes.
+> When the hand comes down, he isn't laughing any more. He's looking at the potato quite seriously.
+hanbi: …Can I keep it?
+you: It's your sketchbook.
+hanbi: …I know. I'm asking anyway.
+hanbi[smile]: Nobody's drawn me before. I'm always the one holding the pencil.
+* [sincere] "Then it's yours. I'll do a better one when I've had more than thirty seconds."
+    @rel hanbi trust+1
+    hanbi: …Don't make it better. Make another one. They're different things.
+* [playful] Sign it. Large. With a flourish.
+    @rel hanbi closeness+1
+    > You sign it across the bottom corner like a bank manager. He watches every stroke of your name.
+    hanbi[smile]: …Now it's worth something.
+* [quiet] Turn the book back round to him, and leave your hand on the page a second longer.
+    @rel hanbi closeness+1
+    > He takes the book back carefully, his fingers beside yours on the paper, as if the potato might smudge.
+@cam wide
+hyunjun: Trade you, hyung. For the portrait.
+> Hyunjun sets a banana milk on the armrest. Then he sets a second one next to it, for you, as if that went without saying.
+daniel: I'm going back in. The bear and I have unfinished business.
+hyunjun: I'll spot you one more coin. After that you're negotiating with the machine on your own.
+@hide daniel hyunjun
+> They go. The claw machine starts its awful little song again. Hanbi hasn't turned the page.
+> He's gone back to the lobby drawing from the start of the night. The front desk. The Archive Wall, box by box. The sofas.
+> You look at it properly, for the first time since he finished it.
+> Everyone's in it. Songha with his phone up. Charlie mid-question. Justin stealing something out of Hyunjun's bag. Hamin counting heads.
+> And on the end of the far sofa, a row of water bottles on an armrest, and nobody beside them.
+you: Hanbi.
+hanbi: …Mm.
+you: Where are you?
+> He looks at the page. It takes him a second to understand the question, and that second tells you more than the answer does.
+hanbi[thinking]: …I was the one drawing.
+you: You were also the one sitting there.
+hanbi: …I don't usually. Put myself in. It's— the page is for who I'm looking at.
+> He tries to say it like a rule of the craft. It comes out sounding like something smaller and older.
+hanbi[sad]: …I think I forget. That I'm in the room.
+* [sincere] "Somebody was sitting there. I saw him. He gave me his water."
+    @rel hanbi trust+1 romance+1
+    hanbi: …
+    hanbi[smile]: You remember where I was sitting.
+    you: Far end. So you could see everyone. It was the first thing I noticed about you.
+    > He puts the pencil to the empty cushion. It takes him thirty seconds. He doesn't make it kind.
+    > A tall shape, a bit rounded at the shoulders, with a sketchbook on its knee. It's the first drawing of himself you've seen.
+* [playful] "May I?" Take the pencil, and put the potato in the empty seat.
+    @rel hanbi closeness+1
+    @flag hanbix_potato
+    > You draw it small, in the corner of the sofa. A potato in a cardigan, a pencil behind its ear, presiding over seven bottles of water.
+    hanbi[smile]: …That's going to be in there forever.
+    you: Good. He was there. He should be on the record.
+    hanbi[smile]: …He looks comfortable.
+* [quiet] Hold out your hand for the pencil. Let him choose who holds it.
+    @rel hanbi trust+1
+    > He looks at your open hand. Then he keeps the pencil, and nods, and bends over the page himself.
+    > Nine quick lines. A tall shape with a sketchbook on its knee. He leaves the face for last, from habit. Then he does the face.
+> The lobby drawing has nine people in it now.
+> He holds the book out at arm's length and looks at it the way you look at a photograph that you turn out to be in.
+hanbi: …It looks more crowded.
+you: It looks finished.
+hanbi[smile]: …You keep doing that to my things tonight.
+> He opens the banana milk Hyunjun left, and hands you yours with the straw already in. Then he drinks his own. All of it, not the polite half.
+hanbi: …Thirty seconds is a long time. When you're the one being looked at.
+you: You've been doing it to me all night.
+hanbi[thinking]: …I know. I'm sorry.
+> A pause. You watch him go back for the sentence.
+hanbi: …No. I'm not sorry. I'd do it again. I'm sorry I didn't ask first.
+you: You can ask now.
+hanbi: …Can I keep looking?
+you: Yes.
+hanbi[smile]: …Good. Then I will.
+> Across the lobby the claw machine plays its losing tune. Daniel's voice says, with great dignity, "One more."
+@goto hanbi_ch3
+
+=== hanbi_ch3
+@autosave
+@bg studio_lobby t=fade
+@music studio
+@time 03:45
+@amb room
+@show hanbi thinking at=c
+> At a quarter to four, Hanbi checks his phone, puts the sketchbook in his coat, and stands up.
+hanbi: …I need to do something. Ten minutes. You can stay here.
+you: What is it?
+> He hesitates. It's the look of someone who's been asked what's in his bag, when it's only socks.
+hanbi: …Rounds.
+you: Rounds.
+hanbi: …When we stay somewhere late. I go round. Who's at four percent. Who hasn't had water. Who's fallen asleep somewhere with a draught.
+hanbi: It isn't a big thing. It's just— things go better if somebody's checked.
+you: Does anyone know you do it?
+hanbi[smile]: …They think the water walks.
+* [sincere] "Can I come? I'd like to see how it's done."
+    @rel hanbi trust+1
+    hanbi: …There isn't much to see. That's the point of it.
+    hanbi[smile]: …But yes.
+* [playful] "Does it come with a uniform? A lanyard?"
+    @rel hanbi closeness+1
+    hanbi[smile]: …A cardigan. You're underdressed.
+* [quiet] Stand up, and hold out your arms for whatever needs carrying.
+    @rel hanbi closeness+1
+    > He looks at your arms for a moment longer than the question needs. Then he nods.
+> From behind the sofa he takes three bottles of water, the phone charger, a packet of tissues and a folded hoodie that isn't his.
+> He looks at the pile. He looks at you. Then, slowly, as if the floor might object, he holds out the water and the tissues.
+hanbi: …Half.
+you: Half is a lot. For you.
+hanbi[smile]: …You remembered that.
+@bg studio_hall t=fade
+> The corridor of doors is dim and blue. Halfway down it, someone is walking in a slow circle, patting each of his own pockets in turn.
+@show charlie thinking at=l
+hanbi: …You call it. Before I do. What does he need?
+* [curious] "His phone. He's done the same four pockets twice."
+    @rel hanbi trust+1 closeness+1
+    hanbi: …Yes.
+    hanbi[smile]: …You're quick. It took me a month to learn the pockets.
+* [playful] "A map?"
+    @rel hanbi closeness+1
+    hanbi[smile]: …Also true. But look at his hands.
+    > Four pockets, patted in order. Then again. Oh.
+* [quiet] Watch Hanbi watching him, and learn how it's done.
+    @rel hanbi trust+1
+    > He doesn't look at Charlie's face. He looks at his hands, his shoulders, where his feet are pointing. He reads him like a page.
+    hanbi: …Pockets. Twice. It's the phone.
+> Hanbi takes a phone out of his own cardigan. It's fully charged. There's a sticker of a plane on the case.
+charlie[smile]: Hyung. That's mine. …Did I hand it to you, or did you rescue it?
+hanbi: …You put it on the charger at one. Then you went to look at the rooftop.
+charlie: I did do that. And it's at a hundred. I don't think I've ever got it past sixty. Thank you.
+> Charlie pockets the phone. Then he notices you, and the water in your arms, and puts it together.
+charlie[smile]: You're helping. Good. He should have help. He's just never asked for it.
+> He says it lightly, as a plain fact, and goes off down the hall with one hand raised over his shoulder.
+@hide charlie
+hanbi[thinking]: …"You should have help."
+you: He's not wrong.
+hanbi: …He's almost never wrong. He just arrives late.
+@bg studio_practice t=fade
+@sfx step
+> The practice room is lit by one strip light. Somebody's phone is propped on the floor against the mirror, playing a beat at half volume.
+@show justin smile at=r
+> Justin is dancing. Not rehearsing. Just moving, the way other people pace. He spots you in the mirror, finishes the eight-count anyway, and lands it.
+justin: Hyung. And guest.
+> There's already a bottle in his hand. You didn't see Hanbi cross the room, and you were standing next to him.
+justin[smile]: See, that's the thing about him. You never catch it happening. I turn round and there's water. It's like living with a very thoughtful ghost.
+justin: And tonight the ghost has an apprentice.
+you: I'm on tissues.
+justin: Respect. Start at the bottom. Work up to chargers.
+> Hanbi opens the window a hand's width, because the mirror has started to fog. He hangs the folded hoodie on the barre. It's Justin's, of course.
+justin[smile]: …Thanks, hyung.
+> He says it to the hoodie, more or less. Then he looks at you, and for half a second he's entirely serious.
+justin: Hey. Make him drink one too. He counts us and forgets there's one more.
+you: I'm learning that.
+justin[smile]: Fast learner. Okay. I've got sixteen more bars in me. Go and haunt someone else.
+@hide justin
+@bg studio_frontdesk t=fade
+@music quiet
+> Back round to the front desk. One bottle of water left. It's in your hands, and you've been thinking about Justin's instruction the whole way down the corridor.
+@show songha neutral at=l
+> Songha is behind the desk with a clipboard. You don't know where he found a clipboard. It seems likely it found him.
+songha: Oh, good. You're both here. I've got an item.
+hanbi: …What do you need?
+songha: Nothing. *I've* got an item. For you. 03:55: Hanbi sits down. You've skipped it four times tonight, so I've moved it four times.
+hanbi[surprised]: …I'm on the schedule?
+songha[smile]: Hyung. You've always been on the schedule.
+> He turns the clipboard round. It's a page in his tidy handwriting, soft at the corners from being carried about. It's clearly older than tonight.
+> *HB — Hamin keeps one back (food). Justin refills bottle. Daniel: make him laugh before stages. Songha: chair.*
+> Hanbi reads it. Then he reads it again, more slowly. He looks like a man counting his change and finding there's too much.
+hanbi: …What is this?
+songha: The rota. For you. It's been running about a year.
+hanbi: …For me.
+songha: Did you think the kimbap walked? You do the rounds. We know. Everybody knows. We leave you to it because it's how you say things.
+songha: We just thought someone ought to say it back.
+> He isn't teasing. It's as gentle as you've heard Songha be all night, and he gets through it quickly, in case anyone notices.
+@cam closeup hanbi
+hanbi[shy]: …
+hanbi: I didn't know.
+songha: No. You weren't supposed to. You're very hard to look after if you can see it coming.
+> Hanbi looks at the page for a long moment. He isn't embarrassed. He's taking it in slowly, the way he takes in a face before he draws it.
+hanbi: …The refills. I thought I was just— not drinking much.
+songha[smile]: Justin's very quiet about it. {{playerName}}, he'll be pleased it went a whole year unnoticed.
+@cam wide
+* [sincere] Hold the last bottle out to him. "This one's yours. Drink it where I can see."
+    @rel hanbi trust+1 romance+1
+    > He takes it. He looks at you over the top of it, and drinks. More than the polite mouthful. Half the bottle, in one go.
+    hanbi: …I was thirsty.
+    you: I know. You have been since the lobby.
+    hanbi[smile]: …You call it before I do, now.
+* [playful] "Can I see the rest of the rota? Is there a page four?"
+    @rel hanbi closeness+1
+    songha: Absolutely not. It's laminated. It's classified. …I'm adding you to it.
+    > He writes. You read it upside down: *{{playerName}} — water, last bottle.* He underlines it twice.
+    > You hand Hanbi the last bottle. He opens it and drinks, because it's on the schedule now, and you don't argue with the schedule.
+* [quiet] Put the bottle in his hand. Pull out the chair behind the desk. Say nothing.
+    @rel hanbi trust+1 closeness+1
+    > He looks at the bottle. At the chair. At you. It's his own trick, done back to him, and he knows it.
+    hanbi[smile]: …That's what it's like. On the other side.
+    > He sits. He drinks. Songha ticks something on the clipboard and looks very satisfied.
+songha: 03:58. Hanbi sat down. Three minutes late. I'll allow it.
+songha[smile]: Rounds are covered till five, hyung. I've got Hamin on the upstairs. Go and have the rest of your night.
+@hide songha
+> He goes, clipboard under his arm. Hanbi stays in the chair with the bottle in both hands.
+hanbi[thinking]: …A year.
+you: How does it feel?
+> You watch him nearly say *fine*. You watch him put it down and pick something else.
+hanbi: …Like finding out I've been in the drawing the whole time.
+hanbi[smile]: …I'd like to go somewhere high up. Will you come? I think I need to look at something from far away.
+@goto hanbi_ch4
+
+=== hanbi_ch4
+@autosave
+@bg studio_rooftop t=fade
+@music hanbi
+@time 04:02
+@amb wind
+> The rain has thinned to nothing. The rooftop is wet and wide and smells of cold concrete. Below, the city is a loose handful of lights.
+@video vid_hanbi_drama
+@unlock cg:cg_hanbi_drama
+@show hanbi neutral at=c
+> Hanbi goes straight to the low wall on the alley side and looks over, the way you'd check on something left in the oven.
+hanbi: …There.
+> The alley behind the laundromat, from above. The vending machine, small as a matchbox, with its one red button. The laundromat sign, still on.
+> And the STUDIO 25 sign with its crooked 2. You're looking at it from the back, and the letters are the wrong way round.
+hanbi: …I've drawn this building from every side except this one. Tomorrow there'll be scaffolding. I wanted the last side.
+> He opens the sketchbook on the wall. The wind takes the page at once and tries to turn it for him.
+* [sincere] Pin the page flat with both hands. "I've got it. Draw."
+    @rel hanbi trust+1
+    > Your hands are on either side of the paper, and his pencil moves between them. He's careful at the edges.
+* [playful] Put the hundred-won coin from under the sofa on one corner. "Paperweight. It owes us."
+    @rel hanbi closeness+1
+    hanbi[smile]: …Six years under a sofa. Now it's got a job.
+    > The coin holds one corner and you hold the other three. It's doing about a quarter of the work and would get all of the credit.
+* [quiet] Stand on the windward side of him, so the page lies still.
+    @rel hanbi closeness+1
+    > You don't say why you've moved. After a moment the page settles, and he glances at you, and his shoulder comes to rest a little nearer yours.
+@sfx pencil
+> He draws the alley in long downward lines. He's quick with the walls and slow with the lights.
+> You hold the page. Far below, a taxi goes by. Neither of you says anything for a while, and it's comfortable.
+you: Can I ask you something that isn't about tonight?
+hanbi: …Yes.
+you: What happens after? For you. For all of you.
+> The pencil doesn't stop, but it slows.
+hanbi: …We practise. We wait. We practise more. One day someone tells us a date.
+hanbi[smile]: …That's what I say when the others ask.
+you: The others ask you?
+hanbi: …I'm the eldest. At two in the morning someone always asks if it's going to be okay. I say yes.
+you: Is it?
+hanbi[thinking]: …I don't know. I say yes because it's needed. It isn't a lie. It's— water. You hand it over.
+> He shades the side of the laundromat. The wind pulls at the fringe over his eyes and he lets it.
+hanbi: …Do you know what I've never said?
+you: Tell me.
+hanbi: …"I want to debut."
+hanbi: I say "when it happens." "When we get there." "It'll come." I've noticed I do it. Tonight. Since the drawing.
+hanbi[sad]: …I leave myself out of that one too.
+> He says it to the alley. His voice is as level as ever. His hand has stopped moving.
+hanbi: If I say I want it, out loud, and it takes years— or it doesn't—
+> The dash. He hears it. He breathes in, and goes back for the rest.
+hanbi: …Then everyone heard me want it. And I'm the one who's supposed to be calm.
+hanbi: …I want it very much. That's the thing I don't say. It's a lot to want, out loud.
+> There it is, said, on a wet roof at four in the morning. It doesn't seem to have broken anything. He looks faintly surprised about that.
+* [sincere] "I heard it. And I'm not going to hold it against you, however long it takes."
+    @rel hanbi trust+2
+    hanbi: …However long.
+    you: I know a bit about long. I waited six years to return a pencil.
+    hanbi[smile]: …You haven't returned it yet.
+    you: However long.
+* [playful] "Say it to the laundromat. It's always on. It can take it."
+    @rel hanbi closeness+1
+    > He looks at you. He looks at the sign below. He leans over the wall a very little and says it, not loudly, to a laundromat.
+    hanbi: …I want to debut.
+    > The sign buzzes, flickers once, and steadies.
+    hanbi[smile]: …It heard.
+* [quiet] Keep the page flat. Wait until he says it again, by himself, a bit louder.
+    @rel hanbi trust+1 closeness+1
+    > You don't tell him it's fine, and you don't tell him it'll happen. You hold the paper still so that he has somewhere to put it.
+    hanbi: …I want to debut. With them. All eight.
+    hanbi[smile]: …It's easier the second time. Like your name.
+@flag hanbix_said
+> He goes back to the drawing. The lines come quicker now, and lighter.
+hanbi: …Your turn.
+you: My turn?
+hanbi: …Your letter said "a place you want to stay." That's what you hope for. It isn't what you're scared to want. Those are different.
+> He doesn't look up when he says it, so you have room to answer.
+hanbi: …You don't have to. I'm asking out loud, that's all. I'm trying it.
+* [sincere] "To be missed. When I leave somewhere, I'd like someone to notice the gap."
+    @rel hanbi trust+1 romance+1
+    > It comes out smaller than you meant. It's the kind of thing you'd never put in a letter.
+    hanbi: …Someone did.
+    you: Hanbi—
+    hanbi: …I had a drawing about it. For six years. It had a hole in it exactly your size.
+    hanbi[shy]: …You were missed. I can prove it. I've got it in my coat.
+* [curious] "A door key. One that stays the same for more than a year."
+    @rel hanbi closeness+1
+    hanbi[thinking]: …A key.
+    > He turns to the margin. Six strokes. A small, plain door key, with a loop of thread through it that he colours teal.
+    hanbi: …It doesn't open anything. But it's a start. You can say what colour the door is later.
+* [quiet] "I don't know how to say mine yet."
+    @rel hanbi trust+1
+    hanbi: …Okay.
+    hanbi[smile]: …I know that one. It's where I've lived.
+    hanbi: I'll keep the space. Like the face. It isn't empty. It's just not drawn yet.
+> The wind drops. He finishes the alley in the quiet: the wet paving, the back-to-front sign, the matchbox vending machine.
+> Then he reaches for the tin and stops with his hand over it.
+hanbi: …One colour. Same rule.
+@if var.color == "yellow"
+    hanbi: …Yellow. The laundromat. It should be the one that's on.
+    > He says it first and colours it second. The sign on the page takes the light, and the rest of the alley looks darker and kinder round it.
+@elif var.color == "green"
+    hanbi: …Green. There's an exit sign over the back door. I can see it from here.
+    > He says it first and colours it second. One small green rectangle over a door, doing its job in an empty alley.
+@elif var.color == "red"
+    hanbi: …Red. The button. You can see it all the way from up here.
+    > He says it first and colours it second. One grain of red on a matchbox. It's still the first thing you see.
+@else
+    hanbi: …Blue. The lobby window. The wall's still glowing, a little. It gets out through the glass.
+    > He says it first and colours it second. One blue window at the bottom of a grey building, like a lit aquarium.
+> In the bottom corner he writes the date. Under it, smaller: *04:16. Said out loud: 1.*
+you: You're keeping score.
+hanbi[smile]: …I want to see if it goes up.
+> He closes the sketchbook and snaps the teal elastic round it. He doesn't put it away. He keeps it under his arm, close, the way you keep a thing you aren't finished with.
+hanbi: …Thank you. For holding the page.
+you: It was only the corners.
+hanbi: …It was the wind. I couldn't have drawn it in this wind. I'd have said, "another day."
+hanbi[smile]: …There wasn't going to be another day. So.
+> He takes a last look over the wall. The crooked 2, from behind. Then he turns for the stairwell door, and his hand goes up to check the pencil behind his ear.
+> It isn't there. It's in his other hand. He looks at it as if it's changed hands by itself.
+hanbi: …Huh.
+> On the first stair down he blinks, and the blink lasts slightly too long.
+@goto hanbi_ch5
+
+=== hanbi_ch5
+@autosave
+@bg studio_lounge t=fade
+@music quiet
+@time 04:20
+@amb room
+> The lounge is as you left it. One lamp. The harbour on the table, finished, with its one piece of home-made sky.
+@show hanbi neutral at=c
+> Hanbi stops just inside the door. He's looking at the sofa the way a person looks at the far end of a swimming pool.
+> You've spent a whole night learning how he reads other people. It works on him, too.
+> The pencil in the wrong hand. The blink on the stairs. He's been on his feet since the alley.
+you: Hanbi.
+hanbi: …I'm fine.
+> He says it before you've asked anything. Then he hears it. One corner of his mouth goes up, caught.
+hanbi[smile]: …I said it before you asked. That's a habit. I'm working on it.
+* [quiet] Move his bag off the sofa cushion. Don't say a word. It's his own trick.
+    @rel hanbi trust+1 closeness+1
+    > You lift the bag off the cushion and put it on the floor. It isn't a question. It's also, very clearly, a question.
+    hanbi[smile]: …That's mine. You're using mine.
+    > He sits. The sofa takes him in with a long orange sigh.
+* [sincere] "You're tired. You don't have to be fine about it."
+    @rel hanbi trust+1
+    hanbi: …
+    hanbi: …I'm tired.
+    > He tries it out the way he tried the colours. Out loud, and then a pause to see what happens. Nothing falls over. He sits down.
+* [playful] "Item. 04:20: Hanbi sits down. I'm told it's laminated."
+    @rel hanbi closeness+1
+    hanbi[smile]: …He's got to you. He's got to everyone.
+    > But he sits. You don't argue with the schedule.
+> He sits like a guest, upright, with his hands on his knees. His eyes keep going to the door.
+hanbi: …I can't. When the others are still up. Someone might—
+you: Need something.
+hanbi: …Yes.
+you: Give me the list.
+hanbi[thinking]: …The list?
+you: You've got one. Who's at what percent. Who hasn't eaten. Say it, and then I'm the one carrying it. Ten minutes.
+> He looks at you for a long moment. You can see him deciding whether he can hand it over.
+> Then he tells you, quietly, with his eyes already half shut. The whole building.
+hanbi: …Charlie's phone is full, but he'll leave it somewhere. Probably the stairs. Daniel gets sad after the fifteenth try. He needs someone to say the machine's rigged.
+hanbi: Hyunjun will say he isn't cold. He's cold. Haruta says yes to everything, so ask him twice. Justin's fine if there's music.
+hanbi: Hamin looks after everyone else, so nobody checks on Hamin. …Check on Hamin.
+hanbi: Songha— Songha needs to be told he can stop. He won't. Tell him anyway.
+* [sincere] Say it back to him, all of it, in order.
+    @rel hanbi trust+2
+    you: Stairs. Rigged. Cold. Ask twice. Music. Check on Hamin. Tell Songha anyway.
+    > His eyes open for a moment. Nobody has ever read him his own list.
+    hanbi[smile]: …You got all of them.
+    you: I've been paying attention. I had a good teacher.
+* [playful] "And Hanbi? What does the list say about Hanbi?"
+    @rel hanbi closeness+1
+    hanbi[thinking]: …There isn't a line for him.
+    you: There is now. "Gets ten minutes. No arguing."
+    hanbi[smile]: …That's a short line.
+    you: I'll add to it.
+* [quiet] Take the charger out of his cardigan pocket and put it in your own.
+    @rel hanbi trust+1 closeness+1
+    > You hold your hand out. He understands, and gives it up: the charger, warm from his pocket, the cable wound in a neat figure of eight.
+    > It weighs almost nothing. You can see how much lighter he is without it.
+hanbi: …Ten minutes. Wake me if Charlie—
+> The sentence stops there.
+> It isn't a dash this time. He's asleep. It happened between one word and the next, like a lamp going off in another room.
+@hide all
+@music stop
+> You don't move.
+> His head has tipped back against the terrible orange cushion. His hands have come off his knees. The sketchbook has slid down between the two of you with the teal elastic still round it.
+> Asleep, he looks like his drawings of other people. Every line is where it happened to fall.
+> Far off, the claw machine plays its tune. A floor above, someone laughs. None of it needs you.
+* [quiet] Keep still. Be one thing in the building that he doesn't have to check on.
+    @rel hanbi trust+1 romance+1
+    > You sit. That's all of it. It's the hardest thing you've done tonight, and the easiest. You've never been any good at staying put.
+    > Minute by minute, you find it isn't difficult here.
+* [sincere] Fold the dust sheet over him, the way he'd do it for anyone else.
+    @rel hanbi trust+1 closeness+1
+    > It's clean. He checked. You pull it up to his shoulders and tuck the edge in, the way he tucks in a scarf.
+    > He doesn't wake. His breathing goes a little deeper, like someone who's been told the door is locked.
+* [curious] Open the sketchbook at the back cover, where a piece is missing, and draw him. Small. In the margin.
+    @rel hanbi closeness+1
+    @flag hanbix_margin
+    > You don't turn any pages. Only the back, beside the jigsaw-shaped hole. A sofa. A long shape asleep on it. A lamp.
+    > You get as far as the face, and you stop. You understand something about him that you hadn't, before.
+    > It doesn't feel right to draw it while he can't look back.
+@sfx door
+> At 04:26 the door with the round window opens a few centimetres.
+@show hamin neutral at=l
+> Hamin. He has a triangle kimbap in one hand. He sees the sofa, and he stops where he is.
+hamin: …He's asleep?
+> He keeps his voice so low that you mostly read it off his face. You nod.
+hamin[smile]: …Good. That's good. He never does.
+> He crosses the room in three quiet steps, puts the kimbap on the arm of the sofa, and goes back to the door.
+hamin: Don't tell him I saw. He'll say sorry about it.
+you: Hamin. Have *you* eaten?
+> He stops in the doorway. Nobody ever asks him. You can see it land.
+hamin[smile]: …Not yet. I'll go now. Thank you for asking.
+@hide hamin
+> The door closes without a click. You tick one line off a list that isn't yours.
+@time 04:31
+@music hanbi
+> At 04:31 he wakes. He doesn't jolt. He comes up slowly, like a swimmer.
+@show hanbi neutral at=c
+hanbi: …How long—
+you: Eleven minutes.
+hanbi: …Who needed—
+you: Nobody. I checked. Charlie came by to ask if you needed anything. I said, "eleven minutes." He kept the corridor quiet for most of them.
+> He laughs before he's fully awake, and it makes a sound. It's low and rough and real. You haven't heard that all night.
+hanbi[laugh]: …Eleven minutes. And nothing happened.
+you: Nothing at all. It was nice.
+@if flag.hanbix_margin
+    > He finds the sketchbook under his hand, open at the back. He looks at the little sofa and the long shape asleep on it. The oval where the face isn't.
+    hanbi: …You left the face.
+    you: I didn't want to draw it while you couldn't look back.
+    hanbi[smile]: …Yes. That's it. That's the reason. I never had the words for it.
+@else
+    > He sees the kimbap on the arm of the sofa. He looks at it, then at the door, then at you.
+    hanbi: …Hamin?
+    you: I'm not allowed to say.
+    hanbi[smile]: …Hamin.
+> He sits up. There's a crease down one cheek from the seam of the cushion. He doesn't know about it, and you decide not to tell him.
+hanbi[thinking]: …Can I say something? It's a new one. I only found it just now.
+you: Say it.
+hanbi: …I've always wanted to be somewhere people can rest. A person like that. It's the thing I know how to be.
+hanbi: I didn't know I wanted one too.
+> He looks at the sofa. At the sheet, at the lamp, at you. He takes the last eleven minutes in slowly.
+hanbi: …I rested. With you there. I've never— not with someone in the room.
+hanbi[thinking]: …I think I'm allowed both. To be it, and to want it. I'd like to hear what you think.
+* [sincere] "You're allowed both. And I'd like to be that, for you. If you'll let me."
+    @rel hanbi trust+1 romance+1
+    hanbi: …
+    hanbi: …I'll let you.
+    hanbi[smile]: …That's the whole sentence. I checked it for dashes.
+* [playful] "Eleven minutes says yes. I've got the data."
+    @rel hanbi closeness+1
+    hanbi[smile]: …Eleven minutes. Songha will want it in writing.
+    hanbi[smile]: …Both, then.
+* [quiet] Hand him back the list. "Ask twice. Music. Check on Hamin." Keep the charger. {if hanbi.closeness >= 4}
+    @rel hanbi closeness+1 romance+1
+    > He takes the list back, because it's his, and he loves it. But the charger stays in your pocket, and he notices, and he lets it.
+    hanbi[smile]: …Half.
+    you: Half.
+> He opens the sketchbook at the alley from above, and finds the corner where he wrote the score.
+> He crosses out the 1. Beside it he writes a 2.
+hanbi[smile]: …It went up.
+@goto hanbi_ch6
+
+=== hanbi_ch6
+@autosave
+@bg studio_frontdesk t=fade
+@music quiet
+@time 04:40
+@amb room
+@show hanbi thinking at=c
+> Twenty minutes left, by ECHO's corrected count. Hanbi has brought you to the front desk. He's looking for something, and he's looking low.
+hanbi: …They moved the letter desk out of the lounge years ago. But nobody here throws anything away. They just put it under something.
+> He crouches behind the counter. You hear a box slide, and a drawer that sticks on the left.
+hanbi[smile]: …There you are.
+> He comes up holding a hand-lettered card, folded in half. *FUTURE LETTER.* The tape on the back has gone the colour of tea.
+> In his other hand there's a small grey machine with a crank handle and a clamp. It's still bolted to a sawn-off piece of desk.
+you: No.
+hanbi[smile]: …Yes.
+you: That's the sharpener. That's the actual sharpener. I fought that thing every morning for a whole winter.
+@textbox echo
+echo: Item identified. Pencil sharpener, Future Letter desk. Reported broken two hundred and fourteen times.
+echo: Fifty-one of those reports are in one handwriting. I will not say whose.
+@textbox normal
+you: …It was a long winter.
+hanbi[smile]: …Fifty-one.
+> He puts it on the counter between you and turns the crank. It goes round a quarter of the way and stops with a crunch.
+hanbi: …I'd like to fix it.
+you: The building's being gutted in four hours.
+hanbi: …I know. I'd still like it to have worked. Once.
+* [sincere] "Then let's fix it. What do you need?"
+    @rel hanbi trust+1
+    hanbi: …A screwdriver. A flat one. And someone to hold it still.
+    you: I can do the second one. I've been practising all night.
+* [playful] "Two hundred and fourteen complaints, and you're the first person to pick it up."
+    @rel hanbi closeness+1
+    hanbi[smile]: …Complaining is a kind of looking after. It's just louder.
+    hanbi: …I need a flat screwdriver.
+* [quiet] Turn the lamp on the desk towards it, and hold the block steady with both hands.
+    @rel hanbi trust+1 closeness+1
+    > He looks at your hands on the wood. It's the same hold as the page on the roof.
+    hanbi[smile]: …You're good at that. Now I need a flat screwdriver.
+> There isn't a screwdriver. There are forty pens, a stapler, and a bowl of boiled sweets set into one single sweet.
+> Then you remember your coat pocket.
+you: Would a hundred won do?
+> The coin from under the sofa. He takes it and fits the edge to the screw, and it turns as if the two of them had arranged it.
+hanbi[smile]: …I told you it had been waiting.
+@sfx click
+> The casing comes off in two halves. He lays out the parts on a tissue in the order they came out, the way he lays out a row of water bottles.
+> Inside, the blades are clean. They always were. The trouble is further in.
+> There's a plug of shavings packed hard as cork, and in the middle of it a snapped pencil point, jammed in at an angle.
+hanbi: …Someone forced it. A long time ago. The lead broke off inside. Nothing could get past after that.
+you: I'd like it on the record that it was already broken when I got here.
+hanbi[smile]: …Noted.
+> He eases the plug out with the tip of his own pencil, slowly, a crumb at a time. You hold the block. Neither of you hurries it.
+hanbi[thinking]: …It's funny.
+you: What is?
+hanbi: …It never worked, so you asked the room for a sharpener. So I got up.
+hanbi: If it had worked, I'd have stayed in the armchair. I'd have drawn you from across the room. You'd have a face, and I wouldn't know your name.
+> The last of the broken lead drops onto the tissue. It's a grey splinter no longer than an eyelash.
+hanbi: …That's what I've been grateful to. For six years. That.
+* [sincere] "You'd have got up anyway. You'd have found a reason. You always do."
+    @rel hanbi trust+1 romance+1
+    hanbi: …You think so?
+    you: You gave your water to a stranger tonight before I'd said a word. You don't need a broken sharpener. It just got there first.
+    hanbi[smile]: …I'd like that to be true. I think, for you, it would have been.
+* [playful] "We should frame it. 'Broken lead, six years old. Introduced two people.'"
+    @rel hanbi closeness+1
+    > He folds the tissue round the splinter, twice, and puts it in the pocket of his cardigan with great seriousness.
+    hanbi[smile]: …I'm keeping it. Don't tell Songha. He'll want it labelled.
+* [quiet] Look at the splinter of lead with him for a moment. It did a lot, for its size.
+    @rel hanbi trust+1
+    > He doesn't throw it away. He folds the tissue round it and puts it in his pocket, next to the old portrait.
+> He puts the machine back together. The coin turns the screw home. He wipes the casing with his sleeve, which he would never normally do to his sleeve.
+> In the drawer that sticks there's a box of pencils, unsharpened, stamped in gold down the side: *STUDIO 25*. He holds one out to you, blunt end first.
+hanbi: …You do it. It was your winter.
+@sfx pencil
+> You put the pencil in, and you turn the crank.
+> It goes round. All the way round, and again. It sounds like paper tearing very neatly. A long curl of wood comes out of the side, with a gold edge, in one piece.
+> You take the pencil out. It's absurdly sharp. Six years, and it took four minutes and a coin.
+@textbox echo
+echo: Sharpener, Future Letter desk. Status: working. I am closing two hundred and fourteen reports.
+echo: …That was very satisfying. I did not know I was waiting for it.
+@textbox normal
+> You look at the pencil in your hand. You know what it's for.
+* [sincere] Hold it out to him. "One pencil. Six years late. Already sharp."
+    @rel hanbi trust+1 romance+1
+    > He looks at it as if it's a much larger thing than a pencil. He takes it with both hands.
+    hanbi: …You gave it back.
+    you: I said I would. I was sixteen, and I meant it.
+    hanbi[smile]: …I know you did. I was there.
+* [playful] "Invoice settled. I'd like a receipt."
+    @rel hanbi closeness+1
+    > He takes the pencil. He tears a corner off the tissue and writes on it with the new point. He hands it over very solemnly.
+    > *Received: 1 pencil. Condition: better than the one I lent. — H.*
+    hanbi[smile]: …Keep that. For your records.
+* [quiet] Reach up, and tuck it behind his other ear. {if hanbi.closeness >= 4}
+    @rel hanbi closeness+1 romance+1
+    > He holds still for it, and his eyes stay on yours while you do it. One pencil behind each ear now. He wears it without a trace of embarrassment.
+    hanbi[smile]: …That one stays where you put it.
+> He turns the new pencil over in his fingers. He tries the point on the edge of the folded card. *FUTURE LETTER.*
+hanbi[thinking]: …I never wrote mine. I told you. I sent a drawing, so I wouldn't have to use words.
+> He takes the old portrait out of his coat and unfolds it along the soft crease. He turns it over. The back is blank.
+hanbi: …There's seventeen minutes. Is that long enough for a letter?
+you: How long is the letter?
+hanbi[smile]: …Short. I'm still me.
+> He writes. He uses words, and he doesn't draw anything. It takes him a long time for how little it is. He reads it over twice before he's satisfied.
+> Then he does the thing you've watched him learn, a line at a time, all night. He turns it round and reads it to you.
+hanbi: …"To me, later."
+hanbi: "You said it out loud. More than once. Nothing broke."
+hanbi: "{{playerName}} was there. They held the page."
+hanbi: "Don't put this away."
+> He folds the portrait back along its crease. Your face isn't finished yet on the front. On the back there's his handwriting.
+hanbi[smile]: …That's three. I'll write it in later.
+> He loosens the clamp, lifts the sharpener off its piece of desk, and puts it in your coat pocket. He tucks it in next to the hundred-won coin.
+hanbi: …It's yours. You complained about it fifty-one times. You've earned it.
+you: What am I going to do with a desk sharpener?
+hanbi[smile]: …Put it somewhere you're staying. It needs to be clamped to something.
+@sfx chime
+@textbox echo
+echo: It is 04:57. I have checked twice, and the laundromat agrees.
+echo: All recipients to the lobby, please. There is one thing left to choose.
+@textbox normal
+> He puts the folded card under his arm. *FUTURE LETTER.* He isn't leaving that for the skip either.
+> Then he holds out his hand, as he did an hour and forty-seven minutes ago. He isn't leading you anywhere. It's there in case you want it.
+> This time there's no correction from the ceiling.
+@time 04:57
+@goto act4_choice
+
+=== hanbi_final
+@bg studio_lobby t=fade
+@music echo
+@amb room
+@time 04:57
+> The others draw back a little, the way people do at a station to give someone room to say goodbye. Nobody is going anywhere, but they do it all the same.
+@show hanbi neutral at=c
+> Hanbi is beside you, at the front desk, with a folded card under his arm and a pencil behind his ear. The line of light along the counter is waiting.
+> He has the look you know by now. There's a sentence coming, and he's carrying it carefully.
+hanbi: …Before it writes anything. Can I ask you something? Out loud.
+you: Ask.
+hanbi: …What was it? Tonight. For you.
+> He doesn't say *it's okay if you don't know*. You can see him deciding not to. He asks, and then he leaves the question where it is.
+hanbi[smile]: …I'll be all right with the answer. I checked.
+> You think of a jigsaw with one cardboard piece in it. A potato in a cardigan. Eleven minutes. A pencil, returned.
+* [romantic] Take his hand, the one that's grey along the edge. "I like you. That's the whole sentence." {if hanbi.romance >= 4}
+    @goto hanbi_ending
+* [sincere] "Tonight I found my person. The one I put my things down next to."
+    @goto hanbi_ending_beside
+* [quiet] "Something I don't want to hurry. I'd like to get it right. Slowly."
+    @goto hanbi_ending_someday
+
+=== hanbi_ending_beside
+@bg studio_lobby t=fade
+@music echo
+@amb room
+@time 04:58
+@show hanbi neutral at=c
+hanbi: …Your person.
+you: If you want the job. It goes both ways. That's the only condition.
+> He thinks about it properly, the way he thinks about which colour to use.
+hanbi[smile]: …I've been doing it since the alley. I'd like to keep it.
+hanbi: …Both ways. I'm new at that half. I'll practise.
+@textbox echo
+echo: RECORD 01 — OWNER: HANBI. SELECTED FOR PRESERVATION.
+echo: The portrait is incomplete. I am preserving it as it is. Incomplete things are my speciality.
+@textbox normal
+@sfx echo
+> Light runs out of the wall and into the small rectangle of glass on the desk. The lounge draws itself, line by line. The rain. The figure at the letter desk. The orange sofa is the only colour.
+@show hyunjun smile at=r
+hyunjun: Of course it's the sofa. Everything else in that room changed. That never did.
+@show daniel smile at=l
+daniel: It's been holding up the whole lounge for years. It's earned the colour.
+@hide hyunjun daniel
+> Hanbi picks up the glass card. He looks at the sofa inside it for a while. You watch him get ready to do something he doesn't do.
+hanbi: …I'd like to ask for something.
+> Eight people stop talking at once.
+hanbi[smile]: …The sofa. The real one. It goes in the skip at nine. I'd like to keep it.
+hanbi: …I don't need it. I want it. I'm saying that on purpose.
+@show songha smile at=l
+songha: He asked for something. Somebody write down the time.
+@show justin smile at=r
+justin: 04:59. Logged. Everybody lift.
+songha[smile]: The practice studio has a lounge with nothing in it. I'll ring about a van. This is the easiest schedule I've ever made.
+@hide all
+@call echo_farewell
+@bg dawn_street t=slow d=3
+@music hanbi
+@amb birds
+@time 05:40
+> It went through the door on the third try. Haruta called the angles, calmly, and was right about the last one.
+> So now the worst orange sofa in Seoul is on the pavement outside the laundromat, in the first sun. It looks like it's been waiting all its life to be outdoors.
+> Songha is pacing up and down with his phone, booking a van. Daniel has his eyes closed along one arm of the sofa. Charlie is on the kerb with two coffees, reading the laundromat's opening hours.
+@show hanbi smile at=c
+> You and Hanbi have the middle. You've put your bag down on the ground, and you haven't kept hold of the strap.
+> He unfolds the old portrait on his knee, the blank oval upward, and takes the pencil from behind his ear. It's the one you gave back.
+hanbi: …I know now. How to draw you.
+you: Since when?
+hanbi: …Since you put your bag down.
+hanbi: I said it when we were sixteen. You looked like you were waiting. I didn't know for what. So I couldn't do the face.
+you: And now you know.
+hanbi: …Somewhere to put your things. That's all. It isn't much to want. You've wanted it a long time.
+> He says it kindly, as a fact, the way he'd tell you your phone was at four percent. It goes through you like warm water.
+hanbi: …Hold still. Thirty seconds. I won't be kind.
+@sfx pencil
+> You hold still. The pencil doesn't leave the page. Across the alley the laundromat's dryers turn. Behind you, Songha confirms a van.
+> Then he turns the portrait round.
+> It's you, at sixteen and tonight, both at once. He hasn't made it kind, and it isn't flattering. It's a person who has been told they can stay, and who's beginning to believe it.
+you: …That's what I look like?
+hanbi[smile]: …That's what you look like when you're not waiting.
+* [sincere] "I don't have a word for what you are to me. I'd like one."
+    @rel hanbi trust+1
+    hanbi[thinking]: …Family. The kind you choose. I've got seven already.
+    hanbi[smile]: …There was always a space at the end of the sofa. I thought I'd drawn it wrong.
+* [playful] "Six years, and you did it in thirty seconds."
+    @rel hanbi closeness+1
+    hanbi[laugh]: …Six years and thirty seconds. Don't round it down.
+    hanbi: …I needed all of it. I needed to know who I was drawing. You're family. That's who.
+* [quiet] Lean your shoulder against his, and look at the drawing together.
+    @rel hanbi closeness+1
+    > He leans back, exactly as much. You hold each other up like two books on a shelf.
+    hanbi: …This is what I meant. When I said a place to rest. It's this. It's family. I get one too.
+> He opens the sketchbook to the inside of the front cover. There's a line there in his sixteen-year-old capitals: *IF FOUND, RETURN TO: HANBI.*
+> Underneath it, pressing hard, he writes: *OR {{playerName}}.*
+you: What's that for?
+hanbi: …In case I lose it. It should know where to go.
+hanbi[smile]: …And in case you lose track. Of where to go. It's written down now. Writing stays.
+> You've had four addresses, and none of them ever had you on somebody else's cover. You read the line twice, like a word you're learning to spell.
+> You take the sharpener out of your coat pocket. *Put it somewhere you're staying. It needs to be clamped to something.*
+> The sofa has a wooden rail along the back. You fit the clamp over it and tighten the screw with a hundred-won coin.
+hanbi[thinking]: …There?
+you: It goes where the sofa goes. The sofa goes where you all go. I've decided I'm easy to find.
+> He looks at the sharpener for a long moment. It's a grey machine bolted to a terrible sofa in the morning sun. He is plainly, quietly happy, and he doesn't hide it.
+hanbi[smile]: …Then I'll always have a sharp pencil. And you'll always have to come and use it.
+you: That was the plan.
+hanbi: …It's a good plan. It doesn't have an end date. I checked.
+@show hyunjun smile at=r
+hyunjun: Breakfast. I'm calling it, and I'm buying. All of us. The sofa can hold the table.
+@show songha smile at=l
+songha: The sofa is staying exactly where it is. The van's at nine. Hanbi, I need a charger. I'm at two percent, and I've got a van to manage.
+> Hanbi reaches for his cardigan pocket, and stops. You're already holding it out to Songha. It's still wound in his neat figure of eight.
+songha[smile]: …Ah. There are two of you now.
+hanbi[laugh]: …There are two of us now.
+@hide all
+> He hands you a bottle of water from somewhere. You drink half and hand it back, and he drinks the rest without being asked.
+> *I hope, by the time you read this, you've found a place you want to stay.*
+> You have. It's orange, it's on a pavement, and it leaves in a van at nine. You know exactly where it's going.
+> You stay on it, next to him, until then.
+@ending hanbi_beside
+@credits
+@end
+
+=== hanbi_ending_someday
+@bg studio_lobby t=fade
+@music echo
+@amb room
+@time 04:58
+@show hanbi neutral at=c
+hanbi: …Slowly.
+you: Is that all right?
+hanbi[smile]: …It's how I do everything. I didn't know anyone else wanted it that way.
+@textbox echo
+echo: RECORD 01 — OWNER: HANBI. SELECTED FOR PRESERVATION.
+echo: Status: in progress. I invented that status tonight. I am pleased to be using it again so soon.
+@textbox normal
+@sfx echo
+> Light runs out of the wall and into the small rectangle of glass on the desk. The lounge, the rain, the orange sofa. A figure at a desk, and on its face a single soft line.
+@show daniel smile at=l
+daniel: There's a line on the face now. There wasn't one before. I'd call that progress.
+@show haruta smile at=r
+haruta: I like it like that. It's like a film that stops just before the last scene. You walk home still inside it.
+@show charlie thinking at=c
+charlie: So it's unfinished on purpose.
+haruta: For now. That's the good part.
+@hide daniel haruta charlie
+> Hanbi picks up the glass card and holds it out to you in both hands.
+hanbi: …Keep it for me. I'd like to visit it.
+@show songha smile at=l
+songha: "Visit." He's making appointments. I'll leave room in the calendar.
+@hide all
+@call echo_farewell
+@bg dawn_street t=slow d=3
+@music hanbi
+@amb birds
+@time 05:40
+> There's a bench outside the laundromat, under the sign that's always on. Behind the glass one dryer is still turning. It's somebody's forgotten towels, going round and round.
+@show hanbi neutral at=c
+> You sit. He sits. The alley is peach and grey and very quiet. The STUDIO 25 sign is across the way, with its crooked 2, the right way round again.
+> He has his hands round the folded *FUTURE LETTER* card. He turns it over once, and puts it down on the bench between you.
+@if hanbi.romance >= 4
+    hanbi: …I said it in the drawn room. I'd like to say it again. Out here, where the rain's real.
+    hanbi: …I like you.
+@else
+    hanbi: …In the drawn room I said I wanted to see you again. I didn't know what it was yet. I've found the rest of the sentence since.
+    hanbi: …I like you.
+> There's no dash. He looks at you the whole way through it.
+you: I like you too.
+> It's out, in ordinary daylight, on a bench. The dryer goes on turning. Nothing breaks. It's the easiest true thing you've said in years.
+hanbi[smile]: …Good. I hoped you would.
+hanbi: …I'd thought about what to say if you said it back. It turns out I'd rather just look at you for a minute.
+* [sincere] "I don't want it to be something that happened because a building was closing."
+    @rel hanbi trust+1
+    hanbi: …No. Me neither. I want it to happen on an ordinary day. One we chose.
+* [playful] "We've been awake for twenty-two hours. I'd like to like you on some sleep."
+    @rel hanbi closeness+1
+    hanbi[smile]: …I'd like that too. I think I'd be better at it.
+    hanbi: …An ordinary day, then. One we chose.
+* [quiet] "I've started a lot of things the week before I left. I want this one to start on a day I'm staying."
+    @rel hanbi trust+1
+    hanbi: …Then we pick a day. One where nobody's leaving. I'd like that more than I can— no. I'd like that very much.
+> He takes the new pencil from behind his ear. He tears the card along its fold, slowly, so that there isn't a ragged edge. *FUTURE* on one half, *LETTER* on the other.
+hanbi[thinking]: …It was raining. The first time. It was twenty to four in the afternoon.
+hanbi: …The first rain of spring. 15:40. This bench.
+you: What do I bring?
+hanbi: …The sharpener. I'll bring the portrait, and the pencil you gave back. I'll finish your face here. Then I'll say it again. Then we start.
+you: And if it rains early?
+hanbi[smile]: …Then I'll be early. I was built to be early.
+> He writes it on the back of both halves, in his small careful capitals. *FIRST RAIN OF SPRING. 15:40. THE BENCH. BRING THE SHARPENER.*
+> He gives you the half that says *FUTURE* and keeps *LETTER* for himself.
+hanbi: …It's in writing now. Writing stays.
+you: And until then? Spring's a long way off.
+> He looks almost offended, very gently, in the way he is when someone supposes he's only brought one charger.
+hanbi: …Until then I need sittings. Every week. I'm slow. You've seen how slow.
+hanbi: They're real. I'll see you next week, and the week after. We'll eat. You'll hold still, badly.
+hanbi[smile]: …Spring is just when I stop pretending the sittings are about the drawing.
+you: I already know they're not about the drawing.
+hanbi: …I know you know. I want to say it on the day anyway. Out loud. With the right weather.
+> He unfolds the old portrait on his knee. There's the oval, and the one soft line where a mouth might go.
+@sfx pencil
+> He adds a second line. It's short, near one eye. It's the beginning of the look you get when you're about to laugh.
+hanbi: …One line a sitting. I've counted. It comes out at about spring.
+* [sincere] "I'll be there. I'm writing it down too."
+    @rel hanbi trust+1
+    > You borrow the pencil and copy it onto the back of your hand. *15:40. Bench.*
+    hanbi[smile]: …That'll wash off.
+    you: Then I'll write it again. Every week. It's on my list.
+* [playful] "One line a sitting. What if I turn up twice a week?"
+    @rel hanbi closeness+1
+    hanbi[laugh]: …Then I'll draw thinner lines.
+    hanbi[smile]: …Come twice a week.
+* [quiet] Put the half-card in your inside pocket, with the things you don't pack in boxes.
+    @rel hanbi trust+1
+    > It lies flat against your ribs. *FUTURE.* For the first time in a long while, the word has a date on it.
+    > He watches where you put it. His shoulders come down, as they did outside his door.
+> The sun clears the roof of the laundromat. The sign overhead is still on. It doesn't know it's morning.
+> The sharpener is heavy in your coat. You have an appointment in a city in spring. You've left every city you've lived in, and it has always been in spring.
+> You won't be leaving this one. You've got it in writing.
+songha: Hanbi. Has anyone seen Hanbi? I need a charger.
+> The voice comes down the alley. Hanbi stands up and holds out his hand. He isn't leading you. It's there if you want it.
+hanbi[smile]: …Coming. We're coming.
+> You take it. The dryer in the window is still turning as the two of you go.
+@ending hanbi_someday
+@credits
+@end

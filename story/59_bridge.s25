@@ -1,0 +1,14 @@
+# Shared bridge into the expansion chapters, for routes whose first new chapter does not
+# already contain ECHO's clock correction.
+
+=== echo_refund
+@sfx echo
+@fx memory n=0.5
+> On the way down, every clock in the building changes its mind at once.
+@time 03:10
+@textbox echo
+echo: Correction. It is 03:10.
+echo: My clock has been running one hour and forty-seven minutes fast. I would rather not discuss why.
+echo: I have returned the difference. Please spend it inside the building.
+@textbox normal
+> In the window, the sky that had started thinking about morning thinks better of it, and goes back to being night.

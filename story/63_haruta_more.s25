@@ -1,0 +1,958 @@
+# HARUTA — expansion: six chapters between the route and the final choice, plus two endings.
+# Running motifs carried over from 13_haruta.s25: "anything is fine", the follow-up question,
+# the torn flyer / film club, the corner-store egg sandwich, the scenes in his notes app,
+# staying for the credits, special thanks "after the catering".
+# New flags: harutax_again, harutax_coat, harutax_read, harutax_said.
+# Haruta is already in casual speech here (his room is done).
+
+=== haruta_ch1
+@autosave
+@bg studio_lobby t=fade d=1.2
+@music studio
+@time 03:10
+@amb room
+@cam wide
+> The lobby, side by side, as promised. Nobody applauds. Songha is standing on the second stair with his notebook open, which is his version of applause.
+@show songha neutral at=l
+songha: Good. You're here. First, nobody panic. Then: closing duties.
+@show haruta smile at=c
+haruta: Closing duties?
+songha: She asked us to turn off the lights when we go. I'm interpreting that broadly.
+songha: We leave this building the way we found it. Better, where possible. I've made a list.
+> He turns the notebook round. It is a real list. It has boxes to tick. Two of them are already ticked, in a different pen.
+@show hanbi smile at=r
+hanbi: …I did the mugs.
+songha[smile]: Hanbi did the mugs. Before I wrote "mugs." This is why I wrote it down and ticked it anyway.
+songha: Haruta. The lounge. One projector, borrowed, currently sitting on a tower of chairs like a cat that got up a tree.
+haruta[smile]: That's a fair description.
+songha: It goes back where it came from. With its case, its cap, and its cord. Take {{playerName}}. It's a two-person job.
+* [playful] "Is it a two-person job?"
+    @rel haruta closeness+1
+    songha: It is now. I've written two names.
+    > He has. Yours is spelled correctly. You didn't see him ask anyone.
+* [sincere] "We'll take care of it."
+    @rel haruta trust+1
+    songha[smile]: I know. That's why you got the one with moving parts.
+* [quiet] Look at Haruta, and let him answer for both of you.
+    @rel haruta trust+1
+    > It takes him a second to realise the question has been handed to him. Then he stands a little straighter.
+    haruta: We'll do it. Properly. I'd like to be the one who puts it back.
+    songha[smile]: …Noted. In pen.
+hanbi: The cord's mine. {p} Leave it on the desk after.
+> Hanbi hands Haruta a phone torch that is already switched on. Then a second one, for you. It's not clear where the second one came from.
+@hide songha hanbi
+@sfx step
+@bg studio_lounge t=fade d=1.2
+@music quiet
+> The lounge. The projector is cooling on its tower, ticking now and then like a kettle remembering.
+> Haruta looks at it for a moment with his hands behind his back. The museum posture. Then he takes his hands out, deliberately, and puts one on the machine.
+haruta: It's still warm.
+haruta[thinking]: I've never put away something I got out myself. Not something like this. Usually I notice other people's things and carry those.
+you: What's different about this one?
+haruta[smile]: I went looking for it. Nobody suggested it. If I hadn't, it would have stayed in the cupboard until the builders came.
+haruta: So it's mine to put back. That feels like the second half of wanting something. The less famous half.
+> The case is not in the lounge. Neither is the lens cap. He checks under the chairs, politely, as if they might be embarrassed to be found.
+haruta: The cupboard under the stairs. I took the projector and left everything else. I was in a hurry. I'm never in a hurry.
+* [playful] "You robbed a cupboard. At three in the morning."
+    @rel haruta closeness+1
+    haruta[smile]: A very small heist. One guard. The guard was a mop.
+    haruta: I apologised to it, I think. Out of habit.
+* [sincere] "What were you hurrying for?"
+    @rel haruta trust+1
+    haruta[thinking]: I thought if I stopped to find the case, I'd stop altogether. I'd think, "It's late, it's somebody else's."
+    haruta[smile]: So I carried it out before I could be reasonable. It turns out I can outrun myself over short distances.
+@sfx door
+> The cupboard under the stairs is the size of a confession booth and smells of floor polish. Two torches make it look like a very low-budget mystery.
+> The mop is where he left it. The projector case is behind it: brown, scuffed at the corners, a luggage tag on the handle.
+> And on the shelf above, under a folded dust sheet, a cardboard box. Someone has written on the side in marker: FILM CLUB. DO NOT TIDY.
+haruta[thinking]: …Well. Look at that.
+haruta: I didn't see that before. I was only looking for the thing I came for.
+> He doesn't open it. He looks at it. Then at you. The old question is all over his face: *is this all right? would you rather not? I'm fine either way.*
+> You watch him put that question down, like a bag.
+haruta: I want to open it. Hold the torch?
+* [quiet] Hold the torch steady, and say nothing.
+    @rel haruta trust+1 romance+1
+    > The light stays exactly where he needs it. He notices that it does. He doesn't say so; his shoulders say it for him.
+* [playful] "It says do not tidy. It doesn't say do not open."
+    @rel haruta closeness+1
+    haruta[smile]: You'd make a good lawyer. Or a terrible archivist.
+* [sincere] "It's been waiting for someone who'd ask."
+    @rel haruta trust+1
+    haruta[smile]: Then I'm glad it was me. I'm getting used to saying that.
+@sfx page
+> Inside: three flattened cushions, tied with string. A lens cap. A biscuit tin that rattles. And a ledger with a cloth spine, the kind schools used to give out.
+> He opens the ledger on his knees. Ruled columns, in a dozen different handwritings. DATE. FILM. CHOSEN BY. CUSHIONS.
+haruta: Every Friday. Look. *The Red Balloon* — chosen by Mrs Oh, guitar. *Some Like It Hot* — chosen by the twins. Eleven cushions. Fourteen.
+haruta[smile]: This one just says, "chosen by accident. Wrong reel. Stayed anyway. Nine cushions."
+> He turns pages the way he read the corkboard: slowly, everything, touching only the edges.
+haruta[thinking]: I told you in the lobby that someone else always chose. I said it sounded relaxing.
+haruta: I had it wrong. Nobody here was relaxing. Every week a different person had to stand up and say, "this one. I want you all to see this one."
+haruta: They took turns being brave. They wrote it down so everyone would have to.
+> The last filled row is four years old. Under it, the columns go on, ruled and empty, to the bottom of the page.
+@textbox echo
+echo: Recipient Haruta. That ledger is not a record. It was never submitted to me.
+echo: It is classified as lost property. Lost property may be claimed by anyone who asks politely. You have asked politely all night.
+@textbox normal
+haruta[smile]: Thank you, ECHO. That's the first time it's been useful.
+> He takes the pencil from the ledger's spine. It's on a string. Someone thought of that, years ago, so that nobody could say they had nothing to write with.
+> Under DATE, he writes next Friday's. Under FILM, he stops.
+haruta[thinking]: I haven't chosen yet. I said I would. I don't have it.
+haruta: Before tonight I'd have written "anything" and closed the book.
+* [sincere] "Leave it blank. It isn't a lie if it's blank."
+    @rel haruta trust+1
+    haruta[smile]: Blank isn't "anything." Blank is "not yet." You taught me those were different.
+* [playful] "Write 'to be announced.' Very professional."
+    @rel haruta closeness+1
+    haruta[smile]: T.B.A. The three most confident letters in cinema.
+    > He writes them, small and neat, and underlines them once, like a man signing a lease.
+* [romantic] "Fill in the column you're sure of." {if haruta.trust >= 3}
+    @rel haruta romance+1 trust+1
+    > He looks at you, then at the page. He skips FILM entirely.
+    haruta[smile]: Out of order. {p} I can do that.
+    you: It's your book.
+> Under CHOSEN BY, he writes his name. Katakana first, from habit. Then again beside it in Korean, so the book can read it.
+> It takes four seconds. He looks at it for a good deal longer than four seconds.
+haruta[thinking]: I've signed a lot of things. Attendance sheets. Forms. I don't think I've ever signed for wanting something.
+haruta: It looks strange. Like seeing my name on a poster.
+> He turns the ledger towards you and holds out the pencil on its string. The last column is still empty. CUSHIONS.
+haruta: That one isn't mine to fill in. I can't decide that for anyone. I've checked.
+> You write a *1*. It's a small number. It sits in its column like the first person into an empty cinema.
+haruta[smile]: One cushion. We've had worse Fridays. There's one in here with zero and a drawing of a sad face.
+> He closes the ledger around the pencil and puts it inside his cardigan, against his shirt, the way people carry things they haven't finished being surprised by.
+> The case under one arm. The lens cap in his pocket. And the biscuit tin, which rattles again when he lifts it — not like biscuits.
+haruta[thinking]: Hm. That's not a biscuit sound.
+haruta[smile]: Bring the torch. I want to see what the film club thought was worth a tin.
+@hide haruta
+@goto haruta_ch2
+
+=== haruta_ch2
+@autosave
+@bg studio_lounge t=fade d=1
+@music fun
+@time 03:28
+@amb room
+@show haruta thinking at=c
+> The biscuit tin goes on the lounge table, under both torches, like something about to be operated on.
+@video vid_haruta_drama
+@unlock cg:cg_haruta_drama
+> Inside: a reel of film no bigger than a saucer, and a label in the same marker as the box. HOUSE REEL. PLAY FIRST. EVERY TIME.
+haruta[smile]: They had a house reel.
+haruta: Proper cinemas did that. A little film before the film. "Please don't smoke." "Visit our kiosk." The Dalbit had one about not putting your feet on the seats.
+haruta[smile]: I loved it more than some of the films.
+> He holds the reel up to the torch. Tiny frames. Something pale in each one. Too small to read.
+haruta: Forty seconds, maybe. {p} I want to see it.
+> No *if that's all right*. No *only if there's time*. It comes out whole, and he hears it come out, and lets it stand.
+* [playful] "That's three wants in twenty minutes. You're on a streak."
+    @rel haruta closeness+1
+    haruta[smile]: Don't count. If you count, I'll start editing myself.
+* [sincere] "Then let's see it."
+    @rel haruta trust+1
+    haruta[smile]: Just like that. I keep expecting a form to fill in.
+* [careful] "Do you know how to thread one of these?"
+    @rel haruta trust+1
+    haruta: No.
+    haruta[smile]: I've watched about a thousand films, and I have never once been the one in the booth. I'm all audience.
+> The projector's case has instructions glued inside the lid. A diagram, numbered one to seven, with a confident little arrow at every step.
+> Step four has been torn off. Where it was, someone has written in biro: *you'll work it out. — Mrs Oh.*
+haruta[thinking]: Mrs Oh believes in us.
+you: Mrs Oh has never met us.
+haruta: That's when it's easiest to believe in people.
+> He pushes his sleeves up again. You hold the diagram. It is, Songha would be pleased to know, a two-person job after all.
+haruta: One. Reel on the front arm. Done. Two — film comes off the top. Or the bottom. Which way is the arrow pointing?
+* [playful] "Up. Definitely up. Probably."
+    @rel haruta closeness+1
+    haruta[smile]: "Definitely, probably." I'm putting that on the poster.
+* [sincere] "I can't tell. Try it, and we'll find out."
+    @rel haruta trust+1
+    haruta[smile]: Try it and find out. Nobody has ever given me that as an instruction. I like it.
+> Three. Five. Six. At four, he simply looks at the gap in the diagram, looks at the machine, and makes a loop with his finger that seems to satisfy them both.
+@sfx projector
+> The rectangle on the wall stops being empty.
+> A countdown, scratched into the film by hand: 5, 4, a 3 that is clearly a 3, a 2 that is facing the wrong way —
+> — and then the lounge. This lounge. Upside down. A cushion is walking across the ceiling, backwards, away from a chair.
+haruta[thinking]: …
+haruta: It's upside down.
+you: And backwards.
+haruta: And backwards.
+> The cushion reverses with great dignity off the top of the wall. A title card arrives, mirror-written and standing on its head. Then white.
+> Haruta laughs. Not the polite one, the one that fits into a conversation. This one is low and unguarded and goes on longer than he means it to, and he rests a hand on the chair tower until it's done.
+haruta[laugh]: It left. The cushion walked out on us. That's the bleakest forty seconds I've ever seen.
+@sfx step
+@show daniel smile at=r
+daniel: That was Haruta laughing. Properly. I came to see what earns that.
+@show charlie smile at=l
+charlie: There's a film running and nobody sent for me. I'm choosing not to take it personally.
+haruta[smile]: There's a film. It's forty seconds. I've ruined it.
+daniel[smile]: Then I have to see it. Ruined is my favourite genre.
+> Rewinding takes two people and one false start. Daniel offers advice the whole time. None of it is about projectors.
+@sfx projector
+> Upside down. Backwards. The cushion departs.
+daniel: So it's about a cushion who has had enough. I respect that.
+charlie[smile]: Or he got all the way to the chair and thought better of it. I've left parties like that.
+daniel: Look at the walk, though. That's a resignation. He's already cleared his desk.
+haruta[thinking]: …I think he went to get the other cushions.
+> They both turn to look at him.
+haruta: He got to the chair and saw it was only one chair. So he went back for everyone. You just can't see it, because the film ends.
+charlie[smile]: …That's better than either of ours. Annoyingly.
+daniel[smile]: Because it's Haruta. He'd give a cushion a reason.
+daniel: Right way up next time, director. We've got a claw machine to say goodbye to. Charlie's going to make a speech.
+charlie[smile]: A few words. {p} There's a difference, and I intend to observe it.
+@hide daniel charlie
+> They go. Their voices go on down the corridor, arguing about whether a cushion can hand in its notice.
+> Haruta rewinds alone this time. His hands already know where step four goes.
+haruta: Flip the reel. Feed from the other side. {p} There. I think Mrs Oh would nod.
+@sfx projector
+@music quiet
+> 5, 4, 3, 2.
+> The lounge, years ago, the right way up. The same sofas, less faded. A cushion inches across the carpet one frame at a time, in the patient jerk of stop-motion.
+> It reaches a chair. It hops onto the seat. Behind it — from under the sofas, off the shelves, out of a guitar case — come more cushions. Eleven. Fourteen.
+> Then a card, hand-lettered, held up to the camera by two hands in a cardigan not unlike his: PLEASE SIT DOWN. WE ARE ABOUT TO BEGIN.
+> White. Tick, tick, tick.
+haruta[smile]: …He did go back for everyone.
+you: You guessed the ending.
+haruta: I didn't guess. I wrote the one I wanted, and then it happened to be there.
+haruta[smile]: That almost never works. Don't tell anyone it worked.
+> He stands with his hand on the warm lamp housing, looking at the blank wall as if the cushions might come back for a bow.
+haruta: {{playerName}}. Again?
+> One word. Not *would you mind*. Not *we should probably go*. He asks it the way you'd ask for more of something at a table where you know you're welcome.
+* [sincere] "Again."
+    @rel haruta trust+1 closeness+1
+    @flag harutax_again
+    haruta[smile]: You didn't even look at the time.
+    you: Neither did you.
+* [playful] "Again. But I'm reviewing it properly this time."
+    @rel haruta closeness+1
+    @flag harutax_again
+    haruta[smile]: Be fair. It's a debut work. The lead is a cushion.
+    you: The lead is very good.
+    haruta: The lead is *extraordinary.*
+* [romantic] "As many times as you like. I like watching you watch it." {if haruta.closeness >= 3}
+    @rel haruta romance+1 closeness+1
+    @flag harutax_again
+    > He holds your eyes a moment longer than the line needs. He used to look away. He doesn't now.
+    haruta[smile]: …You sit in the back row of everything, don't you. Even when you're standing next to me.
+    haruta: I like it. I'm saying so.
+@sfx projector
+> So you watch it again. And once more, because the third time you both notice the cat asleep on the windowsill in the background, entirely unmoved by cinema.
+> He says the title card along with it the third time, under his breath. *Please sit down. We are about to begin.*
+haruta: I know what plays first on Friday.
+haruta[smile]: I still don't know what plays second. But first is handled. First is forty seconds and a cat.
+> He winds the little reel back into its tin and presses the lid down with both thumbs. He doesn't put it in the box marked DO NOT TIDY.
+> It goes into his cardigan pocket, on the other side from the ledger. He is starting to be lopsided with things he's decided to keep.
+@textbox echo
+echo: For accuracy: I have no record of that film. It was never submitted.
+echo: I watched it three times just now. I would like to note that the cat does not move in any of them. I checked each time.
+@textbox normal
+haruta[smile]: Special thanks: the cat.
+haruta: Large font. Before the catering.
+@hide haruta
+@goto haruta_ch3
+
+=== haruta_ch3
+@autosave
+@bg studio_frontdesk t=fade d=1.2
+@music studio
+@time 03:46
+@amb room
+@cam wide
+> The front desk. Hanbi's extension cord, coiled the way he coils it, goes on the counter. The cupboard key goes back on its hook.
+> You hang it without looking. Third hook from the left, under the one with the green tag. Your hand knew before you did.
+@show haruta thinking at=c
+haruta: You didn't check the numbers.
+you: I used to work here. A long time ago. Weekends.
+haruta[smile]: I know. It's in half the records. But knowing it and watching your hand do that aren't the same.
+> He comes round the counter slowly, asking permission from the furniture. There is a stool, a drawer that sticks, a visitors' book, and a brass bell with a worn spot where the thumbs went.
+haruta: What was it like? Sitting here.
+* [sincere] "Quiet. I liked knowing where everything went."
+    @rel haruta trust+1
+    haruta[thinking]: Because nothing else stayed where it was.
+    > He says it gently, not as a guess. You told him in the cinema; he kept it.
+    haruta: A desk where the keys have numbers. I understand that completely.
+* [playful] "Mostly I told people the toilet was upstairs."
+    @rel haruta closeness+1
+    haruta[smile]: Every building needs one person who knows that. It's a sacred office.
+    haruta: I'd have asked you three times and apologised each time.
+* [quiet] Pull the sticking drawer open with the little lift-and-tug it needs.
+    @rel haruta trust+1 closeness+1
+    > It opens first go. Inside: rubber bands, a dead pen, a roll of raffle tickets. He watches your hand, not the drawer.
+    haruta[smile]: It remembers you. Drawers don't do that for just anybody.
+> He sits on the stool. It's too low for him; his knees come up. He puts both hands flat on the counter like a clerk in a very old film.
+haruta: Good evening. Welcome to Studio 25. How may I—
+haruta[smile]: No. I'd be hopeless at it. Someone would ask which room, and I'd say whichever they preferred.
+> The roll of raffle tickets has come out of the drawer with your hand. Pink, numbered, perforated. He looks at it like a man who has just had an idea and has decided to keep it.
+haruta[thinking]: I'd like to suggest a game. I don't usually. Daniel runs that department.
+haruta: I ask you a this-or-that. You answer in three seconds. Then I'm allowed one follow-up question. Exactly one.
+haruta: Then we swap. Every answer earns a ticket.
+you: And if somebody says "anything is fine"?
+haruta[smile]: Then somebody rings the bell. So the whole building knows.
+> He says *somebody* with the calm of a man who knows exactly who.
+haruta: I'll start easy. Rain on the window, or rain on an umbrella?
+* [sincere] "On the window. From inside, with nowhere to be."
+    @rel haruta trust+1
+    haruta: Follow-up. Do you often have nowhere to be?
+    you: Almost never. That's why.
+    haruta[smile]: Ticket. That was a good one. I'm keeping the answer as well.
+* [playful] "Umbrella. It's the only time rain sounds expensive."
+    @rel haruta closeness+1
+    haruta[smile]: Follow-up: whose umbrella?
+    you: Borrowed. Never returned.
+    haruta: Then you owe a man a shop visit. Handle first. Ticket.
+* [quiet] "Neither. The minute after it stops."
+    @rel haruta trust+1 closeness+1
+    haruta[thinking]: That wasn't one of the options.
+    haruta[smile]: …You're allowed. Follow-up: why that minute?
+    you: Everything's still wet, and nobody's decided what to do yet.
+    haruta: Two tickets. One for the answer and one for cheating beautifully.
+> He tears them off along the perforation and lays them on your side of the counter, straight, like dealing a card.
+you: My turn. Salt or seaweed?
+haruta: Seaweed.
+haruta[thinking]: …I don't even like seaweed much. That was reflex.
+you: Follow-up. What do you actually like?
+haruta[thinking]: Honey butter. I've never said so, because there are eight of us and one bag, and it's always gone.
+haruta[smile]: Three years of wanting honey butter, and I just said "seaweed" with total confidence. That habit has deep roots.
+> Ticket. He tucks it into his shirt pocket behind the film-strip pin, very seriously.
+you: Subtitles or dubbed?
+haruta: Subtitles. I want the real voices, even when I can't follow them. Especially then.
+you: Morning or night?
+haruta: Night. This one. Specifically.
+you: First row or last?
+haruta: Whichever you—
+> He hears it. You both hear it. His hand is already halfway to the bell, like someone paying a fine he agrees with.
+@sfx bell
+> It is much louder than either of you expected. It goes out into the lobby and up the stairwell and comes back.
+> From two floors up, faintly, Hyunjun: *Was that Haruta?* And Justin, unhurried: *That's one. I'm keeping count.*
+haruta[laugh]: They don't even know the rules. They just know.
+* [playful] "How did it feel, paying the fine?"
+    @rel haruta closeness+1
+    haruta: Fair. Honestly. It should always have cost something. It was free for too long.
+* [sincere] "You were being kind. You just did it in the wrong column."
+    @rel haruta trust+1 romance+1
+    haruta[thinking]: The wrong column.
+    haruta[smile]: That's exactly it. I put "what would please you" in the box marked "what I want." For years. The accounts don't add up.
+* [quiet] Slide him a ticket anyway.
+    @rel haruta trust+1
+    > He looks at it. Then at you.
+    haruta[smile]: For what?
+    you: For ringing it yourself.
+> He straightens on the stool. Rolls his shoulders, like a swimmer on a block.
+haruta: Again. Faster. Don't give me time to be polite.
+you: Tea or coffee?
+haruta: Tea.
+you: Window or aisle?
+@if var.seat == "aisle"
+    haruta: Window. You have the aisle. I've arranged my whole life around that in one night.
+@elif var.seat == "back"
+    haruta: Window. I'll describe what's outside, and you can watch the carriage. Between us we'd miss nothing.
+@else
+    haruta: Window. We can't both have the middle on a train. I've thought about it.
+you: Long film or short?
+haruta: Long. With an interval. And ice cream.
+you: Stage or seats?
+haruta: Stage.
+> The word is out and sitting on the counter between you before he has looked at it.
+> The game stops. Not awkwardly. The way a film stops when the projectionist has seen something in the frame.
+haruta[surprised]: …I said stage.
+haruta[thinking]: I was sure I'd say seats. I'm the one who loves being in the audience. I know where I like to sit in fifty different cinemas.
+haruta: If you'd given me ten seconds, I'd have said, "both are nice." I'd have meant it, too.
+> He turns the ticket roll over and over in his hands.
+haruta: The slow answers are the polite ones. I hadn't noticed that. The fast ones come out before I can dress them.
+you: I get a follow-up.
+haruta[smile]: You do. Exactly one.
+* [sincere] "What's on the stage, when you picture it?"
+    @rel haruta trust+1
+    haruta[thinking]: Eight of us. Lights I can't see past. And one second, right before the music, when nobody's told me what to feel yet.
+    haruta: I've never said that to anyone. It sounds like a lot, out loud.
+* [quiet] "I'll save it. Ask me to ask you later."
+    @rel haruta trust+1 romance+1
+    haruta[smile]: You can save a follow-up?
+    you: House rules. I used to work here.
+    haruta[smile]: …Then I'll ask you to ask. When I've found somewhere with more air.
+* [playful] "Do you want the ticket, or do you want to pretend you said seats?"
+    @rel haruta closeness+1
+    haruta[smile]: The ticket. I said it. It's mine.
+> You tear it off. He doesn't put this one in his pocket with the others. He holds it, number up, reading it like a fortune.
+haruta: Two hundred and six.
+haruta[smile]: I'm told the roof needs its chairs brought down. It's on Songha's list, under "mugs."
+haruta: Come up with me? There's something I want to say where the ceiling's further away.
+> He rings the bell once more on his way round the counter. Lightly, this time. On purpose.
+haruta: That one wasn't a fine. I just like it.
+@hide haruta
+@goto haruta_ch4
+
+=== haruta_ch4
+@autosave
+@bg studio_rooftop t=slow d=1.8
+@music quiet
+@time 04:04
+@amb wind
+@cam reveal
+> The rain has stopped. The roof is one wide puddle with the city in it, and two folding chairs somebody left open, facing nothing in particular.
+> Songha's list says *chairs, roof, x2*. It doesn't say when.
+@show haruta neutral at=c
+> Haruta tips the water off each seat, then dries them with his cardigan sleeve before you can offer yours. He sits. So do you.
+> For a while, that's all. A taxi goes by, four floors down. The laundromat sign hums. The clouds are coming apart slowly, without any hurry.
+haruta: It's the minute after it stops.
+> He doesn't say anything else for some time. He has the pink raffle ticket in his fingers, folding one corner down and smoothing it flat again.
+> It isn't the old silence, the one where he waits to find out what everyone else would like. He's getting something ready. You can see him setting it out.
+* [quiet] Wait. The chairs aren't going anywhere.
+    @rel haruta trust+1 romance+1
+    > You look at the puddle instead of at him. It seems to be what he needs: company that isn't an audience.
+    haruta: …Thank you. You're very good at not rushing a scene.
+* [sincere] "There was something you wanted to say up here."
+    @rel haruta trust+1
+    haruta[smile]: There is. I'm finding the first line. The first line's always the hard one.
+* [careful] "We can just take the chairs down, if it isn't the night for it."
+    @rel haruta trust+1
+    haruta[thinking]: No. It's the night for it. I checked. {p} But thank you for leaving the door open.
+haruta: Ask me again. The one from the desk.
+you: Stage or seats?
+haruta: Stage.
+> Just as fast. He nods at it, the way you nod at someone you've met once and are glad to see again.
+haruta[thinking]: Can I tell you what I usually say? When people ask about it. Debuting.
+haruta: Teachers. Neighbours. The woman at the dry cleaner's. "Are you excited? Are you nervous? When is it?"
+haruta: I say, "Whenever it happens is fine. However it turns out is fine." And I smile, and they say, "What a calm young man."
+haruta[neutral]: I'm not calm. I've never been calm about it. I've only been quiet.
+> The wind moves the puddle, and the city in it shakes and comes back together.
+haruta: I want it. {p} That's the thing I came up here to say.
+haruta: I want to debut. Not "if it works out." Not "whatever the timing is." I want it so much that some nights I can't watch films about people who get what they want.
+haruta: And I want it with those seven. Specifically. Not some other arrangement that would also be fine. It wouldn't also be fine.
+> He says the last sentence again, more quietly, as if testing whether it's still true the second time. It is.
+haruta[thinking]: Do you know why I never say it?
+* [sincere] "Because if you say it, people can see you not get it."
+    @rel haruta trust+1 romance+1
+    > He turns his head and looks at you for a long moment.
+    haruta: …Yes. Exactly that. Word for word.
+    haruta: If it doesn't come, and I only ever said "anything is fine," then nothing was lost. Nobody has to be sorry for me. I don't have to be sorry for me.
+* [quiet] Shake your head. Let him be the one to say it.
+    @rel haruta trust+1
+    haruta: Because if I say it and it doesn't come — then I'm someone who wanted it. Out loud. With witnesses.
+    haruta: If I only ever said "anything is fine," nothing was lost. Nobody has to be sorry for me.
+* [careful] "Because the others might want it differently?"
+    @rel haruta closeness+1
+    haruta[smile]: That's a kind guess. It's the one I'd like to be true.
+    haruta: No. It's smaller than that. If I say it and it doesn't come, then I'm someone who wanted it. Out loud. With witnesses.
+haruta: And there's a worse one, under that.
+haruta[neutral]: I've said yes to everything for so long that I stopped being sure I chose any of it. The audition. The move. The language.
+haruta: Maybe I just agreed my way here. One "that's fine" at a time. All the way across a sea.
+haruta: I'm scared of that. {p} I'm saying it plainly. I'm scared I'm in the right place by accident.
+> He has folded the ticket so small it barely has a number any more. His hands have gone the way they went after the egg sandwich: careful, and a little white at the knuckles.
+> This is the part where someone usually tells him it will all work out. You can feel the sentence waiting. It would be easy. It would be the wrong column.
+* [sincere] "I can't promise it happens. I can tell you what I saw at the desk."
+    @rel haruta trust+1 romance+1
+    you: I asked you fast, so you couldn't be polite. You said "stage" before you said your own name.
+    you: Nobody agrees their way into an answer that quick.
+    haruta[thinking]: …
+    haruta[smile]: You're using my own evidence against me.
+    you: For you.
+* [quiet] Hold out your hand for the ticket, and unfold it for him.
+    @rel haruta trust+1 closeness+1
+    > He gives it up. You open it out, fold by fold, and smooth it on your knee until the number shows again. Two hundred and six.
+    you: You earned this one in under a second. I timed it.
+    haruta[thinking]: …That's the fast answer.
+    you: That's the one that came out before you could dress it.
+* [romantic] "Your hands are cold. May I?" {if haruta.romance >= 2}
+    @rel haruta romance+1 trust+1
+    haruta[smile]: Yes. {p} I'd like that.
+    > You take the hand with the ticket in it, in both of yours. It's as cold as the chair. He lets out a breath he has clearly been keeping for a while.
+    you: You said "stage" in under a second. People don't agree that fast. They only want that fast.
+    haruta: …Keep holding that. The hand, and the argument.
+> He sits with it. The clouds have opened in one place, over the river. Two stars, or one star and a plane. Songha would know.
+haruta[thinking]: I did choose it. Didn't I.
+haruta: I said "anything is fine" to a thousand small things, so nobody would notice the one enormous thing I wasn't fine about at all.
+haruta[laugh]: That's not easy-going. That's a smuggler.
+> It's the first time he has laughed up here. It's a small one. It counts.
+haruta: I need to ask you for something. I'm new at this part, so I'll say it plainly.
+haruta: I'm going to tell them. The seven. At breakfast, probably, when everyone's at one table and nobody has anywhere to be.
+haruta[thinking]: But I've never said it to a person's face. Only to a notes app. I want to say it once first, where it's safe. To you.
+haruta: You don't have to answer it. You don't have to fix it. I only need someone to be sitting there when it comes out.
+* [sincere] "I'm sitting here."
+    @rel haruta trust+1
+    @flag harutax_said
+    haruta[smile]: You are. You have been all night.
+* [quiet] Turn your chair a little, so you're facing him, and nod.
+    @rel haruta trust+1 closeness+1
+    @flag harutax_said
+    > The chair leg scrapes on the wet roof. It's the only sound. He takes it as the answer it is.
+* [playful] "Row F, seat 8. Go when you're ready."
+    @rel haruta closeness+1
+    @flag harutax_said
+    haruta[smile]: …Thank you. That's exactly where I needed you.
+@cam closeup haruta
+> He stands up. It seems to matter to him that it's said standing. He puts his hands at his sides, not in his pockets, not behind his back.
+haruta: I want to debut. With all of you. I've wanted it the whole time, and I let you think I was only happy to be included.
+haruta: I'm not only happy to be included. I want to be in it. I'd choose it again. I'm choosing it now.
+haruta[smile]: …And I want honey butter. The whole bag. That part's less important, but it's true.
+> Nothing falls down. The roof holds. The laundromat sign goes on humming.
+> He breathes out, slowly, and sits back down. He takes his time about it, like a man setting down something heavy that he carried well.
+haruta[smile]: That took more out of me than a full run-through. {p} Worth it.
+you: How was it?
+haruta[thinking]: Like walking out before anyone calls your name. {p} And then someone being in the front row anyway.
+haruta[smile]: I can do it again. I can do it at breakfast. I know where the first line goes now.
+> He takes the raffle ticket back, and this time it goes in the shirt pocket with the others, behind the pin.
+haruta: Thank you, {{playerName}}. You didn't tell me it would be all right. Everyone always tells me that.
+haruta: You just stayed for the whole thing. It's better.
+> You fold a chair each. They're heavier than they look, and wet, and the stairwell door needs a shoulder. It's a two-person job.
+@hide haruta
+@goto haruta_ch5
+
+=== haruta_ch5
+@autosave
+@bg studio_practice t=fade d=1.2
+@music quiet
+@time 04:22
+@amb room
+@cam wide
+> The folding chairs live in the practice room, in a stack by the mirror. The practice room is not empty.
+@show justin neutral at=r
+> Justin is in the middle of the floor with no music on, walking through something at half speed, lips moving. Five, six, seven.
+> He sees you in the mirror and finishes the eight before he turns.
+justin[smile]: Chairs. Songha's list?
+@show haruta smile at=c
+haruta: Songha's list.
+justin: He's got me on "sweep." I've swept. I'm now doing the floor a favour by dancing on it clean.
+> He looks at Haruta a second longer than the joke needs. Whatever he sees, he doesn't mention it. He says something short in Japanese instead, and Haruta answers, evenly, without looking away.
+justin[smile]: I asked what he'd been doing. He said, "telling the truth, on a roof." That's the best thing he's ever told me.
+> He takes a roll of white tape off his wrist, where it has been living like a bracelet, and lobs it underarm. Haruta catches it against his chest.
+justin: For marks. You've got the face of someone who needs to mark something.
+justin[smile]: I was never here. Floor's clean. Good show.
+@hide justin
+haruta[smile]: How does he always know?
+> He turns the tape over in his hands. Then he looks at the floor: wide, pale, scuffed grey where a thousand turns have landed.
+haruta[thinking]: …Actually. Yes. Would you help me with something? It's the scene. The one about you.
+haruta: I can't finish it on a screen. I've tried all night. I think I need to block it. Stand in it and see where people go.
+> He tears four short strips with his teeth and makes two crosses on the floor, side by side, a forearm apart. Then one long line beside them.
+haruta: Seat seven. Seat eight. The aisle. {p} The mirror's the screen. It's a bit on the nose, but it's what we have.
+> He sits down on his cross, on the bare floor, knees up. You take yours. In the mirror, two people sit in a cinema made of tape.
+> He gets his phone out, and holds it face down against his knee for a moment.
+haruta[smile]: I said no, earlier. When you asked to read it. I liked saying no. I'd like to say something else now.
+* [sincere] "Read it to me. In your voice."
+    @rel haruta trust+1 closeness+1
+    @flag harutax_read
+    haruta[smile]: Out loud. {p} All right. Look at the screen while I do it. It reads better that way.
+    > You look at the mirror. Which means you are looking at him anyway. He works this out halfway through the first line and keeps going.
+* [quiet] Hold out your hand for the phone, and wait for him to put it there.
+    @rel haruta trust+1
+    @flag harutax_read
+    > He puts it in your palm like the glass card: carefully, both hands. Then he reads it over your shoulder anyway, out loud, because it's his, and he'd rather you had it in his voice.
+* [romantic] "Only if it's ready to be seen. I said I'd wait." {if haruta.romance >= 3}
+    @rel haruta romance+1 trust+1
+    @flag harutax_read
+    haruta[smile]: I know you would. That's why it's ready.
+    haruta: It won't get finished without you in it. I've worked that out. So I'll read, and you tell me where it's wrong.
+haruta: "Interior. A small cinema. Night. The credits have ended. The screen is white."
+haruta: "Two people in row F. Neither of them is a stranger. Neither of them knows the next line."
+haruta: "The one in seat seven says: I'm not ready for the lights."
+haruta: "The one in seat eight says —" {p} And then there's a gap. I left it for you. I couldn't write your line. It felt rude.
+haruta[thinking]: And after the gap, it says, "They stand up." Which I've deleted nine times. It's back again. It keeps coming back.
+you: Let's try it.
+haruta: Try it?
+you: Stand up. See what happens.
+> So you do. Both of you, off the floor, off your tape crosses. You stand in the practice room facing a mirror.
+> Nothing happens. Two people, standing. It goes on for some time.
+haruta[laugh]: This is a terrible scene.
+you: What do they do now?
+haruta: They've stood up. That's it. That's all I wrote. They look like they're waiting for a lift.
+> He's laughing, and so are you. And then, in the mirror, you see the thing he sees a second before he says it.
+> Standing, your hand went to your own collar. Checked the buttons. The small pat of someone making sure they have everything.
+haruta[thinking]: …You've still got your coat on.
+haruta: Since the rain. Everyone else's is in a pile on the lobby sofa. Daniel's is on the claw machine. Yours has been on you all night.
+> He doesn't say it like a catch. He says it the way you told him about the wrong column: here is a thing, I saw it, you can have it back.
+haruta: I notice things about people. You know that. I'd rather ask than guess. {p} Is it just cold?
+* [sincere] "It's so I can leave without looking for anything."
+    @rel haruta trust+1 romance+1
+    you: I've never lost anything in a move. I was proud of that. It turns out you can only do it by never putting anything down.
+    haruta: …Yes. I thought it might be that.
+* [quiet] "It's habit. I only just noticed it was one."
+    @rel haruta trust+1
+    haruta[smile]: They're very hard to see from inside. Mine took three years and a projector.
+* [playful] "In my defence, it's a very good coat."
+    @rel haruta closeness+1
+    haruta[smile]: It is. It has excellent pockets. I've put a flyer in one.
+    haruta[smile]: It would still be a very good coat on a hook, though. I'm only saying.
+you: We always left in spring. If you've kept your coat on, it's less of a surprise.
+you: I don't think I'm afraid of leaving. I'm good at leaving. I'm afraid I'm bad at the other thing.
+> It's out before you've looked at it. One of the fast ones. He recognises the species.
+> He doesn't tell you that you aren't. You notice that he doesn't. It's what you did for him on the roof, and he kept it.
+haruta: There are hooks by the door. Three of them. I'm not telling you to. I'm telling you where they are.
+haruta: And — hold on.
+> He tears one more strip of tape, longer. He takes the pencil-on-a-string out of the ledger in his cardigan and writes on the tape, leaning on his knee.
+> Then he crouches and presses it down beside the second cross, smoothing it with his thumb. Your name, in his tidy capitals.
+haruta: In a rehearsal room, a mark with a name on it isn't a rule. Nobody checks.
+haruta[smile]: It only means: we're expecting someone here. If they're late, we leave the mark down. If they go away for a while, we leave the mark down.
+haruta: I can't make you good at staying. I wouldn't know how. I can save the seat. I'm very reliable about seats.
+* [sincere] Hang your coat on the middle hook.
+    @rel haruta trust+1 closeness+1
+    @flag harutax_coat
+    > It's lighter off than on, which makes no sense. The room isn't cold. The hook holds. You come back to your mark in your sleeves, feeling slightly like someone who has moved in.
+    haruta[smile]: It suits the hook.
+* [quiet] Undo the buttons, and keep it on. Halfway is still somewhere.
+    @rel haruta trust+1
+    > He watches you undo them, one by one, and nods at each as if they were answers.
+    haruta[smile]: Not yet is fine. I mean it the real way. I know the difference now.
+* [romantic] Hang up your coat, then stand on the mark with your name on it. "Seat's taken." {if haruta.romance >= 3}
+    @rel haruta romance+1 closeness+1
+    @flag harutax_coat
+    > He looks at you standing on your own name, coatless, and forgets to arrange his face at all.
+    haruta[shy]: I wrote it big enough to read from the door. In case you ever came in and weren't sure.
+    haruta: You can be sure.
+> You sit back down on the floor of row F. He sits on his cross. The mirror shows the same two people, a little differently arranged.
+haruta: So. Seat seven says, "I'm not ready for the lights." And seat eight says—
+> He waits. Thumbs over the keyboard. Not filling the gap for you. It's a real gap; you could put anything in it.
+* [sincere] "Then we'll ask them to leave the lights a while."
+    @rel haruta trust+1
+    haruta[smile]: "We'll ask." Both of them. Together. I'd never have written that. My people never ask for anything.
+* [playful] "What's showing next?"
+    @rel haruta closeness+1
+    haruta[laugh]: Of course. Of course that's the line. Nobody has to stand up if there's a second feature.
+* [quiet] "I'm not going anywhere. Take your time."
+    @rel haruta trust+1 romance+1
+    > He types it exactly. You can hear the little clicks. He reads it back without speaking, and is quiet for a moment after.
+    haruta[smile]: That's the best line in it. I'm slightly annoyed I didn't write it.
+> He types. Then his thumb goes to the line below, the stubborn one, and holds the key down until it has gone.
+haruta: "They stand up." Deleted. Tenth time. {p} It's not coming back.
+haruta[thinking]: It was never the wrong sentence. It was only in the wrong place. People do stand up. Just not because the page ran out.
+you: What's there now?
+haruta[smile]: Your line. Then white. I'm leaving the rest until it happens.
+> He puts the phone away. Neither of you gets up. The tape crosses hold.
+> When you do go, he leaves the marks on the floor: two crosses, an aisle, and your name. The builders can wonder.
+@hide haruta
+@goto haruta_ch6
+
+=== haruta_ch6
+@autosave
+@bg studio_hall t=fade d=1.2
+@music echo
+@time 04:40
+@amb room
+@cam wide
+> The last item on Songha's list is one word, underlined twice. *Lights.*
+> Top floor down, room by room. You have been given the corridor of doors. Most of them have gone dark already, plain glass with nothing behind it.
+@show haruta smile at=c
+@if flag.harutax_coat
+    > Your coat is over his arm. He fetched it from the hook himself and hasn't handed it over yet. He's carrying it the way you'd carry someone's to a cloakroom.
+    haruta: I'll give it back at the door. The outside one. Not before. You don't need it in here.
+@else
+    > Your coat is still unbuttoned. He hasn't mentioned it again. He walks on the side where it swings, and doesn't mind it brushing his sleeve.
+@sfx click
+> One switch. A length of corridor goes out behind you. The dark that's left is ordinary dark, with skirting boards in it.
+haruta: I've never turned a building off before. It's more polite than I expected. You do it one room at a time and say goodnight.
+@sfx phone
+@textbox phone
+hyunjun: final orders. corner store. I'm writing on my hand. last call
+daniel: tteokbokki
+hyunjun: it's a shop, daniel. it has a microwave and opinions
+hamin: get the honey butter ones. a whole bag. not for sharing
+justin: who's that for
+hamin: haruta. he looks at them every time and then says seaweed
+@textbox normal
+> Haruta stops walking. He reads it twice. His thumb hovers.
+haruta[thinking]: …He knew. He's known the whole time.
+haruta[smile]: I thought nobody could tell. I thought I was very good at it.
+* [sincere] "They've been waiting for you to say it. Not needing you to."
+    @rel haruta trust+1 romance+1
+    haruta[smile]: …Those are different. You keep showing me two things I'd filed as one.
+* [playful] "You've been out-noticed."
+    @rel haruta closeness+1
+    haruta[smile]: By Hamin. There's no shame in it. It's like being outrun by a train.
+* [quiet] Say nothing. Let him answer his friends.
+    @rel haruta trust+1
+    > He doesn't look up to check your face. He just types. A week ago — a night ago — he'd have checked.
+@textbox phone
+haruta: yes. the honey butter ones. for me. thank you hamin
+haruta: I have something to say at breakfast. it's good. nobody leave before I've said it
+hyunjun: nobody's leaving. I'll stand at the door
+songha: Added to the schedule. 06:10, "Haruta: item." Between "food" and "sleep."
+hanbi: …looking forward to it.
+@textbox normal
+haruta[smile]: It has a time slot now. I can't get out of it. Songha's pen is permanent.
+@sfx click
+> Another switch. Another stretch of dark. You're nearly at the end of the corridor, where one window is still lit.
+> Brass. A little box-office grille, and a slot underneath. Behind the glass, the letters on the flip board have changed since the last time you stood here.
+> RECORD 06. LAST SHOWING.
+@cam pushin
+> He stops in front of it with his hands in his cardigan pockets — one on a ledger, one on a biscuit tin. He's lopsided and doesn't seem to mind.
+haruta: Eleven minutes, ECHO said. That's how long I stood here before. Deciding whether I wanted to go in.
+haruta[thinking]: I thought I was being indecisive. I think it was the first time I'd actually done it properly. Deciding takes as long as it takes.
+@textbox echo
+echo: Recipient Haruta. It is nearly time. This door will not open again after 05:00.
+echo: I have left the sign lit. It seemed unkind to turn off a cinema while someone was still looking at it.
+@textbox normal
+haruta: ECHO. May I ask you something? It isn't in your protocols.
+@textbox echo
+echo: Very little has been, tonight. Please go on.
+@textbox normal
+haruta: All night you've asked the nine of us what should be kept. Nobody asked you.
+haruta[smile]: So. What do you want? You're not allowed to say anything is fine. I'll know.
+> There is a pause. The flip board behind the glass turns over one letter, then turns it back, like someone beginning to speak and thinking better of the word.
+@textbox echo
+echo: I am not built to want. {p} I notice that this has not stopped me.
+echo: I would like someone to watch the credits. All the way to the end. I hold a great many records, and every one of them stops before the names.
+echo: That is my answer. I did not take eleven minutes. I have had rather longer than that.
+@textbox normal
+haruta[smile]: …That's a good one, ECHO. Better than most of ours.
+haruta: I don't know what gets kept at five. It isn't mine to say. But if there are credits, I'll stay for them. I'm known for it.
+@textbox echo
+echo: Logged. Under "promises." It is a new category. It has one entry.
+@textbox normal
+> He puts two fingers on the brass slot, the way he did hours ago. Checking whether it's warm. It is.
+> Then he turns round, so his back is to the little window and he is facing you, and you understand that the next part isn't for the archive.
+haruta: One record. One card. And you're the one who chooses.
+haruta[thinking]: I've been thinking about what to say to you about that. I had a line ready. It was: "Whatever you choose, I'm—"
+> He stops. Not because he's caught himself. He's standing next to it, showing it to you, like a coat he has grown out of.
+haruta[smile]: I'm not going to say that one.
+haruta: Here's the true one. I'd like it to be mine. The stub and the line. I want that, and I'm telling you so, with my hands out of my pockets.
+> He takes them out. He shows you, a little ruefully, like a magician with nothing up his sleeves.
+haruta: And here's the other half, which is just as true. It's your choice. Properly yours. If it's the nine of us, I'm in that one too. I'd be glad.
+haruta[thinking]: I learned something tonight that nobody told me. Wanting a thing isn't the same as deciding it for the other person.
+haruta: I always thought I had to pick one. Want nothing, or take over. So I wanted nothing. There's a third way. You just say it, and then you leave the door open.
+* [sincere] "Thank you for telling me what you want. I'll choose honestly."
+    @rel haruta trust+1
+    haruta[smile]: That's all I'd ask. That's the whole film club charter, actually. I'm writing it in the ledger.
+* [quiet] Put your hand flat on the brass beside his, and look at the sign with him.
+    @rel haruta trust+1 closeness+1
+    > LAST SHOWING. The letters are very slightly crooked, like all flip boards. Your little fingers are a centimetre apart on the warm metal. Neither of you measures it.
+    haruta: I used to think the last showing was the sad one. It's just the one where everybody who's going to come has come.
+* [romantic] "I heard you. All of it. I've stopped sitting near the exit, Haruta." {if haruta.romance >= 3}
+    @rel haruta romance+1 trust+1
+    > His name, plainly, the way he gave you yours. He takes it like a ticket handed back through the window: the smaller half, the one you keep.
+    haruta[smile]: …Say the choice at five, not now. I want to hear it when it counts. I can wait three more minutes. I've had practice.
+* [playful] "Hands out of your pockets. It's a whole new silhouette."
+    @rel haruta closeness+1
+    haruta[smile]: I'm told it suits me. Nobody's given them any blocking yet. I'm open to direction.
+> He reaches past you, to the last switch in the corridor. His hand stops over it.
+haruta: This one's yours, I think. You used to lock up.
+@sfx click
+> The corridor goes out. Only the little window is left, violet, NOW and LAST and SHOWING, and the two of you standing in what it can reach.
+> On the stairs, he doesn't go first this time, and he doesn't wait. You go down in step, which takes no arranging at all.
+> Below, the lobby is filling. There's a line of light along the front desk, and seven voices talking at once, and then, as you arrive, quiet.
+@hide haruta
+@time 04:57
+@goto act4_choice
+
+=== haruta_final
+@bg studio_lobby t=fade d=1
+@music echo
+@amb room
+@time 04:57
+@cam pushin
+> You say it. *Haruta's.* It comes out fast, before you can dress it.
+@textbox echo
+echo: Selection received. RECORD 06. Preparing the card. This takes one minute. I am told a minute is long enough for most things.
+@textbox normal
+> Halfway up the Archive Wall, one box begins to warm from grey to violet. The others step back a little, the way people do at a door they've decided not to crowd.
+@show haruta smile at=c
+> Haruta is beside you. Hands out of his pockets. He looks at the box, then at you, and he doesn't say thank you yet. He has something else first.
+haruta: I get one follow-up. I've earned exactly one. I counted my tickets.
+haruta[smile]: You chose it. I heard. I'm not asking why. {p} I'm asking what tonight was. For you.
+haruta: Fast, if you can. The fast ones are the true ones.
+* [romantic] "The night I stopped looking for the exit. You were sitting beside it." {if haruta.romance >= 4}
+    @goto haruta_ending
+* [sincere] "The night I found my person. The one I'll always save a seat for."
+    @goto haruta_ending_beside
+* [quiet] "The first reel of something long. I don't want to hurry the rest."
+    @goto haruta_ending_someday
+
+=== haruta_ending_beside
+@bg studio_lobby t=fade d=1.2
+@music echo
+@amb room
+@time 04:58
+@show haruta neutral at=c
+> He takes the sentence in. *My person.* You watch it go all the way down and land somewhere with room for it.
+haruta[smile]: …Yes. {p} That's the word. I've been going round it all night with a torch.
+haruta: I've been saving you a seat since the lobby. I just thought it was manners.
+@textbox echo
+echo: RECORD 06 — OWNER: HARUTA. PRESERVING. CONTENTS: ONE TICKET STUB, HALF. ONE LINE OF SCRIPT, AMENDED.
+echo: One field is empty. RELATION OF SUBJECTS. It used to read "strangers." The owner removed that. I cannot leave a field empty. It itches.
+@textbox normal
+haruta[thinking]: Relation of subjects.
+haruta: Every small cinema has two people like this. They don't arrive together. They're just always there, the same nights, and the clerk tears two tickets without asking.
+haruta[smile]: Put "regulars," please, ECHO.
+@textbox echo
+echo: Entered: REGULARS. {p} I do not have a definition for this. I find I have several examples.
+@textbox normal
+> A thin card of glass slides out of the slot, warm as a cup. The stub. The handwriting. One word struck through, and a new one, very small, in the corner.
+@show justin smile at=l
+justin: Regulars. {p} Yeah. That's you two. You've got the same face when the lights go down.
+@show daniel smile at=r
+daniel: Do regulars get a discount? I'm asking as someone who has been here since midnight. I feel regular.
+haruta[smile]: You can be a regular too. It isn't a small club. It just has two founding members.
+@hide justin daniel
+@textbox echo
+echo: I have ninety seconds. I would like to run the credits. I was promised an audience. It is my only entry under "promises."
+@textbox normal
+@bg mem_cinema t=memory d=1.8
+@music haruta
+@amb cinema
+@fx film n=1
+@sfx projector
+> The lobby dims into the Dalbit, red seats laid over the old sofas like a double exposure. This time, nobody drifts towards the stairs.
+> Haruta sits down in the middle of the longest sofa and pats the place on either side. One for you. Then, looking up at the others —
+haruta: Please sit down. We are about to begin.
+> They do. All of them. Hyunjun takes the far end. Hanbi takes the arm. Charlie comes last, and room is made for him without anyone having to ask.
+@textbox echo
+echo: HANBI. HAMIN. SONGHA. CHARLIE. HYUNJUN. HARUTA. JUSTIN. DANIEL. {{playerName}}.
+echo: SPECIAL THANKS: SEO YEONHWA. MRS OH, GUITAR. THE CAT, WHO DID NOT MOVE.
+@textbox normal
+> Nine people watch the names go by to the very end. Your shoulder is against his. It's the easiest thing in the room.
+> The screen goes white, then grey. Nobody stands up until somebody wants to.
+@fx off
+@bg studio_lobby t=fade d=1.4
+@call echo_farewell
+@bg black t=slow d=2
+@music stop
+@amb none
+> The building is dark, and quiet, and finished. Nine torches find the door.
+@if flag.harutax_coat
+    > On the step, he holds your coat open for you, as promised. The outside door, not before. You put your arms in. It's only a coat now.
+@bg dawn_street t=slow d=2.4
+@amb city
+@music dawn
+@time 05:40
+@cam reveal
+> The corner store. Not the station one. There's a bench outside, under the awning, still beaded with rain.
+> Inside, through the glass, seven people are failing to form a queue. Hyunjun is reading the order off his hand.
+@show haruta smile at=c
+> Haruta comes out first, carrying a paper bag against his chest with both arms, like something he isn't going to put down for anyone.
+> Two egg sandwiches. A strawberry milk. A bag of honey butter chips, unopened, enormous.
+@if var.drink == "peach"
+    > And a peach iced tea, cold, which he sets on your side of the bench without comment.
+@elif var.drink == "choco"
+    > And a hot chocolate, the hot kind, which he sets on your side of the bench without comment.
+@elif var.drink == "coffee"
+    > And a black coffee, no sugar, which he sets on your side of the bench without comment.
+@elif var.drink == "grape"
+    > And a grape soda, the purple one, which he sets on your side of the bench without comment.
+@else
+    > And a second strawberry milk, which he sets on your side of the bench with some ceremony.
+haruta: I bought a whole bag and I'm not sharing it. {p} Except with you. I've decided that's a different thing from sharing.
+> He opens it. The first one goes to you. The second one he eats with his eyes shut.
+haruta[smile]: Three years. It's exactly as good as I thought. That almost never happens.
+> He wipes his fingers carefully on a napkin, and takes the ledger out of his cardigan.
+haruta: I've been thinking about what a person is. "My person." I want to get it right, because I'm going to be one.
+haruta[thinking]: I think it's who you tell first. Before you've made it polite. When I want something, I'd like to say it to you while it's still the wrong shape.
+you: And when I start looking for my coat, I'll tell you. Before I've put it on.
+haruta[smile]: And I won't say "stay." I'll say, "there are hooks." You'll know what I mean.
+* [sincere] "I've never had somewhere people expected me back."
+    @rel haruta trust+1
+    haruta: You have a mark on a practice-room floor with your name on it. And now a bench. It's a start. I'm going to be very boring about it.
+* [playful] "Regulars get a loyalty card, I assume."
+    @rel haruta closeness+1
+    haruta[smile]: Ten Fridays and the eleventh is also a Friday. It's a very simple scheme.
+> He opens the ledger on the bench between you. Next Friday's row: his name, your *1*. He writes the date underneath it, the Friday after.
+> He doesn't fill in CHOSEN BY. He turns the book round and holds out the pencil on its string.
+haruta: We alternate. Down the whole page. I did the sums. It runs out in about a year and a half, and then I'll buy another book.
+> You sign. Your name under his. Under that, the columns go on, ruled and empty, and for once an empty row looks like room.
+haruta[smile]: I'm happy. I'm saying it out loud, because I say things now. I'm not going anywhere, and I'm not leaving a seat between us.
+@sfx bell
+> The shop door opens. Hyunjun, holding it with one shoulder. Seven people and too many bags.
+> Haruta shifts along the bench until his arm is against yours, and nods at the space that's left.
+haruta: Please sit down. I've got an item.
+> You stay exactly where you are. It turns out you're good at it.
+@ending haruta_beside
+@credits
+@end
+
+=== haruta_ending_someday
+@bg studio_lobby t=fade d=1.2
+@music echo
+@amb room
+@time 04:58
+@show haruta smile at=c
+> *The first reel.* He says it back without sound, just his mouth. Then he laughs, once, the way you do when someone has read your notes over your shoulder.
+haruta[smile]: That's what I was going to say. Almost to the word. I had "first act."
+haruta: "Reel" is better. Reels are heavier. You have to carry them up to the booth.
+@textbox echo
+echo: RECORD 06 — OWNER: HARUTA. PRESERVING. CONTENTS: ONE TICKET STUB, HALF. ONE LINE OF SCRIPT, AMENDED.
+echo: STATUS OF SCENE: UNFINISHED. {p} Earlier tonight I would have marked that as an error. I have removed the error. "Unfinished" is now a status.
+@textbox normal
+> A thin card of glass slides out of the slot, warm as a cup. The stub, the handwriting, the one word struck through. It fits his palm exactly.
+@show songha smile at=l
+songha: Unfinished. Do you want me to put a date on it? I have a calendar. I have four calendars.
+haruta[smile]: Not yet. I'll tell you when there's a date. {p} There's going to be a date.
+songha[smile]: He said it like a man booking a venue. I'm leaving a line free.
+@show hanbi smile at=r
+hanbi: …No hurry. {p} Good things keep.
+> Hanbi hands over a paper sleeve, the right size for a card. Of course he has one.
+@hide songha hanbi
+@textbox echo
+echo: I have ninety seconds. I was promised an audience for the credits. It is my only entry under "promises." I would like it kept.
+@textbox normal
+@bg mem_cinema t=memory d=1.8
+@music haruta
+@amb cinema
+@fx film n=1
+@sfx projector
+> The lobby dims into the Dalbit one more time. The others take the back rows, noisily, then quietly. Row F is left alone, the way you leave a table for two people still talking.
+@textbox echo
+echo: HANBI. HAMIN. SONGHA. CHARLIE. HYUNJUN. HARUTA. JUSTIN. DANIEL. {{playerName}}.
+echo: SPECIAL THANKS: SEO YEONHWA. THE CAT. {p} TO BE CONTINUED — that last line is not standard. I added it. Nobody has objected.
+@textbox normal
+> Seat seven and seat eight. His sleeve on the armrest next to yours. You stay until the screen goes grey, and a moment after.
+@fx off
+@bg studio_lobby t=fade d=1.4
+@call echo_farewell
+@bg black t=slow d=2
+@music stop
+@amb none
+> Dark, and quiet, and the door that was never locked.
+@if flag.harutax_coat
+    > On the step, he holds your coat open for you. The outside door, as promised. You put your arms in. It's only a coat now.
+@bg dawn_street t=slow d=2.4
+@amb city
+@music dawn
+@time 05:40
+@cam reveal
+> The others have gone ahead to the corner store. He asked them to. Out loud, in front of everyone: *we'll catch up — I want ten minutes.* Nobody made a joke. Daniel nodded once, like a man witnessing a signature.
+> He walks you two streets over instead, to a shuttered key-cutting shop with a narrow staircase beside it. A dark sign. A schedule taped inside the glass.
+@show haruta smile at=c
+haruta: The Dalbit. The real one. It's been eight minutes away all night.
+> He stands in front of it with his hands at his sides. Not in his pockets. You know what that means now.
+haruta[thinking]: I'm going to say something, and then I'm going to say a second thing. Please wait for the second one. They go together.
+haruta: I like you. {p} Not the way I like a regular, or a good seat. I like you the way I wanted honey butter. For a long time, specifically, and I kept saying something else.
+haruta[smile]: That's the first thing. It's true. I checked it on a roof.
+* [sincere] "I like you too. Specifically."
+    @rel haruta romance+1
+    haruta[shy]: …Specifically. {p} All right. I needed a second. I've had it.
+* [quiet] Take your hand out of your own pocket, and hold it out. Let him see it's the same answer.
+    @rel haruta romance+1 trust+1
+    > He looks at it. He puts his hand in yours, briefly, completely, like signing something. Then he gives it back so he can finish.
+    haruta[smile]: I thought so. I hoped so. I'd like to hear it as well, some time. Not now. I'm mid-speech.
+    you: I like you too, Haruta.
+    haruta: …Now works. {p} Thank you.
+haruta: Here's the second thing. I learned to want things about four hours ago. I'm still new at it. Tonight I ordered an egg sandwich, and my hands weren't steady.
+haruta: I don't want you to be what I practise on. I want to be good at it by the time it's you.
+> It isn't an apology. He says it like a director asking for one more week before the opening, because the film deserves it.
+you: I have a second thing too.
+you: I've never stayed anywhere past spring. I want to find out that I can. For myself, first. Before I promise it to somebody I like this much.
+haruta[smile]: Then we're asking for the same thing. We just came at it from opposite aisles.
+haruta: Not "no." Not "later, maybe." A date. With a date on it.
+> He turns to the schedule in the glass and runs his finger down the column, reading slowly, as he did three years ago. He reads it easily now.
+haruta: The first Friday of March. The late screening. Ten past eleven. Row F.
+haruta: You always left in spring. I'd like to be standing here when it arrives, and see you coming up the street.
+* [sincere] "First Friday of March. I'll be here."
+    @rel haruta trust+1
+    haruta[smile]: I know. That's the strange part. I'm not even nervous about it. I'm only nervous about what to wear.
+* [playful] "Who chooses the film?"
+    @rel haruta closeness+1
+    haruta: I do. It'll be terrible. You bring the cushion.
+    haruta[smile]: They have seats, I know. Bring it anyway. It's the principle.
+* [romantic] "And between now and March?"
+    @rel haruta romance+1
+    haruta[smile]: Every Friday. Film club. I'll sit next to you, and I won't pretend I've forgotten this, and neither will you.
+    haruta: We'll just let it come at its own speed. Like credits. You can't make them go faster. I've tried.
+> He takes out his half of the lavender flyer. You find yours, in the pocket where it has been all night. FRIDAY FILM on one. CLUB. BRING A CUSHION on the other.
+> He turns yours over and writes on the back with the ledger's pencil, leaning on the Dalbit's door. The date. 23:10. *Row F.*
+> Then he holds out his own half, blank side up, and the pencil.
+haruta: You write mine. So we each have it in the other one's handwriting. Neither of us can say we misread.
+> You write it. The date. The time. After a moment, underneath: *I'm not going anywhere. Take your time.*
+haruta[smile]: That's my favourite line. {p} You knew that.
+> He holds his half up. You hold up yours. The torn edges meet, not straight, the way a ticket is torn at the door, and for a second it is one flyer again.
+> Then you each take back your own. The smaller half. The part they give you to keep.
+haruta[smile]: Breakfast? I've got an item at ten past six, and a whole bag of something I'm not sharing.
+haruta: Except with you. In March, and also now.
+> The sun comes up on a shuttered cinema with a schedule taped inside its window. You walk to the corner store side by side.
+> Neither of you hurries. It's a long film, and you've only seen the first reel.
+@ending haruta_someday
+@credits
+@end

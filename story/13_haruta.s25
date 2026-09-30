@@ -711,7 +711,8 @@ haruta[laugh]: I don't have a lounge, or a building, or a film. I have a project
 > On the stairs, he goes first — then stops, and waits, so that you arrive in the lobby side by side.
 @hide haruta
 @time 04:57
-@goto act4_choice
+@call echo_refund
+@goto haruta_ch1
 
 === haruta_ending
 @chapter ending

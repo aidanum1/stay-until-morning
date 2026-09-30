@@ -73,3 +73,19 @@ Model policy from here: gpt_image_2_5 medium 2K (1.0) for environments, gpt high
 Reference photos (uploaded by the producer, never redistributed): hamin a8741f2c · hyunjun 18b6a6c9 · charlie ce8e9b29 · haruta 3605d717 · justin 4a7fe3f1 · songha 0dc582ca · hanbi 694d07f8 · daniel 7dfdeaa8
 
 Locked identities (v2): hamin b9d03d6b · haruta 4afed593 · songha 414255e2 · hanbi 55b62416
+
+### 2026-09-30 — 3D quality test (producer request: "try making 1 AA level 3d with hamin")
+Planned: 1 × gpt_image_2_5 high full-body A-pose turnaround source for Hamin (ref = locked identity) ≈ 1.5–2.75, then 1 × image_to_3d textured + PBR + rigged ≈ 35. Planned total ≈ 38 → remaining ≈ 132 (≈82 usable above reserve). One attempt only; no retries without a changed strategy.
+| 163 | gpt_image_2_5 high, full-body A-pose source (ref = identity) | hamin | 3D test source | 1.5 | 1.5 | ✔ | 20e93a74-66cb-4518-95b4-973ae9a62503 |
+| 164 | image_to_3d textured + PBR + rigged | hamin | 3D quality test | 35 | 35 | ✔ (delivered; quality rejected) | 6d03bf38-9a38-40ec-bddf-38522c5ccbc9 |
+
+Result: 30.7k tris, 24 bones, one 2K albedo. Coat/trousers/shoes usable; **face and hair are not** (smeared face texture, no likeness, hair is a solid shell, holes on the coat back). Far below the 2D identity art — not shippable, not retried.
+
+**Confirmed spent: ≈416.5 · Remaining: ≈133.5** (reserve 50 untouched → ≈83.5 usable)
+
+### 2026-09-30 — "Drama wardrobe" cinematics (producer request: more videos, new clothes/environments per story, love-interest styling)
+Planned: 8 × gpt_image_2_5 high with identity reference (1.5) = 12, then 8 × kling3_0 5 s from those stills (8.75) = 70. Planned total 82 → remaining ≈ 51.5 (reserve 50 intact, 1.5 spare). **No retries possible after this batch without touching the reserve.**
+| 165–172 | 8 × gpt_image_2_5 high "drama wardrobe" stills (ref = identity) | all | new outfits + story environments | 12.0 | 12.0 | ✔ | jobs.json dramaStills |
+| 173–180 | 8 × kling3_0 5 s from those stills | all | drama cinematics | 70.0 | 70.0 | submitted | jobs.json dramaVideos |
+
+**Confirmed spent: ≈498.5 · Remaining: ≈51.5** — only the 50-credit emergency reserve (+1.5) is left. No further generation without the producer's explicit say-so.

@@ -1,162 +1,186 @@
 {
- "note": "Higgsfield job ids per asset. Reference photo media ids are producer uploads and are never redistributed.",
- "refPhotos": {
-  "hamin": "a8741f2c-472a-4007-ac58-aaa672aff47f",
-  "hyunjun": "18b6a6c9-2eda-4cce-b363-18c5f0274578",
-  "charlie": "ce8e9b29-d631-48bc-a487-eaef9018c7b6",
-  "haruta": "3605d717-37e6-42c0-bf52-fb48f536bccf",
-  "justin": "4a7fe3f1-2505-4373-850d-63321c6ea89c",
-  "songha": "0dc582ca-0ec7-47b0-8d80-57a58251192e",
-  "hanbi": "694d07f8-0c89-4be8-bc56-a8dcb58cb7e8",
-  "daniel": "7dfdeaa8-f329-4017-a666-27edd5d4350e"
- },
- "identity": {
-  "hamin": "40e3e5a6-7865-45ba-bdbc-e284cc96fb67",
-  "hyunjun": "0926fc1a-fdfe-484a-beb3-974f067b0b59",
-  "charlie": "3203d473-c76b-4794-ab7e-81a6cd5785c3",
-  "haruta": "0bec4c3b-700e-4c47-897e-5febfd832ad0",
-  "justin": "2d44d882-afcb-4bb7-a912-0e293860392f",
-  "songha": "01a7998c-f0c2-4ade-bfe2-9f9e556a5095",
-  "hanbi": "23785210-3848-4be9-a420-d057a926f5e0",
-  "daniel": "cfacdfd8-32c7-4c5b-80ae-980a6ee72176"
- },
- "expressions": {
-  "hamin": {
-   "smile": "aa31d37c-24b8-487f-8c99-4d69f16f8ea0",
-   "laugh": "1c914e48-e53c-4dc1-b760-fbc92c3146fa",
-   "surprised": "7981bf4e-dadb-46d6-a540-5619afa65f76",
-   "thinking": "3127772f-c75f-4ee1-bca0-a9e00f92bd93",
-   "shy": "4cc33952-54e3-41b8-a231-baf2d97b7d3c",
-   "sad": "baaf73aa-07e2-42c4-9d4f-a1f07c6f2e95"
+  "note": "Higgsfield job ids per asset. Reference photo media ids are producer uploads and are never redistributed.",
+  "refPhotos": {
+    "hamin": "a8741f2c-472a-4007-ac58-aaa672aff47f",
+    "hyunjun": "18b6a6c9-2eda-4cce-b363-18c5f0274578",
+    "charlie": "ce8e9b29-d631-48bc-a487-eaef9018c7b6",
+    "haruta": "3605d717-37e6-42c0-bf52-fb48f536bccf",
+    "justin": "4a7fe3f1-2505-4373-850d-63321c6ea89c",
+    "songha": "0dc582ca-0ec7-47b0-8d80-57a58251192e",
+    "hanbi": "694d07f8-0c89-4be8-bc56-a8dcb58cb7e8",
+    "daniel": "7dfdeaa8-f329-4017-a666-27edd5d4350e"
   },
-  "hyunjun": {
-   "smile": "cc333e2d-f56f-4ddd-83a1-6bf6cbba45ff",
-   "laugh": "eb9677c5-1b0c-4ff4-a3a7-d40b7a517ce2",
-   "surprised": "ba6a9aef-05f2-4c0f-a3bf-c761980cab6f",
-   "thinking": "515fe771-6ef0-4c21-b7d7-661d027235d1",
-   "shy": "fed2c96c-80f5-4e04-b0db-550634b28ec5",
-   "sad": "be62b0ff-de81-41d6-90f5-2996ff048101"
+  "identity": {
+    "hamin": "40e3e5a6-7865-45ba-bdbc-e284cc96fb67",
+    "hyunjun": "0926fc1a-fdfe-484a-beb3-974f067b0b59",
+    "charlie": "3203d473-c76b-4794-ab7e-81a6cd5785c3",
+    "haruta": "0bec4c3b-700e-4c47-897e-5febfd832ad0",
+    "justin": "2d44d882-afcb-4bb7-a912-0e293860392f",
+    "songha": "01a7998c-f0c2-4ade-bfe2-9f9e556a5095",
+    "hanbi": "23785210-3848-4be9-a420-d057a926f5e0",
+    "daniel": "cfacdfd8-32c7-4c5b-80ae-980a6ee72176"
   },
-  "charlie": {
-   "smile": "a3b8abeb-4cd4-47aa-a0d9-2bb7ccef6b04",
-   "laugh": "18a9c613-780c-4d33-9d8a-789aba4f4678",
-   "surprised": "8fca3e16-1e98-442f-81d4-72ff3a1ac21e",
-   "thinking": "50ac7758-a3f6-4879-b93b-297d6cf0292f",
-   "shy": "7a1581b7-c90c-49ba-bb73-69d7395d5900",
-   "sad": "6a403738-6184-4270-a833-a4bb27207396"
+  "expressions": {
+    "hamin": {
+      "smile": "aa31d37c-24b8-487f-8c99-4d69f16f8ea0",
+      "laugh": "1c914e48-e53c-4dc1-b760-fbc92c3146fa",
+      "surprised": "7981bf4e-dadb-46d6-a540-5619afa65f76",
+      "thinking": "3127772f-c75f-4ee1-bca0-a9e00f92bd93",
+      "shy": "4cc33952-54e3-41b8-a231-baf2d97b7d3c",
+      "sad": "baaf73aa-07e2-42c4-9d4f-a1f07c6f2e95"
+    },
+    "hyunjun": {
+      "smile": "cc333e2d-f56f-4ddd-83a1-6bf6cbba45ff",
+      "laugh": "eb9677c5-1b0c-4ff4-a3a7-d40b7a517ce2",
+      "surprised": "ba6a9aef-05f2-4c0f-a3bf-c761980cab6f",
+      "thinking": "515fe771-6ef0-4c21-b7d7-661d027235d1",
+      "shy": "fed2c96c-80f5-4e04-b0db-550634b28ec5",
+      "sad": "be62b0ff-de81-41d6-90f5-2996ff048101"
+    },
+    "charlie": {
+      "smile": "a3b8abeb-4cd4-47aa-a0d9-2bb7ccef6b04",
+      "laugh": "18a9c613-780c-4d33-9d8a-789aba4f4678",
+      "surprised": "8fca3e16-1e98-442f-81d4-72ff3a1ac21e",
+      "thinking": "50ac7758-a3f6-4879-b93b-297d6cf0292f",
+      "shy": "7a1581b7-c90c-49ba-bb73-69d7395d5900",
+      "sad": "6a403738-6184-4270-a833-a4bb27207396"
+    },
+    "haruta": {
+      "smile": "cf9cce8d-2e63-49ca-9beb-faada8fcf68d",
+      "laugh": "186a93d0-da67-4dcf-97c6-f0565ed111f0",
+      "surprised": "53a1d037-ec10-429d-9792-10f631e9eb8f",
+      "thinking": "e8ba1e71-f32f-4d73-8d72-5ed33d7c8c80",
+      "shy": "27084fe5-ba13-4d9e-b043-168902bec19a",
+      "sad": "49f6b3b5-cd4c-42d7-8be9-616ae1c07ff9"
+    },
+    "justin": {
+      "smile": "d79e9592-6937-487f-8338-5c58089921fe",
+      "laugh": "508fc963-5be4-4cc2-8a5a-ea28d2891e38",
+      "surprised": "ff62a193-6ee9-4199-9b9b-0fa3ab767f69",
+      "thinking": "72435724-7019-4140-b7a9-59c094bd004a",
+      "shy": "259f8d0d-c0bb-447b-853a-b61bce56fdbe",
+      "sad": "a7756c26-2c8e-48e5-9000-07a9e1979f35"
+    },
+    "songha": {
+      "smile": "ce6e8658-aec8-4695-bf39-73e8aa3eb7d8",
+      "laugh": "fd94a223-7d77-445e-8e1f-f55955194ef1",
+      "surprised": "ede5e856-b4cc-4e2b-b252-6d63ecf6701c",
+      "thinking": "8bfc8bd1-fca5-4786-a363-caf51fe31b1a",
+      "shy": "5040394b-47d4-4ab2-8565-927282c945fc",
+      "sad": "8fb1716b-6f22-4981-a61f-c9e29c934c77"
+    },
+    "hanbi": {
+      "smile": "62ff37bb-b1c9-4cd8-ac5d-3b29ebf23b33",
+      "laugh": "1082c1d4-4874-4e0a-b95a-d387a51ae012",
+      "surprised": "a3541b9d-e31d-4eed-8f63-f2c022b45188",
+      "thinking": "64487ef1-32dd-43b2-849c-32b23059d2c3",
+      "shy": "6e4d4ee9-c71c-46c7-8249-677fefa2a5d2",
+      "sad": "bb37cb43-ade7-4ae2-ad7d-663425fb2ba3"
+    },
+    "daniel": {
+      "smile": "445fd07e-913b-4006-897f-f6f699d7abe3",
+      "laugh": "ee209625-8897-4d9b-a853-e929d1a2a2a8",
+      "surprised": "0d57e901-7934-4f25-8918-09771c629002",
+      "thinking": "19149e5f-6f7c-4e14-882d-7012227e4f95",
+      "shy": "f973b006-543d-4eed-90b5-3a61f7c949a1",
+      "sad": "b1fa5aa7-6fee-46bd-b543-bd849e79ca61"
+    }
   },
-  "haruta": {
-   "smile": "cf9cce8d-2e63-49ca-9beb-faada8fcf68d",
-   "laugh": "186a93d0-da67-4dcf-97c6-f0565ed111f0",
-   "surprised": "53a1d037-ec10-429d-9792-10f631e9eb8f",
-   "thinking": "e8ba1e71-f32f-4d73-8d72-5ed33d7c8c80",
-   "shy": "27084fe5-ba13-4d9e-b043-168902bec19a",
-   "sad": "49f6b3b5-cd4c-42d7-8be9-616ae1c07ff9"
+  "cutouts": {
+    "hamin": {
+      "neutral": "379eb859-9d54-49ef-ae17-7d3a194666aa",
+      "smile": "fdda364c-fde5-4f04-874c-100a1540e53e",
+      "laugh": "0032c1cf-1020-44e8-931a-e9e50514d3f0",
+      "surprised": "20699b04-b7c6-4d8c-b2ed-3f095ab1d6e3",
+      "thinking": "2f054930-4387-443f-b85d-a65e5ecce3ff",
+      "shy": "eaa4e927-36f3-48dd-a656-8c8359ad1cb8",
+      "sad": "8a4fa58e-d2c4-419f-84db-9fff8c99bfd2"
+    }
   },
-  "justin": {
-   "smile": "d79e9592-6937-487f-8338-5c58089921fe",
-   "laugh": "508fc963-5be4-4cc2-8a5a-ea28d2891e38",
-   "surprised": "ff62a193-6ee9-4199-9b9b-0fa3ab767f69",
-   "thinking": "72435724-7019-4140-b7a9-59c094bd004a",
-   "shy": "259f8d0d-c0bb-447b-853a-b61bce56fdbe",
-   "sad": "a7756c26-2c8e-48e5-9000-07a9e1979f35"
+  "backgrounds": {
+    "studio_ext_night": "15a9ad02-959f-446b-a92d-f2963f80e02c",
+    "studio_lobby": "1b6bd8b0-87d3-4933-9c06-6c7770f697b1",
+    "studio_lobby_morning": "f65b0d38-dbe5-4a50-9eaa-cb36201e86ab",
+    "studio_hall": "2f19ad08-e342-4373-9de0-cfa1c4a51f66",
+    "studio_archive": "78c4c473-0558-4943-a08b-039953a2f3be",
+    "studio_practice": "456ec068-2de8-4d83-ba95-4f5806ad1fa7",
+    "studio_rooftop": "2837d272-c440-4ddd-9b78-95998ccd7797",
+    "studio_lounge": "3e5acfef-df12-4372-a572-65fb7395d7a5",
+    "studio_frontdesk": "f27a2988-68af-4412-b589-4ac303074676",
+    "mem_beach": "fcd94e27-0561-4c16-93f0-f4e3ba21847f",
+    "mem_subway": "7e99f37d-299e-4336-aa91-deea76689463",
+    "mem_street_night": "e03dd5ee-6c20-4538-81dc-2636d99bacb7",
+    "_gpt_medium_test_ext": "813e5486-3ef0-4ec7-a66c-aad753b442cb",
+    "studio_lobby_wide": "51cc40ae-c9b3-47f6-a188-f1dcc5e54f82",
+    "studio_lobby_morning_wide": "8ac82c50-58ad-4e07-a104-78287bc78804"
   },
-  "songha": {
-   "smile": "ce6e8658-aec8-4695-bf39-73e8aa3eb7d8",
-   "laugh": "fd94a223-7d77-445e-8e1f-f55955194ef1",
-   "surprised": "ede5e856-b4cc-4e2b-b252-6d63ecf6701c",
-   "thinking": "8bfc8bd1-fca5-4786-a363-caf51fe31b1a",
-   "shy": "5040394b-47d4-4ab2-8565-927282c945fc",
-   "sad": "8fb1716b-6f22-4981-a61f-c9e29c934c77"
+  "cg": {
+    "cg_hamin_moment": "ca708e08-6eb3-466a-9613-1a863ea37c95",
+    "cg_hamin_ending": "03d8e9f5-b12e-4485-94e2-4664fb92a5e6",
+    "cg_hyunjun_moment": "31ae2f0f-f4eb-44ef-8a68-b193fbaeec3c",
+    "cg_hyunjun_ending": "7772e849-bee0-4c9f-8f4f-2bac632d05fc",
+    "cg_charlie_moment": "809f11b8-e6f2-4ca8-ac98-eaccf2524a60",
+    "cg_charlie_ending": "5400d573-49f2-4195-9284-37e2ce4e848e",
+    "cg_haruta_moment": "52fc5749-1408-4dec-b8d6-a53b8608cc5c",
+    "cg_haruta_ending": "0332f6f0-87ef-4c87-8d1a-555830033410",
+    "cg_justin_moment": "d2c1156b-986b-4166-a033-fdece45dd40f",
+    "cg_justin_ending": "a7b299d9-5b35-4b28-a3ff-2132d8ebda7b",
+    "cg_songha_moment": "2294d964-c001-4008-ac8e-0d3ae5eaf3c4",
+    "cg_songha_ending": "a48ac094-d39e-4775-9da8-0b905ebfbe72",
+    "cg_hanbi_moment": "acb41d79-3ada-4547-b014-24179ee9cd8c",
+    "cg_hanbi_ending": "9a0b76cb-233f-46e6-a356-9d35be1962ef",
+    "cg_daniel_moment": "6295743a-5c53-4aaa-b0c8-19c98092a17f",
+    "cg_daniel_ending": "646366e8-256c-4484-a310-127700c1d3f5",
+    "cg_echo": "016557e2-b1ef-45f7-958c-b730151f30d5",
+    "cg_ninth": "e46b9d2b-d259-4fa9-81b1-9e9cc8853e12",
+    "cg_photo": "830a732d-917e-45c8-9254-86224ece9ab0",
+    "cg_friendship": "6927a532-bacc-4f9b-bbd1-e6180b3d5312",
+    "cg_true_breakfast": "68750ef4-f02a-432e-9a56-e2d73a2ccb44"
   },
-  "hanbi": {
-   "smile": "62ff37bb-b1c9-4cd8-ac5d-3b29ebf23b33",
-   "laugh": "1082c1d4-4874-4e0a-b95a-d387a51ae012",
-   "surprised": "a3541b9d-e31d-4eed-8f63-f2c022b45188",
-   "thinking": "64487ef1-32dd-43b2-849c-32b23059d2c3",
-   "shy": "6e4d4ee9-c71c-46c7-8249-677fefa2a5d2",
-   "sad": "bb37cb43-ade7-4ae2-ad7d-663425fb2ba3"
+  "video": {
+    "vid_opening": "e5d1cde1-e150-4c95-b742-4b230faf48e5",
+    "vid_hamin": "6925f22a-a651-4d99-a828-30180dc92884",
+    "vid_hyunjun": "a0118877-4d86-4ab1-a134-ac9f1a37e5e2",
+    "vid_charlie": "bb2c0c5d-09f6-4b95-bfd8-d1c8f17b42a9",
+    "vid_haruta": "e08a2f75-f92b-4f89-839d-1db027117fba",
+    "vid_justin": "9c8614b3-f930-4cd2-b558-9de009208468",
+    "vid_songha": "bcb3670b-8224-4a57-ba9a-9d432dc3db4e",
+    "vid_hanbi": "47987271-6173-4d30-81ed-527379cfdc41",
+    "vid_daniel": "5dd29641-84b0-4976-bd88-5104cb7a10eb",
+    "vid_true": "10d1e927-10cd-4f32-88fc-5dfe70b9a26d"
   },
-  "daniel": {
-   "smile": "445fd07e-913b-4006-897f-f6f699d7abe3",
-   "laugh": "ee209625-8897-4d9b-a853-e929d1a2a2a8",
-   "surprised": "0d57e901-7934-4f25-8918-09771c629002",
-   "thinking": "19149e5f-6f7c-4e14-882d-7012227e4f95",
-   "shy": "f973b006-543d-4eed-90b5-3a61f7c949a1",
-   "sad": "b1fa5aa7-6fee-46bd-b543-bd849e79ca61"
+  "idle": {
+    "hamin": "1f59d49b-a619-4e80-8afe-e0ea7c6c7199",
+    "hyunjun": "0ea437a9-f5ad-4720-9df8-303ed8022c66",
+    "charlie": "0bcaeb43-174d-46a2-bfcd-b20b578294d9",
+    "haruta": "c9ca5880-9f92-4e2e-89bc-cd56a947086d",
+    "justin": "9ece24a2-ca70-417a-8e52-bdfd6f4c4703",
+    "songha": "1ee4e582-1818-488c-b962-47d5bf6544ce",
+    "hanbi": "fb0b4f95-8ba4-4625-bb40-f99095426c30",
+    "daniel": "1179febf-de93-4e69-9a9f-554dd7bfbbd6"
+  },
+  "dramaStills": {
+    "hamin": "fd1821de-84e6-4a91-ac40-dedf42482d36",
+    "hyunjun": "d8198be1-9030-4fb4-9231-bba6fbeb31d0",
+    "charlie": "b4917d7a-8ae2-4301-9e72-8ca871c52d7a",
+    "haruta": "cbcdbc0e-4e12-449b-8e67-5fa06df77a48",
+    "justin": "9a505ef0-d323-42a9-897f-77db9dfd506f",
+    "songha": "08473a22-6357-41ee-9ef3-752ec45d6188",
+    "hanbi": "0d9df49c-3999-4c6d-978b-7357dd746ca2",
+    "daniel": "8f429438-9fe5-4719-ad8c-fc0d7f1837a5"
+  },
+  "dramaVideos": {
+    "hamin": "081c76b2-8483-4a51-b39a-8385b6d9e2d6",
+    "hyunjun": "617f61d9-c10d-407c-bada-230cd352ebde",
+    "charlie": "06e35512-b79c-4578-a6b1-487585da1f69",
+    "haruta": "1d355bd1-810d-44e7-a4d8-bd3040df96a4",
+    "justin": "95cc8402-3348-4733-bd69-817e1a40ab5d",
+    "songha": "706aae7e-1492-4721-a708-655c8e356daa",
+    "hanbi": "584f7177-b446-45a9-a8d2-9c132292b8d7",
+    "daniel": "6764c4cf-3262-4b46-ae64-b0d219f295fa"
+  },
+  "test3d": {
+    "hamin_apose": "20e93a74-66cb-4518-95b4-973ae9a62503",
+    "hamin_glb": "6d03bf38-9a38-40ec-bddf-38522c5ccbc9"
   }
- },
- "cutouts": {
-  "hamin": {
-   "neutral": "379eb859-9d54-49ef-ae17-7d3a194666aa",
-   "smile": "fdda364c-fde5-4f04-874c-100a1540e53e",
-   "laugh": "0032c1cf-1020-44e8-931a-e9e50514d3f0",
-   "surprised": "20699b04-b7c6-4d8c-b2ed-3f095ab1d6e3",
-   "thinking": "2f054930-4387-443f-b85d-a65e5ecce3ff",
-   "shy": "eaa4e927-36f3-48dd-a656-8c8359ad1cb8",
-   "sad": "8a4fa58e-d2c4-419f-84db-9fff8c99bfd2"
-  }
- },
- "backgrounds": {
-  "studio_ext_night": "15a9ad02-959f-446b-a92d-f2963f80e02c",
-  "studio_lobby": "1b6bd8b0-87d3-4933-9c06-6c7770f697b1",
-  "studio_lobby_morning": "f65b0d38-dbe5-4a50-9eaa-cb36201e86ab",
-  "studio_hall": "2f19ad08-e342-4373-9de0-cfa1c4a51f66",
-  "studio_archive": "78c4c473-0558-4943-a08b-039953a2f3be",
-  "studio_practice": "456ec068-2de8-4d83-ba95-4f5806ad1fa7",
-  "studio_rooftop": "2837d272-c440-4ddd-9b78-95998ccd7797",
-  "studio_lounge": "3e5acfef-df12-4372-a572-65fb7395d7a5",
-  "studio_frontdesk": "f27a2988-68af-4412-b589-4ac303074676",
-  "mem_beach": "fcd94e27-0561-4c16-93f0-f4e3ba21847f",
-  "mem_subway": "7e99f37d-299e-4336-aa91-deea76689463",
-  "mem_street_night": "e03dd5ee-6c20-4538-81dc-2636d99bacb7",
-  "_gpt_medium_test_ext": "813e5486-3ef0-4ec7-a66c-aad753b442cb",
-  "studio_lobby_wide": "51cc40ae-c9b3-47f6-a188-f1dcc5e54f82",
-  "studio_lobby_morning_wide": "8ac82c50-58ad-4e07-a104-78287bc78804"
- },
- "cg": {
-  "cg_hamin_moment": "ca708e08-6eb3-466a-9613-1a863ea37c95",
-  "cg_hamin_ending": "03d8e9f5-b12e-4485-94e2-4664fb92a5e6",
-  "cg_hyunjun_moment": "31ae2f0f-f4eb-44ef-8a68-b193fbaeec3c",
-  "cg_hyunjun_ending": "7772e849-bee0-4c9f-8f4f-2bac632d05fc",
-  "cg_charlie_moment": "809f11b8-e6f2-4ca8-ac98-eaccf2524a60",
-  "cg_charlie_ending": "5400d573-49f2-4195-9284-37e2ce4e848e",
-  "cg_haruta_moment": "52fc5749-1408-4dec-b8d6-a53b8608cc5c",
-  "cg_haruta_ending": "0332f6f0-87ef-4c87-8d1a-555830033410",
-  "cg_justin_moment": "d2c1156b-986b-4166-a033-fdece45dd40f",
-  "cg_justin_ending": "a7b299d9-5b35-4b28-a3ff-2132d8ebda7b",
-  "cg_songha_moment": "2294d964-c001-4008-ac8e-0d3ae5eaf3c4",
-  "cg_songha_ending": "a48ac094-d39e-4775-9da8-0b905ebfbe72",
-  "cg_hanbi_moment": "acb41d79-3ada-4547-b014-24179ee9cd8c",
-  "cg_hanbi_ending": "9a0b76cb-233f-46e6-a356-9d35be1962ef",
-  "cg_daniel_moment": "6295743a-5c53-4aaa-b0c8-19c98092a17f",
-  "cg_daniel_ending": "646366e8-256c-4484-a310-127700c1d3f5",
-  "cg_echo": "016557e2-b1ef-45f7-958c-b730151f30d5",
-  "cg_ninth": "e46b9d2b-d259-4fa9-81b1-9e9cc8853e12",
-  "cg_photo": "830a732d-917e-45c8-9254-86224ece9ab0",
-  "cg_friendship": "6927a532-bacc-4f9b-bbd1-e6180b3d5312",
-  "cg_true_breakfast": "68750ef4-f02a-432e-9a56-e2d73a2ccb44"
- },
- "video": {
-  "vid_opening": "e5d1cde1-e150-4c95-b742-4b230faf48e5",
-  "vid_hamin": "6925f22a-a651-4d99-a828-30180dc92884",
-  "vid_hyunjun": "a0118877-4d86-4ab1-a134-ac9f1a37e5e2",
-  "vid_charlie": "bb2c0c5d-09f6-4b95-bfd8-d1c8f17b42a9",
-  "vid_haruta": "e08a2f75-f92b-4f89-839d-1db027117fba",
-  "vid_justin": "9c8614b3-f930-4cd2-b558-9de009208468",
-  "vid_songha": "bcb3670b-8224-4a57-ba9a-9d432dc3db4e",
-  "vid_hanbi": "47987271-6173-4d30-81ed-527379cfdc41",
-  "vid_daniel": "5dd29641-84b0-4976-bd88-5104cb7a10eb",
-  "vid_true": "10d1e927-10cd-4f32-88fc-5dfe70b9a26d"
- },
- "idle": {
-  "hamin": "1f59d49b-a619-4e80-8afe-e0ea7c6c7199",
-  "hyunjun": "0ea437a9-f5ad-4720-9df8-303ed8022c66",
-  "charlie": "0bcaeb43-174d-46a2-bfcd-b20b578294d9",
-  "haruta": "c9ca5880-9f92-4e2e-89bc-cd56a947086d",
-  "justin": "9ece24a2-ca70-417a-8e52-bdfd6f4c4703",
-  "songha": "1ee4e582-1818-488c-b962-47d5bf6544ce",
-  "hanbi": "fb0b4f95-8ba4-4625-bb40-f99095426c30",
-  "daniel": "1179febf-de93-4e69-9a9f-554dd7bfbbd6"
- }
 }

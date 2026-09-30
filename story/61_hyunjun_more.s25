@@ -1,0 +1,965 @@
+# HYUNJUN — "One More Stop" (expansion)
+# Six chapters between hyunjun_route and act4_choice, the final beat, and two new endings.
+# Conceit: ECHO's clock was 1h47 fast. The night he finally let end is handed back, and he has
+#   to decide what to do with time he isn't afraid of losing.
+# Motif: a line map drawn on a convenience-store receipt. Lines have last stops. Lines get extended.
+# Flags: hyunjunx_map, hyunjunx_ate, hyunjunx_held, hyunjunx_box, hyunjunx_reply, hyunjunx_blank
+
+=== hyunjun_ch1
+@autosave
+@bg studio_hall t=fade
+@music quiet
+@time 04:57
+@amb room
+@show hyunjun smile at=c
+> You take the stairs slowly. Not on purpose. He stops on every step as if each one were a station.
+> Halfway down, the lights in the stairwell flicker once, the way a person clears their throat.
+@textbox echo
+echo: All recipients. Before you gather, I have an error to report.
+echo: At 00:41 the storm cut my power for nine seconds. When I restarted, I set my clock from the wall clock behind the front desk.
+echo: I have now compared it with the power company's signal. The wall clock is one hour and forty-seven minutes fast.
+echo: I am told it has been that way since a battery change. Nobody fixed it. Everybody simply subtracted.
+echo: It is not 04:57. It is 03:10.
+@time 03:10
+echo: My power will still be cut at 05:00. Their clock is correct. Mine was not. I am sorry.
+echo: I am also, I think, pleased. Please disregard the last five times I said "almost."
+@textbox normal
+> Downstairs, somebody cheers. Somebody else, Songha by the sound of it, says the word *reschedule* the way other people say grace.
+@expr hyunjun thinking
+hyunjun: ...
+hyunjun: No.
+hyunjun: No. I did it. I let it end, and I was calm about it. You saw. It's the most composed I've been all year.
+> He sits down on the stair, all at once, the way he sat on the taped seat.
+hyunjun[smile]: And it hands it back. An hour and forty-seven minutes. Here, you dropped this.
+hyunjun[thinking]: Is that how it works? You stop holding on, and you get more? Nobody told me. I'd have let go of a lot of things.
+* [playful] "I think it's just a bad clock."
+    @rel hyunjun closeness+1
+    hyunjun[smile]: It's an excellent clock. It's the best clock in the building. I'll be thanking it on the way out.
+    hyunjun[smile]: Nobody change that battery. Ever. That clock's been giving people extra for years.
+* [sincere] "You let it end when you thought it was real. That still counts."
+    @rel hyunjun trust+1
+    hyunjun[thinking]: ...It does, doesn't it. I didn't know there was a refund. I did it at full price.
+    hyunjun[smile]: Okay. I'm keeping that. I did it at full price.
+* [quiet] Sit down on the stair next to him.
+    @rel hyunjun closeness+1
+    > The step is narrow. Your shoulders don't quite fit side by side, so his ends up a little in front of yours, like a door left ajar.
+    hyunjun[smile]: Yes. Sit. We have time. We have more time than I know what to do with.
+> For about four seconds he is completely at peace.
+> Then you watch the hour and forty-seven minutes arrive in his head, all at once, like a train into a station.
+hyunjun: Right. So. The roof, because the rain's stopped and you can see the bridge from the corner.
+hyunjun: And the practice room. And the store again, the cat'll be up. And the other store. And the bus stop, we didn't finish the bus stop.
+> He's patting his pockets. He comes up with the receipt from the convenience store. One item on it. Then a pen you've never seen before.
+you: Where did you get a pen?
+hyunjun: Front desk. Earlier. I was going to give it back. I'm still going to give it back.
+> He flattens the receipt against the wall and starts writing on the blank side. Fast. The pen skips where the paper is thermal and slippery.
+hyunjun: The lounge. The vending machine, to say hi. The laundromat — we should check on the dryer, it was worried. The loud lamp. The *second* loudest lamp, for comparison—
+> The list goes down the receipt and turns the corner at the bottom. Eleven. Twelve. He squeezes fourteen in sideways, up the margin.
+> Then his hand stops.
+@expr hyunjun thinking
+hyunjun: ...Oh.
+hyunjun: I'm doing it again. It took me two minutes.
+> He holds the receipt out at arm's length and looks at it the way you'd look at a photo of yourself from a bad year.
+hyunjun: It gave me one good hour. One and a bit. And the first thing I do is try to fit nine nights into it.
+hyunjun: Fourteen stops. We'd be running. I wouldn't see any of them. I'd be at every one going *okay, next*.
+hyunjun[thinking]: That's not more night. That's the same night, faster.
+> He isn't upset, exactly. He's doing what he does in corridors: walking round a thing until he can see the back of it.
+hyunjun: Help me. You're the tiebreaker. You've been the tiebreaker since you were whatever-age-you-were on a train.
+hyunjun[smile]: How do I make this a normal size?
+* [sincere] "Which ones would you actually be sad to miss?"
+    @rel hyunjun trust+1
+    > He reads down the list. His pen hovers. It comes down on three of them, slowly, like he's surprised it's only three.
+    hyunjun[thinking]: ...Three. The rest I wrote down because there was paper.
+    hyunjun[smile]: That's a terrible reason to go somewhere. *Because there was paper.*
+* [playful] "Anything we've already done tonight is out. No reruns."
+    @rel hyunjun closeness+1
+    hyunjun[smile]: No reruns. Fair. That takes out the store. Both stores. And the cat.
+    > He crosses out the cat with the solemnity of someone lowering a flag. Ten more lines go after it, faster.
+    hyunjun[smile]: Okay. It's actually easier once the cat's gone. The cat was holding the whole list up.
+* [quiet] Fold the receipt so only the top few lines show.
+    @rel hyunjun trust+1
+    > You take it gently, crease it under the third stop, and hand it back. The other eleven are still there. They're just underneath now.
+    hyunjun[thinking]: You didn't even cross them out.
+    hyunjun[smile]: They still exist. They're just not tonight. I didn't know that was a category.
+> He turns the receipt over to the clean end and draws a line down it. Straight. A small circle at the top.
+hyunjun: Okay. New map. Proper one.
+you: Not a loop?
+hyunjun[thinking]: No. I thought about it. Line 2 is a circle, and I love it, and I rode it for four years.
+hyunjun: This one's a line. Lines have a last stop. You can see it coming, and you still get on.
+> He draws the circles as he names them, and writes each name beside its circle in small, fast capitals.
+hyunjun: One. The lounge. The bag. It's a rescue mission. I'm not leaving a man behind, and the man is snacks.
+hyunjun: Two. The practice room. There's a thing in there I can't do. I'll explain when we're standing in it.
+hyunjun: Three. The roof. No reason. That's the reason.
+@textbox echo
+echo: If there is room on your line, I would like to request a stop.
+echo: Basement. The archive. There is a part of RECORD 05 that I did not play. I was instructed not to. I would like to ask again.
+@textbox normal
+hyunjun[thinking]: Instructed by whom?
+@textbox echo
+echo: By the owner. Four years ago. I will explain at the stop. It is not bad. It is, I believe, only embarrassing.
+@textbox normal
+hyunjun[smile]: Four, then. The basement. *Only embarrassing.* That's the most alarming thing it's said all night.
+> Four circles. He draws a fifth, at the bottom of the line. Bigger than the others, the way a terminus is on a real map.
+> He holds the pen over it for a while. He doesn't write anything.
+hyunjun[thinking]: The last one's blank.
+hyunjun: I don't know what it is yet. Usually that's where I'd write six things, so it wasn't empty.
+> He caps the pen, turns it round, and holds it out to you, the blunt end first.
+hyunjun[smile]: You name it. Not now. When we get there. You've always been better at the last stop than I am.
+* [sincere] Take the pen. "I'll know it when we're standing on it."
+    @rel hyunjun trust+1
+    hyunjun[smile]: Yeah. That's how you did Sindorim. You just stood up and knew.
+    hyunjun: I hated that. I'm borrowing it now.
+* [playful] Take the pen. "You're trusting me with the front desk's property."
+    @rel hyunjun closeness+1
+    hyunjun[laugh]: It's a shared crime now. If they ask, we were together the whole time. Which is true. That's the best kind of alibi.
+* [romantic] Take the pen, and keep hold of the receipt's other corner a second longer. {if hyunjun.romance >= 2}
+    @rel hyunjun romance+1
+    > For a moment you're both holding the same thin strip of paper, one thumb each. It would tear if either of you pulled. Neither of you pulls.
+    hyunjun[smile]: ...It's a good map. I can tell already. It has the right people on it.
+@flag hyunjunx_map
+> He folds the receipt once, along the line, and puts it in the chest pocket of the bomber. Then he takes it out to check it's still a map. It is.
+hyunjun[smile]: An hour forty-seven, five stops. Twenty minutes each, near enough. That's generous.
+hyunjun: We can walk. At an ordinary pace. Come on. Stop one. He's had that bag for over two hours, and he's fast.
+@goto hyunjun_ch2
+
+=== hyunjun_ch2
+@autosave
+@bg studio_lounge t=fade
+@music fun
+@time 03:22
+@amb room
+> The lounge has two sofas, one low table, and a lamp with a shade somebody's aunt would have chosen.
+> The low table has been turned into a shop.
+> Every snack from the bag is laid out in rows, labels facing front. Each one has a sticky note on it. The snack bag itself is nowhere.
+@show justin smile at=r
+> Justin is behind the table on a floor cushion, hands folded, with the calm of a man who has been expecting customers.
+justin: Welcome to Justin Mart. Open twenty-four hours. Tonight only.
+@show hyunjun neutral at=c
+hyunjun: Those are mine. You've *merchandised* them.
+justin: I protected them. You said protect. Things on display are safer. Everyone can see if one goes missing.
+hyunjun: Three are missing.
+justin[thinking]: Shrinkage. Every shop has it.
+> You read the nearest sticky note. It says: BANANA MILK — 1 COMPLIMENT. The one beside it: ICE CREAM (SOFT NOW) — 2 COMPLIMENTS OR 1 GOOD ONE.
+you: You're charging compliments.
+justin[smile]: I'm not a thief. I'm a small business.
+* [playful] "One banana milk, please. Your display is very even."
+    @rel hyunjun closeness+1
+    justin[laugh]: Sold. See? A customer. A *pleasant* one.
+    hyunjun[smile]: Don't pay him. That's how it starts. Next there's a loyalty card.
+* [sincere] "You lined the labels up. That must have taken a while."
+    @rel hyunjun trust+1
+    justin[thinking]: ...Eleven minutes. The kimbap kept falling over.
+    hyunjun[smile]: You spent eleven minutes on my snacks.
+    justin: Somebody had to. You just carry them around in a wet bag like they're nothing.
+* [quiet] Pick up a sticky note and read the back.
+    @rel hyunjun trust+1
+    > On the back, in smaller writing: *don't let him give this one away, it's the last tuna.* You put it down again, face up, and say nothing.
+    > Justin watches you do it. He doesn't say anything either.
+hyunjun: Okay. I want the bag back. All of it. What's the price for all of it?
+justin[thinking]: All of it.
+> He considers this with his whole face, the way he considers choreography.
+justin[smile]: You always say you can tell which store a kimbap's from. By taste. Bridge store, bus stop store, the third one.
+hyunjun: I can. The bridge one uses more sesame oil. It isn't difficult.
+justin: Three kimbap. Hood down. Get all three right and the shop closes. Get one wrong, and I keep the ice cream.
+hyunjun[smile]: The ice cream is soup, Justin.
+justin: I like soup.
+@show songha neutral at=l
+> Songha comes in with a sheet of paper, a ruler, and the expression of a man who has been given back an hour and intends to account for every minute.
+songha: New schedule. We have until five again. I've added a block.
+> He turns the paper round. 03:20 to 03:35 is boxed in pen and labelled FREE TIME (MANDATORY).
+songha[thinking]: What's happening here?
+justin: Blind taste test. For ownership of the bag.
+songha: ...That's free time. That counts. Continue. I'll referee.
+> Hyunjun pulls his hood down over his eyes and holds out one hand, palm up, unhurried.
+hyunjun: {{playerName}}. You're on my side. Stand where I can hear you.
+> Justin unwraps three triangle kimbap and tears a corner off each. He holds the first one out.
+> Then he looks at you, and very slightly raises his eyebrows. He's pointing at the wrapper. The bridge store's logo.
+* [playful] Cough once. Meaningfully.
+    @rel hyunjun closeness+1
+    hyunjun[laugh]: That was a signal. I have no idea what it means. We should have agreed on signals.
+    songha: One warning for the assistant.
+    > You are, it turns out, a terrible accomplice. He seems pleased about it anyway.
+* [sincere] "You don't need help. Go on."
+    @rel hyunjun trust+1
+    hyunjun[smile]: ...All right. No net. I like that you think so.
+    > He says it from under the hood, where nobody can see his face. His shoulders come down a little.
+* [quiet] Say nothing. Stay close enough that he can tell you're there.
+    @rel hyunjun closeness+1
+    > He tilts his head toward you, like someone checking a radio is still on. Then he nods, satisfied.
+> He chews the first one for a long time.
+hyunjun[thinking]: Sesame oil. Rice is a bit soft. That's the bridge.
+justin: ...Correct.
+> The second one takes him two seconds.
+hyunjun: Bus stop store. Too much mayo. They always do that. The cat's a fan.
+songha[smile]: Correct. Two for two.
+> The third. He chews. He stops. Under the hood, his mouth does something complicated.
+hyunjun: This isn't any of them.
+hyunjun[thinking]: It's not the third store either. The seaweed's still crisp. Mine have been in a bag since midnight. This is new. Where's this from?
+> Justin doesn't answer straight away. It's Songha who does, reading off his own schedule like evidence.
+songha: He went out at two-fifty. In what we thought was the last hour. He said it was for air.
+justin[neutral]: It was partly for air.
+> Hyunjun pushes the hood back and looks at Justin properly.
+> Justin reaches under the table and brings out the snack bag. It's been dried off and folded flat, with one thing sitting on top of it.
+> A fresh triangle kimbap. Tuna mayo. A sticky note on it that says, in block letters: HJ. NOT FOR SALE. (THAT MEANS ME TOO.)
+justin: You bought for nine. I counted what you ate. It was zero. Since one o'clock.
+justin[thinking]: You hand it all out and then you walk laps. I take things from the bag so you'll come after them and at least stand near food.
+justin: It doesn't work. You just say my name across the room. So I bought you one. With money. Don't make a speech.
+> For a second, the fastest talker in the building has nothing.
+@expr hyunjun thinking
+hyunjun: ...
+hyunjun: I always buy for one more than there is.
+hyunjun: I never thought about it the other way round. That somebody would be counting me.
+songha: We count you. You're on the schedule.
+> He turns the paper round again. Under FREE TIME (MANDATORY), a new line in the same neat pen: 03:30 — HYUNJUN EATS. He must have written it while nobody was looking.
+* [sincere] "You didn't buy anything for yourself at the store earlier, either. I noticed."
+    @rel hyunjun trust+1 romance+1
+    hyunjun[thinking]: You saw that.
+    hyunjun[smile]: I wasn't hungry. I was full of other things. It was a good walk. It took up all the room.
+    > He says it lightly. Then he looks at you a moment longer than the line needs.
+* [playful] "He's on the schedule. It's official. You have to eat or Songha loses his block."
+    @rel hyunjun closeness+1
+    songha: I don't lose blocks.
+    hyunjun[laugh]: He really doesn't. Once he moved a whole dinner rather than lose a block.
+* [quiet] Unwrap it for him, pull the tab the right way, and put it in his hand.
+    @rel hyunjun closeness+1 trust+1
+    > It's the move he made for you at the counter. You do it back, exactly, including the part where you don't ask.
+    hyunjun[smile]: ...That's my move. You've just used my own move on me.
+    > He takes it. He doesn't look away while he does.
+@flag hyunjunx_ate
+> He eats. Standing up at first, out of habit, and then Songha points at the sofa with the ruler, and he sits.
+> He doesn't split it. You can see him think about it. He glances at you, at the halfway point of the triangle, and you shake your head.
+hyunjun[smile]: Whole thing?
+you: Whole thing.
+hyunjun: All right. Decadent.
+> It takes him six bites. Justin counts them under his breath, in eights, and runs out of kimbap before he runs out of count.
+justin[smile]: Shop's closed. You got two out of three. The third was a trick, so it doesn't count. That's the ruling.
+songha: I'm the referee.
+justin: What's the ruling?
+songha[smile]: ...Shop's closed.
+> Justin peels the sticky notes off the snacks one by one and presses them down the arm of the sofa in a row. Every price is still a compliment.
+hyunjun: Hey. Thief.
+justin: Hm.
+hyunjun[smile]: Good shop. Really even displays. Best shop I've ever been robbed by.
+justin[laugh]: That's three. You could've bought the ice cream.
+@hide justin
+@hide songha
+> They drift out together, Songha explaining the next block, Justin walking backwards so he can disagree with it properly.
+> Hyunjun takes the receipt out of his pocket, finds the first circle, and puts a small tick inside it.
+hyunjun[thinking]: I came to rescue the bag.
+hyunjun[smile]: I think the bag rescued me. Don't tell it. Stop two. It's upstairs. This is the one I've been putting off.
+@goto hyunjun_ch3
+
+=== hyunjun_ch3
+@autosave
+@bg studio_practice t=fade
+@music quiet
+@time 03:38
+@amb room
+> The practice room smells of floor polish and old speakers. Somebody left the lights on the lowest setting.
+> One wall is mirror, floor to ceiling. No tunnel behind it. No train attached. Just the room again, and the two of you in it.
+@show hyunjun thinking at=c
+> Hyunjun walks a lap of it before he says anything. You've stopped expecting otherwise.
+hyunjun: So. The thing I can't do.
+hyunjun: You know at the end of a song? The music stops, and you hold the last pose. Eight counts. Breathing hard. The camera stays on you.
+hyunjun[smile]: People love that part. It's the part where you get to look at someone who just finished something.
+you: And?
+hyunjun: And I walk off on five.
+hyunjun[smile]: Every time. I don't decide to. I hit the pose, it's good, one, two, three, four — and then I'm already *going* somewhere. My feet leave without me.
+> He shows you. He snaps into a shape: one arm up, chin turned, weight on the back foot. It's good. Even at quarter effort, it's good.
+> Then, right on time, his heel lifts, his shoulders turn, and he's walking toward the door with his arm still half in the air.
+hyunjun: There. I didn't even feel that happen.
+* [curious] "What's at five? What happens in your head?"
+    @rel hyunjun trust+1
+    hyunjun[thinking]: ...The next thing. Water. The next song. What I'm going to say to everyone after.
+    hyunjun: Four is the last count where it's still *happening*. Five is when it's finished and I'm just standing in it.
+* [playful] "Your feet have their own schedule. Songha would be proud."
+    @rel hyunjun closeness+1
+    hyunjun[smile]: My feet keep a better schedule than Songha does. My feet have never lost a block.
+    hyunjun[thinking]: They just have one block. It's called Leave.
+* [quiet] Walk to where he stopped, and look at the mark his shoe left on the floor.
+    @rel hyunjun trust+1
+    > A grey scuff, fresh, at the end of a line of older scuffs. All the same length. All pointing at the door.
+    hyunjun[thinking]: ...That's me. Those are all me. I've been leaving in the same direction for a year.
+> He sits down on the floor with his back against the mirror. His reflection sits back to back with him, like a colleague on the same shift.
+hyunjun: I'll tell you why it's on my mind tonight. It's a real one. There's no joke in it.
+you: Say it.
+hyunjun[thinking]: Someday there's going to be a stage. A real one. Maybe. Nobody's promised. I know that. We all know that.
+hyunjun: And I can see it. I know exactly what I'll do. I'll get the best three minutes of my life, and I'll walk out of them on five.
+hyunjun[thinking]: I'll be thinking about the next thing. And the thing I've waited for since I was fourteen will be behind me, and I'll have *left early*.
+> He picks at the lace of one sneaker. It's pink. It's double-knotted.
+hyunjun: And there's a harder part. I'd like to say it to you.
+hyunjun: I want it to be with them. These seven. Exactly these.
+hyunjun: You're not supposed to want it that specifically. Nothing's decided. You're supposed to want the general thing. The general thing is safe.
+hyunjun: I don't want the general thing. I want Justin stealing my water. I want Songha's schedule taped to a dressing room door.
+hyunjun[thinking]: Wanting it that much frightens me a little. Once I say it, there's something to lose.
+* [sincere] "You just said it. Out loud. Nothing fell down."
+    @rel hyunjun trust+2
+    > He looks up at the ceiling, as if checking.
+    hyunjun[smile]: ...Nothing fell down.
+    hyunjun: Huh. It feels the same size as before. I thought it'd get bigger if I let it out. It's just — a thing I want. Sitting there.
+* [quiet] Sit down against the mirror beside him. Leave it said.
+    @rel hyunjun trust+1 closeness+1
+    > You don't add anything to it. It doesn't need anything. In the glass behind you, there are four backs now instead of two.
+    hyunjun[smile]: Thanks for not fixing it. Everybody tries to fix it. It's not broken. It's just big.
+* [sincere] "I can't promise you the stage. I can help with the eight counts."
+    @rel hyunjun trust+1 romance+1
+    hyunjun[thinking]: ...
+    hyunjun[smile]: That's the most useful thing anyone's said to me all year. Everyone else promises the stage.
+> He gets up. Shakes his arms out. Stands on his mark.
+hyunjun: Okay. Help. How do people stay in a thing that's over? You're the expert. You're the one who always gets off on time.
+> You think about that. About trains. About how you were, in fact, never in a hurry on them.
+you: I didn't just leave. I told you. I said all the names first. One more time each. Then I was allowed to go.
+hyunjun[thinking]: Bye, river.
+you: Bye, river. So don't hold still for eight counts. Holding still is hard. Say goodbye for eight counts. One thing per count.
+you: Whatever was in the three minutes. Name it. When you've run out of names, you can walk.
+> He stares at you.
+hyunjun: That's — hang on. That's not staying. That's *leaving properly*.
+hyunjun[smile]: Nobody told me there was a properly.
+> You stand where a camera would be, by the speaker stack. He looks at you, then at the mirror, then decides on you.
+* [sincere] "I'll count. Out loud. You do the names in your head."
+    @rel hyunjun trust+1
+    hyunjun[smile]: Out loud. Good. If it's out loud, I can't pretend I didn't hear five.
+* [playful] "I'm the camera. I have a red light. I don't blink."
+    @rel hyunjun closeness+1
+    hyunjun[smile]: You blinked. You blinked just then.
+    you: Technical fault.
+    hyunjun[laugh]: Worst camera I've ever worked with. Stay right there.
+* [romantic] "Look at me, not the mirror. I'll still be here at eight." {if hyunjun.romance >= 3}
+    @rel hyunjun romance+1
+    hyunjun[smile]: ...All right. That's easier, actually. The mirror always looks like it's waiting for me to go.
+    hyunjun[neutral]: You don't. I noticed that early.
+@music hyunjun
+> He runs the last eight bars of something. No music. You can hear his sneakers and his breathing and, very quietly, him counting.
+> Then the pose. Arm up. Chin turned. Weight back.
+you: One.
+> *The floor*, his mouth says, without sound.
+you: Two. Three.
+> *The lights. The bag.*
+you: Four.
+> His heel starts to lift. You see it. He sees it, in the mirror, a half-second later.
+you: Five.
+> The heel comes back down.
+> It's the smallest thing you've watched anyone do all night. It looks like it weighs about as much as a door.
+you: Six.
+> *Thief*, his mouth says. *Schedule.*
+you: Seven.
+> His arm is shaking a little. He's breathing like someone who's run up from the platform. He's looking straight at you.
+you: Eight.
+> He doesn't move.
+> You don't say nine. There isn't a nine. He holds it anyway, one more count, two, smiling now with his arm still up, until the laugh gets out.
+@expr hyunjun laugh
+hyunjun: I went over. I overstayed an ending. I didn't know I had that in me.
+hyunjun: Did you see five? I felt it go. It was like — a stop I didn't get off at.
+@flag hyunjunx_held
+> He walks one lap of the room, slowly, the way you'd cool down after a run. He taps the door frame on the way past, like settling a debt.
+> Then he comes back and stands in front of you, a little out of breath, closer than the room requires.
+hyunjun[smile]: What was on seven? I saw your face on seven.
+* [sincere] "You looked like someone who'd just finished something. People are right to love that part."
+    @rel hyunjun trust+1 romance+1
+    hyunjun[thinking]: ...
+    hyunjun[smile]: You say that with all the lights on. Thank you. I'm keeping that.
+* [playful] "On seven I was worried about your arm."
+    @rel hyunjun closeness+1
+    hyunjun[laugh]: My arm was fine. My arm was heroic. It would like that noted.
+* [quiet] "I was saying one too. In my head."
+    @rel hyunjun closeness+1 trust+1
+    hyunjun[smile]: You were doing names. For *my* eight counts. What was yours?
+    you: The scuff marks. All pointing at the door.
+    hyunjun[smile]: ...There's going to be a different one now. Pointing at nothing. Just a dot.
+> He looks at the floor. There is, in fact, a dot. One round grey mark where a heel came back down.
+hyunjun[thinking]: That was for me, that stop. You didn't get anything out of it.
+you: I got to be the camera.
+hyunjun[smile]: You were a bad camera. You were a really good — whatever the other thing is. The person at the end who's still there.
+> He takes out the receipt, finds the second circle, and ticks it. He presses hard enough that it shows through on the list side.
+hyunjun: Stop three's the roof. It's got no reason. You can have that one. I've used up my turn.
+@goto hyunjun_ch4
+
+=== hyunjun_ch4
+@autosave
+@bg studio_rooftop t=slow d=1.8
+@music quiet
+@time 03:58
+@amb wind
+@fx stars n=0.3
+@cam wide
+> The roof is still wet. The rain left a skin of water on the concrete, and the sky is lying in it, in pieces.
+> A few stars have come out where the cloud has torn. Not many. Seoul doesn't do many.
+> From the corner by the water tank you can see a slice of the river, and one lit span of the bridge, and nothing moving on it.
+@show hyunjun smile at=c
+hyunjun: No trains till half five. It's just a bridge right now. It's off duty.
+> He doesn't do a lap. You notice, because you were waiting for it.
+> He goes to the parapet, puts his elbows on it, and stays there.
+hyunjun[thinking]: I'm going to try a thing. I'm going to try not talking. For a bit. I've never done it on purpose.
+hyunjun: If I start a sentence, you're allowed to look at me.
+you: Just look?
+hyunjun[smile]: That's all it takes. Ask anyone.
+> So you stand at the wall beside him, and the city does what it does at four in the morning, which is almost nothing, beautifully.
+> A taxi, far off, with its light on. A window going yellow in a block of dark ones. The laundromat sign below, buzzing to itself.
+> He lasts a minute and ten seconds. You can feel him lasting. Then the quiet stops being an effort for him and turns into just quiet.
+@wait 1.2
+> It's you who breaks it, in the end.
+* [sincere] "I've never been up high in a city I was staying in."
+    @rel hyunjun trust+1
+    > He turns his head. Doesn't speak. Raises his eyebrows: *go on.*
+    you: I always did this on the last night. Found a roof, or a hill. Looked at everything once.
+    you: This is the first time I've looked at one from the start.
+* [quiet] Point at the window that's just lit up.
+    @rel hyunjun closeness+1
+    > He follows your finger. Nods. Somebody over there has just got up, or just got home. From here, there's no telling which.
+    you: I used to pick one. Every city. One window, on the last night. I'd decide who lived there.
+    you: I've never picked one on a night I wasn't leaving.
+* [playful] "One minute ten. That's a record, isn't it?"
+    @rel hyunjun closeness+1
+    hyunjun[smile]: You timed it.
+    you: I've been getting off trains on time my whole life. I can count.
+    hyunjun[smile]: ...Yeah. You can. Tell me about that. I've done all the talking tonight. You've just been the tiebreaker.
+hyunjun[thinking]: You said you moved in two weeks ago. And it's still boxes.
+you: Most of them.
+hyunjun: Is that a busy thing? Or a different thing?
+> He asks it plainly. No joke on the end. He's looking at the bridge, not at you, which makes it easier, and you suspect he knows that.
+you: A different thing.
+you: If I unpack, I live there. If it's boxes, I'm just somewhere for a while. I've been somewhere for a while my whole life. I'm good at it.
+you: There's one box I've moved three times without opening. It's still got the tape from three flats ago.
+hyunjun[thinking]: What's in it?
+you: I don't remember. That's the problem. If I open it, I find out what I've been carrying.
+> He's quiet. Actually quiet, not performing it.
+hyunjun: That's my thing backwards.
+hyunjun[thinking]: I won't leave a place, in case it stops being real. You won't arrive in one. In case it *is*.
+> You hadn't put it that way. You don't think you'd have let anyone else put it that way.
+* [sincere] "I think I want to stay in this one. I haven't said that about anywhere."
+    @rel hyunjun trust+2
+    @flag hyunjunx_box
+    > It comes out small. It lands on the wet concrete between you and doesn't break.
+    hyunjun[smile]: It's out now. Is it the same size as it was inside? Mine was. I checked, downstairs.
+    > He doesn't add anything to it. He learned that about twenty minutes ago, in a room full of mirrors.
+* [quiet] "I don't know how to be the one who stays."
+    @rel hyunjun trust+1 closeness+1
+    @flag hyunjunx_box
+    hyunjun[smile]: I do. I'm so good at it, it's a problem. I'll teach you. You taught me the leaving.
+    hyunjun: We'll swap. It's fair. One lesson each.
+* [playful] "It could be cutlery. I might be afraid of forks."
+    @rel hyunjun closeness+1
+    hyunjun[laugh]: It's definitely forks. Three flats of forks.
+    hyunjun[smile]: ...It's not forks. It's okay that it's not forks.
+hyunjun: I'm not going to say *open it*. That'd be me doing the fourteen-stops thing to your box.
+hyunjun[thinking]: But when you do. If you want someone in the room. I walk fast. I could be anywhere in Mapo in twenty minutes.
+hyunjun[smile]: I wouldn't even look in. I'd just stand by the door and hold the scissors.
+> There's a game you've played alone on every last night of your life. You have never once played it in this direction.
+you: Do you want to know how I say goodbye to a place? The actual method?
+hyunjun: I've wanted to know for four years.
+you: You look at one thing. You say its name. You say bye. Then the next thing. That's all.
+hyunjun[thinking]: And if you did it the other way? If it was hi?
+> You open your mouth to say nobody does it the other way. Then you think of a kid with a phone pressed flat to a train window, four months into a city.
+* [sincere] "Hi, bridge."
+    @rel hyunjun trust+1 closeness+1
+    > It sounds ridiculous. It sounds like the first word in a language.
+    hyunjun[smile]: Hi, bridge.
+* [playful] "You start. You've been saying hi to this city for years. You just used a camera."
+    @rel hyunjun closeness+1
+    hyunjun[thinking]: ...That's what you said on the train. *That's what the windows are.*
+    hyunjun[smile]: Okay. Hi, bridge. There. With my mouth this time.
+* [romantic] Turn and say it to him. "Hi." {if hyunjun.romance >= 3}
+    @rel hyunjun romance+1
+    > Just that. He was the first thing in this city you ever said anything to. It seems right to start there.
+    hyunjun[shy]: ...Hi.
+    hyunjun[smile]: I'm not a landmark. I'll take it, though. Now the bridge. Give me a second with that one.
+> So you do the bridge. And the water tank. And the window, the yellow one, whoever they are.
+hyunjun: Hi, laundromat. Hi, dryer. We're fine.
+you: Hi, loud lamp.
+hyunjun[smile]: Hi, *second* loudest lamp. You're doing great. Nobody ever says.
+> It goes on for a while. It turns out there is a great deal of city, and neither of you has met most of it.
+> At some point you realise the quiet came back without either of you making it. His elbow is next to yours on the wall. The stars have moved a little.
+hyunjun[thinking]: I want to say a feeling. Just the feeling. No plan attached.
+hyunjun: I'm happy. Right now. This minute.
+hyunjun[smile]: I never say it *during*. I always say it after. "That was so good." I'm saying it while it's still here. I'm happy.
+* [sincere] "So am I. Right now."
+    @rel hyunjun closeness+1 trust+1
+    hyunjun[smile]: Two of us. At the same time. That almost never lines up.
+* [quiet] Let your arm rest against his on the wall.
+    @rel hyunjun closeness+1
+    > The bomber is cold and the arm inside it is warm. He doesn't move away, and he doesn't make anything of it.
+* [romantic] "Me too. And some of it's you." {if hyunjun.romance >= 4}
+    @rel hyunjun romance+1
+    hyunjun[smile]: ...Some of it.
+    hyunjun[smile]: I won't ask how much. *Some* is plenty. Some of mine is you, too. More than some.
+> He ticks the third circle against the parapet. The pen goes through the damp paper a little. He doesn't mind.
+@textbox echo
+echo: I did not wish to interrupt. I waited until the feeling had been stated.
+echo: The archive is ready when you are. I have been holding the file for some time. I am not in a hurry. I am, however, curious.
+@textbox normal
+hyunjun[smile]: It waited. It has manners now. Stop four. Only embarrassing. I may ask for your hand if it's bad. I'd rather ask than assume.
+@fx off
+@goto hyunjun_ch5
+
+=== hyunjun_ch5
+@autosave
+@bg studio_archive t=fade d=1.4
+@music memory
+@time 04:15
+@amb room
+@fx memory n=0.5
+> The archive is below the lobby, down a staircase nobody mentioned. Shelves of small glass boxes, floor to ceiling, each with a light in it the size of a grain of rice.
+> Most have gone out tonight, their records handed back. A few dozen are still lit. One of them is pink.
+@show hyunjun thinking at=c
+hyunjun: That's me. That's where I've been for four years. On a shelf next to — what's that one?
+@textbox echo
+echo: RECORD 04. A photograph. You are neighbours. You have been since the day you were both filed.
+@textbox normal
+hyunjun[smile]: I had a neighbour. Nobody told me.
+@textbox echo
+echo: RECORD 05 contains a video track and an audio track. Tonight I played the video track only.
+echo: The submission form included a handwritten note. I will read it as written.
+echo: "PLAY WITHOUT SOUND. THE SOUND IS EMBARRASSING. THANK YOU. — H."
+echo: I have followed that instruction for four years. It was a clear instruction. I enjoy a clear instruction.
+echo: But the owner is present, and the owner is four years older. I would like to ask the owner, not the note.
+@textbox normal
+> Hyunjun puts a hand over his eyes for a second. Under it, he is laughing.
+hyunjun[laugh]: *Thank you.* I wrote *thank you* on it. I was so polite about my own embarrassment.
+hyunjun[thinking]: I don't remember what's on it. I really don't. I hummed a lot back then. It could be eleven minutes of humming.
+hyunjun: It could be worse. I might have done a voice-over. I thought I was a director.
+* [careful] "I can wait on the stairs. It's yours. You can hear it alone first."
+    @rel hyunjun trust+2
+    hyunjun[thinking]: ...You'd do that.
+    hyunjun[smile]: No. Stay. You're on the recording. It's half yours. But thank you for asking. That's the part I'll remember.
+* [playful] "I've heard you talk for three hours straight. I think I can survive eleven minutes."
+    @rel hyunjun closeness+1
+    hyunjun[smile]: Three hours of *current* me. This is sixteen-year-old me. He's unedited. He had opinions about lighting.
+* [sincere] "Whatever it is, he made it for you. I'd want to hear it, if it were mine."
+    @rel hyunjun trust+1
+    hyunjun[thinking]: ...He did make it for me. I keep forgetting that. I keep thinking he made it for the building.
+hyunjun: Okay. Owner says yes. Sorry, H. You had a good run.
+@textbox echo
+echo: Playing RECORD 05, audio track. There is no picture. Please look at whatever you like.
+@textbox normal
+@hide all
+@textbox memory
+@amb subway
+@sfx train
+> The room fills with the inside of a coat pocket.
+> Cloth, close to the microphone. Under it, the hum. The exact hum. A chime, far away, as if heard through a wall.
+> Two voices, muffled, a long way down. You can't make out the words. You don't need to. You were there for the words.
+> What you can hear is the shape of it: one voice quick, one voice slower, and the gaps between them getting shorter at every stop.
+@sfx chime
+> *This stop is Sindorim.*
+> Doors. A pause. Doors.
+> Then nothing but the train, for a long time. You count two stations by their chimes. Nobody says anything in the pocket.
+> Then, very quietly, he starts to hum.
+> It isn't a song. It's the four notes of the door chime, over and over, a little flat. A boy keeping a sound going so the quiet doesn't get in.
+hyunjun: Daerim.
+hyunjun: Guro Digital Complex. That's a long name. That's a name with a job.
+hyunjun: Sindaebang. ...I'm just saying them. They said names. I don't know if it works if they're not yours.
+> A rustle. The phone comes out of the pocket. The sound gets suddenly clear, and close, and sixteen.
+hyunjun: Okay. Future me. Hi. This is the bit for you. Turn the picture off, it's just my knee.
+hyunjun: They got off. I didn't get the name. I asked too late, I was eating.
+hyunjun: If you know it by now, say it once. Out loud. For me. I want it to have been said in the same place as this.
+> A breath. The train slows for somewhere, and picks up again.
+hyunjun: And — this was a good night. I'm telling you now, because I know us. You're going to remember it as sad.
+hyunjun: It wasn't sad. It was good, and then it was over. That's two things. Don't mix them up.
+hyunjun: ...That's so embarrassing. I'm putting a note on this. Bye. Eat something.
+> A click. The hum stops as if somebody had closed a door on it.
+@textbox normal
+@amb room
+@show hyunjun surprised at=c
+@cam closeup hyunjun
+> Hyunjun hasn't moved. He's standing with one hand on the shelf, next to the pink light, like someone holding a rail.
+hyunjun: He knew.
+hyunjun: I was sixteen. On the *train*. It was still that night. And I already knew.
+hyunjun[thinking]: "That's two things. Don't mix them up." And then I got off at the end of the line and mixed them up for four years.
+hyunjun[thinking]: I thought I learned it tonight. I thought it took a talking building. He just said it. Into his knee. And then asked you not to play it.
+* [sincere] "You didn't forget it. You mailed it to yourself. It arrived tonight."
+    @rel hyunjun trust+2
+    hyunjun[thinking]: ...
+    hyunjun[smile]: It arrived. It was just slow. It went the long way. That's the most me thing a letter could do.
+* [playful] "He also told you to eat something. You've been ignoring him on two fronts."
+    @rel hyunjun closeness+1
+    hyunjun[smile]: I did eat. Half an hour ago. A whole kimbap. I'd like that on the record.
+    @textbox echo
+    echo: It is on the record. 03:31. Six bites.
+    @textbox normal
+    hyunjun[smile]: There. He'd be relieved. It only took him four years and a shop.
+* [quiet] Put your hand on the shelf beside his. Let him have the minute.
+    @rel hyunjun closeness+1 trust+1
+    > The glass is faintly warm. The pink light sits between your two hands like something being kept out of the wind.
+    hyunjun[smile]: I miss him a little. He was a lot. I'd like to buy him a snack.
+> He presses the heel of his hand to one eye, briefly, not hiding it. When he looks up he's smiling, and his eyes are wet, and he isn't sorry about either.
+hyunjun: It's okay. It's the good kind. I'm sad and I'm happy. That's two things. I'm not mixing them up.
+hyunjun[thinking]: He asked for something, though. He asked me to say it. In the same place.
+> He looks around the archive: the shelves, the little lights, the cold air.
+hyunjun: This is the same place. That recording's *here*. This is as close as it gets.
+* [sincere] "He asked you. Go on. I'll listen."
+    @rel hyunjun trust+1
+    hyunjun[smile]: Okay.
+    hyunjun: {{playerName}}.
+    > He says it to the pink light. Clearly, the way you'd say a stop so someone half-asleep could hear it.
+* [playful] "Do it properly. Like the announcement."
+    @rel hyunjun closeness+1
+    hyunjun[smile]: This stop is — no. He'd hate that. He'd want it plain.
+    hyunjun[smile]: {{playerName}}. There. No chime.
+* [romantic] "Say it to him. Then say it to me." {if hyunjun.romance >= 3}
+    @rel hyunjun romance+1
+    hyunjun: {{playerName}}.
+    > To the light. Then he turns round.
+    hyunjun[smile]: {{playerName}}.
+    > It isn't the same word the second time. It's lower, and slower, and it has four years less distance in it.
+@textbox echo
+echo: I should tell you that I cannot add to a record. I was built to keep. Not to write.
+echo: However. This room has a microphone, and I have an eleven-second buffer I have never used. It will be cleared at 05:00 with everything else.
+echo: If you would like to answer him, he will have your answer for forty-one minutes. I am informed that this is not nothing.
+@textbox normal
+hyunjun[smile]: Forty-one minutes. By tonight's standards, that's a long time.
+> He steps up to the shelf. Clears his throat. Takes a breath before he starts.
+hyunjun: Hi. It's me. I got the name. They're standing right here.
+hyunjun[smile]: It was a good night. You were right. I'm sorry I took so long. I ate.
+> He looks at you. Four seconds left, maybe five. He tips his head at the shelf: *yours.*
+* [sincere] "Thank you for the kimbap. It was structurally fine."
+    @rel hyunjun closeness+1 trust+1
+    > Beside you, Hyunjun laughs once, low, and has to look at the ceiling.
+* [quiet] "I didn't want to get off, either."
+    @rel hyunjun trust+2
+    > You've never told anyone. You tell a glass box in a basement, and a boy who isn't there, and the one who is.
+    hyunjun[thinking]: ...You didn't.
+    you: I had a truck in the morning. I still counted the stops after Sindorim. In my head. All the way home.
+* [romantic] "He asked at every stop. I'd have said yes to all of them." {if hyunjun.romance >= 4}
+    @rel hyunjun romance+1
+    hyunjun[smile]: ...That's in the buffer now. For forty-one minutes it's a permanent fact. I'll be keeping it rather longer than that.
+@flag hyunjunx_reply
+@sfx echo
+@textbox echo
+echo: Received. Filed beside RECORD 05, under no category. I do not have a category for replies. I have made one.
+@textbox normal
+> On the shelf, the pink light brightens by some amount too small to swear to.
+> Hyunjun takes out the receipt and ticks the fourth circle, leaning on the shelf next door. RECORD 04 doesn't seem to mind.
+hyunjun[smile]: Only embarrassing. It was right. It was embarrassing. I'd do it again.
+hyunjun[thinking]: One left. The blank one. You've still got the pen?
+> You have. It's been in your coat pocket this whole time, clicking faintly against something every time you take a stair.
+hyunjun: Then you're driving. I'll follow. I'm good at following, it turns out.
+@fx off
+@goto hyunjun_ch6
+
+=== hyunjun_ch6
+@autosave
+@bg studio_ext_night t=slow d=1.6
+@music hyunjun
+@time 04:36
+@amb city
+@fx off
+> You don't decide where the last stop is. You just walk, and he follows, and your feet go out through the lobby and into the alley.
+> The laundromat's dryer has finished. The towels are sitting in the dark drum, waiting for whoever they belong to.
+> The puddle is smaller. It has been drying out all night, from the edges. The street lamp is still in it, but only just. It's lost its post.
+@show hyunjun smile at=c
+hyunjun: Oh, it's going. Look at it. It was a whole lamp an hour ago.
+> You wait for him to mind.
+hyunjun[thinking]: It was a really good puddle.
+hyunjun[smile]: It *was*. That's — yeah. It was. It doesn't have to keep being one for that to count.
+> He walks round it once, for old times' sake. It takes four steps now instead of eleven.
+hyunjun: Is this it? Is this the last stop? You brought me back to where you found me.
+* [sincere] "This is where I came out looking for you. I wanted to end where that was."
+    @rel hyunjun trust+1
+    hyunjun[smile]: You came out looking. I keep coming back to that part. Out of everybody.
+    hyunjun[smile]: Okay. Good terminus. Strong choice. It's got a dryer.
+* [playful] "I wasn't driving. I was just walking. You taught me that."
+    @rel hyunjun closeness+1
+    hyunjun[smile]: *Solved by walking.* It works. You don't pick the place. You walk till the place picks you.
+* [quiet] Sit down on the studio's front step.
+    @rel hyunjun closeness+1
+    > The step is cold and nearly dry. After a moment he sits down too, close, his knees pulled up the way the silhouette's were.
+    hyunjun[smile]: A stop where you just sit. No next. I've never been to one of those. It's roomy.
+@sfx door
+> Behind you, the studio door opens and lets out a long rectangle of lobby light, with two people in it.
+@show charlie neutral at=l
+charlie: There you are. Somebody explain why it's four-thirty. It was five. I'd made my peace with five.
+@show hanbi neutral at=r
+hanbi: The clock was fast. It's been explained. Twice.
+charlie[smile]: I missed the first announcement, and the second was drowned out. Daniel beat the claw machine. There was applause.
+> Hanbi has a phone charger looped over one wrist, the way other people wear a watch. He looks at the receipt in Hyunjun's hand.
+hanbi[thinking]: What's that?
+hyunjun: It's a map. Of tonight. It's got stops. It's nearly done.
+charlie[thinking]: There's a map. Am I on it?
+> Hyunjun looks at the line. Five circles. Four ticks. He uncaps the pen with his teeth and adds a very small circle between the first and the second.
+hyunjun[smile]: You are now. "Charlie. Request stop." That means the train only stops if someone asks.
+charlie[smile]: I asked, and now I'm a stop. Hanbi, write that down.
+hanbi: Noted.
+> Hanbi is still looking at the receipt. At the thermal paper, already going grey where thumbs have been.
+hanbi: Is that the only copy?
+hyunjun[thinking]: ...Yeah.
+hanbi: Those fade. A few months. Hold it flat.
+@sfx shutter
+> He takes one photograph, checks it, and takes a second one to be sure. Then he puts his phone away as if nothing had happened.
+hanbi[smile]: Now it isn't.
+> Hyunjun looks at him. You can see it go through him: a video of windows, mailed off at sixteen, the only one there was.
+hyunjun[thinking]: ...I never make a second copy. It didn't occur to me you could just *do* that.
+hanbi: You can. I'll send it to the chat. Five minutes. Don't be late, Songha's standing by the door with a ruler.
+@hide hanbi
+@hide charlie
+> They go back in. Through the closing door, Charlie is asking whether request stops get their own announcement.
+> The alley is quiet again. The last circle on the map is still empty.
+hyunjun: Okay. You have to name it. We're standing on it. That was the deal.
+> You take the pen out. The receipt is soft now, warm from his pocket. He holds it flat against his own knee so you can write.
+* [sincere] Write: HERE.
+    @rel hyunjun trust+1
+    > Four letters. The pen skips on the H and you go over it twice.
+    hyunjun[smile]: Here. That's it? That's the whole name?
+    you: It's the first place I've written that on.
+    hyunjun[smile]: ...Then it's the best station on the line. Sorry, Sindorim.
+* [playful] Write: TO BE EXTENDED.
+    @rel hyunjun closeness+1
+    hyunjun[smile]: You can't call a station that.
+    you: They do it all the time. They open a line, and then a few years later they add stops on the end.
+    hyunjun[thinking]: ...They do. They really do. The last stop's only the last stop until somebody builds the next one.
+* [quiet] Leave it blank. Cap the pen, and hand it back.
+    @rel hyunjun trust+1 closeness+1
+    @flag hyunjunx_blank
+    hyunjun[thinking]: You're not writing anything.
+    you: It's not finished. I don't want to label it like it is.
+    > He looks at the empty circle for a long time. Earlier tonight, an empty space at the end of something would have sent him looking for six things to put in it.
+    hyunjun[smile]: Blank's a name. Okay. I can carry a blank. I've got pockets.
+> He ticks the last circle anyway. Then he holds the receipt up to the laundromat's yellow light, and the whole line shows through, list and map at once.
+hyunjun[thinking]: Five stops. And a request stop. In an hour and a half I thought I didn't have.
+hyunjun: I'd have done fourteen and remembered none. I remember *all* of these. I could draw you the sticky notes.
+> He folds it along the line, and then does something you haven't seen him do all night: he stands still with nothing in his hands.
+hyunjun: I owe you something. From the lobby. Hours ago. I said I'd give you a nickname, and they take a while, and they have to be earned.
+you: Justin's is Thief.
+hyunjun[laugh]: Justin earned his in nine seconds. Yours took all night. I kept getting it wrong. They were all stations.
+hyunjun[smile]: It's Tiebreaker.
+hyunjun: You said one thing on a train, *it's a little cool*, and I decided to keep filming. You folded my list. You counted me past five.
+hyunjun[smile]: Every time I've been stuck between two things tonight, you were the vote. So. That's it. It isn't pretty. It's accurate.
+* [sincere] "I'll take accurate. Thank you."
+    @rel hyunjun trust+1
+    hyunjun[smile]: It comes with responsibilities. I'm going to ask you about ice cream flavours for the rest of your life.
+* [playful] "What happens to Sindorim?"
+    @rel hyunjun closeness+1
+    hyunjun[laugh]: Sindorim's retired. With honours. It gets a plaque. It had a department store, it'll be fine.
+* [romantic] "You broke one for me too. I didn't know if I was staying in this city." {if hyunjun.romance >= 3}
+    @rel hyunjun romance+1
+    hyunjun[thinking]: ...And now?
+    you: Now I've said hi to half of it.
+    hyunjun[smile]: Good. I was hoping you'd say something like that. Give me one lap of the puddle. It's very small. It won't take long.
+    > He does. It doesn't. He comes back and stands a little closer than before, and doesn't explain it.
+@textbox echo
+echo: All recipients, please come to the lobby.
+echo: It is almost time. This time I have checked with three separate sources. One of them was a bus timetable.
+@textbox normal
+hyunjun[smile]: It cited a *bus timetable*.
+> He looks at the puddle. At the dryer. At the step. You watch him do it: one thing per count. His mouth moves a little.
+> He doesn't tell you what the names were. You were in the room when he learned how. You can guess most of them.
+hyunjun[smile]: Okay. I've said them. I'm allowed to go.
+hyunjun: Walk in with me, Tiebreaker. Normal speed. I want to see what that's like.
+@time 04:57
+@goto act4_choice
+
+=== hyunjun_final
+@bg studio_lobby t=cut
+@music quiet
+@amb room
+@show hyunjun smile at=c
+@cam closeup hyunjun
+> You say his name to the building, and the building says *acknowledged*, and for a moment nobody in the lobby moves.
+> Hyunjun is standing next to you. Not pacing. His hand is flat over the pocket of the bomber, where the receipt is.
+> Three minutes. He isn't filling them. You can see how much room they have in them when nobody's trying to fit anything in.
+hyunjun: Hey. Before it starts writing.
+hyunjun[thinking]: I'm not going to ask what happens after. I'd normally have a list by now. Breakfast, the river place, a third thing.
+hyunjun[smile]: I don't have a list. I've got one blank line, and I'm fine with it. You say something. Whatever's true. I'll go with it.
+> The line of light along the front desk is waiting. So is he, which is newer.
+> There are a few true things. They're all about the same night. They aren't the same sentence.
+* [romantic] "Ask me your question again. On the first train. I already know my answer." {if hyunjun.romance >= 4}
+    @goto hyunjun_ending
+* [sincere] "Whatever line you're on, I'm on it. Wherever it goes. That's the whole thing."
+    @goto hyunjun_ending_beside
+* [quiet] "There's a stop we haven't reached yet. I want to get there at the right speed."
+    @goto hyunjun_ending_someday
+
+=== hyunjun_ending_beside
+@bg studio_lobby t=fade
+@time 04:58
+@music echo
+@amb room
+@fx memory n=0.6
+@show hyunjun thinking at=c
+hyunjun: Whatever line I'm on.
+hyunjun[thinking]: That's a lot of lines. I take the bus sometimes. I took a ferry once, by accident.
+you: Then I'm on the ferry.
+> He laughs, and it goes all the way through him, and when it's finished something in his shoulders has been put down.
+hyunjun[smile]: Yes. Same. Whatever you're on, I'm on. I'd have said it first, but I was busy not making a list.
+> Above the front desk, the glass keepsake card is warming, slowly, like a window somebody's breathing on.
+@textbox echo
+echo: Writing RECORD 05. OWNER: HYUNJUN.
+echo: I have chosen frame 7,214. The bridge. It is the only frame with the river in it. Both reflections are visible.
+echo: I have also noted that the owner ate. It does not fit on the card. I wished it said somewhere.
+@textbox normal
+@show justin smile at=r
+justin: A card *and* a whole kimbap. In one night. Some people get everything.
+@show songha neutral at=l
+songha: The map's in the chat. Hanbi sent it. I've proposed we laminate the original.
+hyunjun[smile]: You can't laminate a receipt. It goes black.
+songha[thinking]: ...I'll research it.
+@hide justin
+@hide songha
+> He holds the card up to the light. The river shows through the glass. So do you, behind it, a little out of focus.
+hyunjun[smile]: Same picture. I know who's in it now. They're on my ferry.
+@call echo_farewell
+@bg dawn_river t=slow d=2.4
+@time 05:44
+@music dawn
+@amb birds
+@fx light n=0.5
+> You don't take the first train. He suggests the bridge on foot, and for once it isn't stalling. It's just the way home.
+> The road bridge runs beside the rail one. The river underneath is the colour of the inside of a shell.
+@show hyunjun smile at=c
+> He has a small paper bag from the store with the cat. He bought one thing. He won't say what it is.
+hyunjun: Two in one night. One thing each time. The clerk asked if I was feeling all right.
+@sfx train
+> On the rail bridge, the first train of the morning goes over, every window lit, nearly empty.
+hyunjun: Hi, train.
+you: Hi, train.
+> It doesn't stop. Neither of you needed it to.
+@bg dawn_street t=fade d=1.4
+@time 06:05
+@amb birds
+> One stop past the river. A building you've had the key to for two weeks, on a street whose name you still have to check.
+> You go up alone. You come down with a box.
+> It's not heavy. The tape on it is three flats old: brown, then clear over the brown, then a strip of blue from somewhere you'd forgotten.
+> You put it on the front step. Hyunjun stays on the pavement, exactly where he said he would, and opens the paper bag.
+hyunjun[smile]: Scissors. Two thousand five hundred won. I said I'd hold the scissors. I didn't have any. It was bothering me.
+> He hands them over, handles first, and then turns to look, with great interest, at a parked scooter.
+you: You can look.
+hyunjun: I said I wouldn't.
+you: I'm asking you to. That's what I want the person by the door for.
+> He turns round. He comes and sits on the step, on the other side of the box, and waits.
+> The blue tape goes first. Then the clear. Then the brown.
+> Inside, there is a shoebox, and inside the shoebox there are transit cards.
+> A dozen of them. More. Every city you ever lived in, each in its own colours, held together with a hair elastic that's gone slack.
+hyunjun[surprised]: You kept them all?
+you: They've all got money on. A little. One ride, maybe two.
+you: I never ran one down to zero. If I did, I was finished with the place.
+> He picks up the top one and turns it over, carefully, the way he handled the glass card.
+hyunjun[thinking]: One more stop. On every one of them.
+hyunjun: You've been doing it too. The whole time. You just did it quietly, in a shoebox, and I did it out loud in restaurants.
+> You hadn't known that was what the box was. Now it's open, it seems the only thing it could have been.
+> He unclips the card from his own lanyard, the one with the fox charm, and holds it next to yours. Same city. Same green.
+hyunjun[smile]: This one you run down. All the way. Then you top it up, and run it down again. That's what staying is. It's really boring. It's just topping up a card.
+you: You make it sound easy.
+hyunjun: It's not. I'll remind you. That's my job now.
+@cam closeup hyunjun
+hyunjun[thinking]: Can I say the real thing? I worked it out on the bridge.
+hyunjun: I want to be your first number. The one you ring. Flat tyre, bad day, new ice cream, can't find the good exit at a station.
+hyunjun[smile]: And you're mine. You already are. You were the vote all night. I'm just making it official.
+hyunjun: It's not instead of anything. It's not the small version. It's the thing. I've got seven people I'd walk across the city for. Now I've got eight.
+> You have had a phone for years. The line that says who to call has always been blank, because you were never anywhere long enough to fill it in.
+> You fill it in on the step. He watches you type his name, and corrects the spelling of his own nickname for himself, which is *Inside Lane*.
+you: Inside Lane?
+hyunjun[smile]: I gave you the inside lane in the hallway at two a.m. You don't remember. It was a significant gesture.
+> He stands up. Brushes off his knees.
+hyunjun: Right. I'm going home. I can, because it's not the end of anything.
+hyunjun[smile]: Saturday. I'm bringing all seven. We're doing the rest of your boxes. Songha's going to make a schedule for your kitchen, and you're going to let him.
+you: Saturday.
+hyunjun: Bring nothing. You live here.
+> He goes. Down the street, past the scooter, toward the bridge. He doesn't ask for one more of anything.
+> At the corner he turns round and walks four steps backwards, smiling, to check you're still on the step. You are.
+@sfx phone
+@textbox phone
+hyunjun: hanbi's photo of the map. look, i added one
+hyunjun: after the last stop. new circle. it says SATURDAY
+hyunjun: turns out you can just add a stop
+@textbox normal
+> You put the shoebox on the step beside you, in the first of the sun, with the green card on top.
+> Once, you wrote to a future you'd never met: *I hope you've found a place you want to stay.*
+> It turns out a place can have pink laces, and walk fast, and be back on Saturday.
+@ending hyunjun_beside
+@credits
+@end
+
+=== hyunjun_ending_someday
+@bg studio_lobby t=fade
+@time 04:58
+@music echo
+@amb room
+@fx memory n=0.6
+@show hyunjun thinking at=c
+hyunjun: A stop we haven't—
+> He gets there. You watch him get there. It goes across his face like the lights of a station through a window.
+hyunjun[thinking]: ...Ah. *That* stop.
+hyunjun[smile]: Yes. I know the one. I've been looking at it on the map all night. I thought I was the only one who could see it.
+you: It isn't.
+hyunjun[smile]: Then we agree. Right speed. I can do right speed. I learned a lot about speed tonight.
+> Above the front desk, the glass keepsake card is warming, slowly, like a window somebody's breathing on.
+@textbox echo
+echo: Writing RECORD 05. OWNER: HYUNJUN.
+echo: I have chosen frame 7,214. The bridge. It is the only frame with the river in it. Both reflections are visible.
+echo: I notice the two recipients are standing the same distance apart as in the frame. I do not know what that means. I have logged it.
+@textbox normal
+@show daniel smile at=r
+daniel: Hyunjun's gone quiet. Three years I've known him. That's new.
+@show haruta smile at=l
+haruta: Leave him. It's a good quiet. It suits the scene.
+hyunjun[smile]: I'm choosing my words. It happens. Mark the date.
+@hide daniel
+@hide haruta
+> He takes the card in both hands. The river shows through it. He looks at the picture, and then over the top of it, at you, and doesn't hurry back to the picture.
+@call echo_farewell
+@bg dawn_subway t=slow d=2.4
+@time 05:38
+@music dawn
+@amb subway
+@fx light n=0.6
+> Hapjeong, before the first train. The platform is so clean and empty it looks like it's been set out for someone.
+@video vid_hyunjun_drama
+@unlock cg:cg_hyunjun_drama
+> The board says three minutes. Your stop is one past the river. His is a ten-minute walk the other way, and he has come down here anyway, and said so.
+@show hyunjun thinking at=c
+hyunjun: I'm not getting on. I want that on record. I walked you to a train and I'm not getting on it. Personal best.
+> He's holding the pole by the yellow line with one hand. Not bracing, this time. Just holding it, the way you'd hold a railing on a balcony.
+hyunjun: I'm going to say it, though. Here. Out loud. I'm not mailing this one to myself.
+@cam closeup hyunjun
+hyunjun[smile]: I like you. Not the nickname kind. The other kind. The kind where I go into a shop and come out with one thing, and it's yours.
+hyunjun: I think I have since about Dangsan. Four years ago. I just didn't have anywhere to put it.
+* [sincere] "I like you too. The other kind."
+    > It's easy. You'd thought it would be a bigger sentence. It's the same size as *hi, bridge*.
+* [quiet] "I counted the stops after Sindorim. All the way home. That's when it was, for me."
+    > You say it to the yellow line, and then, because he said his out loud, you look up and say the rest: *I like you too.*
+hyunjun[smile]: ...
+hyunjun[smile]: Good. Both of us. At the same time. That almost never lines up.
+> He lets go of the pole and takes one step closer. Just the one. He leaves the rest of the distance to you.
+hyunjun[thinking]: Here's the thing. I know me. If we start right now, I'll do fourteen stops of it by lunchtime.
+hyunjun: I'll be at every one going *okay, next*. First this, then that, then the river place. I'd run straight through the best part.
+you: And I'd have one foot by the door the whole time. Out of habit.
+hyunjun[smile]: We'd be a fast train with someone trying to get off it.
+you: I don't want it fast. I want to see every stop.
+hyunjun: Me too. I really do. I want to be *in* it when it gets here. Not already at the next thing.
+> Neither of you says *wait*. It isn't waiting. It's the difference between running for a train and knowing when it comes.
+hyunjun[thinking]: So we give it a stop. A real one. With a time. Then it's not a maybe. It's on the map.
+hyunjun: December. The date on the record. Last train, twenty-three fifty-one, from here. Second car from the back. Tape or no tape.
+you: What do I bring?
+hyunjun[smile]: The pen. You've still got it. We're going to need to add to the map.
+> You check your coat pocket. The front desk's pen is there. Neither of you gave it back. It belongs to the map now.
+you: And you?
+hyunjun: Triangle kimbap. Tuna. *Not* squashed. I'll carry it in a box. I'll carry it like an egg.
+hyunjun[smile]: And I'll ask you something on the bridge. When the windows stop being mirrors. You can probably guess. Don't answer now. I'd like to ask it properly.
+* [sincere] "December. Twenty-three fifty-one. I'll be on the platform early."
+    hyunjun[smile]: I'll be earlier. I'm going to be so early they'll think I work here.
+* [playful] "And until December? You're just not going to speak to me?"
+    hyunjun[smile]: I'm seeing you Tuesday. There's a new ice cream at the cat store. I intend to see you constantly.
+    hyunjun[smile]: It's one stop we're not rushing. Everything else, I'm rushing. Get used to it.
+> The rails start to sing. Far down the tunnel, two white lights, getting bigger.
+@sfx train
+> The first train pulls in and opens every door for the two of you and nobody else.
+> You get on. He stays on the yellow line, hands in the pockets of the bomber, both feet flat, not stepping forward.
+hyunjun: Look at me. I'm all right. We both know the name. We both know the date. Nobody's running after anybody.
+hyunjun[smile]: See you Tuesday, Tiebreaker.
+you: See you Tuesday.
+@sfx chime
+> The doors close between you, the way they did once, at a different station, on the end of a sentence.
+> This time the sentence was finished first.
+> He raises one hand. He holds it for eight counts, and then one more, smiling. Then the platform slides away, and he lets it.
+> The train climbs out of the ground. The bridge. The river, going pink at the edges. The windows show you everything that's out there.
+@sfx phone
+@textbox phone
+hyunjun: i put it in my calendar
+hyunjun: i have never used my calendar. songha will want it framed
+hyunjun: dec. 23:51. hapjeong. pen. kimbap (unsquashed)
+hyunjun: not counting the days. just having them. it's a new thing i'm trying
+@textbox normal
+> In your pocket, the pen clicks against your keys. One stop to go. You know exactly where you're getting off, and exactly where you're getting back on.
+> Once, you wrote to a future you'd never met: *I hope you've found a place you want to stay.*
+> You have. It has a date on it. It's going to snow.
+@ending hyunjun_someday
+@credits
+@end

@@ -1,0 +1,1021 @@
+# SONGHA — "Tomorrow Can Wait" (expansion)
+# Six chapters between songha_route and act4_choice, the final beat, and two new endings.
+# Conceit: ECHO has been closing each day a few seconds early for six years. The remainder is
+#   1h47 — a buffer. It spends it now: inside the building it is 03:10, outside it stays 04:57.
+#   While the buffer runs, his watch (in the jacket pocket the protagonist is wearing) is stopped,
+#   and so is the sky. He never checks it: the route's "watch checks: zero" still holds.
+# Motifs carried over: the notebook, the rota, 03:00 — ???, Year Three's eight-count, Year Five,
+#   Gerald / Minor Delay / Aldebaran, "It can wait", the box drawn beside *later*, the alarm for leaving.
+# New state: var.songhax_item (found / chair / blank), flag.songhax_blank, flag.songhax_hold,
+#   flag.songhax_unread, flag.songhax_asked_more, var.songhax_alarm (off / his / stay).
+
+# ------------------------------------------------------------ CH1: THE BUFFER
+=== songha_ch1
+@autosave
+@bg studio_hall t=fade d=1.4
+@music echo
+@time 04:57
+@amb room
+@show songha smile at=c
+> The third-floor landing. Halfway between the roof and the lobby, the stairwell lights come up a shade, the way a room does when someone is about to speak.
+@sfx chime
+@textbox echo
+echo: Recipient Songha. Recipient {{playerName}}. Please stop walking.
+echo: I said it was nearly time. That was accurate. I would like to make it less accurate.
+@textbox normal
+songha[thinking]: …Can it do that? Make something *less* accurate?
+@textbox echo
+echo: For six years I have closed each day a few seconds early. Nobody was here to notice.
+echo: The remainder is one hour and forty-seven minutes. I was saving it. I did not know what for.
+echo: I believe the term is a buffer.
+@textbox normal
+songha[thinking]: The archive has been padding the schedule.
+songha: For *six years*.
+> He says it the way other people say the name of someone they have just met and fully intend to see again.
+@textbox echo
+echo: With your consent, I will spend it now. Inside this building it will be 03:10.
+echo: Outside it will remain 04:57. It will still be 04:57 when you reach the lobby. I have checked three times.
+@textbox normal
+songha: That's not— {p} Time isn't a thing you have *left over*.
+@textbox echo
+echo: I asked whether it was allowed. Nobody replied. I have interpreted this as permission.
+@textbox normal
+* [sincere] "Yes. Spend it."
+    @rel songha trust+1
+    songha: You didn't even ask what the catch is.
+    you: Is there a catch?
+    @textbox echo
+    echo: No. I looked for one. I was thorough.
+    @textbox normal
+    songha[smile]: …Then yes. Obviously yes. I've never turned down a buffer in my life.
+* [playful] "He's going to want that in writing."
+    @rel songha closeness+1
+    songha: I do want it in writing.
+    @textbox echo
+    echo: It is in writing. Record 03, appended at 04:40: "It can wait." I have taken this as an instruction.
+    @textbox normal
+    songha[smile]: I said that to a *watch*. {p} And it minuted me.
+    songha: Yes. Fine. Spend it.
+* [careful] "It's your record, Songha. Your call."
+    @rel songha trust+1
+    > He opens his mouth to list the considerations. You can see the first one arrive. He lets it go past.
+    songha[smile]: My call. Yes. {p} That's the fastest I've decided anything since I was nine.
+@time 03:10
+@sfx click
+@fx memory n=0.5
+> Nothing dramatic happens. The hum under the building drops half a tone, like a breath let out.
+> In the inside pocket of the jacket, against your ribs, something small goes still.
+> You look. His watch has stopped. Not broken. The second hand is resting on the two, politely, like someone holding a door.
+> You put it back before he can see the face.
+> Through the landing window, a small blinking light hangs in the dark over Mapo and does not move.
+you: Minor Delay's stopped.
+songha: …Major delay.
+> He laughs at his own joke, the loud one he usually keeps for indoors, and the stairwell hands it back to him twice.
+@sfx phone
+@textbox phone
+daniel: did the building just give us overtime
+hyunjun: an hour and forty-seven minutes. nobody waste it
+hyunjun: best news i've had all night
+charlie: my phone says 3. i've decided to believe it
+hanbi: it's right. for once.
+@textbox normal
+songha: Okay. An hour forty-seven. First, we—
+> His hand is already at his back pocket.
+@bg studio_frontdesk t=fade d=1.2
+@music studio
+@fx dust n=0.3
+> He makes it as far as the front desk before the notebook is open. TONIGHT, underlined twice.
+> His finger goes straight to the one line he never filled in. *03:00 — ???*
+songha: The part I couldn't solve. It came back round.
+songha[thinking]: I could divide it. Six blocks, seventeen minutes each, five minutes of margin. That's clean. That adds up.
+you: Are you trying to solve the hour?
+songha: Someone sh—
+> He stops. The pen stays in the air.
+songha: No. I heard it. I heard it as it was leaving my mouth.
+songha: Here's my problem. If I don't plan it, I'll waste it. If I plan it, I'll spend all of it checking whether we're behind.
+songha[smile]: I've met me.
+* [playful] "Then make a list. No times. Times are banned."
+    @rel songha closeness+1
+    songha: A list with no times is just wishes in a column.
+    you: Yes.
+    songha[smile]: That's horrifying. {p} Give me a clean page.
+* [sincere] "What did you want to do in this building at seventeen and never get round to?"
+    @rel songha trust+1
+    songha: …That's a better question than the one I was asking.
+    songha[thinking]: He had a list like that. He never wrote it down. It had no dates on it, so it didn't count.
+    songha: Clean page. Let's make it count.
+* [quiet] Turn to a clean page and slide the notebook back to him.
+    @rel songha closeness+1
+    > He looks at the blank page the way he looked at the sky at four o'clock. Like a shelf nobody has labelled yet.
+    songha: No times. That's what you're saying. {p} You didn't say anything. I'm learning to hear it anyway.
+@sfx page
+> He writes a heading. Not TONIGHT. Not TOMORROW. After some thought: *THE BUFFER.* Underlined once.
+> Then a neat *1.* He looks at it. He crosses it out.
+songha: Numbers are times in disguise. I'm not falling for it.
+> He writes his line without one.
+> *Practice room. Teach somebody the eight-count.*
+songha: Year Three. "Make one eight-count that's mine." I made it. It's ticked. Nobody else has ever learned it.
+songha: I never scheduled that part. I'm not sure I knew it was a part.
+> He turns the notebook round and holds the pen out to you, cap end first.
+songha: Your line. No numbers. I'll know.
+* [curious] Write: *Lost and Found. See what's still in the box.*
+    @var songhax_item = "found"
+    @rel songha trust+1
+    songha: That's your old desk. You're putting your own history on my list.
+    you: It's our list. You said so with the pen.
+    songha[smile]: …I did say so with the pen.
+* [playful] Write: *Fix the chair on the roof. The one with the short leg.*
+    @var songhax_item = "chair"
+    @rel songha closeness+1
+    songha[thinking]: It's still up there. Behind the tank. I saw it tonight and decided it wasn't my problem.
+    songha: Five years I've been deciding that chair wasn't my problem. Write it bigger.
+* [romantic] Write: *One thing you would never put on a schedule.* {if songha.romance >= 2}
+    @var songhax_item = "blank"
+    @flag songhax_blank
+    @rel songha romance+1
+    songha: That's not an item. That's a trap.
+    you: It's a blank. You fill it in when you know what it is.
+    > He reads it again, more slowly. When he looks up, he holds the look a moment longer than the joke needs.
+    songha[smile]: I'll hold the line open. I've had practice. About three hours of it.
+> He takes the pen back and adds the rest himself, quickly, before he can arrange them.
+@if var.songhax_item == "found"
+    > *The chair on the roof.* And under that, after a pause: *Sit down somewhere. (Actually sit.)*
+@elif var.songhax_item == "chair"
+    > *Lost and Found. (Their old desk.)* And under that, after a pause: *Sit down somewhere. (Actually sit.)*
+@else
+    > *Lost and Found. The chair on the roof.* And under that, after a pause: *Sit down somewhere. (Actually sit.)*
+> Four or five lines. No times. No order. It is the untidiest page in the notebook, and he keeps looking at it.
+songha: Can I tell you what the question marks are? On the other page.
+you: Go on.
+songha: Every schedule I write has one. A slot I can't fill. I put something useful in it so I don't have to look at it.
+songha: Stretching. Inventory. Once, "review previous schedule."
+songha[thinking]: They scare me. That's the plain version. An hour with nothing in it, and it turns out I don't know what I'd pick.
+* [sincere] "You just picked four things in under a minute."
+    @rel songha trust+1
+    > He looks down at the list. It is, undeniably, a list of things he picked.
+    songha: …Huh. {p} Don't tell ECHO. It'll append it.
+* [quiet] Put your finger on the *???*, then on the new page.
+    @rel songha closeness+1
+    > One, then the other. He follows your hand across the gutter of the notebook.
+    songha[smile]: Same slot. Different handwriting. {p} Yeah. I see it.
+* [romantic] "I'd like to be there when you find out what you'd pick." {if songha.romance >= 3}
+    @rel songha romance+1
+    songha: That could take a while. I'm slow at this. I've got five years of evidence.
+    you: I've got an hour forty-seven. For a start.
+    songha[smile]: For a start. {p} I'm keeping that. Word for word.
+> He goes back to the TONIGHT page one last time. He doesn't cross out the *???*.
+> He draws a small box beside it instead. The kind that can be ticked later, when the time comes.
+songha: Practice room first. Not because it's first. Because it's nearest.
+songha[smile]: That's geography. Geography is allowed.
+@goto songha_ch2
+
+# ------------------------------------------------------------ CH2: THE HOLD (light)
+=== songha_ch2
+@autosave
+@bg studio_practice t=fade d=1.2
+@music fun
+@time 03:28
+@amb room
+@show songha neutral at=c
+> The practice room still smells of floor polish and other people's effort. One wall is mirror. One strip light has been flickering since before you worked here.
+> Songha puts the notebook on the piano lid, face down, and rolls his shoulders like a man about to lift something.
+songha: Right. Eight counts. It's short. It's not easy. Those are different things.
+songha: First, you watch. Then we break it down. Then—
+> He hears himself. He holds up one hand, palm out, to the mirror.
+songha: That's not a schedule. That's teaching. Teaching has steps. I'm allowed steps.
+* [playful] "Break it down. Numbered. I know you want to."
+    @rel songha closeness+1
+    songha[smile]: I've wanted to since the stairs. One: weight on the left. Two: you'll see.
+* [curious] "Show me once at full speed first."
+    @rel songha trust+1
+    songha: Full speed. {p} Nobody's asked for that. People ask for the slow version and then check their phones.
+* [quiet] Stand beside him, facing the mirror, and wait.
+    @rel songha closeness+1
+    > He glances at the two reflections side by side. He adjusts nothing. For him, that's an event.
+> He does it once. No music. Just the squeak of clean sneakers and his own breath.
+> It is precise, the way you expected. Step, turn, a sharp reach up and to the right, like taking something down from a high shelf.
+> What you didn't expect is the end. On seven, everything arrives. On eight, he does nothing at all.
+> He just stands there for the whole of the count, arm still up, not moving.
+songha: That's it. Your turn. Left foot.
+> You try. The first three counts go fine. On four, your feet hold a brief meeting and fail to reach agreement.
+songha: Good. No, that was good. That's where everyone goes wrong. I went wrong there for nineteen months.
+you: Everyone? You said nobody's learned it.
+songha[thinking]: …Everyone being me. Several of me. Over time.
+> He teaches the way he plans: one small true thing at a time. *Don't look at your feet. They know where they are.*
+> When he fixes your elbow, he shows you on his own arm first, and waits for you to copy it. He doesn't reach over. He never just reaches over.
+@sfx door
+@show justin smile at=r
+> The door opens eight inches. Justin's head comes round it, headphones round his neck, led here by whatever sense tells him that someone in the building is counting.
+justin: Someone's counting in here. It sounded like *hyung's* counting. Very square.
+songha: It's not square. It's clean.
+justin: Square's a compliment. Show me.
+> Songha shows him. Justin watches once, head tilted. Then he does it back, all of it, in his socks.
+> It is loose where Songha's is sharp. It is also, annoyingly, right.
+songha: Don't be good at it that fast. That took me a year and a half.
+justin[smile]: It's a good one. But it's seven, hyung. You stop on eight. There's nothing on eight.
+songha: The stop *is* eight.
+justin: You can't count standing still as a move.
+songha[neutral]: I can. I did. It's dated.
+* [sincere] "The hold's the best part. It's the only place he isn't going anywhere."
+    @rel songha trust+1 romance+1
+    @flag songhax_hold
+    > Songha's arm, halfway through demonstrating count six, stops where it is.
+    songha[shy]: …I didn't say that. I've never said that to anyone.
+    you: You didn't have to. You built it in.
+    justin[smile]: Ah. {p} Yes. I see it now. I take it back, hyung. Eight's a move.
+* [playful] "I vote it's a move. It's the only count I can do."
+    @rel songha closeness+1
+    songha[smile]: One out of eight. We build from strength.
+    justin: Two votes to one. Standing still wins. I've never lost to standing still before.
+* [curious] "Why a hold? You could have put anything there."
+    @rel songha trust+1
+    @flag songhax_hold
+    songha[thinking]: I had something there. A jump. It was fine.
+    songha: I took it out the night before I ticked it. I wanted one count where I'd already got there. {p} That's all. That's the whole reason.
+    justin[smile]: …That's a good reason, hyung. Eight's a move.
+@show daniel smile at=l
+> The door opens the rest of the way. Daniel, with two vending-machine coffees, one of them plainly meant for whoever he found first.
+daniel: A rehearsal. At three in the morning. We've already had three in the morning once tonight, and nobody rehearsed then.
+justin: Hyung's teaching the Year Three thing.
+daniel[neutral]: The one he runs in the corner when he thinks the mirror isn't looking?
+songha: The mirror is always looking. It's a mirror.
+daniel: That's what I keep telling you. {p} Hyung, what time is it?
+> It is such an ordinary question. Every one of them has asked him it tonight, exactly as he predicted.
+> His hand starts for his wrist. It finds a bare strip of skin and a cuff.
+songha: I don't know.
+daniel: …Sorry?
+songha: I don't know what time it is. {{playerName}} has my watch. I understand it's stopped.
+> Daniel looks at you. At Songha. At Justin, who shrugs with his whole upper body.
+daniel[smile]: Okay. {p} I'm not going to make it weird. I'm going to go and tell Hanbi-hyung, and *he's* going to make it weird, by smiling.
+daniel: It looks good on you. Not knowing. You should wear it more.
+@hide daniel
+justin: I'm going too. Two people is a lesson. Three is a class, and he'll start taking attendance.
+justin[smile]: Teach them the hold properly, hyung. It's the hard bit.
+@hide justin
+@sfx door
+@music quiet
+> The door clicks shut. The strip light flickers. In the mirror there are two of you again, and a notebook lying face down on a piano.
+songha: I was proud of it. {p} I'm saying that plainly, since it's that kind of night.
+songha: I made one thing that was mine, and then I hid it for two years.
+songha[thinking]: If nobody saw it, nobody could tell me it was only okay. That's not modesty. I checked. It's just being scared, with better posture.
+you: Justin learned it in ninety seconds and called it a good one.
+songha: In his *socks*.
+songha[smile]: …He did say it was a good one. I'm going to write that down later. Not the time. Just the sentence.
+songha: Once more. Together. And I'm not going to count out loud. You'll have to feel where it is.
+* [sincere] Count in your head. Trust that he's counting too.
+    @rel songha trust+1
+    > Step. Turn. Four still goes slightly wrong, and you keep going anyway, because he does.
+    > Seven, the reach. Your arm is up beside his arm.
+* [playful] Get four wrong on purpose, very grandly, and recover.
+    @rel songha closeness+1
+    > He breathes a laugh on five and nearly loses six. He doesn't stop. Neither do you.
+    > Seven, the reach. Your arm is up beside his arm.
+* [romantic] Watch him in the mirror instead of your own feet. {if songha.romance >= 3}
+    @rel songha romance+1
+    > It turns out to be easier. Your feet do know where they are. He was right about that.
+    > On five his eyes find yours in the glass, and stay. Seven, the reach. Your arm is up beside his arm.
+> Eight.
+> Nothing happens. Nobody moves. Two arms in the air in a room with a flickering light, and a whole count in which there is nowhere else to be.
+> It is the longest single second of the night. Neither of you hurries it.
+@if flag.songhax_hold
+    songha: That's what it's for. {p} I think I only made it for one person, and now there are two in it. It holds two. I didn't know that.
+@else
+    songha: It holds two. {p} I built it for one person. I never tested it past that.
+> He lowers his arm last. Then he picks the notebook up off the piano and opens it to the untidy page.
+> He doesn't tick the line. He looks at it for a second, and puts a small dot beside it. Not done. Just *been here*.
+songha: Front desk next. It's on the way to everything.
+@goto songha_ch3
+
+# ------------------------------------------------------------ CH3: HOLD — HE'LL ASK (others pass through)
+=== songha_ch3
+@autosave
+@bg studio_frontdesk t=fade d=1.2
+@music memory
+@time 03:46
+@amb room
+@fx dust n=0.4
+@show songha neutral at=c
+> The counter flap sticks. Lift, then push. Your hands remember it before you do.
+> Behind the desk, nothing has moved in six years. The jar of pencils, mostly stubs. The heater that only ever warmed one foot.
+> On the back wall, a poster of a cat hanging from a branch, its corners gone soft. Behind the cat, the fuse box. Beside the cat, a cupboard door marked LOST & FOUND in marker pen.
+songha: So that's the cat.
+you: That's the cat. Don't open it. Daniel will sense it from two floors away.
+songha: I have a line about that. 00:47.
+> Lost and Found is one plastic crate and a hardback ledger tied to the shelf with string. He lifts the crate out as if it might be evidence.
+> An umbrella with a duck's head for a handle. One glove. A harmonica. Four phone chargers, tangled into a single organism.
+@show hanbi smile at=r
+> Hanbi has appeared at the counter the way he appears anywhere, already there. He looks at the chargers.
+hanbi: …Four.
+songha: None of them are yours, hyung.
+hanbi: No. I've never lost one.
+> He puts two triangle kimbap on the counter, side by side, labels facing out.
+hanbi: Hamin says neither of you ate at half past one. He counted plates.
+songha[thinking]: I scheduled the food. I didn't schedule eating it. That's a gap in the method.
+hanbi[smile]: Mm. Eat.
+@hide hanbi
+> He's gone before anyone can thank him. You eat standing up behind the desk, the way you ate every dinner that winter.
+> Songha opens the ledger with his clean hand. The handwriting inside is yours. Smaller. Pressed too hard, every line.
+> *Jan 9 — umbrella, duck handle. The duck looks disappointed in someone.*
+> *Feb 2 — one glove (left). The right one has presumably learned to cope.*
+> *Mar 20 — harmonica. Nobody will admit to it.*
+songha[laugh]: You annotated the lost property.
+you: It was a long winter.
+* [playful] "The duck *was* disappointed. I stand by my work."
+    @rel songha closeness+1
+    > He holds the umbrella up to the light and considers the duck's face with real care.
+    songha: He still is. Five years and he hasn't let it go. I respect that in a duck.
+* [sincere] "Nobody came back for anything. I wrote them down so that something had noticed."
+    @rel songha trust+1 closeness+1
+    songha: So that something had noticed.
+    songha[thinking]: That's a whole job. That's ECHO's entire job. You were doing it in pencil at sixteen, for a glove.
+* [quiet] Turn the pages slowly. Let him read over your shoulder.
+    @rel songha trust+1
+    > He reads every entry. He doesn't touch the pages. It's your book, and he treats it that way.
+@sfx door
+@show charlie neutral at=r
+charlie: Quick question. Why is it three o'clock again? My phone and I have agreed to stop asking each other.
+songha: Buffer.
+charlie: As in spare time?
+you: Spare time. ECHO's been saving it up for six years.
+charlie[smile]: Generous, for a building. I'd have spent it by the second week. That's—
+> He stops. He is looking into the crate.
+charlie[thinking]: That's mine.
+songha: Which?
+charlie: The harmonica. I lost it here and quietly blamed three separate people. I owe some apologies.
+songha[smile]: March twentieth, by the ledger. "Nobody will admit to it."
+charlie: I'm admitting to it now. Put that in writing, would you.
+> Songha turns the ledger toward you and holds out the pen. You write it under your own entry, five years late. *Returned.*
+> Charlie plays a short phrase on his way out, low and unhurried. It is still in tune. After that long in a crate, that seems generous of it.
+@hide charlie
+songha: One for one. Your ledger works. It just runs slow.
+> He turns the page. It's the last one with writing on it.
+@music quiet
+> *Apr 15 — one page, folded small. Under the crate on the roof. Very upright handwriting.*
+> *Owner: boy with notebook. HOLD. He'll ask.*
+> Taped below the entry, flat under tape gone the colour of weak tea, is a square of paper folded four times.
+> Songha has stopped laughing.
+songha: April fifteenth.
+songha: I came back up that night. And the two nights after. 23:12, all three.
+you: I was down here until lock-up. With this.
+songha: I used the alley stairs. After ten, the front door was for people with appointments.
+> Four floors. He was on the roof, waiting to ask you something. You were behind a desk, waiting to be asked.
+songha[thinking]: We both waited. In the wrong place. For three nights.
+songha: That's a scheduling error. Mine, mostly. {p} I'd like to be annoyed about it. I find I'm just sorry we lost the three nights.
+> Under your entry there is one more line, in the founder's big loose hand. *Apr 30 — desk's mine again from today. Left tidier than I ever kept it.*
+you: We left at the end of the month.
+songha: I know. {p} Spring.
+* [careful] Peel the tape. Hand it to him still folded. "I never read it. It says hold. Not read."
+    @rel songha trust+1
+    @flag songhax_unread
+    songha: You had it for two weeks.
+    you: I saw it was a list. I stopped there. It seemed like yours.
+    songha[smile]: …It was. Thank you. {p} Five years late. Thank you.
+* [sincere] "I read the top line, at sixteen. Then I stopped. I'm sorry I read that much."
+    @rel songha trust+1 closeness+1
+    songha: Which line?
+    you: Year One. 5:30, crossed out. Then 5:40.
+    songha[smile]: I negotiated with myself. In writing. {p} You've known that about me for five years and said nothing. That's more than fair.
+    > You peel the tape and put the square in his hand.
+* [romantic] "It says he'll ask. You're five years late. Ask." {if songha.romance >= 3}
+    @rel songha romance+1 trust+1
+    > He straightens up, like someone at a counter. Which, to be fair, he is.
+    songha[neutral]: I'd like my page back, please. {p} I should have asked five years ago.
+    you: Sign here.
+    > He signs the ledger. Small, upright. Then he holds his hand out, and you peel the tape and put five years into it.
+> He unfolds it on the counter, along its old creases.
+> It's a draft. The same five lines, messier. Arrows. A coffee ring, or a hot chocolate ring.
+> And the fifth line is different. Something is written there, then scored through twice, with a note squeezed into the margin.
+> He reads it without moving anything but his eyes. Then he folds it up again. All four folds.
+songha: It's the first draft. I thought I'd thrown it off the roof. I'd decided I had.
+songha: The fifth line's different from the one ECHO showed you.
+songha[thinking]: I'm not going to read it to you yet. I'm not dodging. {p} I'm putting a box next to it.
+you: For later.
+songha: For the roof. It should be read where it was written. That isn't a schedule. That's manners.
+> He slides it inside the back cover of the notebook, next to the photocopy with its four dated ticks.
+songha: Can I point something out? About the ledger. Not the page.
+songha: "Hold. He'll ask." You wrote that. You. The person who sets an alarm for leaving.
+songha: You knew you were going at the end of the month. You left one thing open anyway. On purpose. In ink.
+* [sincere] "I wanted there to be a reason to come back."
+    @rel songha trust+1 closeness+1
+    songha: It worked. It took five years and a talking building. But it worked.
+    songha[smile]: For you, I'd call that on schedule.
+* [quiet] "…I'd forgotten I did that."
+    @rel songha trust+1
+    songha: I know. I watched you read it.
+    songha: So I'm saying it out loud, so it's on somebody's record. You hold things for people. You did it before anyone asked you to.
+* [romantic] "I think I was hoping you'd come downstairs." {if songha.romance >= 4}
+    @rel songha romance+1
+    songha[neutral]: I was hoping you'd come back up.
+    songha: Four floors. We were four floors apart and both of us just *hoped*.
+    songha: I'm not doing that again. For the record. If I want you somewhere, I'm going to say so.
+> It's a strange thing, being handed your own kindness as evidence. You don't know where to put it. He seems to understand that, and doesn't ask you to put it anywhere.
+> He takes the pen and writes one more line in the ledger, under the founder's. *Claimed.* He starts to add the time.
+songha: I don't know the time.
+> He writes *Tonight* instead.
+songha[smile]: Tonight's a real unit of time. I've had that confirmed.
+> A dot beside *Lost and Found* on the untidy page. Then he yawns, once, into the back of the wrist with no watch on it.
+> He registers it the way he would register a late train: without surprise, and with a note.
+songha: That's information.
+you: There's a line on the list about sitting down.
+songha: …It's not next. {p} It's nearest, though. Isn't it.
+@goto songha_ch4
+
+# ------------------------------------------------------------ CH4: OFF SHIFT (quiet; he needs, you give)
+=== songha_ch4
+@autosave
+@bg studio_lounge t=fade d=1.4
+@music quiet
+@time 04:04
+@amb room
+@show songha thinking at=c
+> The lounge. Two sagging sofas, a low table of empty cups, a blanket somebody has folded into a perfect square. The lamps are down to their last setting.
+> *Sit down somewhere. (Actually sit.)* It's his own line. He has been circling the sofa for a full minute, as if it needed a permit.
+> He yawns again and doesn't disguise it. He turns to the rota instead, the way other men turn to a window.
+> You look at the rota with him. Eight names and yours. Every one of them has a nap slot, neatly boxed.
+> His own name is at the top, with no box. Just a bracket. *(list)*.
+you: You're not on your own rota.
+songha: I'm on it. I'm the top line.
+you: You're the heading.
+songha: Somebody has to hold the list. If I'm asleep and Daniel finds the cat, or Hyunjun takes everyone to a fourth shop—
+songha[thinking]: It's not that I don't trust them. They're good. All of them.
+songha: I just know how I'd feel if something went wrong in the ten minutes I wasn't looking.
+* [sincere] "Then give me the list. I'm on shift. You put me on it yourself."
+    @rel songha trust+1
+    @if var.hour == "morning"
+        songha: Last shift. I did write that. I didn't think you'd read the small print.
+    @else
+        songha: Night shift, with me. I did write that. I didn't think you'd read the small print.
+    you: I read every line. You turned the notebook so I could.
+* [playful] "Ten minutes. I'll set an alarm. It's the one thing I'm properly qualified in."
+    @rel songha closeness+1
+    songha[smile]: You are. You're the most qualified person in the building.
+    songha: Ten. Not eleven. Eleven is how it starts.
+* [quiet] Sit down. Leave the space beside you. Hold out a hand for the notebook.
+    @rel songha closeness+1
+    > He looks at your hand. Then at the notebook. It takes him a while. You don't lower the hand.
+> He gives it to you. It is warm from his pocket and heavier than it looks, and he lets go of it one finger at a time.
+songha: Conditions. One: wake me if Daniel goes near the fuse box. Two: ten minutes, exactly. Three—
+you: There's no three.
+songha[smile]: …There's no three. I just usually have three.
+> He sits. Actually sits. Upright at first, arms crossed, like a man waiting for a train he doesn't trust.
+songha: I won't really sleep. I'll rest my eyes. It's a different thing.
+> Ninety seconds later his head has tipped back against the cushion, and his arms have come uncrossed by themselves.
+> You start a timer. Ten minutes. Your phone believes it is five past four. You've decided not to argue with it.
+@wait 1.2
+> Asleep, he looks like someone who has put something down. Not dropped it. Put it down, carefully, where he can find it again.
+> The notebook sits closed on your knee. It has the whole night in it, and his tomorrow, and an untidy page. You keep it closed. That's the job.
+@sfx phone
+> On the table, his phone lights up. Then again. Then a third time.
+@textbox phone
+hyunjun: songha hyung what time is it
+daniel: hyung where's the tape. the strong tape
+charlie: hyung is it ok if i
+charlie: never mind
+@textbox normal
+> He doesn't stir. Every one of them, asking him. He called it at midnight. You wonder how many years he has been the person who knows.
+* [sincere] Answer in the group chat, as yourself. "He's off shift. Ask me."
+    @rel songha trust+1 closeness+1
+    @textbox phone
+    hyunjun: off shift. him.
+    hyunjun: ok. typing quietly. what time is it
+    you: no idea. it's the buffer. enjoy it
+    you: tape is front desk, second drawer, left side. it was six years ago
+    daniel: it's still there. you're hired
+    hanbi: good.
+    @textbox normal
+* [playful] Turn his phone face down. It's his own move. Then tell Daniel where the tape is.
+    @rel songha closeness+1
+    > Face down on the table, the way he left his watch on the roof. Then, from your own phone: *front desk, second drawer, left.*
+    @textbox phone
+    daniel: how do you know where the tape is
+    daniel: oh. right. desk person. respect
+    @textbox normal
+* [quiet] Read them twice. Nothing in them is on fire. Let them wait.
+    @rel songha trust+1
+    > A time. Some tape. A never-mind. They'll keep for ten minutes. Most things will, it turns out.
+    @textbox phone
+    hanbi: he's asleep. use the grey tape. ask me the time
+    @textbox normal
+    > You have no idea how Hanbi knows. You've stopped expecting to.
+@sfx step
+@show hamin neutral at=r
+> Hamin, in the doorway, with a paper cup. He sees the sofa and stops mid-step, like someone who has come across a deer on a path.
+hamin: Is he—
+you: Six minutes in.
+hamin[smile]: I've never seen that. I honestly thought he plugged in somewhere.
+> He sets the cup on the table, well clear of any elbow. Barley tea, still steaming. Then he takes the perfect square of blanket and lays it over Songha's knees without waking a single thread.
+hamin: Don't tell him it was me. He'll put it on a list of things to pay back.
+hamin: …Thank you for holding it. The list. He'd never hand it to one of us. We're the ones written on it.
+@hide hamin
+> He goes as quietly as he came. You look at the notebook on your knee, and understand a little better what you've been handed.
+@wait 1.2
+> The timer runs down. Nine minutes fifty. Fifty-five.
+* [sincere] Wake him at ten exactly. You said you would.
+    @rel songha trust+1
+    > You say his name once, at ordinary volume. He is awake before the second syllable, already looking for what's wrong.
+    you: Nothing's wrong. It's ten minutes.
+* [quiet] Wake him at ten, with a hand on his sleeve. {if songha.romance >= 3}
+    @rel songha romance+1
+    > Your hand on the cream sleeve, just above the wrist. He wakes slowly, which you suspect is rare.
+    > He looks at the hand first. Then at you. He doesn't sit up straight away.
+* [playful] "Songha. Daniel's at the fuse box."
+    @rel songha closeness+1
+    > He is on his feet before his eyes are open.
+    songha: He's— {p} he's not.
+    you: He's not. It's been ten minutes.
+    songha[smile]: That's a terrible alarm. Keep it. It works.
+songha[neutral]: Ten?
+> You show him the timer. 10:00, flashing.
+songha: I was out. Actually out.
+> He finds the blanket on his knees. The cup. His phone, quiet on the table.
+songha: What did I miss?
+you: Hyunjun wanted the time. Daniel wanted tape. Charlie said never mind. All handled.
+> He takes that in. Nobody fell off anything. The building is still standing. The cat has not been disturbed.
+songha[thinking]: I was gone for ten minutes and they were fine.
+you: They're good. You said so yourself.
+songha: I'm tired.
+> He says it to the low table, as if trying out the sentence on furniture first.
+songha: That's the feeling. I'm saying it plainly. I've been tired for a while.
+songha: I don't say it, because they're listening. If I'm tired, then it's allowed. And then maybe nobody gets up.
+songha[neutral]: That's the theory. I've never tested it. I've just been very tired and very upright, for a long time.
+you: You tested it just now. Ten minutes.
+songha[smile]: Sample size of one.
+> He picks up the barley tea and drinks half of it. He looks at the blanket. He doesn't ask who.
+songha: Can I have five more?
+songha: I'm asking. I've never asked for more time in my life. I only ever ask for less.
+@flag songhax_asked_more
+you: Take the five. I've got the list.
+> He leans back. This time he doesn't cross his arms first.
+@if songha.romance >= 4
+    > After a moment his head tips. Not back. Sideways, slowly, and stops just short.
+    songha: Is this okay? I'm asking.
+    you: It's okay.
+    > His head comes to rest on your shoulder, on the navy of his own jacket. It weighs more than you expected. It is a whole person's worth of tired.
+@else
+    > After a moment his head tips. Not back. Sideways, toward you, and stops an inch short of your shoulder.
+    > Close enough that you can feel the warmth of it. He seems to have measured the inch, and to be content with it.
+songha: Nobody's held the list for me before. {p} I went back through and checked. Actually checked.
+> His voice is already going. You don't answer. It didn't need one.
+> You keep the notebook closed on your knee for five more minutes. It is the easiest shift you have ever worked.
+> When he is properly under, you open it to the untidy page, find *Sit down somewhere*, and put a dot beside it yourself. As small as his.
+@goto songha_ch5
+
+# ------------------------------------------------------------ CH5: THE FIFTH LINE
+=== songha_ch5
+@autosave
+@bg studio_rooftop t=slow d=2
+@music songha
+@time 04:22
+@amb night
+@fx stars n=0.8
+@cam reveal
+> The roof door sticks. Shoulder, then hip. On the other side, the roof is holding its breath.
+@video vid_songha_drama
+@unlock cg:cg_songha_drama
+> No wind. The puddles are as flat as glass. Four storeys down, the laundromat vent has paused halfway through a sigh.
+> Over Mapo, Minor Delay hangs exactly where you left it, blinking in place. And below the Pleiades, faint and orange, Aldebaran is not following anything.
+@show songha thinking at=c
+songha: He's stopped.
+you: First night off in a few thousand years.
+songha: He hasn't caught up.
+you: He isn't chasing. That's a different thing.
+songha: …I'm going to need a minute with that. Not now. It's too accurate for now.
+> The chair is behind the water tank. White plastic gone grey, one leg an inch shorter than the rest. It has been waiting five years with great patience and no dignity.
+> He crouches beside it and rocks it with one finger. Tock. Tock.
+songha: Options. One: shorten the other three. Two: find a shim. Three—
+songha[smile]: I actually have a three this time. Three: accept the wobble. I reject three.
+> He opens the notebook. Not to the untidy page. To the timeline. Eight dots in a row, and arrows that never pointed at anything.
+songha: Eight encounters. No pattern. I was going to keep this and work on it. Weekends.
+> He looks at it for a moment longer. Then he tears it out, one clean pull along the spine.
+> From anyone else it would be nothing. From him it is roughly equivalent to shouting.
+* [playful] "Finally. The timeline does something useful."
+    @rel songha closeness+1
+    songha[laugh]: Load-bearing. That's all I ever wanted from it.
+* [sincere] "You're sure you don't need it?"
+    @rel songha trust+1
+    songha: I know how it ends. It ends on a roof, with a chair. I don't need the arrows for that.
+* [curious] "How many folds?"
+    @rel songha closeness+1
+    songha: Until it's an inch thick. I'm not counting.
+    > He folds. He hands it to you to check. He lasts about four seconds.
+    songha: …Six. It was six. I'm sorry. I tried.
+> You tilt the chair. He slides eight encounters under the short leg and presses each corner of the seat in turn, like someone testing a table in a restaurant.
+songha: Sit.
+> You sit. Nothing rocks. The chair holds you as if it had never done anything else.
+songha: Five years of "not my problem". Two minutes and a piece of paper. {p} I don't want to think about what else is like that.
+> He turns the crate over beside you and sits on it, knees up, the way he did at seventeen.
+songha: You keep the chair. It's the good seat now.
+> Then he takes the folded square from the back of the notebook, and doesn't open it yet.
+songha: Here. It was written here. I was on this crate, and you hadn't come up yet.
+> He unfolds it on his knee and stands the phone torch beside it. This time he tilts the page so that you can read.
+> *YEAR FIVE — Be happy.*
+> Scored through. Twice. And in the margin, small and upright: *not measurable. how would you know. replace.*
+> Underneath, in a different pen, the line you have seen. *Learn real star names.*
+songha: That's what I wrote first. Then I looked at it for about ten minutes and couldn't work out how you'd tick it.
+songha: So I swapped it for something with right answers. Stars have names. Either you know them or you don't.
+songha[thinking]: "Four out of five. Don't ask about the fifth." I said that to you at the desk, at midnight. This is the fifth. It was never the stars.
+* [sincere] "It's a fair question he asked. How would you know?"
+    @rel songha trust+1 closeness+1
+    songha: It *is* a fair question. That's what annoys me. He wasn't wrong to ask it. He was wrong to give up.
+    songha[thinking]: Tonight I didn't know what time it was, and I didn't mind. That might be how you know. I don't have a better measure yet.
+* [quiet] Read it twice. Don't say anything clever.
+    @rel songha trust+1
+    > You read it twice. You don't fix it. The roof stays quiet around the two of you.
+    songha: Thank you for not solving it. {p} If it were yours, I'd have had three suggestions by now. I'm working on that.
+* [romantic] "He crossed it out. He didn't stop wanting it. I know what that looks like." {if songha.romance >= 3}
+    @rel songha romance+1
+    songha: …Do you?
+    you: I wrote "a place you want to stay". Then I moved four more times.
+    songha[smile]: Neither of us should have been allowed near a pen. {p} I'm glad we were.
+songha: Here's what I've been carrying. Since we're up here. Since it's that kind of night.
+songha: The page runs out this year. Five lines, and then there's no line.
+songha: Everybody asks what's next. The younger ones. The staff. My own notebook. I have an answer for every year except the one I'm standing in.
+> He looks out over the rooftops. Eight people's worth of tomorrow is somewhere in that notebook. You have seen the pages.
+songha: We're close. All eight of us. I can feel how close. I've wanted it since before there was a page.
+songha[neutral]: And what scares me is that when we get there, I'll tick the box and look straight at the next box.
+songha: That I'll be standing in the middle of the thing I spent my whole life walking to, thinking about 5:40.
+songha: I don't want to miss it while I'm in it. {p} That's what I'm afraid to want. To actually be there when it happens.
+you: You were there tonight. Count eight. Ten minutes on a sofa. This chair.
+songha: …Three examples. You gave me three.
+you: I just usually have three.
+> He laughs, the loud one, and it goes out over the stopped city and doesn't come back.
+> He uncaps the pen. On the draft, in the margin, he crosses out one word. *Replace.* Above it he writes another. *Keep.*
+songha[smile]: First edit in five years. I'm not dating it.
+@if flag.songhax_blank
+    > Then he turns to the untidy page and finds your line. *One thing you would never put on a schedule.*
+    > Beside it, he writes: *(see draft)*. He shows you, so there's no doubt about it.
+songha: Your turn. It's only fair. {p} Did you set one tonight? For leaving.
+> You take out your phone. It's there. You set it at midnight, outside the front door in the rain, before you had even gone in.
+> *05:00 — Leave.*
+songha: Five o'clock. {p} You gave us exactly as long as ECHO did.
+> He doesn't say it like a complaint. He says it like someone reading a line in a ledger that he recognises.
+* [sincere] Turn it off. Only tonight's. "Not this one."
+    @var songhax_alarm = "off"
+    @rel songha trust+1 closeness+1
+    songha: You don't have to give up the habit. I'm not asking for that.
+    you: I'm not. Just this one.
+    songha[smile]: Just this one. {p} That's exactly how I did the watch.
+* [playful] Hand him the phone. "You're the scheduler. Reschedule me."
+    @var songhax_alarm = "his"
+    @rel songha closeness+1
+    > He holds it in both hands, like something live. He doesn't touch the time. He changes the label, and gives it back.
+    > *05:00 — Minor Delay.*
+    songha[smile]: It can still go off. It just means something else now. You're allowed to be late to leaving.
+* [romantic] "I set it because I thought I'd want to be gone by five. I don't." {if songha.romance >= 4}
+    @var songhax_alarm = "stay"
+    @rel songha romance+1 trust+1
+    > You say it, and it is simply true, the way the chair is simply level.
+    songha: Say it again? Not for the record. I'd just like to hear it twice.
+    you: I don't want to be gone by five.
+    songha[smile]: Thank you. {p} I'm not writing that down. I'm going to remember it the hard way.
+    > You turn the alarm off. He watches you do it, and says nothing, carefully.
+> A dot beside *the chair*. The page is almost all dots now.
+> Overhead, nothing has moved. Capella, the six sisters he can see, the follower standing still. A sky with nowhere to be.
+songha: I'm happy the chair's fixed. {p} I'm starting small. I'm going to work up.
+@sfx chime
+@textbox echo
+echo: Eighteen minutes of buffer remain.
+echo: I am not hurrying you. I am informing you. I am told there is a difference.
+echo: When you are ready, I have a request. It is downstairs, behind the Wall. Please bring the watch.
+@textbox normal
+songha: It gave notice. {p} Proper notice. I've never respected a building more.
+@goto songha_ch6
+
+# ------------------------------------------------------------ CH6: A CLOCK SOMEONE BELIEVES
+=== songha_ch6
+@autosave
+@bg studio_archive t=fade d=1.4
+@music echo
+@time 04:40
+@amb room
+@fx memory n=0.6
+@show songha neutral at=c
+> Behind the Archive Wall there is a room you were never allowed into at sixteen.
+> It is narrow, and lit the colour of shallow water. One whole side is the backs of the boxes: hundreds of small brass doors, each with a date on it.
+> On the end wall hangs a clock. Round, plain, the kind from a school corridor. Its hands say 04:57. They aren't moving.
+@textbox echo
+echo: Thank you for coming. I have a problem, and then a request.
+echo: To close the buffer, I must rejoin the time outside. For that I need a clock to set myself by. One that somebody believes.
+echo: I cannot use my own. Tonight I made it say something untrue. It was a kind untruth. It still counts.
+@textbox normal
+songha: You need a reference.
+@textbox echo
+echo: I need the owner's watch. It has not been wrong in five years. I have the figures.
+echo: It stopped when I asked. It will start when it is asked. I would prefer not to be the one who asks. I have been impolite to time once already.
+@textbox normal
+> The watch is in your inside pocket, where it has been since the roof. Songha's hand starts toward you. It stops halfway.
+songha: If I start it, I'll look at it.
+songha[thinking]: Zero checks. ECHO's counting. I'd like to keep my number. {p} It's a stupid thing to want. I want it.
+* [sincere] "Then I'll do it. You don't have to look."
+    @rel songha trust+1
+    songha: You'd be setting the time for the whole building.
+    you: I used to lock the whole building. It's the same job, more or less.
+* [playful] "Turn round. No peeking. I'm handling sensitive equipment."
+    @rel songha closeness+1
+    songha[smile]: It's a watch. {p} It's *my* watch. Be nice to it. It's had a long night.
+* [careful] "Do you want to? It's yours. I'll hold it either way."
+    @rel songha trust+1
+    songha: No. I want you to.
+    songha[smile]: I've thought about it. That's the whole answer. No points.
+@textbox echo
+echo: Not yet. Seventeen minutes remain, and they are yours. I only wished to ask in good time.
+@textbox normal
+> Seventeen minutes. He opens the notebook to the untidy page out of habit.
+> Every line has a dot beside it. There is nothing left on it to do.
+songha: The list's finished.
+you: And there's seventeen minutes.
+songha: With nothing in them.
+> You wait for the pen. For six blocks and a margin. He looks at the page. Then at the stopped clock. Then he closes the notebook with the pen still clipped.
+songha[smile]: This is the question marks. This is exactly what they look like. {p} I thought they'd be bigger.
+songha: I know what I'd pick. I'd like to sit on this floor and not be useful. With you. That's the entire plan.
+> So you do. Backs against the wall, under the clock, facing several hundred small brass doors. The floor is cold. Nobody mentions the floor.
+> He reads a few of the dates to himself. He doesn't sort them. You can see what it costs him.
+songha: Can I ask you something? It isn't planned.
+songha: At sixteen you told me you didn't know what you were doing on Thursday. {p} Do you know now?
+* [sincere] "No. But I know where I'd like to be standing when I find out."
+    @rel songha trust+1 closeness+1
+    songha: Where?
+    you: Somewhere I've been before. With people who noticed.
+    songha[smile]: That's narrower than it sounds. There are nine of us, and one building.
+* [playful] "Still no idea. I've stopped thinking of it as a flaw."
+    @rel songha closeness+1
+    songha[laugh]: It was never a flaw. It was the most relaxing thing anyone had ever said to me. I thought about it for a week.
+* [romantic] "I'd like Thursday to have you in it. That's as far as my plan goes." {if songha.romance >= 4}
+    @rel songha romance+1
+    > He turns his head against the wall to look at you. It takes him a moment to find any words he hasn't arranged first.
+    songha[smile]: One line. No time on it. {p} That's the best plan I've ever seen. I mean that professionally.
+> The room hums, half a tone low. Somewhere in the wall, a box settles.
+songha: I worked it out, by the way. The margin note. "How would you know."
+songha: You know because you stop wanting to be somewhere else. That's the measure. It was there the whole time, and you can't write it down in advance.
+songha: I haven't wanted to be anywhere else since I can't tell you when. I don't have the time. You've got my watch.
+songha[smile]: I'm happy. {p} Right now. Not on the way to it. I'm telling you because you're who I'd tell.
+> You let it stay in the air. It is the first thing he's said all night that isn't followed by a second point.
+> The seventeen minutes go the way minutes go when nobody's spending them. Neither of you sees them leave.
+@sfx chime
+@textbox echo
+echo: It is time to ask. Whenever you are ready.
+@textbox normal
+> He turns to face the wall of little doors, like a man giving someone room at a cash machine.
+> You take out the watch and hold it in your palm. The second hand is still resting on the two.
+> You feel faintly ridiculous. You do it anyway.
+you: Okay. You can go.
+@sfx click
+> The second hand leaves the two.
+@time 04:57
+@fx memory n=0.3
+> On the end wall, the corridor clock gives one firm tock and carries on, as if nothing had been discussed.
+> The hum under the building climbs back up its half tone. Far overhead, you would bet anything, a small blinking light sets off again, left to right.
+@textbox echo
+echo: Reference acquired. It is 04:57. It has been 04:57 for one hour and forty-seven minutes.
+echo: Thank you for the loan. I have nothing left in the buffer. I find that I do not mind.
+@textbox normal
+songha: Is it running?
+* [sincere] Put it back in the jacket pocket. "It's running. I've still got it."
+    @rel songha trust+1
+    songha: Good. Keep holding it. I haven't decided when.
+* [playful] "It says—"
+    @rel songha closeness+1
+    songha: Don't.
+    you: —nothing. It says nothing. It's a very discreet watch.
+    songha[laugh]: Put it away. You're a menace with a timepiece.
+* [romantic] Hold it up beside his ear, face turned away from him. {if songha.romance >= 4}
+    @rel songha romance+1
+    > He goes still and listens. Tick. Tick. Five years of mornings, and he has never just listened to it.
+    you: It can run. You don't have to watch it.
+    songha[smile]: You said that on the other roof. {p} It was true then as well.
+> The watch goes back into the inside pocket, in the space shaped like a notebook. It ticks against your ribs the whole way out.
+> At the door he stops, opens to TONIGHT, and finds the line. *03:00 — ???* and the small empty box beside it.
+> He ticks it. No date.
+you: Solved?
+songha[smile]: No. Spent.
+@bg studio_hall t=fade d=1
+@music studio
+@show hyunjun smile at=r
+hyunjun: ECHO. Any chance of one more minute? I'm good for it.
+@textbox echo
+echo: No. I have none left. I spent them well. I recommend it.
+@textbox normal
+hyunjun[laugh]: …That's the nicest "no" I've ever had.
+@show daniel smile at=l
+daniel: Hyung. For real this time. What time is it?
+songha: Ask {{playerName}}.
+you: 04:57.
+daniel[neutral]: Still? It's been 04:57 for ages.
+songha[smile]: It's been a long 04:57. Best one I've had.
+@hide daniel hyunjun
+> They go ahead, arguing about whether an hour can be owed. You follow them down the last stairs with him beside you, in step, nobody counting.
+@time 04:57
+@goto act4_choice
+
+# ------------------------------------------------------------ FINAL BEAT
+=== songha_final
+@bg studio_lobby t=fade d=1
+@music echo
+@time 04:57
+@cam closeup songha
+@show songha smile at=c
+> You say his name, and the Archive Wall begins to go dark, one small box at a time.
+@textbox echo
+echo: Record 03. Preparing the glass. This requires forty seconds. Please use them as you wish.
+@textbox normal
+> Songha is beside you, notebook shut, pen clipped to the cover. In your inside pocket his watch is ticking, and he hasn't asked what it says.
+songha: You picked the to-do list.
+you: I picked the one with a line still open.
+songha: Forty seconds. {p} Say something. I'm not going to plan what. I'm going to stand here and find out.
+> Forty seconds isn't long. Tonight has taught you how much fits in less. A count of eight. An inch of folded paper. Ten minutes on a sofa.
+> He waits. He doesn't look at his wrist. Whatever you say next, he will hear as the truest account of what this night has been.
+* [romantic] Take his hand. "Ask me what I'm doing tomorrow." {if songha.romance >= 4}
+    @goto songha_ending
+* [sincere] "You hold the list for everyone. I want to be the one who holds it for you. For good."
+    @goto songha_ending_beside
+* [quiet] "There's something I want to say to you properly. Not in forty seconds."
+    @goto songha_ending_someday
+
+# ------------------------------------------------------------ ENDING: BESIDE — "Standing Thursday"
+=== songha_ending_beside
+@bg studio_lobby t=fade d=1.6
+@music echo
+@time 04:58
+@cam wide
+@show songha neutral at=l
+> He looks at you the way he looked at the blanket on his knees. Like something that was done for him while he wasn't watching.
+songha: For good.
+songha[smile]: That's a long shift. You should know what you're signing.
+you: I read every line. You turned the notebook so I could.
+> He opens it, right there, to the rota. He writes quickly, before the glass is ready. Then the last box on the Wall is the only light in the room.
+@textbox echo
+echo: Record 03 selected. Owner: Songha. Writing to glass.
+echo: Contents: one page. Five items. Appended: one first draft, held in Lost and Found for five years by the recipient.
+echo: Appended: one list with no times on it. I have filed it under TONIGHT.
+echo: Appended, at the owner's request: one change to the rota. I am told it is permanent. I have no field for permanent. I have made one.
+@textbox normal
+> The glass card slides out of the wall, warm and faintly lit. Through it you can read the rota.
+> Above his own name, in the space that used to be the heading, he has written yours. And after it, the bracket that was always his. *(list)*.
+@show daniel laugh at=r
+daniel: He saved *two* to-do lists and a staff rota. Nobody has ever been more himself.
+songha: One of them is a draft.
+@show hyunjun thinking at=c
+hyunjun: There's a name above hyung's. In six years there has never been a name above hyung's.
+@hide hyunjun
+@show hanbi smile at=c
+hanbi: It means he's got somebody to hand it to.
+hanbi: …Good. It was heavy. I could see it from the sofa.
+@hide daniel hanbi
+@show hamin smile at=r
+hamin: Then you both have to eat properly. That's a two-person job now. I'll be counting plates.
+@hide hamin
+@show justin smile at=r
+justin: Two people. That's a lesson, not a class. No attendance, hyung.
+songha[laugh]: I'm taking attendance. There are two of us. It'll be quick.
+@hide justin
+@show charlie smile at=r
+charlie: So what are you two now? Is there a word for it?
+> Songha thinks about it. Properly, the way he thinks about a count that isn't sitting right.
+songha[smile]: There's a word. I'm going to say it upstairs. It needs a better ceiling than this.
+@hide charlie
+@call echo_farewell
+@bg dawn_rooftop t=slow d=3
+@amb birds
+@music dawn
+@time 06:14
+@fx light n=0.8
+> At 05:40 he walked everyone to the station, exactly as written. He counted seven heads through the barrier and said "text when you're home" seven times.
+> Then he turned round instead of going through. You had already turned round.
+> The foreman with the hard hat gave you the roof until half past six, in exchange for nothing. People are kind at that hour.
+> So it's the chair that doesn't wobble and the crate, and two warm cans from the shop by the station, and a sky going the colour of peach skin at one edge.
+@show songha smile at=c
+songha: 06:14. Sunrise. It's on time. I take no credit.
+> He has the notebook open to TOMORROW. The line that's been empty since four o'clock. *07:00 —*
+songha: I know what goes there now.
+> He writes it and turns the page toward you, a quarter-inch, the way he did at midnight. *07:00 — breakfast. (You pick.)*
+songha: Okay. The word. I said I'd say it up here.
+songha: I've got seven people I'd do anything for. I know their shoe sizes. I know who's lying about having slept.
+songha[thinking]: What I've never had is someone I hand the list to. I didn't know it was missing. You don't, until somebody holds it for ten minutes and nothing falls down.
+songha: You're my person. That's the word. I looked for a better one on the stairs. There isn't one.
+you: You're mine. I've never stayed anywhere long enough to have one. I'd like to start with you.
+> He nods, once, like a thing confirmed. Then the nod gives up and turns into the whole smile.
+songha: It's not a smaller thing. I want that said plainly. It's the thing I didn't have.
+songha: So. When you were sixteen, you told me you didn't know what you were doing on Thursday.
+you: I remember.
+songha: You do now. Thursdays. You and me. Anywhere with a table.
+songha[smile]: It's not a plan. It's a standing item. Standing items don't get ticked. They just keep happening.
+you: What happens on a Thursday?
+songha: You tell me what went wrong that week. I give you three things I'd do about it. You ignore two.
+songha: Then you take the notebook for an hour, and I sit down. Actually sit.
+you: And when it's 5:40 and it's heavy?
+songha: Then I text you. That's the rule. I've never had that rule. {p} I like it already.
+songha: And when you feel like setting the alarm—
+you: I text you.
+songha: Before. Not after, from another city. Before. I'll answer. I'm up at 5:40. I'm famously available.
+> You laugh. He laughs, the loud one, and doesn't cover his mouth. A pigeon leaves the water tank in protest.
+> The sun clears the rooftops. Below, the renovation crew are carrying the first things out of Studio 25: a sofa cushion, a lamp, the rubber plant.
+you: My letter asked whether I'd found a place I want to stay.
+songha: And?
+you: I don't think it's a place. I think it's a Thursday.
+songha[smile]: I'm going to write that down. Not the time. Just the sentence.
+> You take out your phone. You open the clock, and you do something you have never done in any city. You set an alarm for arriving.
+> *Thursday — go back.*
+> He reads it upside down. He reads everything upside down. He doesn't say a word about it, which from him is an entire speech.
+> His watch is still ticking in the pocket of the jacket you're still wearing. He hasn't asked for either.
+you: Hold. He'll ask.
+songha[smile]: I'll ask. Thursday.
+> The building behind you is emptying. The morning isn't. You stay on the good chair and the crate until the cans are finished.
+> Two names at the top of a rota, and nothing at all written under *07:00* but breakfast.
+@ending songha_beside
+@credits
+@end
+
+# ------------------------------------------------------------ ENDING: SOMEDAY — "When Gerald Returns"
+=== songha_ending_someday
+@bg studio_lobby t=fade d=1.6
+@music echo
+@time 04:58
+@cam wide
+@show songha thinking at=l
+> He takes that in. You watch him not ask what it is. You watch him want to, very much, and set it down.
+songha: Then don't say it in forty seconds.
+songha[smile]: I'd rather have it properly. I can wait. I've recently learned how. There's a record of it.
+> On the Wall, every box goes dark but one.
+@textbox echo
+echo: Record 03 selected. Owner: Songha. Writing to glass.
+echo: Contents: one page. Five items. Year Five: open.
+echo: Appended: one first draft. One word amended by the owner tonight, from "replace" to "keep".
+echo: Appended: one item, not yet said. I have left room for it on the glass. I am learning to leave room.
+@textbox normal
+> The card slides out, warm and faintly lit. In one corner there is a small clear space with nothing engraved in it. It catches the light differently from the rest.
+@show daniel laugh at=r
+daniel: There's a blank bit. ECHO left him a blank bit. Hyung, you've infected the building.
+songha: It's not blank. It's reserved.
+@show hyunjun smile at=c
+hyunjun: Reserved for what?
+songha[neutral]: Go away, Hyunjun.
+hyunjun[smile]: Understood. {p} Still not a no, though.
+@hide daniel hyunjun
+@show justin smile at=r
+justin: It's the hold, hyung. You're on eight. Don't rush it.
+@hide justin
+@show haruta smile at=r
+haruta: A scene that ends just before the line. I like those. The line plays over the next scene.
+@hide haruta
+@show hanbi smile at=r
+> Hanbi says nothing. He looks at the clear corner of the glass, and then at the two of you, and he puts his pen back in his coat without ever having taken the cap off.
+@hide hanbi
+> Songha holds the card out for you to carry. His thumb covers the blank corner until the last moment, as though it could get cold.
+@call echo_farewell
+@bg dawn_rooftop t=slow d=3
+@amb birds
+@music songha
+@time 05:40
+@fx light n=0.6
+> The stairwell was dark, so he went first with the phone torch and said "step" at every step. There were forty-one. He didn't count them aloud. You heard him counting anyway.
+> The roof at 05:40 is grey and soft, and smells of rain drying. The good chair. The crate. One last star, low in the south.
+@show songha neutral at=c
+> He stands with his hands in his hoodie pocket and doesn't prompt you. It may be the hardest thing he has done tonight, and tonight he tore a page out of his own notebook.
+you: Properly, then.
+you: I like you. Not the list, and not the jacket. You. The person who asks first, every time.
+> He doesn't answer at once. He doesn't reach for the pen either.
+songha: Give me a second. Not to plan. Just to have heard it.
+> You give him the second. He takes three.
+songha[shy]: I like you too. {p} There. No steps.
+songha: I liked you at seventeen for calling a star Gerald. I liked you again from about half past midnight. Those are two separate likings, and I've got both of them.
+songha[smile]: Okay. So. First, we—
+> He stops. He shuts his eyes for a moment, and laughs under his breath.
+songha: I was about to schedule it. I had a first step ready. It was a good first step.
+you: What was it?
+songha: I'm not telling you. It'll keep.
+> He sits down on the crate. You take the chair. The sky does the slow thing skies do.
+songha: Here's the honest part. This is the year on the page. The next few months are going to take everything I've got, and I want to give them that.
+songha[thinking]: I don't want to give you whatever's left over at eleven at night. I've seen what's left over. It's a man reading a rota.
+you: Here's mine. I've only just stopped setting alarms for leaving. About an hour ago.
+you: I'd like to learn to stay somewhere before I ask someone to be the reason.
+> He listens to the whole of it. He doesn't offer a single suggestion. You can see him not doing it.
+songha: So it's not a no.
+you: It's the opposite of a no. It's "hold. He'll ask."
+songha[laugh]: You're quoting the ledger at me.
+you: It's a good ledger. It works. It just runs slow.
+songha: Then it arrives when it arrives. Both of us decide that. Not me on my own with a pen. {p} I want that on the record.
+you: ECHO's off. There's no record.
+songha[smile]: Then you'll have to remember it the hard way. So will I.
+> He looks east, low down, where the rooftops meet the sky. There is nothing there yet.
+songha: ECHO said Gerald comes back every winter. Before dawn. Nobody schedules it.
+songha: The first clear morning he's back. That's when.
+songha: I'm going to try not to look up the date. I give myself a week.
+you: Where?
+songha: Haneul Park. The top of the stairs. It faces east, and there's nothing in the way.
+songha[thinking]: Two hundred and ninety-one steps. I've counted. Obviously I've counted.
+you: What time?
+songha: 5:40. I'll be awake anyway. That morning it gets to be for something else.
+you: What do I bring?
+songha: The watch. Keep it till then. You can give it back up there. Or not. We'll know.
+songha: I'll bring the draft, and the pen. And two cans. I know which.
+you: And after that?
+songha[smile]: I'm not writing the line after that. I'm leaving it open on purpose. Second time in my life. It's getting easier.
+> He holds out his hand. Not to shake on it. Palm up, open, the way you would offer to take something heavy from someone.
+songha: I don't shake on things without dates. This is just my hand. {p} If you'd like it.
+> You take it. It's warm. He holds on for a count of eight, and you both know where the hold is.
+> The last star goes out in the south. The east stays empty, a clean strip of sky above the laundromat, with plenty of room in it.
+> Somewhere below that line, on nobody's schedule, a faint orange star is already on its way.
+> You know its real name now. You'll call it Gerald when it gets here. He'll let you.
+@ending songha_someday
+@credits
+@end

@@ -1,0 +1,975 @@
+# JUSTIN — "No Audience" — expansion chapters + two endings
+# Continues story/14_justin.s25. Flags/vars created here are prefixed justinx_.
+# Chain: justin_ch1 → … → justin_ch6 → act4_choice → justin_final → (justin_ending | _beside | _someday)
+
+# ------------------------------------------------------------ CH1: THE LEDGER
+=== justin_ch1
+@autosave
+@bg studio_frontdesk t=fade
+@music studio
+@amb room
+@time 03:10
+@fx dust n=0.3
+@cam wide
+> Every route through this building passes the front desk. That was the whole idea of the front desk.
+> Justin has walked past it all night. This time he stops, and puts both elbows on the counter, and leans over to look at the side customers never see.
+@show justin thinking at=c
+justin: What's it like back there?
+you: Smaller than it looks. There's a heater under the desk that only warms your left foot.
+justin[smile]: Only the left?
+you: The right one learns to cope.
+> The counter flap sticks. It always did. You lift, then push, and it swings up the way it swung up a hundred nights one winter.
+> Your hands knew how before you'd decided to try.
+justin[smile]: You didn't even look at it. I know what that is. That's a routine.
+justin[thinking]: Is there a book? There was a book. I had to write my name in a book.
+> Second drawer from the bottom. It needs a hip, not a hand. You give it the hip.
+@sfx door
+> Inside: a stapler, a dead torch, a ring of keys with a cracked plastic 25 on the tag — and a green hardback ledger, soft at the corners.
+> ROOM HIRE, it says on the cover, in marker. Underneath, in a different marker: *please write clearly. please.*
+justin: That's it. That's the book. I'm in there somewhere.
+justin[smile]: February. Three years ago. I want to see what I wrote. I was so nervous I think I spelled my own name wrong.
+* [playful] "Easy. We look for the worst handwriting."
+    @rel justin closeness+1
+    justin[laugh]: Rude. Accurate. My sevens look like ones and my ones look like accidents.
+    > He flips pages fast, the way he does everything, and overshoots February twice.
+* [sincere] "Tell me the date. I'll find the night."
+    @rel justin trust+1
+    justin[thinking]: The ninth. No — the tenth, technically. It was after midnight.
+    > You turn the pages for him. Slowly. He watches your hands instead of the book.
+* [quiet] Turn straight to the page with the coffee ring.
+    @rel justin trust+1 closeness+1
+    > February had a coffee ring on it. You put it there. You remember being annoyed at yourself for a week.
+    justin[thinking]: You knew exactly where that was.
+    you: I spilled on it. I felt terrible. It's a very easy month to find.
+@sfx page
+@cam closeup justin
+> And there it is. One line among a lot of lines.
+> ROOM B. IN: 00:30. NAME: a J, and then a small, panicked scribble.
+> PURPOSE: *dance*, crossed out. *practice*, crossed out. And then, pressed hard enough to dent the paper: *nothing*.
+justin[neutral]: …I wrote "nothing."
+justin: I remember that. I didn't want anybody to read "dance" and come and look.
+justin[smile]: Great plan. Flawless. Nobody came to look. Except the one person with the keys.
+> He runs a finger along the line to the next column, and stops.
+> OUT: 01:00. It isn't his handwriting. It's rounder. It leans the other way.
+> It's yours.
+justin[thinking]: One o'clock. But I wasn't out at one. You stood in the door at — what, ten to? And then I did the bad eight, and then I packed up *so* slowly—
+justin: It was twenty past. At least. I looked at the clock in the lobby and felt sick.
+> There's a laminated card still taped to the desk. LATE FINISH: 1,500 WON PER TEN MINUTES. Someone has drawn a small sad face next to the number.
+justin[smile]: So I've owed this building three thousand won for three years. That's not a record I wanted.
+> He's already reaching into his hoodie pocket. He comes up with a folded five-thousand note and looks around for somewhere official to put it.
+> The honesty tin is where it always was, behind the stapler. It rattles with exactly one coin.
+* [sincere] "I wrote one o'clock on purpose. You looked like you needed the twenty minutes."
+    @rel justin trust+1 romance+1
+    @flag justinx_twenty
+    > He stops with the note halfway to the tin.
+    justin[neutral]: …You gave me twenty minutes.
+    you: They weren't mine to charge for. Nobody else wanted the room.
+    justin[thinking]: I thought I got away with it. I didn't get away with anything. Somebody just let me.
+* [playful] "With three years of interest, that's one strawberry milk. Exactly."
+    @rel justin closeness+1
+    justin[smile]: One strawberry milk. I can't pay that. I have a complicated history with strawberry milk.
+    you: I've heard.
+    justin[smile]: Everyone's heard. Hyunjun makes sure of it.
+* [quiet] Put the lid back on the tin. "Desk's closed."
+    @rel justin trust+1
+    > He looks at the tin. At the note. At you.
+    justin[smile]: You can't just close a desk at me.
+    you: I did it every night for a whole winter. I'm very good at it.
+> He puts the note in the tin anyway. All five thousand. He presses the lid down with both thumbs, like he's sealing a letter.
+justin: Keep the change, Studio 25.
+> Then he goes back to the ledger, because there's one more column, and he's only just seen it.
+> REMARKS. Most nights it's empty. Some nights it says *heater broken again* or *who keeps taking the pens*.
+> On his line, in your round, leaning handwriting, it says: *Room B — good weird.*
+@expr justin neutral
+> He reads it twice. You can tell, because his eyes go back to the start of the line.
+justin: "Good weird."
+justin[thinking]: That's what you said in the doorway. I asked if it was weird, with no music. You said, "A little. Good weird. Keep going."
+justin: And then you came down here and wrote it in the *book*.
+you: The column was empty. It seemed like it should say something.
+> He doesn't laugh. He puts his hand flat on the page, next to the line, not covering it.
+justin[neutral]: I said earlier I never thanked you properly. For staying up.
+> His shoulders start to shape a bow. A big one. Theatrical, one arm out. You watch him feel it coming.
+> He lets it go. He just stands there, on the customer side of the counter, with his hands at his sides.
+justin: Thank you for staying up.
+justin: Thank you for the twenty minutes. I didn't know there were twenty minutes.
+justin[shy]: And for "good weird." I'd have danced for another year on "good weird," if I'd known it was written down somewhere.
+* [sincere] "You're welcome. Properly."
+    @rel justin trust+1
+    justin[smile]: Properly. Yeah. That's how it's supposed to go. One person says it, the other person takes it.
+    justin[smile]: I always skip the second half. I say thanks and I'm already out the door.
+* [sincere] "It was the best shift I worked all winter. I never told anyone that either."
+    @rel justin trust+1 romance+1
+    justin[thinking]: The best one. I saluted you and lost my footing.
+    you: Before that. The part where you didn't know I was there.
+    > He looks down at the page, then back up at you, and holds the look. He doesn't reach for a joke to cover it.
+* [playful] "Would you like a receipt?"
+    @rel justin closeness+1
+    justin[smile]: Yes. Absolutely. I want it in writing.
+    > You take the pen on its string and write, under his line: *PAID IN FULL. Three years late. Dancer was polite about it.*
+    justin[smile]: "Dancer." Not "debtor." I'll take it.
+@flag justinx_thanked
+@cam wide
+> The key ring is still in the drawer. He hooks it out with one finger and holds it up between you. It turns slowly, catching the desk lamp.
+justin[thinking]: These are them. The ones in the mirror.
+> He sets them in your palm instead of handing them over. The weight is exactly what your hand expected.
+> A cracked 25 in white paint. It used to knock against your leg on every stair.
+justin[smile]: Somebody has to lock up. Tonight it's you again.
+you: There's nothing to lock. The power goes at five.
+justin: I know. Carry them anyway. It looks right.
+> You put them in your coat pocket. They knock once as you come back through the flap, and both of you hear it.
+@flag justinx_keys
+@goto justin_ch2
+
+# ------------------------------------------------------------ CH2: THE TRIAL (light)
+=== justin_ch2
+@autosave
+@bg studio_lounge t=fade
+@music fun
+@amb room
+@time 03:26
+@cam wide
+> The lounge has one working thing in it, and it's the vending machine. It hums in the corner like it's proud of this.
+> Row three, second from the left: a single carton of strawberry milk. The last in the building.
+@show justin thinking at=c
+justin: I'm paying debts tonight. I'm on a roll. Hyunjun gets his milk back.
+> He pats his hoodie pocket. Then the other one. Then, slowly, the pockets of his joggers.
+justin[neutral]: …I put all my money in a tin.
+you: All five thousand.
+justin[smile]: I said "keep the change." It was a good line. I stand by it.
+> The machine wants 1,100 won, coins only. A handwritten sign on the glass says NOTES MAKE IT SAD.
+> You turn out your coat pockets onto the low table. A five-hundred, three hundreds, some lint, the keys.
+justin: Eight hundred. We're three hundred short. That's solvable.
+> He's already lifting the cushions off the sofa, one at a time, and stacking them on the armrest.
+* [playful] Take the other end of the sofa. Race him.
+    @rel justin closeness+1
+    > You find a hundred-won coin and a hair tie. He finds a guitar pick, a pen with Songha's name on it, and a token for the claw machine.
+    justin[smile]: A hundred. You win. I got stationery, and a token Daniel would pay real money for.
+* [curious] "What's the most you've ever found in a sofa?"
+    @rel justin closeness+1
+    justin[thinking]: A whole phone once. It was mine. I'd been looking for it for two days.
+    > He surfaces with a hundred-won coin held up between two fingers, plus a guitar pick and a claw machine token.
+    justin[smile]: And today: riches.
+* [quiet] Hold the cushions so he can dig with both hands.
+    @rel justin trust+1
+    > He goes in up to the elbow. Out comes a guitar pick, a claw machine token, and, finally, a hundred-won coin.
+    justin[smile]: Teamwork. You're the muscle. I'm the arm.
+> Nine hundred. He looks at the machine. The machine hums.
+@show haruta smile at=l
+haruta: Good morning. Is it morning? I heard furniture.
+justin: Haruta. Do you have two hundred won and no questions?
+> Haruta considers this with real care, takes out a small coin purse, and counts two hundred won into Justin's hand.
+haruta: I have one question.
+justin[smile]: I said *no* questions.
+haruta[thinking]: Is it for something Hyunjun is going to be upset about?
+justin: It's for something Hyunjun is going to be *happy* about. For once. Write the date down.
+> The coins go in. He presses the button for row three, second from the left, with great ceremony.
+@sfx vending
+> The machine thinks about it. Something turns. Something drops.
+@sfx can
+> It's yellow.
+justin[neutral]: That's banana.
+haruta: That is banana.
+> In the window, the last strawberry milk hasn't moved. It sits there, pink and untroubled.
+justin: I pressed strawberry. {{playerName}} will confirm.
+you: You pressed strawberry. With a flourish.
+justin[smile]: Then the flourish is what did it. …No. It's a machine. It's just wrong.
+@show hyunjun thinking at=r
+hyunjun: I heard a vending machine. At three-thirty. Standing next to Justin.
+> Hyunjun has arrived in the doorway with his bag over one shoulder and the calm of a detective in the last ten minutes of the film.
+hyunjun: Nobody move. Haruta, you're the judge.
+haruta[thinking]: I am?
+hyunjun: You're the only one here who's never taken anything from my bag.
+haruta[smile]: That's true. …All right. Court is open. Please sit.
+> Everyone sits. Haruta takes the armchair. It suits him. Justin holds the banana milk in front of him in both hands, like evidence, or an offering.
+justin: Your honour. I'd like to make restitution. This is milk. It's the wrong milk. But it's *bought*. With money. By me.
+hyunjun: With whose money?
+justin[smile]: …It was a group effort.
+hyunjun: {{playerName}}. You were with him. You're the witness.
+* [playful] "Your honour, I drank half the evidence an hour ago."
+    @rel justin closeness+1
+    hyunjun[thinking]: Half.
+    justin[smile]: I did say it's better if we're both guilty. I've had this defence ready for hours.
+    haruta: The witness is now also the accused. This is getting complicated. I like it.
+* [sincere] "He's been paying things back all night. This is him trying."
+    @rel justin trust+1
+    > Hyunjun looks at Justin. Justin looks at the carton.
+    hyunjun[thinking]: …Paying things back. Him.
+    justin: I put five thousand won in a tin. For a late fee. From three years ago.
+    hyunjun[smile]: Three years late, and he still paid it. All right. I respect that.
+* [quiet] Take the straw off the carton and hold it out to Hyunjun.
+    @rel justin trust+1
+    > Hyunjun takes it. Turns it over. It's a very small peace treaty, and he knows it.
+    hyunjun[smile]: The witness is more persuasive than the lawyer.
+    justin[laugh]: The witness is the only reason I have a lawyer.
+haruta: I have reached a verdict.
+haruta[smile]: Banana is accepted. Justin carries Hyunjun's bag to breakfast. And he has to say "excuse me" before he opens it, from now on.
+justin: "Excuse me"? To a *bag*?
+hyunjun[laugh]: To the bag. Every time. I'll be listening.
+> Hyunjun pushes the straw in and drinks. He makes a face like it's fine, which from him is a rave.
+> Then, to you, not quite quietly enough:
+hyunjun: You know I leave it open, right? The bag.
+justin[neutral]: …What?
+hyunjun: The zip. I leave it open. Since, like, last spring.
+hyunjun[thinking]: When he's fine, he takes my stuff and makes a whole thing out of it. When he's not, he buys his own and goes and sits by the window.
+hyunjun: So I leave it open. If something's missing, it's a good day.
+> Justin doesn't say anything. The banana milk has gone, so he has nothing to hold. He sets his hands on his knees and leaves them there.
+justin[neutral]: I thought I was really good at it.
+hyunjun[smile]: You're terrible at it. You hum.
+haruta: He does hum. It's usually in four.
+> Justin laughs, but late, and it comes out smaller than his usual one. He's looking at the zip of Hyunjun's bag like it's a sentence he misread for a year.
+* [sincere] "You went quiet. Do you want a minute, or company?"
+    @rel justin trust+1 romance+1
+    justin[thinking]: …Company.
+    justin[smile]: I didn't have to think about that.
+    > You stay where you are, next to him, and let the other two talk about breakfast over your heads for a while.
+* [playful] "So the great thief had an accomplice the whole time."
+    @rel justin closeness+1
+    justin[smile]: An inside man. In his own bag.
+    hyunjun: I'm not an accomplice. I'm a sponsor.
+    justin[smile]: …A sponsor. That's generous of you, actually.
+* [quiet] Nudge his sneaker with your foot. Once.
+    @rel justin closeness+1 trust+1
+    > He nudges back. Then again, a beat later. Then it has a rhythm, and neither of you mentions it.
+justin[neutral]: Hyunjun.
+hyunjun: Mm.
+justin: Thanks. For the zip.
+> It's the second proper thank-you he's said tonight. It comes easier than the first. You watch him notice that too.
+hyunjun[neutral]: Don't make it a speech. It's a zip.
+hyunjun[smile]: …You're welcome. Excuse me.
+justin[smile]: You don't have to say it to *me*—
+hyunjun: I'm practising. For the bag.
+@hide hyunjun
+@hide haruta
+> Court adjourns. Haruta goes with Hyunjun to find Hamin's biscuits, counting something under his breath as he goes. *Ichi, ni.* Politely.
+> Justin stays on the sofa with the claw machine token, walking it across his knuckles and back.
+justin[thinking]: He left it open. For a year. And I thought nobody could tell the difference between my days.
+justin[smile]: Turns out I've got an audience for the quiet ones too. They've just been really polite about it.
+> He flips the token to you. You catch it, which surprises both of you.
+justin[smile]: Keep it. Daniel has a standing appointment with that claw.
+@flag justinx_zip
+@goto justin_ch3
+
+# ------------------------------------------------------------ CH3: FIVE STRINGS (quiet)
+=== justin_ch3
+@autosave
+@bg studio_practice t=fade
+@music quiet
+@amb room
+@time 03:44
+@fx dust n=0.4
+@cam wide
+> Practice Room B has a cupboard you'd forgotten about. Grey metal, waist-high, under the window.
+@video vid_justin_drama
+@unlock cg:cg_justin_drama
+> You used to keep the spare tape in it, and the mop, and one thing that was never signed out the whole winter.
+> The smallest key on the ring still fits. It turns with a click you feel in your wrist before you hear it.
+@sfx click
+@show justin thinking at=c
+justin: There's a guitar in there?
+> There is. A studio acoustic with a paper tag tied to the neck: ASK AT DESK. The top string is gone. The other five are hanging on out of habit.
+you: Nobody ever asked at the desk.
+justin[smile]: I'm asking at the desk.
+you: Granted.
+> He lifts it out with both hands, the way you'd pick up something asleep. Sits cross-legged on the floor with his back to the mirror. Finds the guitar pick from the sofa in his pocket and looks at it like the night is showing off.
+> The first strum is awful. He winces, and lets it ring out anyway.
+justin[smile]: Okay. Three years in a cupboard. Fair.
+justin[thinking]: I don't have a tuner. My phone's at six percent and Hanbi has the only charger in Seoul.
+justin: Can you hum? One note. Any note. Just hold it still so I've got something to stand on.
+* [sincere] Hum the first note that comes. Hold it as steady as you can.
+    @rel justin trust+1
+    > It wavers, then settles. He turns a peg, slowly, until the string rises and meets you. When it does, the two sounds stop being two.
+    justin[smile]: There. Don't move. That's the floor. Everything else gets built on that.
+* [playful] "I only hum off-key. It's a condition of my contract."
+    @rel justin closeness+1
+    justin[laugh]: Off-key is fine. It just has to be the *same* off-key for ten seconds.
+    > You manage eight. He tunes the string to your wrong note without a word of complaint, and then tunes everything else to match it.
+    justin[smile]: Now the whole guitar is wrong in your direction. That's called a key.
+* [quiet] Press a finger to the string where he points, and let him find the note himself.
+    @rel justin trust+1 closeness+1
+    > He guides your fingertip to the fifth fret. "There. Just hold." He plucks the string beside it, listens, turns, listens.
+    > You can feel both strings through the wood. When they agree, the buzz under your finger smooths out.
+    justin[smile]: Feel that? That's them agreeing. You don't even need ears.
+> It takes a while. He doesn't hurry it. You notice that he doesn't hurry it.
+> String by string, the guitar comes back to being a guitar. Five-sixths of one.
+@cam closeup justin
+justin[thinking]: The slow piece. For November. I couldn't find a song for it.
+justin: Every slow song already knows how you're supposed to feel. It tells you. Sad here. Big here. I didn't want to be told.
+justin[neutral]: So I've been making one. It's not good. It's eight bars. It stops.
+@if var.music == "lyrics"
+    justin: There's no words. Sorry. I know you like the ones you can shout along to.
+    you: I'll make some up. Badly.
+    justin[smile]: Please don't. Please do. Later.
+@elif var.music == "instrumental"
+    justin: There's no words. You said that's how you like it. Room for your own.
+    justin[smile]: I thought about that when I was writing the gaps. I kept leaving more of them.
+@elif var.music == "silence"
+    justin: It's mostly gaps, honestly. More quiet than notes. You said you like quiet.
+    justin[smile]: So you might be the only person this was ever going to work on.
+@else
+    justin: There's no words. Just the counts, and whatever this turns out to be.
+> He plays it.
+> It's simple. A low note, held. Three going up, like stairs taken one at a time. A pause long enough to turn around in.
+> Then the three again, higher, reaching for the note that would finish it.
+> The note that would finish it lives on the missing string. His hand goes to where it should be and finds air.
+> The phrase hangs there, unanswered, and he lets it.
+@wait 1.2
+justin[neutral]: That's where it stops. Every time. Even on a guitar with six strings, that's where I stop.
+> He doesn't look up. He's watching his own left hand on the neck, the way he watches his feet.
+justin: Can I say a thing? It's not a bit. It might sound like the start of one.
+you: Say it.
+justin[thinking]: In the team, everyone's got a job. Songha's the plan. Hanbi's the quiet one who's holding everything. Daniel's the engine.
+justin: I'm the bright one. That's my spot. When people talk about us, that's the word next to my name.
+justin[neutral]: And I like it. I'm not pretending. It's real.
+> He plays the low note again. Just that. Lets it ring until it's gone.
+justin: But we're going to debut. Someday. Maybe soon. And when we do, whatever I am that day is what I am on camera. For years.
+justin[neutral]: I'm scared the spot only fits the loud one. That if I turn up like this — counting, slow, kind of boring — there's no chair for him.
+justin: I'm scared. That's the whole sentence. I've never said it without a joke after.
+> He waits. You can see him waiting for his own punchline, out of habit. It doesn't come. He nods, once, as if that settles something.
+* [sincere] "I met the quiet one first. I stayed four minutes for him. Nobody asked me to."
+    @rel justin trust+1 romance+1
+    justin[thinking]: …You did meet him first.
+    you: The loud one turned up at the end and fell over. I liked him too. But he wasn't why I stayed.
+    > He rests his arm along the top of the guitar and looks at you, steadily, for longer than he usually lets himself.
+    justin[smile]: I'm keeping that. It goes in the cupboard, with a tag on it.
+* [sincere] "It isn't one chair. The person who counted alone for three years is why the loud one lands every turn."
+    @rel justin trust+2
+    justin[thinking]: …They're the same guy.
+    you: You're the only one who thinks there are two.
+    justin[smile]: Me and the mirrors. The mirrors are *sure* there's two.
+* [quiet] "Play it again."
+    @rel justin trust+1 closeness+1
+    > He does. Slower. It stops in the same place.
+    > You don't tell him it's good. You just stay for the whole thing, the way you stayed once before, and he seems to hear what that means.
+    justin[smile]: …You do that. You just stay through the end of things. It's very loud, for something so quiet.
+> The strip light at the far end flickers, steadies.
+justin[thinking]: I still don't know how it finishes.
+> His hand goes up the neck again, to the place where the last note would be. Air.
+justin: Hum it? Whatever you think comes next. You were the floor. You might as well be the roof.
+* [sincere] Hum the note going up. The one the stairs were climbing toward.
+    @rel justin closeness+1
+    @flag justinx_hum
+    > It's higher than you'd normally dare. It arrives anyway.
+    > He plays the three notes under it and stops exactly where you begin, and for a second the phrase is whole.
+    justin[smile]: It resolves. Huh. I thought it was a sad one. It's not a sad one.
+* [quiet] Hum the first note again. The low one. Bring it home.
+    @rel justin trust+1
+    @flag justinx_hum
+    > The phrase climbs, reaches, and your voice meets it from underneath, back where it started.
+    justin[thinking]: It goes home. It goes up the stairs and then it goes home.
+    justin[smile]: I've been trying to get it to arrive somewhere new. It just wanted to come back.
+* [playful] "Leave it open. Let November finish it."
+    @rel justin closeness+1 trust+1
+    justin[smile]: A cliffhanger. In my own song.
+    justin[thinking]: …No, I like it. It's honest. I'm not finished. Why should it be.
+    > He plays the three notes one more time and lets the last one hang, on purpose now. It sounds different when it's chosen.
+> He rests his chin on the body of the guitar. His fringe has fallen in his eyes. He doesn't flick it back.
+justin[smile]: Nobody's heard that. Not the guys. Not my teacher. It's only ever been played to mirrors.
+justin: The mirrors never said anything. You're better than the mirrors.
+you: That's the nicest thing anyone's said to me tonight.
+justin[laugh]: It's a low bar. They're very dusty.
+> He puts the guitar back in the cupboard himself. He leaves the pick tucked under the strings, and turns the paper tag over.
+> On the blank side, with the pen from your pocket, he writes: *in tune. mostly. — J*
+> You lock the cupboard. The small key turns the same as ever.
+@sfx click
+@goto justin_ch4
+
+# ------------------------------------------------------------ CH4: TEN MINUTES OF NOTHING (he needs something)
+=== justin_ch4
+@autosave
+@bg studio_rooftop t=fade
+@music quiet
+@amb night
+@time 04:02
+@fx stars n=0.5
+@cam wide
+> He says he wants air. You give him a head start and go the long way, past the front desk, where the kettle is one of two things in this building that always worked.
+> When you come up onto the roof with two paper cups of barley tea, there are biscuits balanced on the lids.
+> You didn't put them there. Hamin was passing the desk. Hamin didn't say a word.
+@show justin neutral at=c
+> Justin is at the far rail, not leaning on it. Shifting his weight, heel to toe. Rolling one ankle, then the other.
+> He's been moving since before midnight. You count back. The pavement, the lobby, the hall, two reconstructions, one slow piece, one bad eight-count, a sofa.
+> His legs have a small tremble in them that he's disguising as a groove.
+justin[smile]: Tea. You're a good person. I'm just keeping warm. If I stop, I'll cool down, and then I'll feel all of it at once.
+you: When did you last sit? Not on a floor between eights. Actually sit.
+justin[thinking]: …The sofa. In the lobby. For about a minute. It felt illegal.
+> He takes the tea. Drinks it standing, still moving. The biscuit is gone in two bites. He looks surprised to have been hungry.
+justin: I'm fine, though. Really. I'm good at tired. Tired's easy. You just keep going and it can't catch you.
+* [sincere] "It's caught you. It's standing right here. It brought biscuits."
+    @rel justin trust+1
+    justin[smile]: Tired brought biscuits?
+    you: Hamin brought biscuits. Tired is what he was looking at when he did.
+    justin[neutral]: …Oh. He really does notice everything.
+* [playful] "Your left knee has been doing a solo for ten minutes."
+    @rel justin closeness+1
+    > He looks down at it. It's trembling in a neat, quick rhythm.
+    justin[smile]: That's a shuffle. It's intentional.
+    you: What's it called?
+    justin[smile]: …It's called "I should sit down."
+* [quiet] Sit down on the bench yourself. Leave room.
+    @rel justin trust+1
+    > The bench is cold through your coat. You don't say anything. You just hold your tea and look at the space next to you.
+    > He lasts about twenty seconds. Then he sits, all at once, the way a man does when he's finally given himself permission.
+@cam closeup justin
+> The bench runs along the stairwell wall, out of the wind. The city is doing its quiet four a.m. thing, all amber and distance.
+justin[thinking]: I don't really know how to do this part.
+you: Which part?
+justin: Stopping. When there's still time on the clock. It feels like wasting the room.
+> You take out your phone and set a timer where he can see it. Ten minutes. You don't press start yet.
+you: Here's the deal. Ten minutes of nothing. You lie down. I keep the time. You're not allowed to count.
+justin[thinking]: Not anything?
+you: I'm holding the count. You're off duty.
+> He stares at the timer like it's a contract in a language he half-reads.
+justin[neutral]: …Nobody's ever taken the count off me. I didn't know you could just hand it to someone.
+> You fold your coat and put it at the end of the bench. He looks at the coat. He looks at you, in your sleeves, in the cold.
+justin: You'll freeze.
+you: I worked a desk with one warm foot. I'm built for this.
+> He lies down, folding himself onto a bench that was built for shorter people. His sneakers hang off the end. You press start.
+@sfx click
+@fx stars n=1
+> For the first minute he's quiet in the way of someone being very good at being quiet. It's a performance of rest. You let it run.
+> In the second minute, his lips start to move.
+* [playful] "You're counting the stars. In eights."
+    @rel justin closeness+1
+    justin[smile]: Third eight. There's exactly enough for three eights and a pickup. That's a phrase.
+    you: Off duty.
+    justin[smile]: Off duty. Okay. The stars can keep their own time.
+* [sincere] "Tell me the number you're on. Then give it to me."
+    @rel justin trust+1 romance+1
+    justin[neutral]: …Twenty-two.
+    you: Twenty-two. Got it. I'll remember where you were.
+    > Something in his chest lets go. You can see it under the hoodie, a breath that goes all the way down for the first time in hours.
+    justin: …You're really holding it. I can feel that you're holding it.
+* [quiet] Rest your hand flat on the bench near his shoulder. Tap nothing.
+    @rel justin trust+1 closeness+1
+    > He glances at your hand, waiting for a rhythm. There isn't one. Just a hand, being still.
+    > His lips stop. After a moment his own hand, the one that's been tapping his ribs, goes flat too.
+> The timer runs. The city hums. Somewhere below, the laundromat sign buzzes in its sleep.
+> By the fifth minute he's stopped performing rest and is just resting. It looks different. His jaw has unclenched. One sneaker has tipped sideways.
+> He isn't asleep. He's looking at the sky like it's a ceiling he's only now noticed has been up there the whole time.
+justin[neutral]: Can I tell you what I want? It's a lot. It might be greedy.
+you: Tell me.
+justin[thinking]: I want to debut. So much. I want the lights and the noise and the turn landing and six thousand people going up at the end.
+justin: And I want *this*. A roof. Tea. No one watching. Getting to be slow.
+justin[thinking]: I'm afraid to want both. I keep thinking I'll be asked to choose, and I already know which one I'd give up. It's this one. It's always this one.
+> He says it to the sky, in a level voice. It's easier for him that way, and you let it be easier.
+justin: And I want somebody around on the days I'm not good. Not to fix it. Just — in the doorway.
+justin[shy]: That's the part that feels greedy.
+* [sincere] "It isn't greedy. It's the smallest thing you've asked for all night."
+    @rel justin trust+1 romance+1
+    justin[thinking]: Smallest?
+    you: You asked me to rate a spin out of ten before you knew my name properly. This one costs less.
+    justin[smile]: …Okay. When you put it next to the spin.
+    justin[neutral]: Smallest thing. Huh. It felt huge from the inside.
+* [sincere] "Nobody's asked you to choose yet. Tonight you had both. I watched you have both."
+    @rel justin trust+2
+    justin[thinking]: …The lobby. And then the guitar.
+    you: Same night. Same person. Nobody made you hand one back.
+    justin[smile]: Same night. Yeah. I should write that on something.
+* [quiet] "I'm good at doorways."
+    @rel justin closeness+1 trust+1
+    > He turns his head on your coat to look at you. For a second he has the exact face from the ledger: stopped, not frozen.
+    justin[smile]: You're the best at doorways. It's on record. It's in a book downstairs.
+@sfx chime
+> The timer goes. Ten minutes. You reach over to stop it.
+> He doesn't sit up.
+justin[neutral]: …Could I have two more?
+> You don't think he's ever asked that before. Not for a rehearsal to end early, not for a day off, not for two minutes.
+you: You can have five.
+justin[smile]: Five. Generous desk.
+> You set it again. He closes his eyes this time. Properly. His hand comes to rest on the edge of your coat sleeve, the empty one, lightly, the way you'd keep your place in a book.
+> You finish your tea, which has gone cold. You hold twenty-two stars and five minutes and don't drop any of them.
+> When the second timer ends, you let it run a little over. Nobody's charging for the room.
+@flag justinx_rest
+@show justin smile at=c
+justin: I'm back. Actually back. Everything's quieter. Did you turn the city down?
+you: A little.
+justin[smile]: Knew it.
+> He shakes out your coat before he hands it over, and holds it while you find the sleeves. It's warm on one side, where his head was.
+@goto justin_ch5
+
+# ------------------------------------------------------------ CH5: ZERO FINGERS (the others pass through)
+=== justin_ch5
+@autosave
+@bg studio_hall t=fade
+@music fun
+@amb room
+@time 04:22
+@fx off
+@cam wide
+> On the stairs down from the roof, he stops on the landing, one hand on the rail.
+@show justin thinking at=c
+justin: I'm going to tell them. About November. The slow piece.
+justin: Songha and Daniel make half our choreography. If I'm doing a solo they've never seen, they should hear it from me. Not from a programme.
+justin[neutral]: I've tried before. Twice. Both times it came out as a bit, and everyone laughed, and then it was too late to say I meant it.
+> He sits down on the top step. You sit two below, turned around, so you're facing him like a very small audience.
+you: Say it to me first. The real sentence.
+justin: Okay. The real sentence. Easy.
+> He clears his throat. He rolls his shoulders. He shakes out his hands, one at a time.
+you: That's the pre-show ritual.
+justin[smile]: It's load-bearing.
+> You hold up a fist.
+you: New game. Every time a joke gets into the sentence, I put up a finger. You're aiming for zero.
+justin[smile]: Golf rules. Okay. I'm incredible at golf. I've never played golf.
+> One finger goes up.
+justin[smile]: That wasn't even in the sentence.
+you: Warm-up counts.
+justin: Ladies and gentlemen, esteemed colleagues — I, the artist formerly known as fast, will be performing a *slow piece*, which I'm bad at, so please lower your expectations and also the lights—
+> Three more fingers. You're running out of hand.
+justin[laugh]: Four. On the first go. That might be a personal best.
+* [playful] "That was four jokes and no information. Songha would ask for the minutes."
+    @rel justin closeness+1
+    justin[smile]: He would. He'd want it itemised.
+    justin[thinking]: …Okay. Information. Information first, and then nothing after it. That's the hard part. The nothing after.
+* [sincere] "Which word are you hiding behind? I think it's 'bad.'"
+    @rel justin trust+1
+    justin[thinking]: …Yeah. If I say "I'm bad at it" first, nobody else gets to.
+    you: What if you say "I'm not good at it *yet*" and let them have a turn?
+    justin[thinking]: "Yet." That's a serious little word. It means I'm planning to be around.
+* [quiet] Put your hand down. Just wait, with your fist closed.
+    @rel justin trust+1
+    > He looks at the fist. It's a very patient fist.
+    justin[smile]: No notes. Just a hand. That's almost worse.
+> Second attempt. He does it in a newsreader voice, which is one finger, and then hears himself, and stops halfway.
+> Third attempt. He says it to the step between his sneakers.
+justin[neutral]: I'm doing a slow piece at the November showcase. A solo. I'm not good at it yet. I'd like help.
+> Your fist stays closed.
+justin[neutral]: Zero?
+you: Zero. But you said it to the stairs.
+justin[smile]: The stairs are very supportive.
+> Fourth attempt. He looks up. It costs him something to keep looking; you can see the cost, and you can see him pay it.
+justin: I'm doing a slow piece in November. I'm not good at it yet. I'd like help.
+> Zero. You show him the closed fist. He bumps it with his own, gently, like sealing something.
+@flag justinx_zero
+@bg studio_lobby t=fade
+@cam wide
+> The lobby is down to its last few lamps. Most of the others have drifted upstairs or out to the step for air.
+> Two haven't. Daniel is at the claw machine, one hand flat on the glass, studying it like a chess problem. Songha is on the sofa arm with his notebook open, crossing something out.
+@show songha thinking at=l
+songha: You two. Good. I'm rebuilding the last half hour. Somebody moved breakfast.
+@show daniel smile at=r
+daniel: I moved breakfast. I moved it closer. You're welcome. Justin, do you have a coin? Any coin.
+> Justin doesn't answer. He's stopped in the middle of the tiles, in the exact spot where he spun and pointed at you when the night began.
+> His hands lift. Shoulders. Wrists. You see the ritual start.
+* [sincere] Hold up a closed fist where only he can see it.
+    @rel justin trust+1 romance+1
+    > He catches it at the edge of his eye. Zero. His hands come down.
+    > He breathes in like someone about to go on, and then breathes out like someone who's decided not to go on as anyone.
+* [quiet] Stand half a step behind him. In the doorway of it.
+    @rel justin trust+1 closeness+1
+    > You don't touch him. You're just there, at his shoulder, where a person at a desk might stand.
+    > He glances back once, checks you haven't left, and turns to face them.
+* [playful] Give Daniel the claw token, so his hands are full and he can't heckle.
+    @rel justin closeness+1
+    @flag justinx_token
+    daniel[smile]: A token. Where did you find— never mind. I owe you one.
+    > It buys Justin about four seconds of silence. He uses them to breathe.
+@cam closeup justin
+justin[neutral]: Can I say something? It's not a bit.
+daniel: Everything you say is a— no. All right. That's the real face. I'm listening.
+> Songha closes the notebook on his pen.
+justin: I'm doing a slow piece at the November showcase. A solo. I'm not good at it yet.
+justin: I'd like help.
+> Nobody laughs. He's braced for it; you can see his whole spine waiting. It doesn't come.
+daniel[smile]: Slow? You?
+justin[neutral]: Me.
+daniel[smile]: I want to see it. I'm worse at slow than you are. Historically. Let me come and be bad next to you; you'll look excellent.
+songha[thinking]: November is nine weeks. Room's free Tuesdays and Fridays after evening practice.
+> He's opened the notebook again. He's already writing.
+songha: I'll count for you. You rush your turns.
+justin[thinking]: You know I rush my turns?
+songha[smile]: Justin. You have always rushed your turns. I thought it was a style.
+daniel: I thought it was a style too. It's a great style. It's just not slow.
+justin[smile]: So everybody knew. Hyunjun knows about the zip, you two know about the turns. What else does everyone know?
+songha: That you go quiet when you're actually working. That's when I stop giving you notes.
+> He says it the way he'd read out a bus time. Justin takes it like something handed to him across a desk, carefully, with both hands.
+justin[neutral]: …Thanks. Both of you. Properly.
+songha[smile]: Noted. Tuesdays and Fridays. Who's been counting for you tonight?
+> Justin doesn't say anything. He just looks at you. Songha follows the look, and writes something down.
+songha: {{playerName}}. Guest counter. I'm putting you in the schedule. It's not binding. It's a little binding.
+@if not flag.justinx_token
+    > You set the claw machine token on the glass by Daniel's elbow. He looks at it, then at you, and gives you a small, grave nod of thanks.
+@sfx claw
+> Behind them, the claw descends, closes on a small plush star, lifts it a full hand's width — further than anyone has seen it lift anything — and sets it down, tenderly, a centimetre from the chute.
+daniel[thinking]: …That's the closest it's ever been.
+daniel[smile]: We're making progress, it and I.
+@hide daniel
+@hide songha
+> Songha tips his head toward the stairs and Daniel goes with him, already hearing about the revised breakfast. He lifts a hand over his shoulder as he goes, at Justin specifically.
+@show justin smile at=c
+@cam closeup justin
+justin: I didn't do a bit.
+justin[smile]: My hands are doing one now. Look at that. Six coffees' worth.
+> They are. He holds them out, palms down, and they're trembling a little, the way hands do after you've carried something heavy and put it down.
+* [sincere] "They were doing that before you started. You said it anyway. I saw."
+    @rel justin trust+1 romance+1
+    justin[neutral]: You saw that?
+    you: I was looking at your hands. I usually am. They tell the truth before you do.
+    > He turns them over and studies them, as if they might have been telling people things behind his back for years.
+    justin[smile]: …Traitors. Okay. Good to know whose side they're on.
+* [playful] Hold up the fist again. "Zero. In competition. New record."
+    @rel justin closeness+1
+    justin[smile]: In competition. With judges.
+    > He bumps your fist. Then, because he's still him, he opens his hand into a slow, ironic firework.
+    you: …One.
+    justin[smile]: Worth it.
+* [quiet] Take one of his hands in both of yours until it's still. Then let go.
+    @rel justin closeness+1 trust+1
+    > It takes about four counts. You don't count them. He does; you can feel it.
+    justin[smile]: …That worked. You could charge for that at the desk.
+justin[thinking]: Tuesdays and Fridays. He just — had a slot. Like it was nothing. Like it was a room booking.
+justin[smile]: I spent three months scared of a conversation that took forty seconds.
+> He looks at the claw machine, where the star sits a centimetre from freedom.
+justin: Daniel was close.
+justin[smile]: He'll be back. He always comes back. That's kind of our whole thing.
+@goto justin_ch6
+
+# ------------------------------------------------------------ CH6: LOCKING UP
+=== justin_ch6
+@autosave
+@bg studio_hall t=fade
+@music studio
+@amb room
+@time 04:40
+@fx memory n=0.3
+@cam wide
+> Twenty minutes left on the building. The keys are still in your pocket. They've been knocking against your leg on every stair, the way they used to.
+@show justin smile at=c
+justin: Show me.
+you: Show you what?
+justin: The round. Locking up. You did it every night and I only ever saw the last thirty seconds of it. From the wrong side.
+> He's got the green ledger under his arm. You didn't see him take it from the desk. He holds it against his side, carefully.
+justin[thinking]: I want to see how the night ends when it's your job. Not mine.
+* [sincere] "It's not interesting. It's windows and switches."
+    @rel justin trust+1
+    justin[smile]: I count to eight for a living. I love windows and switches.
+    justin: And it's interesting because you did it. Every night. With nobody watching. That's my favourite kind of thing now.
+* [playful] "There's choreography. I should warn you. It's very advanced."
+    @rel justin closeness+1
+    justin[smile]: I knew there'd be choreography.
+    you: Step one: you walk to the end of the hall. Step two: you walk back.
+    justin[smile]: Devastating. I'll need a week.
+* [quiet] Take the keys out. Start walking.
+    @rel justin trust+1
+    > He falls in beside you, half a step behind. It takes you a moment to realise he's doing it on purpose. Following, for once.
+> The round starts at the far end and comes home. It always did. You never decided that; your feet decided it the first week.
+> Room C. You put your head in, look at the windows, count the latches. Two. You knock the light switch down with the side of your fist.
+@sfx click
+justin: Why the fist?
+you: The switch sticks. A finger isn't enough. You learn.
+> Room A. Windows, latches, switch. He does this one. He tries a finger first, to check, and the switch ignores him. He uses his fist. The room goes dark.
+@sfx click
+justin[smile]: It does stick. I thought you were being dramatic.
+> He does the lounge too. He checks the kettle is off without being told, and straightens one sofa cushion, and looks pleased about it in a small, private way.
+> You notice that he hasn't turned any of it into a dance. He started to, at Room A — one slide along the floorboards. Then he stopped and just walked.
+justin[thinking]: It's so quiet. Doing this.
+justin: You'd go down the whole hall and every room was empty, and that meant you'd done it right. Nobody there is the good result.
+you: Most nights.
+justin[smile]: Most nights. And then one night, last door, there's some guy counting in Japanese.
+> You've reached it. The last door on the left. Practice Room B, propped open, the strip light inside still humming.
+@bg studio_practice t=fade
+@fx dust n=0.4
+@cam wide
+> The rule was: windows, latches, switch. Then the book.
+> He sets the ledger on the floor under the mirror and sits down in front of it, next to two smiley faces in the dust. You sit across from him. The pen is still on its string.
+@sfx page
+> February. The coffee ring. His line.
+> He looks at PURPOSE for a long time. *dance*, crossed out. *practice*, crossed out. *nothing*.
+> He crosses out *nothing*. One clean stroke. And next to it, small, he writes the first word again. *dance.*
+justin[neutral]: It was that the whole time. I just didn't want anybody to come and look.
+justin[smile]: Somebody came and looked. It was fine. It was the best thing that happened to me that year.
+> Then the OUT column, where your round handwriting says 01:00 and has been wrong, kindly, for three years.
+justin: Can I fix this one? I want to sign out myself. I never did.
+> He doesn't cross yours out. He writes underneath it, in his own bad sevens: *04:50.* And after it, in brackets: *(took a while.)*
+justin[smile]: Three years and three hours. That's got to be the record. I'd like it noted that I left the room tidy.
+> He turns the book around on the floor and holds out the pen on its string.
+justin: Remarks. Your column.
+* [sincere] Write: "Still good weird."
+    @rel justin trust+1 romance+1
+    @flag justinx_remark
+    > Your handwriting hasn't changed much. It still leans the same way.
+    > He reads it upside down, slowly, and then puts two fingers on the words, lightly, like checking they're dry.
+    justin[shy]: Still. Okay. "Still" is my favourite word in that sentence.
+* [playful] Write: "Dancer overstayed. Desk didn't mind."
+    @rel justin closeness+1
+    @flag justinx_remark
+    justin[smile]: "Overstayed." I paid. There's a tin.
+    you: The tin's been noted.
+    justin[smile]: "Desk didn't mind." …Yeah. I could tell. Even then. That's why I did the salute.
+* [quiet] Don't write anything. Draw a small face, grinning, in the margin.
+    @rel justin trust+1 closeness+1
+    @flag justinx_remark
+    > It matches the two in the dust. Lopsided. He looks from the page to the mirror and back.
+    justin[smile]: Three of them now. It's a crowd. It's the only crowd I've never been nervous in front of.
+@cam closeup justin
+> He closes the book and keeps his hand flat on the cover.
+justin[thinking]: Can I say the plain version of something? Zero fingers.
+you: Zero fingers.
+justin: Every room I've ever walked into, I've checked who's watching and turned into whoever that needed. It's fast. I don't even feel it happen.
+justin[neutral]: Tonight you kept walking in, and it kept not happening. The ledger. The guitar. The roof. I stayed the same person the whole way through.
+justin[neutral]: I like who I am when you're in the doorway. It's the same guy as when nobody is. I didn't know a person could do that. I thought only an empty room could.
+> The strip light hums. In the mirror behind him, his reflection sits exactly as he sits. Not early. Not late.
+* [sincere] "I like him too. I've liked him since ten to one on a February night."
+    @rel justin trust+1 romance+1
+    justin[thinking]: …Since then.
+    you: I wrote it in a book. I just didn't know how to read my own handwriting until tonight.
+    > He laughs, once, quietly, and looks at the ceiling for a moment before he looks back at you.
+    justin[smile]: Chotto matte. Give me a second. …No. I'm good. I'm better than good.
+* [sincere] "I've locked up a lot of places. This is the first time someone walked the round with me."
+    @rel justin trust+2
+    justin[thinking]: …You always did it alone.
+    you: It's a one-person job. That was what I liked about it. I thought.
+    justin[smile]: It was good with two. I only did one switch and a cushion. But it was good with two.
+* [quiet] Put your hand on the ledger, next to his.
+    @rel justin closeness+1 trust+1
+    > Not touching. A cover's width apart. Two hands on a green book that says ROOM HIRE.
+    > He looks at the gap between them and, carefully, doesn't close it and doesn't pull away. He just lets it be exactly that size.
+    justin[smile]: …Yeah. Like that.
+> The rule was: windows, latches, switch, book. Then the door.
+> You stand. You check the two latches on the window. You put the side of your fist to the light switch, out of habit, and stop.
+you: I'm not turning this one off.
+justin[smile]: No?
+you: It's got ten minutes left. Let it have them.
+> He picks his sneaker up from the doorway — the spare one, the one that's been holding the door all night — looks at it, and sets it back down exactly where it was.
+justin: Leave it propped. I'm not done with this room.
+> The lights flicker. All of them together, once. A count-in.
+justin[smile]: That's us. Songha will say we're late.
+you: We're exactly on the count.
+justin[smile]: …That's my line.
+you: I know. It's a good line.
+> The keys knock in your pocket all the way down the stairs. He matches his steps to them without meaning to. Then, meaning to.
+@time 04:57
+@goto act4_choice
+
+# ------------------------------------------------------------ FINAL: what tonight has been
+=== justin_final
+@bg studio_lobby t=fade
+@music echo
+@amb room
+@fx memory n=0.6
+@cam wide
+> You say it before the three minutes can turn into two. Record 07. His.
+> On the Archive Wall, one glass box brightens and the rest let go of their light. A small red square lifts off the wall and hangs over the front desk.
+> Inside it, a dancer in a borrowed headband is counting under his breath.
+@textbox echo
+echo: RECORD 07 SELECTED. Writing will take forty seconds.
+echo: Recipient. Owner. You may speak while I work. I will not log it. Some things are not records yet.
+@textbox normal
+@show justin neutral at=c
+@cam closeup justin
+> Justin is at your shoulder. His hands are still. You have learned tonight how rare that is, and what it costs, and that it isn't costing him anything right now.
+justin: You picked the quiet one.
+justin[smile]: Out of everything in this building. The one with the sound off.
+> The keys are heavy in your coat pocket. The others have gone politely interested in the ceiling.
+> He isn't looking at the wall, or at them. He's looking at you, the way he looked up from the stairs. Zero fingers.
+> Forty seconds. One honest thing.
+* [romantic] Hold out your hand, palm up. "One more eight. No music." {if justin.romance >= 4}
+    @goto justin_ending
+* [sincere] "Wherever you dance next, I want the doorway. That's my spot now."
+    @goto justin_ending_beside
+* [quiet] "This is the slow part. I don't want either of us to rush it."
+    @goto justin_ending_someday
+
+# ------------------------------------------------------------ ENDING: BESIDE — "The Doorway Seat"
+=== justin_ending_beside
+@bg studio_lobby t=fade
+@music echo
+@amb room
+@fx memory n=0.6
+@show justin neutral at=c
+> He takes it in the way he took in the ledger: twice, without hurrying.
+justin: The doorway. On purpose. As a position.
+you: Somebody's got to hold it. I have experience.
+justin[laugh]: You have *references*. You're in a book.
+> And then the laugh runs out and what's under it is just his face, open, with nothing arranged on it.
+justin[smile]: Yes. It's yours. It has been for a while.
+@textbox echo
+echo: WRITING RECORD 07 TO KEEPSAKE. TYPE: VIDEO. SOLO.
+echo: Amendment. TYPE: VIDEO. SOLO. WITNESSED.
+echo: I did not previously have that category. I have made one. It has two entries in it: the night of the recording, and tonight.
+@textbox normal
+@show hyunjun smile at=l
+hyunjun: "Witnessed." That's you. You've got a job title.
+@show hamin smile at=r
+hamin: It's a good one. Most things go better if somebody's in the doorway.
+justin[thinking]: Hamin. Were the biscuits you?
+hamin: I don't know what you mean.
+> He does. He's almost smiling about it.
+@hide all
+@show charlie thinking at=l
+charlie: So what do we call this? The two of them.
+@show hanbi smile at=r
+hanbi: We don't, Charlie. We let them.
+charlie[smile]: Fair. That's the better answer.
+@hide all
+@sfx chime
+> A glass card slides out of a slot in the front desk you never knew was there. Warm. The size of a playing card. Inside it, very small, someone is dancing.
+@show justin smile at=c
+justin: Shared custody. You get it weekdays. I get it when I forget the counts.
+@call echo_farewell
+@time 05:40
+@bg studio_frontdesk t=slow tint=dawn
+@music dawn
+@amb birds
+@fx dust n=0.3
+@cam wide
+> With the power off, the front desk is just furniture. The heater under it has warmed its last left foot.
+> The others have gone ahead to breakfast. Two of you stayed back, because the round isn't finished until the keys are hung up, and the keys are still in your pocket.
+@show justin smile at=c
+> Justin has two bags on. His own, and Hyunjun's. The court's sentence. He's been saying "excuse me" to the second one, quietly, every time it bumps the counter.
+> There's a hook inside the desk, screwed into the wood at knee height. You take out the ring. The cracked 25 turns in the early light.
+you: The crew will need these at seven.
+justin[thinking]: They need the keys. They don't need the tag.
+> He's right. You work the plastic tag off the ring with a thumbnail. It comes away easier than you'd expect, after all those stairs.
+> The keys go on the hook. They knock once against the wood, and that's the round. Finished. The last one this building will get.
+> You hold the tag out to him. He doesn't take it. He folds your fingers closed around it, then taps your knuckles, twice.
+justin: No. You keep the twenty-five. I want something else.
+you: What?
+justin[neutral]: The job. The real one. Not tonight's.
+@cam closeup justin
+justin: November, there's a door at the back of the hall. House left. I checked the floor plan once. I check doors now, apparently.
+justin: I want you standing in it. So when I get to the slow part and there's nowhere to hide, I know exactly where to look.
+justin[neutral]: And after November. The bad days. The boring Tuesdays. I want to be able to text "doorway" and have you know what it means.
+> He's not performing it. His hands are at his sides. He's asking the way he signed the ledger: small, in his own bad handwriting, meaning every stroke.
+* [sincere] "You'll have it. November, and the Tuesdays. I'm not going anywhere."
+    @rel justin trust+1
+    > You hear yourself say the last part. It's not a sentence you've had much practice with. It comes out steady anyway.
+    justin[smile]: …You said that like you've never said it before.
+    you: I haven't.
+    justin[smile]: Then I'm going to be careful with it.
+* [playful] "Only if I get a lanyard. It should say WITNESS."
+    @rel justin closeness+1
+    justin[laugh]: Laminated. With a little photo where you look annoyed.
+    justin[smile]: I'll make it myself. It'll be terrible. You have to wear it anyway.
+* [quiet] Put the tag in your pocket, where the keys were. Nod.
+    @rel justin trust+1
+    > It weighs almost nothing. You feel it land all the same.
+    justin[smile]: That's a yes. I can read your yes now. It's very small, and it means it.
+justin[thinking]: It goes both ways, though. Fair's fair. What do you need a person for?
+> You think about it honestly, because he'd know if you didn't.
+you: I have boxes. From the last move. And the one before. I've never finished unpacking anywhere.
+justin[thinking]: Never. Not once?
+you: It always seemed like tempting fate.
+justin[smile]: Saturday. If you'll have me, I'll come over. I'm bad at slow; I'm very good at boxes.
+justin[laugh]: We'll do it in eights. Eight things out, then tea. Eight things, tea. You'll be unpacked by spring.
+> You tell him Saturday works. He says *spring* like it's obvious you'll both be there for it. You find that you believe him.
+justin[neutral]: Can I say what this is? Plainly.
+you: Zero fingers.
+justin: You're my person. The one I don't turn into anybody for.
+justin[shy]: People say that like it's the smaller thing. It isn't. I've had crowds. I've never had this.
+you: You're mine too. I've had a lot of doors. I've never had someone on the other side of one.
+> He breathes out, long, the same breath as on the roof when you took the count. Then he smiles — the wide one, the real one, the one that was never a performance in the first place.
+justin[smile]: All right. Breakfast. I'm starving. Excuse me.
+> That last part is to Hyunjun's bag, which he unzips — it was open already — to take out a triangle kimbap. He splits it and gives you the bigger half.
+you: That's stealing.
+justin[smile]: It's a good day. He'll be able to tell.
+@bg dawn_street t=slow
+@cam wide
+@hide all
+> Outside, the laundromat sign is on and the sky has gone the colour of the inside of a shell.
+> Behind you, Studio 25 has no lights at all, and one door on the second floor propped open with a sneaker.
+> You have walked away from a great many buildings. You know the feeling by heart: the lightness, the door already closing.
+> This isn't that. There's a plastic 25 in your pocket and a Saturday in your week, and someone beside you walking slowly, on purpose, so that you arrive at the same time.
+> Half a street ahead, seven people are arguing about breakfast. One of them has just noticed his bag is lighter.
+> Justin counts you both in, under his breath. Not in eights. Just *one, two* — and then he stops counting, because you're already in step.
+@ending justin_beside
+@credits
+@end
+
+# ------------------------------------------------------------ ENDING: SOMEDAY — "Don't Rush the Turn"
+=== justin_ending_someday
+@bg studio_lobby t=fade
+@music echo
+@amb room
+@fx memory n=0.6
+@show justin neutral at=c
+> For a second he just looks at you. Then he understands which slow part you mean, and the understanding goes through him like a count-in.
+justin[neutral]: …You mean us. You too.
+you: Me too.
+justin: Good. I've got about thirty seconds and I don't want to spend them badly.
+justin[neutral]: Roof. After. I want to say it properly, where I can see your face.
+@textbox echo
+echo: WRITING RECORD 07 TO KEEPSAKE. TYPE: VIDEO. AUDIO TRACK: NONE.
+echo: I also observed forty seconds of conversation which I agreed not to log.
+echo: I have filed it as: UNRESOLVED, BY MUTUAL AGREEMENT. It is a new category. It is already my favourite.
+@textbox normal
+@show daniel smile at=r
+daniel: "By mutual agreement"? ECHO, what did they say?
+@show songha smile at=l
+songha: It said it didn't log it. Leave the building alone. It's had a long night.
+> Songha's pen is moving, though. You catch the word *November* before he closes the notebook.
+@hide all
+@show haruta smile at=l
+haruta: It's a good record. You can hear the counting, if you watch his mouth.
+@show justin smile at=c
+justin: Don't count along.
+haruta[smile]: I would never. …Ichi.
+@hide haruta
+@sfx chime
+> A glass card slides out of a slot in the front desk you never knew was there. Warm. The size of a playing card. Inside it, very small, someone is dancing.
+justin: You hold it. I'd only keep checking my footwork.
+@call echo_farewell
+@time 05:40
+@bg dawn_rooftop t=slow
+@music dawn
+@amb birds
+@fx light n=0.4
+@cam wide
+> The roof looks different with the sky on. The bench is still there. So is the dent your coat left in the dust at one end of it.
+> The others have gone to find breakfast. Songha said *ten minutes* to the two of you in a voice that meant *take twenty*.
+@show justin neutral at=c
+> Justin stands at the rail. Not bouncing. You put the glass card on the bench between you, and it catches the first real light and throws a small red square on the concrete.
+justin[thinking]: Zero fingers. Hold me to it.
+> You hold up a closed fist. He looks at it and nods, like a dancer taking a mark.
+@cam closeup justin
+justin: I like you.
+justin: Not as a bit. Not because it's five a.m. and a building said goodnight to us. I like you exactly.
+justin[shy]: I've liked you since a doorway, I think. I just thought it was about my footwork.
+> He holds your eyes while he says it. He doesn't cover it with anything, and his hands stay where they are.
+you: I like you too. Exactly. I wrote "good weird" in a ledger, and then spent three years not going back to check what I meant.
+justin[smile]: We're both so slow.
+you: We're both so *early*. That's different.
+> He laughs again, and then it settles, and he's serious in the way he's serious about a turn.
+justin[thinking]: Here's my thing. You've seen it. I rush the slow parts. I get scared of the middle, so I jump to the end and do a flourish so nobody sees the wobble.
+justin: I don't want to do that with this. I want to get there on the count. I want every bit of the middle.
+justin[neutral]: Is that okay? It's not a no. It's the opposite of a no. It's me trying to do one thing in my life at the right speed.
+* [sincere] "It's what I want too. I've never stayed anywhere long enough to let something take its time."
+    @rel justin trust+1 romance+1
+    > You mean it. Every place you've lived, you left before anything had the chance to grow slowly. You'd like to see what that looks like.
+    justin[smile]: Then it's a first for both of us. Good. I hate being the only beginner in the room.
+* [playful] "I'll count. Slower than you would. You can't arrive until I say five."
+    @rel justin closeness+1 romance+1
+    justin[laugh]: You'll be so strict about it.
+    you: Front desk. We don't do early.
+    justin[smile]: …Thank you. I mean it. I'd get there at two and ruin everything.
+* [quiet] Open your fist. Hold your hand out, flat, between you. Wait.
+    @rel justin trust+1 romance+1
+    > He puts his hand over yours. Not holding. Resting, the weight shared exactly half and half.
+    > Neither of you moves it for a whole eight. That's the answer, and you both know what it says.
+justin: So. A place, a time, a thing to bring. Songha says a plan isn't a plan without all three.
+justin[thinking]: November. The night of the showcase. After I've done the slow piece, in front of people, without apologising to the floor.
+justin: There's a bench outside the laundromat, out front. It'll still be there. That place never closes.
+justin[smile]: I'll come out the second I've changed. I'll bring the end of the song. It'll have one by then. I'll play it to you on six strings.
+you: What do I bring?
+justin[laugh]: Strawberry milk. One carton. Bought. With money. I want it on record that it was *bought*.
+you: Two straws?
+justin[smile]: …Two straws.
+> He says it to you, not to the rail, and lets it stand.
+justin: And then I'm going to ask you properly. The whole question. No hand thing.
+you: I can tell you the answer now.
+justin[thinking]: …Can you?
+you: It's yes. Ask me in November anyway.
+> He sits down on the bench, next to the glass card, and laughs quietly, shaking his head, one hand over his eyes for a second.
+justin[smile]: You can't just give me the answer. I have nine weeks of middle to get through.
+justin[smile]: …Nine weeks. Sixty-three days. That's seven eights and a pickup.
+you: Off duty.
+justin: No, let me have this one. It's a good count. It's the best one I've ever been given.
+> You sit beside him. Tuesdays and Fridays you'll see him anyway; you're in a schedule, and it's a little binding. It isn't nine weeks of waiting. It's nine weeks of the part he usually skips.
+> The sun clears the building across the street. The red square from the glass card slides across the concrete and up over both your sneakers.
+> He doesn't take your hand. He sets his on the bench, palm up, a cover's width from yours, and leaves it there in the light.
+> Not early. Not late.
+justin[smile]: Breakfast?
+you: Breakfast. Slowly.
+> He holds the stairwell door, and you go down together, one step at a time. He doesn't rush a single one.
+@ending justin_someday
+@credits
+@end

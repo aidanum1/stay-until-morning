@@ -747,7 +747,7 @@ echo: It is 04:57. There is one thing left to choose.
 @textbox normal
 > Hanbi folds the old portrait along its soft crease and puts it in his coat, next to the sketchbook.
 > Then he stands and holds out his hand to help you up. Not to lead. Just in case you want it.
-@goto act4_choice
+@goto hanbi_ch1
 
 === hanbi_ending
 @chapter ending

@@ -479,7 +479,7 @@ export class Game {
   }
 
   get allRomanceEndingsDone() {
-    return MEMBERS.every((m) => this.persistent.endings.includes(m));
+    return MEMBERS.every((m) => (this.persistent.endings as string[]).some((e) => e.split('_')[0] === m));
   }
 
   // ------------------------------------------------------------ hub

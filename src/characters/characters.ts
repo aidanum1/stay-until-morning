@@ -24,7 +24,7 @@ export interface CharacterDef {
 export const CHARACTERS: Record<CharId, CharacterDef> = {
   hamin: {
     id: 'hamin',
-    symbol: '🌊',
+    symbol: '≋',
     color: '#6f8cff',
     color2: '#c9d6ff',
     hair: '#141a2e',
@@ -39,7 +39,7 @@ export const CHARACTERS: Record<CharId, CharacterDef> = {
   },
   hyunjun: {
     id: 'hyunjun',
-    symbol: '🌃',
+    symbol: '◐',
     color: '#ff5fb0',
     color2: '#ffc2e6',
     hair: '#f28bb8',
@@ -54,7 +54,7 @@ export const CHARACTERS: Record<CharId, CharacterDef> = {
   },
   charlie: {
     id: 'charlie',
-    symbol: '☀️',
+    symbol: '☼\uFE0E',
     color: '#ffb347',
     color2: '#ffe2a8',
     hair: '#6b4424',
@@ -69,7 +69,7 @@ export const CHARACTERS: Record<CharId, CharacterDef> = {
   },
   haruta: {
     id: 'haruta',
-    symbol: '🎞️',
+    symbol: '◫',
     color: '#b48cff',
     color2: '#e3d4ff',
     hair: '#2e2230',
@@ -84,7 +84,7 @@ export const CHARACTERS: Record<CharId, CharacterDef> = {
   },
   justin: {
     id: 'justin',
-    symbol: '🎧',
+    symbol: '♪\uFE0E',
     color: '#ff4b55',
     color2: '#ffe0e2',
     hair: '#6a4a36',
@@ -99,7 +99,7 @@ export const CHARACTERS: Record<CharId, CharacterDef> = {
   },
   songha: {
     id: 'songha',
-    symbol: '⭐',
+    symbol: '☆\uFE0E',
     color: '#5b7cff',
     color2: '#dfe6ff',
     hair: '#16141a',
@@ -114,7 +114,7 @@ export const CHARACTERS: Record<CharId, CharacterDef> = {
   },
   hanbi: {
     id: 'hanbi',
-    symbol: '✏️',
+    symbol: '✎\uFE0E',
     color: '#35c6b8',
     color2: '#c8f3ee',
     hair: '#2f8fa0',
@@ -129,7 +129,7 @@ export const CHARACTERS: Record<CharId, CharacterDef> = {
   },
   daniel: {
     id: 'daniel',
-    symbol: '🌈',
+    symbol: '◠',
     color: '#c38bff',
     color2: '#9ff3ff',
     hair: '#efe4c8',

@@ -1,0 +1,1027 @@
+# DANIEL — "Five More Minutes" — expansion chapters and two further endings.
+# Continues story/17_daniel.s25 (daniel_route -> daniel_ch1 ... daniel_ch6 -> act4_choice -> daniel_final).
+# Running motifs carried over: Mr. Kim, Songha's notebook and the list of eleven things, the radiator,
+# the strip (frames five to eight), "thanks for the booth" / "anytime", the thirty-second challenge.
+# New state: var.danielx_twelve (kim / ask / blank), flag.danielx_asked, flag.danielx_quietpart,
+# var.danielx_label (staying / dry / nothing), flag.danielx_boom, var.danielx_back (time / booth / plain).
+
+=== daniel_ch1
+@autosave
+@bg studio_lobby t=fade
+@music studio
+@amb room
+@time 03:10
+@fx memory n=0.4
+@cam wide
+> The lobby is exactly where you left it. The rubber plant. The front desk. Mr. Kim in his corner, glowering in three colours.
+> What's missing is the hurry. Nobody else has come down. The Archive Wall glows at the steady, unbothered level of a fridge.
+@show daniel thinking at=c
+daniel: ECHO? We're here. You said almost time. We ran. I ran. {{playerName}} walked quickly.
+@textbox echo
+echo: Yes. I would like to correct the record.
+echo: I have been keeping time on the building's own clock. It has run fast since the power came back.
+echo: Recipient Hanbi has plugged in his telephone. His telephone says 03:10.
+echo: I am sorry. It was not almost time. You have one hour and fifty minutes that I had reported as gone.
+@textbox normal
+daniel[surprised]: Hold on. We got time *back*?
+daniel[smile]: That never happens. Time only goes one way. I've checked.
+* [playful] "Best building ever. Five stars. Would get locked in again."
+    @rel daniel closeness+1
+    daniel[smile]: I'm writing that review. I'm signing your name.
+* [sincere] "Good. I wasn't ready for it to be almost time."
+    @rel daniel trust+1
+    daniel[smile]: …Me neither. I did the stairs like I was fine with it. I was not fine with it.
+* [quiet] Let out the breath you've been holding since the stairs.
+    @rel daniel trust+1
+    > He hears it. He doesn't make a joke about it. He lets out one of his own, a second behind yours, like a harmony.
+@sfx step
+@show songha neutral at=l
+> Songha comes down the stairs with the walk of a man who has been told the time twice tonight and believed it both times.
+songha: I rewrote the last hour around that announcement. In my head. I had to do it in my head, because someone has my notebook.
+daniel[neutral]: …Right. About that.
+> The notebook comes out from inside the windbreaker. It is warm and slightly curved, like a thing that has been sat against.
+songha[thinking]: You folded the corner.
+daniel: I folded *a* corner. To mark the page. The page is important.
+> Songha opens it to the fold. Eleven lines in Daniel's handwriting, all capitals, leaning forward like they're running.
+> Five ticks. Then nothing. Then, at the bottom, number eleven, with a tick so small it looks embarrassed.
+songha: One to five, done. Eleven, done. Six through ten, open.
+songha: I can't take this back with five open items in it. I'd know they were there. I'd feel them.
+daniel[smile]: So tear it out. I'll keep the page.
+songha[neutral]: There's tomorrow's running order on the other side.
+daniel: …There's a running order for *tomorrow*?
+songha: There's one for every day. It's just that nobody asks.
+> They look at each other over the notebook. It is the most polite standoff you have ever seen.
+@show hyunjun smile at=r
+hyunjun: Did everyone hear? We got time back. That's one more of everything. I'm starting with the coffee, unless—
+songha: Hyunjun. We're in a negotiation.
+hyunjun[neutral]: Ah. My mistake. Who's winning?
+daniel: Nobody. That's what makes it a Songha negotiation.
+songha[smile]: Simple terms. Close the open items, and the page is yours. I'll copy the running order out again. I like copying things out.
+songha: Done, or crossed off. I don't mind which. I only mind *open*.
+> He holds out the notebook, and a pen, and — after a second's thought — gives the pen to you instead of Daniel.
+songha: You hold this. He presses too hard.
+@hide songha
+@hide hyunjun
+@cam closeup daniel
+> And then it's the two of you, a notebook, and a front desk to lean it on.
+daniel[thinking]: Okay. Six, racing. Seven, basketball. Eight, the one with the hammer. Nine, fireworks, question mark. Ten, sunrise.
+daniel: The arcade's off. We turned it off. We can't do six to eight without turning it back on.
+> He says it lightly. But his eyes go to the stairs, and door eight, and you can see him doing the sum.
+> If the arcade comes back on, so does the rest of it. The checking. The list. The smile from frame one.
+* [sincere] "We don't have to turn anything back on."
+    @rel daniel trust+1
+    daniel: …Yeah. I don't want to. I liked the room better.
+    daniel[smile]: That's a wild thing to hear myself say. I've got eleven machines up there.
+* [playful] "We have a lobby, a lounge, and a lot of furniture. We'll improvise."
+    @rel daniel closeness+1
+    daniel[thinking]: Improvise. With furniture.
+    daniel[smile]: I like you. And I like the plan. In that order, if you're asking.
+* [quiet] Put the pen down on line six, and wait to see what he wants.
+    @rel daniel trust+1
+    > He looks at the pen. Then at you. It takes him a moment to understand that you are not going to decide for him.
+    daniel[thinking]: …I don't want the machines back. I want the things. If that makes sense.
+daniel: Okay. New rule. We do six, seven and eight with whatever's in the building. No ECHO. No neon.
+daniel[smile]: If it's terrible, it's terrible with stuff we found. That's a different kind of terrible. That's *craft*.
+> You write it next to line six, because you're the one with the pen: *analog*. He reads it upside down and nods like it's a legal term.
+daniel[thinking]: Nine, though. Fireworks. ECHO said no.
+@textbox echo
+echo: I said no to the fireworks you described. You described eleven colours and "a sound like the sky clearing its throat."
+echo: I did not say no to every firework. Please ask me again later. I am thinking about it.
+@textbox normal
+daniel[smile]: It's thinking about it. That's the most consideration one of my ideas has had all year.
+> You put a small dot next to nine. Not a tick. A dot. A thing to come back to.
+daniel: And ten's sunrise, and sunrise is just going to happen. You can't really fail sunrise.
+you: You put it on the list anyway.
+daniel[smile]: In case it needed help.
+> He leans on the desk beside you, close enough that the windbreaker whispers against your sleeve, and looks at the page.
+> Your handwriting next to his. Small and level next to all those running capitals.
+daniel: That's strange. Seeing that.
+you: Seeing what?
+daniel: Somebody else's writing on one of my lists. Nobody's ever added to one.
+daniel[smile]: People do the list. Or they don't. Nobody's ever picked up the pen.
+> There's a gap at the bottom of the page. One line's worth, under the embarrassed tick of number eleven.
+daniel: Go on. There's room. Twelve's yours.
+daniel: I won't look. Much. I'll be honest about the much.
+* [playful] Write: *12. Beat Mr. Kim. Fairly.*
+    @var danielx_twelve = "kim"
+    @rel daniel closeness+1
+    daniel[laugh]: "Fairly." With a full stop after it. That's an accusation.
+    you: It's a goal.
+    daniel: It's both. I respect it. Mr. Kim won't.
+* [sincere] Write: *12. Ask Daniel what he wants.*
+    @var danielx_twelve = "ask"
+    @rel daniel trust+1
+    > He reads it. Then reads it again, slower, the way he must have read the fourth frame.
+    daniel[thinking]: That's not a thing you do. It's a thing you wait for. You can't tick that.
+    you: I can if you answer.
+    daniel: …Can I have until five?
+    you: You can have until five.
+* [quiet] Write *12.* and leave the rest of the line empty. {if daniel.trust >= 3}
+    @var danielx_twelve = "blank"
+    @rel daniel romance+1
+    > He waits for the rest of it. There is no rest of it. Just the number, and a clean white space.
+    daniel[thinking]: …What's twelve?
+    you: I don't know yet. I wanted it to have somewhere to go.
+    daniel[smile]: All right. I'm going to think about that blank a good deal. I'd rather you knew.
+> He takes the notebook back from you with both hands, the way you'd take a plate that was full.
+daniel[smile]: Twelve things. It was eleven an hour ago. The list got *longer* and I feel better. Explain that.
+you: It's not all yours to carry now.
+daniel: …Huh.
+daniel[smile]: Right. Six. Racing. I need something with wheels, something to race, and a line on the floor. Lounge. Go.
+> He goes. Then he stops at the lounge door, and holds it, and waits for you to catch up.
+@goto daniel_ch2
+
+=== daniel_ch2
+@autosave
+@bg studio_lounge t=fade
+@music fun
+@amb room
+@time 03:27
+@cam wide
+> The lounge has two sofas that don't match, a low table with a ring on it from every cup since the building opened, and a desk chair with five wheels and one opinion.
+> Within four minutes Daniel has turned all of it into an arcade.
+@show daniel smile at=c
+daniel: Number six. Racing. Here's the track.
+> A strip of paper tape runs across the hall floor outside the lounge door. He found the tape in the front desk. He found everything in the front desk.
+daniel: The car is the chair. The driver is—
+@if var.plush == "whale"
+    > He sits the blue whale on the seat, faded smile facing forward.
+@elif var.plush == "dino"
+    > He sits the green dinosaur on the seat, missing tooth facing forward.
+@elif var.plush == "star"
+    > He sits the yellow star on the seat, the right way up, with great ceremony.
+@else
+    > He sits Mr. Kim's former prisoner on the seat, facing forward.
+daniel: One push each, from the lounge door. Closest to the tape without crossing it wins. If the driver falls off, you're disqualified and also a bad person.
+you: That's not racing. That's curling.
+daniel[neutral]: It's racing at a responsible speed. Hanbi's in the building.
+@show justin smile at=l
+> Justin is on the far sofa with one earbud in, doing a small footwork pattern sitting down. He doesn't look up.
+justin: I'm the commentator. I've decided. Nobody asked me.
+daniel: You're hired. Do the voice.
+justin[laugh]: "Welcome back to the hall. Conditions tonight are: carpet."
+* [playful] Give the chair one enormous, confident shove.
+    @rel daniel closeness+1
+    > The chair sails down the hall, turning slowly, like a planet. The driver stares back at you the whole way. It crosses the tape by about two metres and keeps going.
+    justin: "And that's left the track. That's left the venue. That's in the stairwell."
+    daniel[laugh]: Disqualified. Beautifully. It's how I'd have done it.
+* [careful] Line it up. One small push, from the back of the seat.
+    @rel daniel trust+1
+    > The chair rolls, slows, thinks about it, and stops with its front wheel a hand's width short of the tape.
+    justin: "Oh, that's tidy. That's somebody who reads instructions."
+    daniel[smile]: That's *good*. Why are you good at this? Nobody's good at this. I invented it four minutes ago.
+* [quiet] Crouch down first, and check which way the floor slopes.
+    @rel daniel trust+1
+    > It slopes left. Barely. Old buildings do. You aim a little right, and the chair curves in and stops on the tape like it was called.
+    justin: "…I've got nothing. That was just correct."
+    daniel[thinking]: You *looked at the floor*. I've walked down this hall since I was fifteen. I never looked at the floor.
+> Daniel's turn. He rolls his shoulders once, sights down the hall, and pushes like a man who has never doubted a chair.
+> The chair hits the skirting board, spins twice, and rolls back to him like a dog that's changed its mind.
+daniel[smile]: Lost, with conviction. Tick it off. Six is done.
+@sfx page
+daniel: Seven. Basketball. The hoop is the coin cup. The ball is—
+> He looks around. He looks at Songha's notebook. He looks away from Songha's notebook very quickly.
+justin[smile]: Receipts. Hyunjun's got about forty in his jacket. It's on the other sofa. He won't mind. He'll be honoured.
+> The receipts make good basketballs. Small, dense, a little sad. The coin cup goes on the low table, on top of the oldest ring.
+> Daniel shoots left-handed. Then backwards. Then with his eyes shut, calling his own shot in a low broadcast voice.
+> You get—
+* [playful] Shoot one over your shoulder without looking. Commit to it.
+    @rel daniel closeness+1
+    > It goes in. It should not have gone in. Nobody in the room is more surprised than you, and you work hard to hide it.
+    daniel[surprised]: No. Do that again.
+    you: I never do it twice. It ruins it.
+    daniel[laugh]: That's the smoothest lie I've been told all year.
+* [sincere] Take your time. Miss most of them. Laugh when he does.
+    @rel daniel trust+1
+    > You get four. Three of them bounce off his shoe first. He claims the assists, and you let him have them.
+    daniel[smile]: We're a good team. A bad team, at basketball. But a good team.
+@sfx page
+> Seven gets its tick. There's a receipt ball in his hood. You decide to tell him later.
+@show charlie smile at=r
+charlie: There's a desk chair parked in the hall and a plush at the wheel, so I assume this is on purpose. Is there room for one more?
+daniel[smile]: Charlie. Good timing. We need a mole.
+charlie: A what?
+daniel: Number eight. The one with the hammer. You come up from behind the sofa. We try to tag you. Gently. With this.
+> He holds up the plush. It looks back at all of you, soft and blameless.
+charlie[smile]: Fine. I'm the mole. I'm quick, and it's nearly four in the morning, so nobody's keeping footage. You won't get me once.
+@hide justin
+> He steps behind the sofa. There is some rustling, and then a silence with real professionalism in it.
+> Charlie comes up on the left. Daniel swings, and tags a cushion. Charlie comes up on the right. Daniel tags the arm of the sofa, and apologises to it.
+> He's laughing too hard to aim. He hands the plush to you, out of breath, and nods at the sofa like a man passing on a torch.
+> And you realise something, holding it.
+> He hasn't asked. Not once since the lounge. *You're having fun, right?* Three times in the arcade. None here.
+> He hasn't been checking the score. He forgot there was one.
+* [sincere] "Daniel. Are *you* having fun?"
+    @rel daniel trust+1 romance+1
+    @flag danielx_asked
+    > He stops. Properly stops, mid-breath, one hand on the back of the sofa.
+    daniel[surprised]: …Me?
+    you: You.
+    daniel[thinking]: Nobody asks the— I'm the one who asks. That's the job. I ask, you say yes, we go to the next thing.
+    daniel[smile]: Yeah. I am. I forgot to check on you. I've never forgotten to check. I was just… in it.
+    you: I know. I was watching.
+* [playful] Tag Daniel instead. Lightly, on the shoulder.
+    @rel daniel closeness+1
+    daniel[surprised]: I'm not the mole.
+    you: You popped up.
+    daniel[laugh]: That's entrapment. Charlie, back me up.
+    charlie[smile]: I saw nothing. I was behind a sofa. That's the whole point of me.
+* [quiet] Don't point it out. Just take your turn, and let him keep forgetting.
+    @rel daniel closeness+1 trust+1
+    > Some things stop working the moment somebody names them. You keep this one to yourself, like a coin in a fist.
+> Charlie comes up dead centre, unhurried, quite sure he has timed it.
+> You tag him once, on the shoulder, with the softest object in the building.
+charlie[laugh]: All right. That one's fair. That one I walked into. I'd still like it noted that it took two of you.
+daniel[smile]: Best mole I've ever worked with. I've worked with zero moles. You're still the best.
+@hide charlie
+@sfx page
+> Daniel drops onto the mismatched sofa and lets his head fall back. His chest is still going. There's a receipt ball in his hood, and now one in his hair.
+daniel[smile]: That was better than the real ones. How was that better than the real ones?
+@if flag.danielx_asked
+    daniel[thinking]: …You asked if I was having fun.
+    daniel: I keep thinking about it. It's a very normal question. I ask it forty times a day.
+    daniel[smile]: It's different from the other side. It's like finding out your own front door has a doorbell.
+@else
+    daniel[thinking]: I didn't plan any of that. I planned the *numbers*. I didn't plan what was in them.
+    daniel[smile]: It just went. And I was just in it. I didn't have to drive.
+* [sincere] "You laugh differently when you're not hosting."
+    @rel daniel trust+1
+    daniel[surprised]: Differently how?
+    you: Lower. And you don't look round afterwards to see who heard.
+    daniel[thinking]: …That's a very specific thing to notice about a person. I don't mind that it was you who noticed.
+* [quiet] Reach over and take the receipt out of his hair. {if daniel.closeness >= 3}
+    @rel daniel romance+1
+    > He holds very still while you do it. Not the still of someone waiting for a joke. The other kind.
+    daniel[neutral]: How long has that been there?
+    you: A while. It suited you.
+    daniel: You should've left it. I'd have worn it to breakfast.
+* [playful] "You have a receipt in your hood. And one in your hair. I've known for ten minutes."
+    @rel daniel closeness+1
+    daniel[laugh]: Ten minutes. And you said nothing. That's cold. I'm impressed.
+> He shuts his eyes. Just for a second, you think. Then the second goes on.
+> His knee isn't bouncing. His hands are open on the cushions. Under the grin, which is fading the way a song fades, there is a face you haven't seen yet tonight.
+> It's a tired one. Not sad. Just somebody who has been holding a very large tray, very steadily, for a very long time.
+daniel[neutral]: Hey.
+you: Hey.
+daniel: Can I ask you for something? It's not on the list.
+daniel: It's not fun. I should say that first. It's the opposite of number eight.
+you: Ask.
+daniel[thinking]: …Come to the practice room with me. There's a thing I need somebody to look at.
+daniel: Not everybody. Somebody.
+> He gets up before you can answer, and then stands there, because he's realised he hasn't heard the answer.
+you: Okay.
+daniel[smile]: Okay.
+@goto daniel_ch3
+
+=== daniel_ch3
+@autosave
+@bg studio_practice t=fade
+@music quiet
+@amb room
+@time 03:46
+@cam wide
+> The practice room on the second floor is the cheap one. He said so hours ago: the room he used to rent by the hour, before he went downstairs to lose.
+> One wall of mirror with a crack in the bottom corner, taped over. A floor that has been scuffed by ten thousand turns. A speaker with a dial instead of buttons.
+@show daniel neutral at=c
+> Daniel takes off the windbreaker and folds it. You have not seen him fold anything tonight. He puts it on the floor by the door, and the plush on top of it, like a coat-check.
+daniel: Okay. So. I make up some of our choreography. Me and Songha and Hanbi. You knew that.
+daniel: There's a piece I've been working on. By myself. Nobody asked for it. It's forty seconds.
+daniel[thinking]: I've got three endings for it. The team's seen all three. They like them. They're *good*.
+daniel: Big jump, land on the beat. Spin, point at the camera. Slide to the knees, arms out. You know. Endings.
+you: And?
+daniel: And there's a fourth one. That nobody's seen.
+daniel: I need somebody to watch it and not be nice. Is that okay? You can say no. It's nearly four in the morning. "No" is very reasonable.
+* [sincere] "Show me. I'll tell you what I actually see."
+    @rel daniel trust+1
+    daniel[smile]: That's the scary version. Good. That's the one I wanted.
+* [playful] "I've just watched you lose a race to a chair. I'm ready for anything."
+    @rel daniel closeness+1
+    daniel[laugh]: The chair had a lower centre of gravity. …Thank you. That helped, actually.
+* [quiet] Sit down on the floor against the mirror, where an audience would be.
+    @rel daniel trust+1
+    > You don't say yes. You just go and be where he needs somebody to be. His shoulders come down a centimetre. You've seen them do that once before.
+daniel: One thing. Don't clap. I mean it. If you clap I'll do a bow, and then it's a bit, and then it's gone.
+you: No clapping.
+daniel: And there's no music. The speaker only plays the radio now, and it's a man talking about fishing. So I'll need a count.
+daniel[neutral]: Would you count? Out loud. Eights. Five eights. I'll start on your one.
+you: Five, six, seven, eight—
+@music daniel
+@cam orbit
+@fx dust n=0.3
+> He starts on your one.
+> You have watched him move all night. Stairs two at a time. Machine to machine. Every gesture with a little extra on the end of it, like a signature.
+> This is the same body and none of the same habits. It's clean. Fast where it needs to be and then, suddenly, not. He lets a step *land* before he leaves it.
+you: —five, six, seven, eight. Two, two, three, four—
+> In the mirror there are two of him, and neither one is checking on you. It's the first time all night.
+> The fourth eight builds. You can see the jump coming. You can see where the point at the camera would go.
+you: —five, two, three, four—
+> And he stops.
+> Not a pose. He just arrives. Feet flat, arms down, chin level, looking straight ahead at nothing. Breathing.
+> You keep counting, because he asked you to, and because it seems wrong to leave him alone in it.
+you: Five. Six. Seven. Eight.
+@music quiet
+@cam closeup daniel
+@fx off
+> Four counts of a person standing still. It is the longest part of the dance.
+> You don't clap. It's harder than you expected.
+daniel[neutral]: …That's it. That's the fourth ending.
+daniel: Don't be nice.
+* [sincere] "The still part is where I stopped watching the steps and started watching you."
+    @rel daniel trust+1 romance+1
+    > He opens his mouth to deflect. You watch the joke arrive, and you watch him decide not to use it.
+    daniel[smile]: …That's what it's for. That's exactly what it's for. I didn't know if it worked from the outside.
+    you: It works from the outside.
+* [curious] "Your hands wanted to do something on seven. You didn't let them."
+    @rel daniel trust+1
+    daniel[surprised]: You saw that? It's tiny. It's a twitch.
+    daniel[thinking]: That's the peace sign. It lives in there. Every time I stop, it tries to get out.
+    you: It didn't get out.
+    daniel[smile]: No. It didn't.
+* [quiet] "It's the best one. I don't have to have seen the other three."
+    @rel daniel closeness+1
+    daniel[smile]: You can't know that. There's a knee slide. The knee slide is excellent.
+    you: I believe you. It's still the best one.
+    daniel[thinking]: …Yeah. I think so too. That's the problem.
+> He sits down on the floor, all at once, like the four counts cost more than the forty seconds.
+> You get up, and find the paper cups by the water cooler in the hall, and bring one back. The cooler gurgles at you like a relative.
+> He drinks it in one go. He says thank you, and means it rather more than a paper cup deserves.
+daniel[thinking]: Can I tell you why nobody's seen it?
+you: Tell me.
+daniel: If I stop moving in front of people, they think I've forgotten the steps.
+daniel: Or they wait. For the thing. The face, the joke, the point at the camera. And when it doesn't come, they look at each other.
+daniel: I'm the energy. That's what I'm for. I'm really good at it. I *like* it. I'm not complaining.
+daniel[neutral]: But we're going to debut. Someday. Soon, maybe. Nobody tells us when.
+daniel: And when we do, there'll be the funny one. In every video. For years. I already know who it is.
+daniel: I just want— sometimes— to be given the quiet part.
+daniel: Not take it. Be *given* it. Somebody looks down the line and says, "Daniel, you do the slow eight."
+daniel[thinking]: And I've never asked. Because if you ask, and they say "but you're so good at the other thing" — then you know.
+> He says it levelly. He's just put something down that he's been holding so long his arms have the shape of it.
+* [sincere] "You're afraid to want it. That's not the same as not being allowed."
+    @rel daniel trust+1
+    daniel[thinking]: …Say that again, slower. I want to keep it.
+    you: Afraid to want it. Not the same as not allowed.
+    daniel: Okay. Got it. That's going on a list.
+* [curious] "Ask me. Practise. I'm not the team. It's free."
+    @rel daniel trust+1 closeness+1
+    @flag danielx_quietpart
+    daniel[surprised]: Ask *you*?
+    you: I'm Songha. I'm holding a notebook. Go.
+    daniel[laugh]: You're nothing like— okay. Okay.
+    > He sits up straighter. He takes a breath, the same one he took before your count, and says it in his ordinary voice.
+    daniel[neutral]: "I'd like the quiet part. Just once. I think I'd be good at it."
+    you: Yes.
+    daniel: …That's it? Just yes?
+    you: I just watched you do it. It's not a hard decision.
+    daniel[smile]: Huh. It's much shorter out loud. In my head it was about an hour.
+* [quiet] Move over, so you're sitting next to him instead of across. {if daniel.closeness >= 3}
+    @rel daniel romance+1
+    > You don't have an answer. You have a shoulder, and the floor's the same floor on his side of it.
+    > He leans. Not much. The amount a person leans when they're checking whether it's allowed, and finding out that it is.
+    daniel[smile]: You don't say a lot. But you keep turning up exactly where the thing is.
+daniel[thinking]: I'm tired. I'll say that plainly. I've been up since— I don't know when I've been up since.
+daniel: I don't want to sleep. I don't want to miss any of it. I just want to not be *on*. For a minute.
+daniel: But if I lie down I'll start counting how long I've been lying down. I always do. Then it's not resting, it's a timer.
+you: Then I'll count. You don't.
+daniel[neutral]: …You'd do that?
+you: I counted five eights for you. I can count sixty seconds.
+> He looks at you the way he looked at the pen, downstairs. Then he lies back on the scuffed floor, arms out, like someone floating.
+> You count. Not out loud. He can't hear the numbers, so there's nothing for him to keep up with.
+@wait 1.5
+> Ten. His breathing evens out. The windbreaker isn't on him, so for once it doesn't rustle.
+> Thirty. His hand, flat on the floor near your knee, uncurls.
+> Fifty. Somewhere downstairs Charlie says something dry and several people laugh, and none of it needs him.
+@wait 1.5
+* [careful] Reach sixty. Keep going. Tell him when it's been two minutes.
+    @rel daniel trust+1
+    you: That's two.
+    daniel[smile]: You said one.
+    you: You needed two.
+    daniel: …Yeah. I did. How'd you know?
+    you: You stopped listening for the end at about forty.
+* [quiet] Rest your hand on the floor beside his, the way he did in the booth. {if daniel.romance >= 3}
+    @rel daniel romance+1
+    > His little finger finds the edge of yours without his eyes opening. It's the booth, the other way round. This time you put your hand down first.
+    daniel[smile]: Is it sixty yet?
+    you: Ages ago.
+    daniel: Don't tell me how long. I don't want to know. That's new. I always want to know.
+* [playful] At sixty, say "time" in Justin's commentator voice.
+    @rel daniel closeness+1
+    you: "And that's a full minute of nothing. A personal best. The crowd is silent."
+    daniel[laugh]: The crowd *better* be silent. That was my best work.
+> He sits up. His hair is flat on one side. He looks rested, and a good deal more like the man in frame four.
+daniel[smile]: Thank you. For the count. Both counts.
+daniel: I asked you for something and it was fine. Nothing fell over.
+you: Nothing fell over.
+daniel[smile]: I'm going to show the fourth ending to Songha. Not tonight. But I'm going to. You're my witness. Again.
+@textbox echo
+echo: I have records 08-A through 08-D in the archive. Four strips. They go dark at five with everything else.
+echo: If you would like to see them once before then, I would like to show you. There is also a small administrative matter.
+@textbox normal
+daniel[surprised]: The old ones? The cone one?
+daniel[thinking]: …Yeah. Okay. I want to see them. Come with me?
+daniel[smile]: I keep asking you to come places. I have noticed.
+you: I keep saying yes.
+@goto daniel_ch4
+
+=== daniel_ch4
+@autosave
+@bg studio_archive t=slow d=2.0
+@music memory
+@amb room
+@time 04:04
+@fx memory n=0.5
+@cam reveal
+> The archive room is behind the front desk, down three steps. It's colder than the rest of the building, and it hums.
+> Shelves of small glass boxes, floor to ceiling, most of them dark now. In the middle, a column of glass the height of a person, lit from inside like a jar with a candle in it.
+> Daniel comes in the way people come into libraries. You didn't know he had that walk.
+@show daniel neutral at=c
+daniel: …It's smaller than I thought. ECHO. I thought you'd be huge.
+@textbox echo
+echo: I am distributed. This is only where I keep my hands. I do not have hands.
+echo: RECORDS 08-A, 08-B, 08-C, 08-D. OWNER: DANIEL. TYPE: PHOTOGRAPH, FOUR FRAMES EACH.
+@textbox normal
+@sfx chime
+> Four boxes on the lowest shelf light up, one after another, left to right. You both sit down on the cold floor to be level with them.
+> Four strips. Four Julys. A boy who gets a little taller in each one.
+> In the first he's fifteen and fills the frame like he's trying to get out of it. In the second there are sunglasses, two pairs, one on top of the other.
+> In the third there's the traffic cone, worn as a hat, with enormous dignity. In the fourth he's pretending to cry, holding up a sign that says PLEASE CLAP.
+daniel[smile]: Ah. The sign. I made that sign. I laminated it.
+> He says it quietly. Everything is quiet in here. The room does it to you, the way snow does.
+@textbox echo
+echo: The administrative matter. Every record in this archive is indexed by one word. The founder insisted. She said dates were for tax offices.
+echo: The word is supposed to be what the record felt like. The owner supplies it. You did not supply any. You wrote "lol" on the form four years running.
+echo: I cannot close an index with "lol" in it. I have tried.
+@textbox normal
+daniel[thinking]: What they felt like. …"Funny"? They're all "funny."
+* [curious] "Look at the last frame. In all four. You're not looking at the camera."
+    @rel daniel trust+1 romance+1
+    > He leans in. You watch him see it.
+    > Frame four, every year: the pose half dropped, the head turned, the eyes gone sideways. Towards the edge of the picture. Towards the curtain.
+    daniel[surprised]: …I'm looking at the curtain.
+    daniel[thinking]: I remember that. I was checking if anyone was waiting outside. For the booth. In case I was taking too long.
+    daniel: There never was. It was always just me, and I always checked.
+* [sincere] "Funny's what they look like. He asked what they felt like."
+    @rel daniel trust+1
+    daniel[thinking]: …Yeah. Those are different, aren't they. I always hand in the first one.
+    > He rests his forearms on his knees, and looks at the boy with the two pairs of sunglasses as if the boy might tell him.
+* [quiet] Say nothing. Let him look as long as he needs.
+    @rel daniel trust+1
+    > A minute goes by. In here a minute is a large, slow thing. He doesn't fill it. He's using it.
+    daniel[thinking]: …Every last frame, I'm looking off to the side. I never noticed that. I was looking at the door.
+daniel[neutral]: Okay. The first one. Fifteen.
+daniel: "Hopeful." I'd just found out you could post things to a building and it would keep them. I thought that was the best thing I'd ever heard.
+@sfx click
+> Under the first box, a small line of light writes itself: HOPEFUL.
+daniel: Second one. "Trying." That's two pairs of sunglasses. Nobody needs two. That's a person who's trying.
+@sfx click
+daniel: The cone—
+> He starts laughing, quietly, with his head down.
+daniel[laugh]: The cone is just "happy." I was so happy. I carried it four streets. A man at a bus stop saluted me.
+@sfx click
+> He gets to the fourth. The fake tears. The laminated sign. He's quiet for longer.
+daniel[thinking]: This one's harder.
+daniel: That's the year before the rain. I made the sign as a joke, and then I stood in the booth holding it, and it wasn't one.
+daniel[neutral]: What's the word for when you're doing a bit, and halfway through you notice you mean it?
+* [sincere] "Honest."
+    @rel daniel trust+1
+    daniel[surprised]: For a fake-crying photo?
+    you: For the sign.
+    daniel[smile]: …"Honest." Okay. ECHO, put "honest." By accident. Can you index "by accident"?
+* [careful] "You don't have to find it tonight. It can stay blank."
+    @rel daniel trust+1
+    daniel[thinking]: No. I want to. I've left it "lol" for three years. It deserves a real one.
+    daniel: …"Asking." That's what it is. He's asking. He just made it funny so nobody'd have to answer.
+* [quiet] Put two fingers on the glass, over the sign. {if daniel.trust >= 4}
+    @rel daniel romance+1
+    > PLEASE CLAP. Two years before you told him the rain sounded like applause, and that it wasn't for him, and that this was a good thing.
+    daniel[smile]: …Yeah. That one. You answered that one without even seeing it.
+    daniel: "Asking." Put "asking," ECHO. It got answered. It can say what it was.
+@sfx click
+@textbox echo
+echo: Indexed. Thank you. That is four. There is a fifth.
+echo: RECORD 08, frames one to eight. The form for that one is blank. Tonight's half has two owners. I would like the word from both of you.
+@textbox normal
+> The big strip comes up in the central column, tall and faint: the pose, the startle, the laugh, the bench. Then the four from tonight.
+daniel[smile]: You pick. I picked four. My picking arm is tired.
+* [sincere] "Staying."
+    @var danielx_label = "staying"
+    @rel daniel trust+1
+    daniel[thinking]: Staying.
+    daniel[smile]: From you, that's a big word. I know what it costs. You told me what you're good at.
+    you: I'm trying out being bad at it.
+* [playful] "Dry."
+    @var danielx_label = "dry"
+    @rel daniel closeness+1
+    daniel[laugh]: "Dry." ECHO already wrote that in the margin.
+    you: It earned it. Two years of rain, and then a dry one. Dry is a feeling.
+    daniel: Dry is absolutely a feeling. Ask anyone with socks.
+* [quiet] "Nothing. The good kind."
+    @var danielx_label = "nothing"
+    @rel daniel trust+1
+    daniel[smile]: The good kind. Can you index that, ECHO? "Nothing, the good kind"?
+    @textbox echo
+    echo: It is four words. I will allow it. I am leaving soon. Who will stop me.
+    @textbox normal
+@sfx click
+> Neither of you gets up. The floor is cold and the glass is warm and the hum is the kind you could fall asleep to.
+daniel[neutral]: Can I say something plainly? ECHO's got me indexing things. I might as well.
+you: Say it.
+daniel: I'm calm. Right now. With you.
+daniel: I don't get calm. I get tired, which looks the same from outside. This is the other one.
+daniel[smile]: I didn't have the word for it until about four minutes ago. I've been calling it "different." All night. "It's different around {{playerName}}."
+@if daniel.romance >= 4
+    daniel: And there's another word under that one. I know what it is. I'm not going to make it a bit.
+    daniel: I like you. The kind where I'd sit in a cold room and look at a traffic cone, as long as you were on the floor too.
+    > It's said so simply that for a second you don't recognise it as the large thing it is. Then you do.
+    you: I'm on the floor too.
+    daniel[smile]: Yeah. You are. I checked.
+@else
+    daniel: It's a good word. I want to keep it. I want to know where to find it again.
+    you: It's not in the room. It didn't come on with the lights.
+    daniel[smile]: No. I know. I know where it is.
+> You tell him, because he has told you things, and the ledger ought to balance.
+you: I don't usually see the old ones. Of anybody. I'm gone before people get to the part where they show you the shelf.
+you: I liked the cone. I liked all four. I'd have liked to have been in the queue.
+daniel[surprised]: …There wasn't a queue.
+you: There'd have been one person.
+> He doesn't answer. He looks at the four lit boxes, and the four words under them, and his face does something that isn't any of the seven faces he usually uses.
+@textbox echo
+echo: Recipient Daniel. About the fireworks. I have finished thinking.
+echo: I have one lamp on the roof and forty seconds of power I can move to it. It will not make a sound. It can only do that if something else in the building is switched off.
+echo: The largest thing I am not using is in the lobby. It plays a nursery rhyme. I am sorry. I did the sums twice.
+@textbox normal
+daniel[surprised]: …Mr. Kim.
+@goto daniel_ch5
+
+=== daniel_ch5
+@autosave
+@bg studio_lobby t=fade
+@music studio
+@amb room
+@time 04:22
+@cam wide
+> Mr. Kim is still going when you get back to the lobby. Pink, green, murderous blue. The nursery rhyme, played by a robot who has had a long day and has just heard there's more of it.
+@show daniel thinking at=c
+> Daniel stands in front of the glass with his hands in his pockets. It's the first time you've seen him look at the machine without touching it.
+daniel: Six years. Ninety thousand won. It's never given me anything I didn't cheat for.
+daniel[smile]: I'm going to miss it. I'd rather say so than not.
+@textbox echo
+echo: It is not being removed. It will come back on when the building does. I have left a note in its file. The note says: GRIP, IMPROVING.
+@textbox normal
+daniel[laugh]: You lied for him. ECHO. That's friendship.
+@if var.danielx_twelve == "kim"
+    > You take out the notebook page. Twelve, in your handwriting: *Beat Mr. Kim. Fairly.*
+    daniel[thinking]: We've got one coin. There's one coin in the cup.
+    > He gives it to you. Then he takes three big steps back from the cabinet and puts his hands on his head, where everyone can see them.
+    > The claw goes out. It drops. It closes on a small grey elephant, lifts it a full hand's height, carries it halfway to the chute, and lets go.
+    daniel[laugh]: Halfway. That's the furthest it's ever gone. And fairly. I'm calling that a moral victory.
+    you: Does a moral victory get a tick?
+    daniel: Tonight it does.
+    @sfx page
+@show hanbi smile at=l
+> Hanbi has appeared at the rubber plant with his phone torch on, holding the leaves aside. Nobody asked him to. The socket is behind there, and he is the person who knew that.
+hanbi: It's the top plug. The bottom one's the wall lights.
+daniel: Do I say something? I feel like I should say something.
+hanbi: You don't have to. It's a claw machine.
+hanbi[neutral]: …Say something. I'll wait.
+* [sincere] "Tell him thank you. He's the reason you kept coming downstairs."
+    @rel daniel trust+1
+    daniel[thinking]: …He is. I'd practise for an hour and come down and lose for ten minutes. The ten minutes was how I knew the day was over.
+    daniel[smile]: Thanks, Mr. Kim. You were a terrible machine and a really good clock.
+* [playful] "Read him his record. Eleven tonight, zero for you, minus two for Charlie."
+    @rel daniel closeness+1
+    daniel[smile]: Let the record show he retired undefeated. Except once. With assistance. Which we don't talk about.
+* [quiet] Put your hand flat on the glass next to where his used to go.
+    @rel daniel trust+1
+    > He looks at your hand, and puts his own back up beside it, the way he stood when you first saw him. Like the machine owes him money. Like he'd let it off.
+@sfx click
+@music stop
+> The plug comes out. The lights go pink, then green, then don't go anything. The nursery rhyme stops in the middle of a bar.
+> The lobby is a great deal quieter than you knew it could be. Mr. Kim was underneath everything, all night, and none of you had heard him for hours.
+daniel[neutral]: …Huh. That's the second thing I've turned off tonight.
+hanbi[smile]: You're getting good at it. Go up. Hamin's taken blankets. I'll get the others.
+@hide all
+@bg studio_rooftop t=fade d=1.4
+@amb wind
+@music quiet
+@fx stars n=0.4
+@time 04:27
+@cam reveal
+> The roof is flat and cold and smells of rain that finished hours ago. The city lies all round it, turned down low.
+@video vid_daniel_drama
+@unlock cg:cg_daniel_drama
+> In the middle, on a tripod that has rusted to the spot, there's a lamp the size of a saucepan, pointing straight up.
+@show hamin smile at=l
+> Hamin is there already, with an armful of grey blankets from the lounge cupboard. He hands you one without being asked, and then one to Daniel.
+hamin: They smell a bit like a cupboard. But they're warm.
+@show daniel smile at=c
+daniel: Hamin. You're the best of us. I say that knowing Hanbi's on the stairs.
+@show haruta smile at=r
+haruta: Is this the screening? Where do we sit? I'll sit anywhere.
+> People keep arriving. You hear them more than see them: Charlie asking what's happening, Justin telling him, Hyunjun asking if there'll be a second one.
+> Nobody comes to the middle. They find the low wall round the edge, in twos and threes, and leave the two of you the space by the lamp without discussing it.
+@hide hamin
+@hide haruta
+@textbox echo
+echo: Forty seconds. No sound. I would have liked to give you the throat-clearing. I do not have the power.
+echo: This is number nine.
+@textbox normal
+@sfx power_up
+@fx prism n=1.2
+@cam pan
+> The lamp comes on.
+> It isn't a firework. It's light, thrown straight up into the damp air above the roof, where it catches and opens and comes apart.
+> Magenta first. It spreads like a drop of ink in a glass. Then cyan through the middle of it. Then a soft green that comes down the sky in ribbons, slowly, taking its time.
+> And not a sound. Not a pop. Nine people on a roof and nobody says a word, because there's nothing to talk over.
+> You can hear the wind, and a blanket shifting, and, beside you, Daniel breathing in.
+> He's going to narrate it. You can feel it coming, the way you felt the jump in the dance. A line. A commentary. A number out of ten.
+* [playful] Lean in and whisper, very quietly: "Boom."
+    @rel daniel closeness+1
+    @flag danielx_boom
+    > He breathes a laugh out through his nose, and puts the back of his hand to his mouth to keep it quiet.
+    daniel[laugh]: *Boom*. That's the whole show. That's all it needed.
+    > He whispers it back on the next one. Boom. Just to you. Under the wind.
+* [quiet] Watch him instead of the sky. {if daniel.closeness >= 3}
+    @rel daniel romance+1
+    > The colours go across his face one at a time. Magenta, cyan, green. His mouth is a little open. He has forgotten to arrange it.
+    > He feels you looking, and turns, and for once he doesn't ask what. He just looks back, lit up green, until the next colour comes.
+* [sincere] Keep your eyes on the light, and say nothing at all.
+    @rel daniel trust+1
+    > You give him nothing to answer. After a moment you hear the breath go out of him again, unused.
+    > He keeps the line. It turns out he can. It turns into a smile you can hear without looking.
+@wait 1.5
+> Thirty seconds. The ribbons are coming down thinner. The last of the green hangs over the laundromat like something the sky is thinking of keeping.
+@fx prism n=0.4
+> Forty. The lamp goes out with a small tick, exactly like a radiator.
+@fx stars n=0.5
+> For a second nobody moves. Then, from the low wall, someone starts to clap, and stops after two of his own accord, because the quiet turns out to be the better tribute.
+> It's Songha's voice that comes across the dark, quiet and dry.
+@show songha smile at=l
+songha: Nine's closed. I saw it. Tick it.
+@sfx page
+@hide songha
+> You tick it, by the light of somebody's phone. Four open items an hour ago. One left, and it's the one that does itself.
+@show daniel neutral at=c
+@cam closeup daniel
+> The others are drifting back towards the stairs, in their blankets, in no hurry. Daniel stays where he is, looking up at where the light was.
+daniel: You know why fireworks were on the list?
+you: Tell me.
+daniel: Big finish. Every night needs one. That's how people know it was a good night. There's a bang, everybody goes "ohh," and they take that home.
+daniel[thinking]: I wanted you to have something to take home. So you'd remember it. So tonight didn't just… thin out. The way nights do.
+daniel: And then it was forty seconds of nothing making a noise. And I'll remember that until I'm eighty.
+daniel[smile]: So I think I've had it wrong. About finishes.
+* [sincere] "I'd have remembered tonight without any of it. I'd have remembered the radiator."
+    @rel daniel trust+1 romance+1
+    daniel[smile]: …The radiator. Out of everything.
+    you: That's where you said the real one. I was there.
+    daniel: Yeah. You were. You keep being there. I've started to count on it.
+* [playful] "It did have a big finish. You unplugged your oldest enemy for it."
+    @rel daniel closeness+1
+    daniel[laugh]: That's true. I gave up Mr. Kim for forty seconds of green. It's the most romantic thing I've ever done for a lamp.
+* [quiet] Pull your blanket round both your shoulders. {if daniel.romance >= 3}
+    @rel daniel romance+1
+    > It's not a big blanket. It works if neither of you has any pride about how close you stand. Neither of you has.
+    daniel[neutral]: It does smell like a cupboard.
+    you: It's a good cupboard.
+    daniel: It's the best cupboard.
+> Over the rooftops to the east, the black has a seam in it. Not light. The place where light is going to be.
+daniel[thinking]: Number ten's warming up.
+daniel[smile]: Come on. Before Songha counts us.
+@goto daniel_ch6
+
+=== daniel_ch6
+@autosave
+@bg studio_hall t=fade
+@music daniel
+@amb room
+@time 04:40
+@fx memory n=0.3
+@cam wide
+> The second-floor hall, outside door eight. The others have gone down. You can hear them in the lobby: cups, a zip, somebody folding blankets badly.
+> Door eight is shut. Its little light has gone from blue to a plain, sleepy white.
+@show daniel thinking at=c
+> Daniel has stopped in front of it. He's holding the strip from tonight by its edges. Four frames on paper, still with the faint curl of something that came out of a machine.
+daniel: There's a problem. I only just thought of it. I've been carrying it for an hour and I only just thought of it.
+daniel: There's one.
+> One strip. Two people. The booth that printed it is a bare room with a radiator in it.
+@textbox echo
+echo: I cannot print another. That was the last of the film. I did say.
+@textbox normal
+daniel[neutral]: It's fine. You take it. You're the one going— wherever you go. I've got five in the archive. I'm rich in strips.
+> He holds it out. His hand is steady. His eyes have gone to the fourth frame, and stayed there.
+* [sincere] "It's your record. You waited two years for a dry one. Keep it."
+    @rel daniel trust+1
+    daniel: I don't want to *keep* it. That's the thing. I've kept five. They went in a box in a wall.
+    daniel[thinking]: I want this one to be somewhere I have to go and see it.
+* [playful] "Rock, paper, scissors. Loser keeps it and has to look at my face every day."
+    @rel daniel closeness+1
+    daniel[smile]: That's not a loss. …No. I've got a better idea. A much better one. Hang on.
+* [quiet] Take the other end of the strip. Hold it with him. Don't pull.
+    @rel daniel trust+1
+    > It hangs between you, four small windows. Neither of you lets go. After a moment he laughs, under his breath.
+    daniel[smile]: Okay. Yeah. That's the answer, isn't it. That's exactly it.
+> He folds the strip. Carefully, along the white gap between the second frame and the third, and runs his thumbnail down the crease twice.
+daniel: Tell me if this is stupid.
+you: It isn't.
+daniel: You don't know what it is yet.
+you: I know how you fold things when you mean it. I saw the windbreaker.
+@sfx page
+> He tears it. Slowly, the whole way down the crease, with the care he gave the windbreaker. It comes apart clean.
+> Two halves. The top: a peace sign given up on, and whatever the two of you did in frame two. The bottom: both of you laughing, and then the last one. Nobody doing anything.
+> He looks at the two pieces for one second. Then he holds the bottom half out to you.
+you: That's your favourite.
+daniel[shy]: That's why.
+daniel: It's in two places now. It'll have to meet up sometimes. That's just how it works. I don't make the rules.
+> There's a pen in your pocket still. Songha's. You never gave it back.
+> You turn Daniel's half over, against the wall beside door eight, and write on the back of it. He doesn't look. He looks a little.
+* [sincere] Write: *04:44. Still here.*
+    @var danielx_back = "time"
+    @rel daniel trust+1
+    daniel[thinking]: You put the time.
+    you: You like to know how long things have been going.
+    daniel[smile]: I do. I did. This one I'd like to not know the end of.
+* [playful] Write: *Thanks for the booth. — The wet sleeve*
+    @var danielx_back = "booth"
+    @rel daniel closeness+1
+    daniel[laugh]: You signed it "the wet sleeve." That's going in my wallet. That's going where the money should be.
+* [quiet] Write: *Call when it's quiet.* and your number under it.
+    @var danielx_back = "plain"
+    @rel daniel trust+1 romance+1
+    > He reads it twice. His thumb goes over the digits without touching them, the way you'd check that paint was dry.
+    daniel[thinking]: …What if I call and don't say anything?
+    you: Then I won't either. We'll have a very good call.
+> He takes the pen. He turns your half over on his knee and writes on it, fast, pressing too hard, exactly as Songha said.
+> He gives it back face down. You turn it over.
+> Two words in running capitals, and an arrow that goes off the edge of the paper: *FRAME NINE →*
+daniel[smile]: There's no frame nine. It's a four-frame booth. I know how booths work.
+daniel: I just didn't want the last thing on it to be the last thing.
+> You put your half in the inside pocket of your coat. He watches it go in. He puts his in the windbreaker, in the pocket with the zip, and does the zip up.
+@cam closeup daniel
+> Then he leans back against the wall beside door eight, and you lean beside him, and the hall does its ticking.
+daniel[neutral]: Can I say the thing I'm scared of? Then I'll be myself again. Ten seconds.
+you: Take longer than ten.
+daniel: You're good at leaving. You said. And tomorrow I'm back in a practice room at nine, and the day after, and I don't know for how many years.
+daniel: I want there to be a next one. A next *this*. And I'm scared to want it, because I can't put it on a list and make it happen.
+daniel[neutral]: I can only ask. And I've had exactly one night of practice at asking. So I'm asking.
+@if var.danielx_twelve == "ask"
+    daniel[thinking]: …That's twelve, by the way. You wrote "ask Daniel what he wants." That's what I want. You can tick it.
+    @sfx page
+    > You take the folded page out of his pocket yourself, and tick it against the wall, and put it back. He lets you. He holds the pocket open.
+@elif var.danielx_twelve == "blank"
+    daniel[thinking]: …Can I have your blank? Number twelve. You said it needed somewhere to go.
+    @sfx page
+    > He writes it in himself, small for once: *a next one*. No capitals. No full stop. He leaves the box beside it empty.
+* [sincere] "I've never left half of something with anyone. I'd have to come back for it."
+    @rel daniel trust+1 romance+1
+    daniel[surprised]: …That's why I tore it. I didn't know that's why until you said it.
+    you: I know. I let you.
+    daniel[smile]: We're both being a bit clever. I like it. It's much less lonely than being clever by yourself.
+* [playful] "You've asked me to go four places tonight. I've said yes four times. Try a fifth."
+    @rel daniel closeness+1
+    daniel[smile]: All right. Next week. Dinner, somewhere with no running order. I'd like you to come.
+    you: Yes.
+    daniel[smile]: Five for five. I'm on a streak. I've never had a streak at anything. Ask Mr. Kim.
+* [quiet] Offer your hand, palm up, the way you'd hold out a coin. {if daniel.romance >= 4}
+    @rel daniel romance+1
+    > He takes it with both of his. He turns it over and looks at it, like a strip he's checking for water.
+    daniel[smile]: Dry.
+    you: Dry.
+    > He keeps hold of it. You stand against a wall in an empty hall, and it's the best room in the building.
+> The light under door eight goes out. Not suddenly. It dims the way a person shuts a book.
+@textbox echo
+echo: All recipients. Please come to the lobby.
+echo: It is 04:56 by Recipient Hanbi's telephone. This time I have checked.
+@textbox normal
+daniel[smile]: That's us. For real this time.
+> He pushes off the wall. He pats the zipped pocket once, the way people check for their keys.
+daniel: Hey. {{playerName}}. Whatever you pick down there—
+daniel: It was a good night. It didn't need a finish. I'd like that on the record.
+you: Noted.
+daniel[laugh]: You sound like ECHO.
+> He takes the stairs one at a time. You have never seen him do that. You go down beside him, at the same speed, all the way.
+@time 04:57
+@goto act4_choice
+
+=== daniel_final
+@bg studio_lobby t=fade
+@music echo
+@amb room
+@fx memory n=0.8
+@cam wide
+@time 04:57
+> You say it. Record eight. The strip.
+> The Archive Wall takes a moment to answer, the way a person does when they've been hoping you'd say that and don't want to seem eager.
+@textbox echo
+echo: RECORD 08. OWNER: DANIEL. Acknowledged. Please stand by. I am finding the card.
+@textbox normal
+@show daniel neutral at=c
+@cam closeup daniel
+> Daniel has gone quiet. Not the performing kind, where he holds his breath and his knee bounces. The other one. The one from the floor of the practice room.
+> In Mr. Kim's corner there is only a dark cabinet and a rubber plant. The lobby ticks.
+> He's looking at you. Not checking the score. Just looking, the way you'd look at the fourth frame.
+daniel: You picked the booth.
+you: I picked the booth.
+daniel[smile]: Okay. I've got about two minutes of not knowing what to say. It's a record. Don't tell Charlie.
+> Two minutes. It's enough time to say one true thing, and you find that you know which one.
+* [romantic] Take his hand, here, in front of everyone. "I'm not leaving when it stops." {if daniel.romance >= 4}
+    @goto daniel_ending
+* [sincere] "Wherever you all end up after this — save me the seat beside you. Not across. Beside."
+    @goto daniel_ending_beside
+* [quiet] "There's something I want to tell you. I don't want to fit it into two minutes."
+    @goto daniel_ending_someday
+
+=== daniel_ending_beside
+@bg studio_lobby t=fade
+@music echo
+@amb room
+@fx memory n=0.8
+@cam wide
+> Beside. It's a small word. You watch it land on him like a blanket that smells of a cupboard.
+@show daniel neutral at=c
+daniel: …Not across.
+you: Across is where the audience sits.
+daniel[thinking]: Yeah. It is. I've been putting everyone I like across from me for years. So I could see if they were bored.
+daniel[smile]: Beside's harder. You can't see their face. You just have to believe they're still there.
+you: I'll still be there.
+@textbox echo
+echo: RECORD 08. Preserving. Eight frames. One margin note. One index word.
+@textbox normal
+@sfx chime
+> The glass card slides out of the desk, warm as a cup. Eight tiny frames, and under them, in letters you need to tilt it to read, the word you chose in the archive.
+@if var.danielx_label == "staying"
+    > STAYING.
+@elif var.danielx_label == "dry"
+    > DRY.
+@else
+    > NOTHING, THE GOOD KIND.
+@show charlie smile at=l
+charlie: It's the booth. And there's a word on it. Do they all get a word, or only the ones somebody stopped to choose?
+@show hanbi smile at=r
+hanbi: Only those. Somebody sat on a cold floor for that one.
+charlie[smile]: …Then it's the right word. You can tell.
+@hide charlie
+@hide hanbi
+> Daniel holds one edge of the card and leaves you the other. He isn't grinning at it. He's smiling, which on him is the quieter instrument.
+daniel: Thanks, ECHO. For all five. And for the forty seconds.
+@textbox echo
+echo: You are welcome, Recipient Daniel. Your file now reads: CAN SIT STILL. I did not think I would get to write that.
+@textbox normal
+@hide all
+@call echo_farewell
+@time 05:45
+@bg dawn_cafe t=slow d=2.4
+@music dawn
+@amb cafe
+@fx dust n=0.5
+@cam reveal
+> The breakfast place is four streets from the studio and has been open since five for taxi drivers. It has one long table, by the window, and this morning it has all of you.
+> You're last through the door. You stopped outside to look at the building once more from the pavement, because for once you wanted to see a place before you walked away from it, and not after.
+> It's very loud in here. Hyunjun is ordering one more of something. Songha is writing the orders down in a notebook with one page missing. Hamin is counting who hasn't got water.
+> Eight people, nine chairs.
+> The ninth has an iridescent windbreaker thrown over the back of it, arms out, like it's holding off a crowd.
+@show daniel smile at=c
+daniel: {{playerName}}. Here. I've been holding this for ten minutes. Justin tried for it twice. I had to use the jacket.
+> It's the chair next to his. Not the one facing him. He's turned his own a little, so that the two of them point the same way, out at the room.
+> You sit. The plush is already on the table between your places, leaning on the napkin holder, like somebody who got here early.
+@show songha smile at=l
+songha: For the record, I've put you both down for the soup. He said you'd want the soup. He was very sure.
+daniel[smile]: I guessed. You looked like soup.
+@hide songha
+* [sincere] "You saved it."
+    @rel daniel trust+1
+    daniel[smile]: You asked me to. It's the first thing anyone's asked me for that wasn't a bit. I wasn't going to get it *wrong*.
+* [playful] "Defended it from Justin. With a jacket. I'm moved."
+    @rel daniel closeness+1
+    daniel[laugh]: It was a siege. He's very persistent before he's eaten.
+* [quiet] Put your half of the strip on the table, face up.
+    @rel daniel trust+1
+    > He looks at it. Then he unzips the zipped pocket, and puts his half down above yours, and nudges it with one finger until the torn edges meet.
+@cam closeup daniel
+> The table goes on being loud round you. Somebody's telling the mole story already. It has grown a second sofa.
+> Daniel isn't adding to it. He's got his elbows on the table and his shoulder against yours, and he's just listening to his friends. You can feel that his knee is still.
+daniel[neutral]: Can I tell you what I worked out? On the walk?
+you: Tell me.
+daniel: I've got seven people who'd do anything for me. I know that. And every one of them, I'd keep entertained till I fell over.
+daniel: I've never had one I could be boring at. On purpose. Where that was the whole job.
+daniel[smile]: I'm not dressing it up as anything else. I don't want it to be anything else. I want it to be this, for a really long time.
+daniel: You're my person. The beside one. If that's a thing you'd want to be.
+you: I've never been anyone's anything for long enough to have a seat.
+you: I'd like to find out what it's like. I'd like it to be yours.
+> He doesn't say anything. He puts his phone on the table between the soups and turns it so you can see.
+> Your number, from the back of his half, or from ECHO, who never asked. He's typing the name. He deletes it twice.
+> What he saves, in the end, is *FRAME FOUR*.
+@if var.danielx_back == "plain"
+    daniel[smile]: You said call when it's quiet. I'm going to. I'm going to ring you and say nothing, and you're going to say nothing back, and it's going to be the best part of my week.
+@else
+    daniel[smile]: I'm going to ring you when it's quiet, and not say anything. You don't have to either. We'll just have the line open. If that suits you.
+you: I'll pick up.
+daniel: Every time?
+you: Every time. I'll be beside the phone.
+daniel[laugh]: *Beside*. You're doing it on purpose now.
+@show charlie thinking at=r
+charlie: You two are the only quiet ones at the table. I'm checking, not prying. Everything all right?
+daniel[smile]: Everything's all right. Nothing's happening. It's great. Eat your eggs.
+charlie[smile]: …Good. It suits you both, whatever it is.
+@hide charlie
+> The soup comes. He pushes the better spoon across to you without looking, the way you'd do for someone you'd known for years.
+> Outside the window the street goes from grey to peach, and a taxi driver at the counter asks for the radio on, and nobody at the long table notices the time.
+> There's a chair with your coat on it now. On the way in you'd have called that a small thing.
+> Daniel leans back, in a seat that faces the same way as yours, and for a whole minute he lets the morning go by without saying one word about it.
+> You count it for him. You don't tell him how long.
+@ending daniel_beside
+@credits
+
+=== daniel_ending_someday
+@bg studio_lobby t=fade
+@music echo
+@amb room
+@fx memory n=0.8
+@cam wide
+> He hears it. You watch him hear it: the thing, and the fact that you aren't going to hurry it.
+@show daniel neutral at=c
+daniel: …Is it a good thing? The thing you don't want to fit in?
+you: It's a good thing.
+daniel[smile]: Okay. Then don't fit it. I can wait two minutes. I've sat still for longer. I've got a certificate.
+@textbox echo
+echo: RECORD 08. Preserving. Eight frames. One margin note. One index word.
+@textbox normal
+@sfx chime
+> The glass card slides out of the desk, warm as a cup. Eight tiny frames. He holds it up to the last of the Archive Wall, and then holds it lower, where you can see it too.
+@show haruta smile at=l
+haruta: It ends on the quiet frame. That's brave. Most people would cut before it.
+@show hyunjun smile at=r
+hyunjun: One more, all of us, if there's film. There's never film. I ask on principle.
+@hide haruta
+@hide hyunjun
+daniel: Thanks, ECHO. For trying four hundred and twelve times.
+@textbox echo
+echo: You are welcome, Recipient Daniel. The rain won every time but the last. I have noted the last.
+@textbox normal
+@hide all
+@call echo_farewell
+@time 05:32
+@bg dawn_rooftop t=slow d=2.4
+@music dawn
+@amb birds
+@fx light n=0.5
+@cam reveal
+> The others are downstairs finding their shoes. Songha is doing a headcount. Hanbi is turning off the lights, because somebody should.
+> You and Daniel have come back up to the roof. Nobody said why. There's one item open on a folded page, and this is where it happens.
+> The lamp on its tripod is only a lamp. The blankets are where everyone left them. Over the laundromat the sky has gone the colour of the inside of a shell.
+@show daniel neutral at=c
+> He stands at the low wall with his hands on it. You stand next to him. It's cold enough to see your breath, and neither of you minds.
+daniel: It's been more than two minutes.
+you: It has.
+> You've left a great many places without saying the one true thing about them. You're good at it. You'd like, this once, to be bad at it.
+you: I like you, Daniel. Not the night. Not the booth. You, with the list, and you without it.
+you: I've known since the radiator. I wanted to say it somewhere that wasn't about to be switched off.
+> He doesn't pose. His hand doesn't even twitch. He just looks at you, steadily, while the colour comes up in his face like the sky behind him.
+daniel[shy]: Me too. I like you. The larger word. The one that was under "calm."
+daniel: I was going to say it on the stairs and I turned it into a joke about ECHO. I'm sorry. It was a good joke. This is better.
+@cam closeup daniel
+> And there it is, said, by both of you, in the open air, and nothing falls over.
+> He laughs — the low one, the one that doesn't look round afterwards.
+daniel[thinking]: Can I say the next part? Tell me if it's wrong.
+daniel: I don't want to do it all now. At half five. On no sleep, in a cupboard blanket.
+daniel: All night I've been learning that the good part isn't the big finish. If I grab this like a finish, I'll have learnt nothing.
+* [sincere] "I was going to say the same. I always start things the way I leave them. Fast."
+    @rel daniel trust+1
+    you: I'd like to find out what I'm like slow.
+    daniel[smile]: I've seen you slow. You looked at the floor before you pushed a chair. It was the most attractive thing that happened all night.
+* [playful] "So we're agreed. We like each other, and we're going to be extremely unhurried about it."
+    @rel daniel closeness+1
+    daniel[laugh]: The least hurried on record. Songha will have to invent a new kind of schedule.
+* [quiet] Nod. Move your hand along the wall until it's next to his.
+    @rel daniel romance+1
+    > Beside it. Not on it. The edges of your little fingers touching, like the bench. He looks down, and leaves it exactly there.
+daniel[smile]: I do need one thing on a list, though. One. I'm still me.
+you: Go on.
+daniel: The first night it rains in July. The booth outside the arcade in Hongdae, under the useless awning. Nine o'clock.
+daniel: Bring your half of the strip. I'll bring mine. We put them back together, and then we go in and take frame nine.
+you: And if I want to say something before July?
+daniel[laugh]: Then say it. It's not a lock, it's a booth. I'm seeing you next week anyway. I've decided that, if you'll have it.
+daniel[neutral]: July's just so there's one night where we both know. Where neither of us has to wonder if it's a good moment.
+you: What else do I bring?
+daniel: Four thousand won. You still owe me for the first one.
+you: Plus interest.
+daniel[smile]: I'll waive the interest. I'm not waiving the four thousand. It's the principle.
+> You take the pen out of your coat. It's still Songha's. You write it on the back of your half, under his arrow, where *FRAME NINE →* points off the edge of the paper.
+> *First rain of July. 9. The awning. ₩4,000.*
+> He reads it over your arm, and then holds out his own half for you to write it there too, so that both copies say the same thing.
+@if var.danielx_twelve == "blank"
+    > On the folded page there's a twelve with two small words after it, in his writing: *a next one*. He takes the pen and, carefully, adds a date.
+@sfx page
+> Then the sun comes up. It just does it. Over the laundromat, with no help from anyone, one bright edge and then all of it.
+daniel[smile]: Number ten.
+> He gets the list out. He doesn't tick it. He gives you the page, and holds the pen with you, and the two of you make one slightly crooked tick together.
+daniel[smile]: Done. Everything's closed. Songha's going to frame it.
+@show songha neutral at=l
+songha: I can hear you. I'm on the stairs. Breakfast is in nine minutes and I'm two people short.
+daniel: Five more minutes.
+songha[smile]: …You have four.
+@hide songha
+> Four minutes. You spend them doing nothing, side by side at a low wall, with the light coming across the roof and warming one half of each of you.
+> You're not leaving, and nothing is ending. There's a night in July with your name on it, and a week before that with a booth in it, and breakfast in four minutes.
+> For the first time you can remember, there's somewhere you have to be later. Daniel hums. It sounds a little like rain.
+@ending daniel_someday
+@credits

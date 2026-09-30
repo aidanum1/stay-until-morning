@@ -65,7 +65,8 @@ export class Vm {
           case 'ending':
             return this.ctx.endings().includes(String(args[0]));
           case 'endings':
-            return this.ctx.endings().filter((e) => isMember(e)).length;
+            // any of a member's three endings counts as having finished their story
+            return new Set(this.ctx.endings().map((e) => e.split('_')[0]).filter((e) => isMember(e))).size;
           case 'truedone':
             return this.ctx.trueEnding();
           case 'rooms':

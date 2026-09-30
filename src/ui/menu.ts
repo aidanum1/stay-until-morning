@@ -138,7 +138,7 @@ export class MainMenu {
     );
     list.appendChild(item(t('menu.load'), () => this.panels.saves('load'), { disabled: !this.panels.hasAnySave() }));
     list.appendChild(item(t('menu.archive'), () => this.panels.archive()));
-    if (morning) list.appendChild(item(t('menu.new_memories'), () => this.panels.archive(), { cls: 'new-memories', hint: '🌅' }));
+    if (morning) list.appendChild(item(t('menu.new_memories'), () => this.panels.archive(), { cls: 'new-memories' }));
     list.appendChild(item(t('menu.settings'), () => this.panels.settings()));
     list.appendChild(item(t('menu.credits'), () => this.showCredits()));
     list.appendChild(item(t('menu.language'), () => this.panels.settings()));

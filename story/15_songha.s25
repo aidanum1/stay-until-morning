@@ -694,7 +694,7 @@ songha: We should go down.
 songha[smile]: In a minute. {p} I've got a minute. I checked. {p} I didn't check.
 > You go down together. He holds the stairwell door, then lets it swing shut on the roof, the sky, and the laundromat vent breathing out into the dark.
 @time 04:57
-@goto act4_choice
+@goto songha_ch1
 
 === songha_ending
 @chapter ending

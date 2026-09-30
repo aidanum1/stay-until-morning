@@ -22,21 +22,21 @@ songha: No pressure.
 daniel: So much pressure. Historic amounts of pressure. Take your time. You have three minutes.
 @hide all
 * Preserve Hamin's record. {if var.route == "hamin"}
-    @goto hamin_ending
+    @goto hamin_final
 * Preserve Hyunjun's record. {if var.route == "hyunjun"}
-    @goto hyunjun_ending
+    @goto hyunjun_final
 * Preserve Charlie's record. {if var.route == "charlie"}
-    @goto charlie_ending
+    @goto charlie_final
 * Preserve Haruta's record. {if var.route == "haruta"}
-    @goto haruta_ending
+    @goto haruta_final
 * Preserve Justin's record. {if var.route == "justin"}
-    @goto justin_ending
+    @goto justin_final
 * Preserve Songha's record. {if var.route == "songha"}
-    @goto songha_ending
+    @goto songha_final
 * Preserve Hanbi's record. {if var.route == "hanbi"}
-    @goto hanbi_ending
+    @goto hanbi_final
 * Preserve Daniel's record. {if var.route == "daniel"}
-    @goto daniel_ending
+    @goto daniel_final
 * "Tonight. All nine of us."
     @goto friendship_ending
 * [sincere] "We can make new memories." {if endings() >= 8}

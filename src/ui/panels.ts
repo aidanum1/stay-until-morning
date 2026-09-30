@@ -417,8 +417,11 @@ export class Panels {
   private archiveProgress() {
     const p = this.game.persistent;
     const wrap = h('div');
-    const romance = MEMBERS.filter((m) => p.endings.includes(m)).length;
-    const pct = Math.round(((romance + (p.endings.includes('friendship') ? 1 : 0) + (p.trueEnding ? 1 : 0)) / 10) * 100);
+    const romance = MEMBERS.filter((m) => (p.endings as string[]).some((e) => e.split('_')[0] === m)).length;
+    const kinds = ['', '_beside', '_someday'] as const;
+    const has = (id: string) => (p.endings as string[]).includes(id);
+    const reached = MEMBERS.reduce((n, m) => n + kinds.filter((k) => has(m + k)).length, 0);
+    const pct = Math.round(((reached + (has('friendship') ? 1 : 0) + (p.trueEnding ? 1 : 0)) / 26) * 100);
     wrap.append(
       h('p', { class: 'muted' }, t('archive.progress_desc')),
       h('div', { class: 'progress' }, h('i', { style: { width: `${pct}%` } })),
@@ -427,30 +430,40 @@ export class Panels {
         'div',
         { class: 'ending-symbols' },
         ...MEMBERS.map((m) => h('span', { class: p.endings.includes(m) ? 'on' : '', title: t(`name.${m}`) }, CHARACTERS[m].symbol)),
-        h('span', { class: p.endings.includes('friendship') ? 'on' : '', title: t('ending.friendship') }, '📷'),
-        h('span', { class: p.trueEnding ? 'on' : '', title: t('ending.true') }, '🌅'),
+        h('span', { class: p.endings.includes('friendship') ? 'on' : '', title: t('ending.friendship') }, '❖'),
+        h('span', { class: p.trueEnding ? 'on' : '', title: t('ending.true') }, '✧'),
       ),
     );
     const list = h('div');
     for (const m of MEMBERS) {
-      const done = p.endings.includes(m);
       list.appendChild(
         h(
           'div',
           { class: 'card wide' },
           h('div', { class: 'badge' }, CHARACTERS[m].symbol),
-          h('div', { class: 'grow' }, h('b', null, t(`name.${m}`)), h('div', { class: 'muted small' }, done ? t(`route.${m}`) : t('archive.locked_ending'))),
+          h(
+            'div',
+            { class: 'grow' },
+            h('b', null, t(`name.${m}`)),
+            h(
+              'div',
+              { class: 'ending-trio' },
+              ...kinds.map((k) =>
+                h('span', { class: has(m + k) ? 'on' : '' }, has(m + k) ? t(k ? `ending.${m}${k}` : `route.${m}`) : t('archive.locked_ending')),
+              ),
+            ),
+          ),
         ),
       );
     }
     list.appendChild(
-      h('div', { class: 'card wide' }, h('div', { class: 'badge' }, '📷'), h('div', { class: 'grow' }, h('b', null, t('ending.friendship')), h('div', { class: 'muted small' }, p.endings.includes('friendship') ? t('archive.seen') : t('archive.locked_ending')))),
+      h('div', { class: 'card wide' }, h('div', { class: 'badge' }, '❖'), h('div', { class: 'grow' }, h('b', null, t('ending.friendship')), h('div', { class: 'muted small' }, p.endings.includes('friendship') ? t('archive.seen') : t('archive.locked_ending')))),
     );
     list.appendChild(
       h(
         'div',
         { class: 'card wide' },
-        h('div', { class: 'badge' }, '🌅'),
+        h('div', { class: 'badge' }, '✧'),
         h('div', { class: 'grow' }, h('b', null, t('ending.true')), h('div', { class: 'muted small' }, p.trueEnding ? t('archive.seen') : romance >= 8 ? t('archive.true_hint_ready') : t('archive.true_hint', { n: 8 - romance }))),
       ),
     );
@@ -582,7 +595,7 @@ export class Panels {
       symbol: CHARACTERS[m].symbol,
       label: t(`name.${m}`),
     }));
-    items.push({ scene: 'newmem_group', member: null, symbol: '🍳', label: t('archive.newmem_group') });
+    items.push({ scene: 'newmem_group', member: null, symbol: '✦', label: t('archive.newmem_group') });
     for (const it of items) {
       grid.appendChild(
         h(

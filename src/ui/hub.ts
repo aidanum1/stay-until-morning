@@ -98,7 +98,7 @@ export class HubView {
     const run = this.game.run!;
     for (const s of this.spots) {
       const done = s.kind === 'member' && (run.hub === 'act1' ? run.visited.includes(`${s.member}_intro`) : !!run.flags[`${s.member}_postchat`]);
-      const sym = s.kind === 'member' ? CHARACTERS[s.member!].symbol : s.kind === 'doors' ? '🚪' : '◈';
+      const sym = s.kind === 'member' ? CHARACTERS[s.member!].symbol : s.kind === 'doors' ? '▯' : '◈';
       const el = h(
         'button',
         {

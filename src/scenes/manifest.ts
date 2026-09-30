@@ -72,6 +72,14 @@ export const CG_IDS = [
   'cg_hanbi_ending',
   'cg_daniel_moment',
   'cg_daniel_ending',
+  'cg_hamin_drama',
+  'cg_hyunjun_drama',
+  'cg_charlie_drama',
+  'cg_haruta_drama',
+  'cg_justin_drama',
+  'cg_songha_drama',
+  'cg_hanbi_drama',
+  'cg_daniel_drama',
 ] as const;
 
 export const VIDEO_IDS = [
@@ -85,6 +93,14 @@ export const VIDEO_IDS = [
   'vid_hanbi',
   'vid_daniel',
   'vid_true',
+  'vid_hamin_drama',
+  'vid_hyunjun_drama',
+  'vid_charlie_drama',
+  'vid_haruta_drama',
+  'vid_justin_drama',
+  'vid_songha_drama',
+  'vid_hanbi_drama',
+  'vid_daniel_drama',
 ] as const;
 
 export const MUSIC_IDS = [

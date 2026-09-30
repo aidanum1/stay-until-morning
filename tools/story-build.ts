@@ -34,7 +34,7 @@ export interface BuildResult {
 
 const SPEAKERS = new Set<string>([...MEMBERS, ...EXTRA_SPEAKERS]);
 const FUNCS = new Set(['seen', 'ending', 'endings', 'truedone', 'rooms', 'bond', 'top', 'onstage']);
-const ENDING_IDS = new Set<string>([...MEMBERS, 'friendship', 'true']);
+const ENDING_IDS = new Set<string>([...MEMBERS, ...MEMBERS.map((m) => `${m}_beside`), ...MEMBERS.map((m) => `${m}_someday`), 'friendship', 'true']);
 const UNLOCK_KINDS = new Set(['cg', 'memory', 'music', 'cinematic']);
 
 export function storyFiles(): string[] {

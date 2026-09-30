@@ -32,7 +32,7 @@ interface SimResult {
  * Plays the whole game with a policy. `favour` = member the bot leans toward.
  * Mirrors Game.step/enterHub logic closely enough to catch dead ends.
  */
-function simulate(seed: number, favour: CharId | null, endings: string[] = [], opts: { notYet?: boolean; roomOrder?: CharId[] } = {}): SimResult {
+function simulate(seed: number, favour: CharId | null, endings: string[] = [], opts: { notYet?: boolean; roomOrder?: CharId[]; final?: 'beside' | 'someday' } = {}): SimResult {
   const r = rng(seed);
   const run = freshRun('Sim');
   const vm = new Vm({ scenes: story.scenes }, run, { endings: () => endings, trueEnding: () => endings.includes('true') });
@@ -89,6 +89,11 @@ function simulate(seed: number, favour: CharId | null, endings: string[] = [], o
           const idx = texts.findIndex((t) => t.toLowerCase().includes(favour));
           pick = idx >= 0 ? ev.choices[idx] : ev.choices[0];
         } else pick = ev.choices.find((c) => story.text[c.k].startsWith('"Tonight'))!;
+      }
+      // the last thing said at 04:57 decides which of a member's three endings plays
+      if (run.scene.endsWith('_final')) {
+        const n = ev.choices.length; // [romance?], beside, someday
+        pick = opts.final === 'someday' ? ev.choices[n - 1] : opts.final === 'beside' ? ev.choices[n - 2] : ev.choices[0];
       }
       vm.choose(pick.index);
       continue;
@@ -190,9 +195,17 @@ describe('playthrough simulation', () => {
         const r = simulate(seed * 7 + 3, m);
         if (r.ending === m) ok++;
         expect(r.ending, `seed ${seed}`).not.toBeNull();
+        expect([m, `${m}_beside`], `seed ${seed}`).toContain(r.ending);
+        for (let c = 1; c <= 6; c++) expect(r.scenes.has(`${m}_ch${c}`), `${m}_ch${c}`).toBe(true);
       }
-      // favouring a member should almost always unlock their route
+      // favouring a member should almost always earn the romance ending
       expect(ok).toBeGreaterThanOrEqual(11);
+    });
+    it(`reaches ${m}'s "beside" and "someday" endings`, () => {
+      for (let seed = 1; seed <= 4; seed++) {
+        expect(simulate(seed * 5 + 1, m, [], { final: 'beside' }).ending).toBe(`${m}_beside`);
+        expect(simulate(seed * 5 + 2, m, [], { final: 'someday' }).ending).toBe(`${m}_someday`);
+      }
     });
   }
   it('reaches the true ending once all eight are done', () => {

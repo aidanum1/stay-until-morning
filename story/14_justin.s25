@@ -695,7 +695,8 @@ justin[smile]: Songha's going to say we're late.
 justin: We're not late. We're exactly on the count.
 > He stands and offers you a hand up. You take it. He lets go once you're on your feet — a beat later than he needs to.
 @time 04:57
-@goto act4_choice
+@call echo_refund
+@goto justin_ch1
 
 === justin_ending
 @chapter ending

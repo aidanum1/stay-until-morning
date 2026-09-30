@@ -702,7 +702,7 @@ charlie: That's us.
 charlie[smile]: No, wait. Not "after you." Together. Same time. Nobody leaves first.
 > You go down the stairs side by side, which on a staircase this narrow is not efficient at all. Neither of you suggests otherwise.
 @time 04:57
-@goto act4_choice
+@goto charlie_ch1
 
 === charlie_ending
 @chapter ending

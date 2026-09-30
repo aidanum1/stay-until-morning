@@ -714,7 +714,7 @@ hamin: That's us.
 > He stacks the cups — all nine — and puts them in the bin behind the counter, which of course he knows the location of.
 > At the door, he stops, and waits for you. Not ahead. Not behind. Level.
 @time 04:57
-@goto act4_choice
+@goto hamin_ch1
 
 === hamin_ending
 @chapter ending

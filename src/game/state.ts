@@ -130,7 +130,7 @@ export function defaultSettings(): Settings {
   };
 }
 
-export type EndingId = CharId | 'friendship' | 'true';
+export type EndingId = CharId | `${CharId}_beside` | `${CharId}_someday` | 'friendship' | 'true';
 
 export interface Persistent {
   v: number;

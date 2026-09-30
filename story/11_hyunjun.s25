@@ -723,7 +723,7 @@ hyunjun[laugh]: It's apologising. It's learning so much tonight. We're raising i
 > He starts toward the stairs. Then he stops, turns, and walks back the three steps to you.
 hyunjun: Walk down with me? Slowly. Not on purpose. Just — slowly.
 @time 04:57
-@goto act4_choice
+@goto hyunjun_ch1
 
 === hyunjun_ending
 @chapter ending

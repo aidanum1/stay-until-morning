@@ -717,7 +717,7 @@ daniel: Oh. Okay. That's us.
 @else
     > He stands, and pulls you up by the hand, and lets go a second later than he needs to.
 @time 04:57
-@goto act4_choice
+@goto daniel_ch1
 
 === daniel_ending
 @chapter ending
