@@ -95,6 +95,6 @@ Planned: 8 × gpt_image_2_5 high with identity reference (1.5) = 12, then 8 × k
 | 181–183 | 3 × gpt_image_2_5 high redo stills (identity + real photo refs, slim build, character wardrobe) | hyunjun, justin, daniel | replaces rejected stills | ≈4.5–6 | tbc | ✔ | jobs.json dramaStillsV2 |
 | 184 | gpt_image_2_5 high, Daniel black leather jacket (producer request) | daniel | replaces iridescent jacket still | ≈1.5–2 | tbc | submitted | 7742a18d |
 | 185–186 | 2 × kling3_0 5 s redo videos | hyunjun, justin | replace rejected clips | 17.5 | 17.5 | submitted | jobs.json dramaVideosV2 |
-| 187 | kling3_0 5 s redo video | daniel | leather-jacket clip | 8.75 | 8.75 | submitted | b649cf9f |
+| 187 | kling3_0 5 s redo video | daniel | leather-jacket clip | 8.75 | 8.75 | ✔ delivered | b649cf9f |
 
 **After this redo: spent ≈ 532 of 550 · remaining ≈ 18–19.** Reserve partly used with the producer's explicit authorisation. No further generation.
