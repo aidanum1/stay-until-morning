@@ -119,3 +119,10 @@ Image costs for the redo stills were not itemised; worst case (2.75 each × 4) p
 
 **Bonus used: 97 of 150 · bonus remaining ≈ 53.** Trailers were edited locally (tools/trailer.swift, tools/make-trailers.py) at no credit cost.
 Rule from the producer: drinks in art must not read as alcohol — use milk cartons, paper cups, tea.
+| B56 | gpt_image_2_5 high, cg_hamin_moment redo (strawberry milk instead of can) | hamin | replaces original still | 1.5 | 1.5 | ✔ | 443fb58d |
+| B57 | kling3_0 5 s, vid_hamin redo from that still | hamin | replaces original cinematic | 8.75 | 8.75 | submitted | see jobs.json |
+| B57 | (first vid_hamin redo — discarded: start still had a twisted neck) | hamin | — | 8.75 | 8.75 | wasted | 7f9ad7dd |
+| B58–B59 | 2 × gpt_image_2_5 redo: cg_hamin_moment (facing viewer, strawberry milk), cg_hamin_x3 (facing viewer) | hamin | fix "owl neck" | 3.0 | 3.0 | ✔ | 04e40a92, b9f87d81 |
+| B60 | kling3_0 5 s vid_hamin from the corrected still | hamin | replaces original cinematic | 8.75 | 8.75 | ✔ delivered | ac7f0acf |
+
+**Bonus used: ≈119 of 150 · bonus remaining ≈ 31.**

@@ -164,7 +164,7 @@ def portrait():
         t += 2.0
     ov.append({'image': tag('p_eight.png', S, 'Eight memories', 0.925, 34), 'start': 3.2, 'dur': 7.6})
     ov.append({'image': tag('p_choice.png', S, 'One choice at 04:57', 0.925, 34), 'start': 11.2, 'dur': 7.6})
-    for f, frm in [('vid_songha.mp4', 1.2), ('vid_justin.mp4', 1.2)]:
+    for f, frm in [('vid_hamin.mp4', 1.2), ('vid_justin.mp4', 1.2)]:
         segs.append({'dur': 2.5, 'panels': [{'file': v(f), 'from': frm, 'rect': full}]})
     ov.append({'image': caption('p_end24.png', S, 'Twenty-four endings.', 0.80, 74, sub='A romance visual novel in four languages'), 'start': 19.2, 'dur': 4.6})
     segs.append({'dur': 2.5, 'panels': [{'file': v('vid_true.mp4'), 'from': 1.0, 'rect': full}]})
@@ -190,7 +190,7 @@ def landscape():
         t += 4.5
     ov.append({'image': tag('l_eight.png', S, 'Eight memories  ·  One choice at 04:57', 0.955, 24), 'start': 4.4, 'dur': 8.4})
     w = 1920 / 3
-    for trio, text in ((['vid_songha.mp4', 'vid_charlie.mp4', 'vid_daniel.mp4'], None), (['vid_haruta.mp4', 'vid_justin.mp4', 'vid_hanbi.mp4'], None)):
+    for trio, text in ((['vid_hamin.mp4', 'vid_charlie.mp4', 'vid_daniel.mp4'], None), (['vid_haruta.mp4', 'vid_justin.mp4', 'vid_hanbi.mp4'], None)):
         segs.append({'dur': 3.0, 'panels': [{'file': v(f), 'from': 1.2, 'rect': [i * w + gap, 0, w - 2 * gap, 1080], 'anchorY': 0.25} for i, f in enumerate(trio)]})
     ov.append({'image': caption('l_end24.png', S, 'Twenty-four endings.', 0.84, 70, sub='A romance visual novel in four languages'), 'start': 13.3, 'dur': 5.4})
     segs.append({'dur': 4.0, 'panels': [{'file': str(WORK / 'lobby_morning.mp4'), 'from': 0.6, 'rect': full, 'anchorY': 0.5}]})
