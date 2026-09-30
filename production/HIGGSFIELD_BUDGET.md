@@ -86,6 +86,15 @@ Result: 30.7k tris, 24 bones, one 2K albedo. Coat/trousers/shoes usable; **face 
 ### 2026-09-30 — "Drama wardrobe" cinematics (producer request: more videos, new clothes/environments per story, love-interest styling)
 Planned: 8 × gpt_image_2_5 high with identity reference (1.5) = 12, then 8 × kling3_0 5 s from those stills (8.75) = 70. Planned total 82 → remaining ≈ 51.5 (reserve 50 intact, 1.5 spare). **No retries possible after this batch without touching the reserve.**
 | 165–172 | 8 × gpt_image_2_5 high "drama wardrobe" stills (ref = identity) | all | new outfits + story environments | 12.0 | 12.0 | ✔ | jobs.json dramaStills |
-| 173–180 | 8 × kling3_0 5 s from those stills | all | drama cinematics | 70.0 | 70.0 | submitted | jobs.json dramaVideos |
+| 173–180 | 8 × kling3_0 5 s from those stills | all | drama cinematics | 70.0 | 70.0 | ✔ delivered | jobs.json dramaVideos |
 
 **Confirmed spent: ≈498.5 · Remaining: ≈51.5** — only the 50-credit emergency reserve (+1.5) is left. No further generation without the producer's explicit say-so.
+
+### 2026-09-30 — Drama redo for Hyunjun, Justin, Daniel (producer feedback: builds too big, clothes off-character)
+**Producer explicitly authorised the emergency reserve for this ("Use reserve, up to 4 members").** Planned: 3 × gpt_image_2_5 high with identity + real reference photo (≈1.5–2 each) + 3 × kling3_0 5 s (8.75) ≈ 31–32. Expected remaining ≈ 20. Fix: slender idol builds taken from the reference photos; wardrobe derived from each member's signature style in CHARACTER_BIBLE (Hyunjun street bomber/pink, Justin loose dancer layers/red, Daniel iridescent jacket).
+| 181–183 | 3 × gpt_image_2_5 high redo stills (identity + real photo refs, slim build, character wardrobe) | hyunjun, justin, daniel | replaces rejected stills | ≈4.5–6 | tbc | ✔ | jobs.json dramaStillsV2 |
+| 184 | gpt_image_2_5 high, Daniel black leather jacket (producer request) | daniel | replaces iridescent jacket still | ≈1.5–2 | tbc | submitted | 7742a18d |
+| 185–186 | 2 × kling3_0 5 s redo videos | hyunjun, justin | replace rejected clips | 17.5 | 17.5 | submitted | jobs.json dramaVideosV2 |
+| 187 | kling3_0 5 s redo video | daniel | leather-jacket clip | 8.75 | 8.75 | submitted | b649cf9f |
+
+**After this redo: spent ≈ 532 of 550 · remaining ≈ 18–19.** Reserve partly used with the producer's explicit authorisation. No further generation.

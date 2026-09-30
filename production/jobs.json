@@ -182,5 +182,16 @@
   "test3d": {
     "hamin_apose": "20e93a74-66cb-4518-95b4-973ae9a62503",
     "hamin_glb": "6d03bf38-9a38-40ec-bddf-38522c5ccbc9"
+  },
+  "dramaStillsV2": {
+    "hyunjun": "528d986e-1564-4abf-b01b-073b18c64b42",
+    "justin": "218d23d3-a445-440a-8f8f-182c8cb4051a",
+    "daniel": "f81036af-d9bc-44e6-b6e9-5bd1c215da50",
+    "daniel_v3_leather": "7742a18d-720f-4755-ad34-ed87d9b392d6"
+  },
+  "dramaVideosV2": {
+    "hyunjun": "b9dd7ce7-9b94-4e8e-b0b2-49a0b79e381b",
+    "justin": "37613622-c58b-4699-b02d-d354fadbe798",
+    "daniel": "b649cf9f-67b8-4762-b9e4-d7ebcf044538"
   }
 }
