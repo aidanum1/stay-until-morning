@@ -67,7 +67,7 @@ export function buildLocales(opts: { quiet?: boolean } = {}) {
     for (const e of readdirSync(d, { withFileTypes: true })) {
       const p = join(d, e.name);
       if (e.isDirectory()) walk(p);
-      else if (/\.(webp|png|jpg|mp4|webm|glb)$/.test(e.name)) files.push(p.slice(pub.length + 1).split('\\').join('/'));
+      else if (/\.(webp|png|jpg|mp4|webm|glb|m4a|mp3|ogg)$/.test(e.name)) files.push(p.slice(pub.length + 1).split('\\').join('/'));
     }
   };
   walk(join(pub, 'assets'));

@@ -252,6 +252,29 @@ class Ambience {
 
 // ------------------------------------------------------------ engine
 
+/** Recorded soundtrack: five tracks cover the eighteen music cues. */
+const MUSIC_FILES: Record<string, string> = {
+  title_night: 'night',
+  studio: 'night',
+  quiet: 'quiet',
+  memory: 'quiet',
+  hamin: 'quiet',
+  hyunjun: 'quiet',
+  charlie: 'quiet',
+  haruta: 'quiet',
+  justin: 'quiet',
+  songha: 'quiet',
+  hanbi: 'quiet',
+  daniel: 'quiet',
+  echo: 'echo',
+  tension: 'echo',
+  fun: 'fun',
+  dawn: 'dawn',
+  title_morning: 'dawn',
+  credits: 'dawn',
+};
+const FILE_MUSIC_GAIN = 0.7;
+
 export class AudioEngine {
   ctx: Ctx | null = null;
   private master!: GainNode;
@@ -261,6 +284,8 @@ export class AudioEngine {
   private musicGain: GainNode | null = null;
   private seq: Sequencer | null = null;
   private musicEl: HTMLAudioElement | null = null;
+  private musicFile: string | null = null;
+  private musicLoopTimer = 0;
   private amb: Ambience | null = null;
   private ambGain: GainNode | null = null;
   private ambEl: HTMLAudioElement | null = null;
@@ -309,7 +334,7 @@ export class AudioEngine {
     this.musicBus.gain.value = this.vol.music;
     this.ambBus.gain.value = this.vol.amb;
     this.sfxBus.gain.value = this.vol.sfx;
-    if (this.musicEl) this.musicEl.volume = this.vol.music * m;
+    if (this.musicEl) this.musicEl.volume = this.vol.music * m * FILE_MUSIC_GAIN;
     if (this.ambEl) this.ambEl.volume = this.vol.amb * m;
   }
 
@@ -317,6 +342,11 @@ export class AudioEngine {
     if (id === this.current && !force) return;
     this.current = id;
     if (!this.ctx) return;
+    const wanted = id ? `assets/audio/music/${MUSIC_FILES[id] ?? id}.m4a` : null;
+    // several ids share one recorded track: keep it playing instead of restarting
+    if (wanted && wanted === this.musicFile && this.musicEl && !this.musicEl.paused) return;
+    clearInterval(this.musicLoopTimer);
+    this.musicFile = null;
     // fade out old
     const oldGain = this.musicGain;
     const oldSeq = this.seq;
@@ -342,13 +372,38 @@ export class AudioEngine {
     this.musicGain = null;
     this.musicEl = null;
     if (!id) return;
-    const file = `assets/audio/music/${id}.mp3`;
+    const file = wanted!;
     if (hasAsset(file)) {
-      const el = new Audio(assetUrl(file));
-      el.loop = true;
-      el.volume = this.vol.music * (this.muted ? 0 : this.vol.master);
-      void el.play().catch(() => undefined);
-      this.musicEl = el;
+      this.musicFile = file;
+      const target = () => this.vol.music * (this.muted ? 0 : this.vol.master) * FILE_MUSIC_GAIN;
+      const start = () => {
+        const el = new Audio(assetUrl(file));
+        el.volume = 0;
+        void el.play().catch(() => undefined);
+        this.musicEl = el;
+        return el;
+      };
+      let el = start();
+      let fadeIn = 0;
+      // recorded tracks are not cut as perfect loops: overlap the tail with a fresh copy and crossfade
+      const OVERLAP = 2.4;
+      let out: HTMLAudioElement | null = null;
+      this.musicLoopTimer = window.setInterval(() => {
+        fadeIn = Math.min(1, fadeIn + 0.06);
+        el.volume = target() * fadeIn;
+        if (out) {
+          out.volume = Math.max(0, out.volume - target() * 0.06);
+          if (out.volume <= 0.005) {
+            out.pause();
+            out = null;
+          }
+        }
+        if (el.duration && el.duration - el.currentTime < OVERLAP && !out) {
+          out = el;
+          el = start();
+          fadeIn = 0;
+        }
+      }, 100);
       return;
     }
     const def = TRACKS[id];

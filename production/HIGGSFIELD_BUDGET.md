@@ -98,3 +98,9 @@ Planned: 8 × gpt_image_2_5 high with identity reference (1.5) = 12, then 8 × k
 | 187 | kling3_0 5 s redo video | daniel | leather-jacket clip | 8.75 | 8.75 | ✔ delivered | b649cf9f |
 
 **After this redo: spent ≈ 532 of 550 · remaining ≈ 18–19.** Reserve partly used with the producer's explicit authorisation. No further generation.
+
+### 2026-09-30 — Soundtrack (producer request: "make a real game music ... using higgsfield mcp")
+Image costs for the redo stills were not itemised; worst case (2.75 each × 4) puts spend at ≤ 535.75. Planned: 5 × sonilo_music 40 s at 2.5 = 12.5 → worst-case total 548.25, under the 550 hard limit. Tracks: night, quiet, echo, fun, dawn (aliased to the 18 music ids). This is the last spend possible.
+| 188–192 | 5 × sonilo_music 40 s (night, quiet, echo, fun, dawn) | — | recorded soundtrack replacing the procedural music | 12.5 | 12.5 | ✔ | jobs.json music |
+
+**Final: spent ≈ 543–548 of 550. Budget exhausted — no further Higgsfield generation.**
