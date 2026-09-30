@@ -5,7 +5,7 @@ usage: make-sprites.py [member ...]
 Reads  assets/generated/expr/<member>_<expr>.png
 Writes public/assets/characters/<member>/<expr>.webp  (752x1344, RGBA — full source resolution)
 
-Background removal runs locally with rembg (free), so no Higgsfield credits are used.
+Background removal runs locally with rembg / BiRefNet-portrait (free), so no Higgsfield credits are used.
 All expressions of a member share the same source framing, so we never crop to the
 subject's bounding box — that keeps the head in the same place across expressions.
 """
@@ -19,16 +19,18 @@ OUT = ROOT / 'public' / 'assets' / 'characters'
 W, H = 752, 1344
 
 members = sys.argv[1:] or sorted({p.name.split('_')[0] for p in SRC.glob('*.png')})
-session = new_session('isnet-general-use')
+# birefnet-portrait keeps whole garments (light sleeves, dark coats) that isnet dropped
+session = new_session('birefnet-portrait')
 
 for m in members:
     for src in sorted(SRC.glob(f'{m}_*.png')):
         expr = src.stem.split('_', 1)[1]
         dst = OUT / m / f'{expr}.webp'
-        if dst.exists() and Image.open(dst).size == (W, H):
+        marker = dst.parent / ('.' + dst.stem + '.v2cut')
+        if dst.exists() and marker.exists():
             continue
         img = Image.open(src).convert('RGBA')
-        cut = remove(img, session=session, post_process_mask=True)
+        cut = remove(img, session=session)
         # soften the matte edge a touch so hair strands don't look cut with scissors
         a = cut.getchannel('A').filter(ImageFilter.GaussianBlur(0.6))
         cut.putalpha(a)
@@ -41,6 +43,10 @@ for m in members:
         canvas.paste(cut.crop((0, 0, W, min(nh, H))) if nh > H else cut, (0, max(0, y)))
         dst.parent.mkdir(parents=True, exist_ok=True)
         canvas.save(dst, 'WEBP', quality=88, method=6)
+        faded = dst.parent / ('.' + dst.stem + '.faded')
+        if faded.exists():
+            faded.unlink()
+        marker.touch()
         # coverage sanity: how much of the frame is opaque
         cov = sum(1 for p in canvas.getchannel('A').getdata() if p > 128) / (W * H)
         print(f'{m}/{expr}: {dst.stat().st_size // 1024} KB, coverage {cov:.2f}')

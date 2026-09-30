@@ -202,10 +202,82 @@ function noiseBuffer(ctx: Ctx, seconds = 2) {
   return buf;
 }
 
+/**
+ * Rain is not filtered hiss: it is thousands of separate drops. Build a stereo loop out of short
+ * decaying ticks (near drops), a softer dense bed (far drops) and a little low roof rumble.
+ */
+function rainBuffer(ctx: Ctx, seconds = 7) {
+  const sr = ctx.sampleRate;
+  const n = Math.floor(sr * seconds);
+  const buf = ctx.createBuffer(2, n, sr);
+  for (let ch = 0; ch < 2; ch++) {
+    const d = buf.getChannelData(ch);
+    // far bed: white noise through a one-pole high-pass and low-pass (roughly 700 Hz – 7 kHz), steady
+    let lp = 0;
+    let hp = 0;
+    let rum = 0;
+    for (let i = 0; i < n; i++) {
+      const w = Math.random() * 2 - 1;
+      lp += 0.55 * (w - lp);
+      hp += 0.09 * (lp - hp);
+      rum += 0.004 * (w - rum);
+      d[i] = (lp - hp) * 0.2 + rum * 1.4;
+    }
+    // near drops: each is a 2–9 ms burst with its own brightness, loudness and a fast decay
+    const drops = Math.floor(seconds * 230);
+    for (let k = 0; k < drops; k++) {
+      const at = Math.floor(Math.random() * (n - 800));
+      const len = Math.floor(sr * (0.002 + Math.random() * 0.007));
+      const amp = Math.pow(Math.random(), 3) * 0.55 + 0.03;
+      const bright = 0.25 + Math.random() * 0.7;
+      let y = 0;
+      for (let i = 0; i < len; i++) {
+        y += bright * (Math.random() * 2 - 1 - y);
+        d[at + i] += y * amp * Math.exp((-5 * i) / len);
+      }
+    }
+    // a few heavier drips off a ledge: short pitched plops
+    const drips = Math.floor(seconds * 2.2);
+    for (let k = 0; k < drips; k++) {
+      const at = Math.floor(Math.random() * (n - 4000));
+      const f = 900 + Math.random() * 1600;
+      const len = Math.floor(sr * 0.035);
+      const amp = 0.05 + Math.random() * 0.07;
+      for (let i = 0; i < len; i++) {
+        const t = i / sr;
+        d[at + i] += Math.sin(2 * Math.PI * f * (1 + 6 * t) * t) * amp * Math.exp(-t * 90);
+      }
+    }
+    // make the loop seamless: crossfade the last 0.25 s into the first
+    const x = Math.floor(sr * 0.25);
+    for (let i = 0; i < x; i++) {
+      const k = i / x;
+      d[i] = d[i] * k + d[n - x + i] * (1 - k);
+    }
+  }
+  return buf;
+}
+
 class Ambience {
   nodes: AudioNode[] = [];
   lfo?: OscillatorNode;
   constructor(ctx: Ctx, out: GainNode, id: string) {
+    if (id === 'rain') {
+      const src = ctx.createBufferSource();
+      const full = rainBuffer(ctx);
+      src.buffer = full;
+      src.loop = true;
+      src.loopEnd = full.duration - 0.25;
+      const tone = ctx.createBiquadFilter();
+      tone.type = 'lowpass';
+      tone.frequency.value = 9000;
+      const g = ctx.createGain();
+      g.gain.value = 0.55;
+      src.connect(tone).connect(g).connect(out);
+      src.start();
+      this.nodes = [src, tone, g];
+      return;
+    }
     const src = ctx.createBufferSource();
     src.buffer = noiseBuffer(ctx);
     src.loop = true;
