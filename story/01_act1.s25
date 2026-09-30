@@ -1,0 +1,192 @@
+# ACT I — People I Almost Remember (group scenes)
+# act1_gather runs automatically once all eight intros are seen.
+# SPEECH: Hamin and Haruta are still polite with {{playerName}} here (ko 존댓말 / ja です・ます).
+
+=== act1_gather
+@time 01:05
+@bg studio_lobby t=fade
+@music echo
+@sfx chime
+@hide all
+@cam wide
+> The Archive Wall brightens, all at once, the way a room goes quiet when someone taps a glass.
+> One by one, the others drift in from the corners of the lobby. Hyunjun is still holding half a conversation with nobody. Justin is still mid-spin.
+@textbox echo
+echo: Recipients. Thank you. All nine of you have now spoken to each other.
+echo: This is ahead of schedule.
+@textbox normal
+@show songha thinking at=l
+songha: There was a schedule?
+@textbox echo
+echo: I made an estimate. It was pessimistic. I am pleased to be wrong.
+@textbox normal
+@show daniel laugh at=r
+daniel: It's pleased. The building has feelings. Great. Love that.
+@hide all
+@textbox echo
+echo: I will now explain the rules of the night. There are not many. I have kept them short.
+echo: On the second floor is the Hall of Doors. There are eight doors. Each door is one record.
+echo: Each record opens only with its owner's consent. Nobody else can open it for them. Not even me.
+echo: A door will not open because someone else is curious.
+@textbox normal
+@show charlie smile at=c
+charlie: Okay, that's actually kind of nice. Polite building.
+@textbox echo
+echo: One more rule.
+echo: Each room also requires Recipient {{playerName}} to be present.
+@textbox normal
+@cam wide
+> For the second time tonight, eight heads turn towards you. It is less alarming the second time. Only slightly.
+@show charlie surprised at=c
+charlie: Wait. What's happening? Why do they have to come?
+@show songha thinking at=l
+songha: ECHO. Why is {{playerName}} required?
+@textbox echo
+echo: Because it is required.
+@textbox normal
+songha[neutral]: That's not an answer. That's the question with a full stop on it.
+@textbox echo
+echo: Yes. I will give a better answer when I have one. I am still looking.
+@textbox normal
+@show hyunjun laugh at=r
+hyunjun: So {{playerName}} is, like, the special guest. At all eight parties. That's a lot of parties.
+songha[thinking]: Or the rooms need a reference point. A second witness. Something to reconstruct around.
+hyunjun: Special guest.
+songha: …Fine. Special guest.
+@hide all
+@show daniel smile at=c
+daniel: Okay, {{playerName}}. How do you feel about being everyone's plus-one?
+* [playful] "I've been dragged to worse things at one in the morning."
+    @rel daniel closeness+1
+    @rel hyunjun closeness+1
+    daniel[laugh]: Name one.
+    you: This morning I thought I'd be asleep.
+    daniel: Oh, that's so much worse. You're right. This is better.
+* [sincere] "I don't know why it's me. But if you want me there, I'll come."
+    @rel songha trust+1
+    @rel hanbi trust+1
+    daniel[smile]: …Yeah. Okay. That's a good answer. I was hoping for a funny one, but that's better.
+* [quiet] Shrug, and look up towards the stairs.
+    @rel hamin trust+1
+    > Whatever is up there, it has been waiting longer than you have. You can wait with it a little.
+    daniel: That's a shrug of acceptance. I'm counting it.
+@hide all
+@cam wide
+> The mood in the lobby shifts. Not heavier. Just more careful, the way people get before opening a letter.
+@show daniel laugh at=r
+daniel: I'm going first. Obviously. Is there a line? I'm starting the line.
+@show justin smile at=l
+justin: You can't start a line with one person.
+daniel: I just did. Look at it. Beautiful line.
+@hide justin
+@show charlie thinking at=l
+charlie: What if mine is embarrassing, though? Like, what if I sent a video of me singing?
+@show justin laugh at=c
+justin: It's definitely embarrassing. I believe in you.
+@textbox echo
+echo: Records are not embarrassing. They are only old.
+@textbox normal
+charlie[laugh]: That's worse! That's so much worse!
+@hide all
+> Not everyone laughs.
+@show hanbi thinking at=l
+> Hanbi is sitting on the arm of the sofa with his sketchbook closed on his knees. He hasn't said anything since the word *consent*.
+hanbi: I think I'd… rather wait. For a bit.
+@show haruta shy at=r
+haruta: Is it alright if I don't decide yet, either? I'm sorry. I'm not sure what's in mine.
+@show hamin neutral at=c
+hamin: Nobody has to open anything.
+> He says it to the room, but he is looking at Hanbi and Haruta. Then, briefly, at you.
+hamin: Tonight, or ever. That's how I understood it.
+@textbox echo
+echo: That is correct. Thank you, Recipient Hamin. You explained it more gently than I did.
+@textbox normal
+@hide all
+@show songha smile at=l
+songha: Right. That's rule one, then. Nobody has to open anything.
+> He writes it down. He actually writes it down, in a small notebook, and underlines it twice.
+songha: Rule two: we go up together. Nobody sits in a room with a talking building alone.
+@show hyunjun smile at=r
+hyunjun: Can rule three be snacks?
+songha: Rule three is snacks. Fine.
+@show justin laugh at=c
+justin: Rule four. If it gets weird in there, I'm allowed to dance until it stops being weird.
+songha: That's not a rule. That's a threat.
+justin: It's both. Most good rules are.
+@hide all
+@show hanbi smile at=c
+@cam closeup hanbi
+hanbi: {{playerName}}. You're really okay with this? Eight rooms. That's… a lot of other people's things.
+* [sincere] "Only the doors someone wants opened. Only if they want me there."
+    @rel hanbi trust+1
+    @rel haruta trust+1
+    hanbi: …Okay.
+    > He nods once, slowly, as if he is filing it somewhere safe.
+* [playful] "Ask me again at four a.m."
+    @rel hanbi closeness+1
+    @rel charlie closeness+1
+    hanbi[laugh]: That's fair.
+    charlie: At four a.m. I'm going to be asleep on that sofa. Just so everyone knows.
+* [quiet] Hand him the pencil that's slipped from behind his ear.
+    @rel hanbi closeness+1
+    hanbi[surprised]: Oh. Thank you. I didn't—
+    > He tucks it back without finishing the sentence. That seems to be the whole sentence.
+@hide all
+@cam wide
+@textbox echo
+echo: The Hall of Doors is open. Please go up when you are ready. Or do not. Both are allowed.
+@textbox normal
+@music memory
+@bg studio_hall t=fade
+@amb none
+@fx memory n=0.8
+@cam reveal
+> The stairs creak exactly where they used to. The second floor is a long corridor you don't remember being this long.
+> Eight doors line the hall, four on each side, and every one of them is glowing faintly from the inside, like a paper lantern.
+> On each door, drawn in thin light, a symbol.
+> A wave, cresting. A city skyline at night, its windows lit. A small, round sun.
+> A frame of film. A pair of headphones. A single star.
+> A pencil, mid-line. And at the end, a rainbow, a little lopsided, as if it was drawn in a hurry.
+@show charlie surprised at=c
+charlie: That one's mine. The sun. I don't know how I know that. I just do.
+@show daniel laugh at=r
+daniel: The rainbow's mine. It's wonky. That's so accurate it's rude.
+@show songha thinking at=l
+> Songha stops in front of the star and doesn't say anything at all, which may be the most surprising thing he has done so far.
+@hide all
+> Eight doors. Eight people standing a careful distance from their own.
+> And you, in the middle of the hall, required.
+@chapter act2
+@autosave
+@hub act2
+
+=== hub_echo
+@textbox echo
+@if not seen(act1_gather)
+    echo: RECIPIENTS PRESENT: 9. RECORDS SEALED: 8. STATUS: TALKING.
+    echo: Please continue. Statistically, it is going well.
+    echo: The founder placed this terminal at the height of a person sitting down. She said people tell the truth sitting down.
+    echo: You are standing. That is also fine.
+@elif rooms() == 0
+    echo: HALL OF DOORS: OPEN. RECORDS RETURNED: 0. RECIPIENTS WAITING: 9.
+    echo: Nobody has opened a door yet. I am not rushing anyone.
+    echo: I have until 05:00. For me, that is a very long time.
+@elif rooms() < 4
+    echo: RECORDS RETURNED: SOME. RECORDS REMAINING: SOME. I am being vague on purpose. It seemed friendlier.
+    echo: Observation: recipients laugh louder after a record is returned. I do not know why.
+    echo: I have logged it anyway.
+@elif rooms() < 6
+    echo: The founder kept a jar of pencils on the front desk. She never bought a single pencil.
+    echo: They simply accumulated. She called this "community."
+    echo: There are forty-one pencils in the jar tonight. One of them is Recipient Hanbi's. He has not noticed yet.
+@else
+    @if seen(interlude_3)
+        echo: RECORD 09 — STATUS: READY.
+        echo: It will wait until you are. I am very good at waiting. I have had practice.
+    echo: Observation: it is very quiet now. The rain has stopped. Somebody is snoring on the sofa.
+    echo: I think I like this part of the night best. I did not know I could have a best part.
+@textbox normal
+@if seen(act1_gather)
+    @hub act2
+@else
+    @hub act1

@@ -1,0 +1,879 @@
+# HAMIN — "The Things You Notice"
+# Route theme: being noticed. Romance through small acts of attention, not declarations.
+# Speech: polite (KO 존댓말 / JA です・ます) until the SPEECH SHIFT inside hamin_room; casual after.
+# Seeds used: var.drink (prologue vending machine), flag.cold (prologue "Are you cold?").
+# Running details: the laundromat song, corn tea, 2:47 (the laugh's timestamp), "next time", eight cups.
+
+=== hamin_intro
+@show hamin neutral at=c
+@cam closeup hamin
+> Hamin is standing by the front desk holding a roll of paper towels he did not have ten minutes ago.
+> He tears off three squares, folds them once, and sets them on the sofa arm beside Charlie, whose hair is still dripping onto an old flyer.
+@show charlie surprised at=l
+charlie: Oh. Thanks. Wait, where did you even find these?
+hamin: Staff bathroom. Second shelf.
+charlie: How do you know there's a staff bathroom?
+hamin: The door says "staff".
+charlie[laugh]: Okay. Yeah. That tracks.
+@hide charlie
+> Justin drifts past behind the sofa, lifts a packet of crackers out of Hyunjun's jacket pocket without breaking stride, and keeps drifting.
+hamin: He hasn't eaten since lunch. Hyunjun knows. That's why he always buys two.
+> He says it quietly, to nobody in particular. Then he looks at you, and then, briefly, at the empty can you still haven't found a bin for.
+@if var.drink == "peach"
+    hamin: Peach iced tea. In the rain.
+    hamin: That's very brave.
+@elif var.drink == "choco"
+    hamin: Hot chocolate. Good choice.
+    hamin: You were holding it through your sleeve. It must have been very hot.
+@elif var.drink == "coffee"
+    hamin: Black coffee. At one in the morning.
+    hamin: So you're planning to stay up.
+@else
+    hamin: Grape soda.
+    hamin: I didn't know anyone actually bought those. I thought they were for decoration.
+* [playful] "Do you always take inventory of people?"
+    @rel hamin closeness+1
+    hamin[smile]: Only the ones holding cans.
+    hamin: The bin is behind the desk, by the way. Under the lost property box.
+* [sincere] "You noticed that?"
+    @rel hamin trust+1
+    hamin[shy]: It's a habit. Sorry.
+    hamin: The bin is behind the desk. If you were looking for it.
+* [quiet] Hand him the can, since he seems to know where it goes.
+    @rel hamin closeness+1
+    > He takes it without comment and drops it into a bin behind the desk that you would never have found.
+    hamin: …I do know where it goes.
+@if flag.cold
+    hamin: There's a heater under the window. It works if you hit the side twice.
+    hamin: I hit it. It's on now. Just so you know.
+you: Did you send something here too? To the Future Letter Project?
+hamin[thinking]: I think so.
+hamin: I think I sent the sea.
+> He says it the way other people say *a postcard*.
+hamin: A recording. From Busan. I was fourteen. It seemed like a good idea at the time.
+hamin: I don't really remember why.
+> He remembers exactly why. You can tell by how quickly he looks at the Archive Wall and then away from it.
+hamin: Also — you were humming. At the door, earlier.
+you: Was I?
+hamin: The song from the laundromat. It's been playing the same one on a loop since we got here. Probably since two thousand and ten.
+hamin[shy]: …Sorry. I notice things. I'm not keeping a list.
+> He is, you suspect, keeping a list.
+@hub act1
+
+=== hamin_intro_repeat
+@show hamin neutral at=c
+hamin: The heater's still on. Charlie's mostly dry.
+hamin: Justin has eaten one cracker. That's progress.
+> He delivers it like a weather report. It is, somehow, the most reassuring thing anyone has said tonight.
+@hub act1
+
+=== hamin_door
+@bg studio_hall t=fade d=1.2
+@amb none
+> The second-floor hallway hums. Eight doors, each with light moving behind the frosted glass.
+> Downstairs, Daniel is losing an argument with the claw machine. It sounds like a long argument.
+> Behind Hamin's, the light rises and falls, slowly. Like breathing. Like something coming in and going out.
+@show hamin neutral at=c
+hamin: That one's mine. I think.
+@textbox echo
+echo: RECORD 02 — OWNER: HAMIN. STATUS: SEALED. AWAITING CONSENT.
+@textbox normal
+hamin: It's just the sea. Four minutes of it.
+hamin: You might be bored. I'm telling you in advance, so you can't say I didn't warn you.
+hamin: If it's boring, you can leave halfway. I won't notice.
+> He will notice.
+> He isn't looking at the door. He's looking at the floor in front of it, where the light pools and pulls back.
+hamin[thinking]: It's fine. You can open it.
+hamin: …That sounded like I was talking to a dentist.
+hamin: What I mean is, I'd like you to be there. If you want to be.
+* [sincere] "Open it."
+    @goto hamin_room
+* [careful] "Not yet."
+    @rel hamin trust+1
+    hamin: Okay.
+    > He lets out a breath. It isn't quite a laugh.
+    hamin[smile]: Honestly, that's a relief. I was going to pretend to be calm for another ten minutes.
+    hamin: It's waited six years. It can wait a little longer.
+    @hub act2
+
+=== hamin_room
+@bg mem_beach t=memory d=2.2
+@music hamin
+@amb ocean
+@fx waves n=1
+@cam reveal
+> The door opens onto sand.
+> Not a picture of sand. Sand, or ECHO's best guess at it — cool and fine, giving a little under each step. The hallway is gone behind you.
+> A beach at night. A long curve of dark water, a line of foam that keeps arriving, and far along the shore, the lights of a city that isn't Seoul.
+@textbox echo
+echo: RECORD 02 — OWNER: HAMIN. TYPE: VOICE MEMO. LENGTH: FOUR MINUTES, TWELVE SECONDS.
+echo: LOCATION: A BEACH IN BUSAN. DATE: JULY, SIX YEARS AGO. 23:41.
+echo: UNRESOLVED SUBJECTS: 1.
+@textbox normal
+@show hamin neutral at=c
+> Hamin stands at the edge of it with his hands in his coat pockets, very still, the way people stand at the edge of cold water.
+hamin: …It smells right.
+hamin: I didn't think it would smell right.
+> He looks up the beach, towards the seawall, where a vending machine hums in a square of white light.
+hamin: The machine was further left.
+@sfx glitch
+> The vending machine slides one metre to the left, with the faint air of something that has been corrected before and didn't enjoy it.
+@textbox echo
+echo: Correction noted.
+@textbox normal
+hamin[smile]: Thank you.
+@if rooms() == 0
+    hamin[thinking]: The unresolved subject. That's the part I don't understand.
+    hamin: I was alone that night. I'm fairly sure I was alone. I went there specifically to be alone.
+    hamin: Although— {p}fourteen-year-olds aren't very reliable witnesses.
+@elif rooms() >= 4
+    hamin: The unresolved subject.
+    hamin: Everyone's come out of their rooms tonight looking at you with the same face.
+    hamin[smile]: At this point, it would be stranger if it *wasn't* you.
+    > He glances at you. You glance at the sea. Neither of you says the theory out loud.
+    hamin: We could not mention it. For a bit. Let it be a surprise.
+@else
+    hamin[thinking]: The others came out of their rooms looking at you a bit strangely.
+    hamin: I didn't ask. It seemed rude.
+    hamin: …Is it you again?
+* [playful] "If it's me, I apologise in advance."
+    @rel hamin closeness+1
+    hamin[smile]: For what?
+    you: I don't know yet. That's why it's in advance.
+    hamin: …That's reasonable.
+* [sincere] "Whatever's in here, I'll stay for all four minutes."
+    @rel hamin trust+1
+    hamin: Four minutes and twelve seconds.
+    hamin[shy]: …Thank you. Really.
+* [quiet] Stand beside him at the edge and look at the water.
+    @rel hamin trust+1
+    > He doesn't say anything. After a moment his shoulders come down half an inch, as if he'd been holding them up for both of you.
+@textbox echo
+echo: Beginning reconstruction. Please do not step on the owner.
+@textbox normal
+@hide all
+@sfx wave
+@fx memory n=0.8
+@textbox memory
+> The light shifts. The moon moves a few degrees along the sky, as if someone nudged it with one finger.
+> Up the beach, a boy of fourteen sits cross-legged on the sand, holding a phone out towards the water at arm's length. Very seriously.
+> He is trying not to breathe too loudly. You can tell. His whole back is concentrating.
+> Thirty metres further along, there is a shape made of soft light. Knees pulled up. Arms around them. Shivering.
+> The unresolved subject.
+> The boy looks at the phone. Then at the shape. Then at the phone again, like he's trying to work out which one is his problem.
+> He stops the recording. He stands up. He walks — not to the shape, but past it, up to the vending machine by the seawall.
+@sfx vending
+@sfx can
+> When he comes back, he is holding a can. He holds it out at arm's length, exactly the way he held the phone.
+hamin: Here.
+you: …Oh. Thanks?
+hamin: It's hot. Corn tea. It was the only hot one.
+you: It's July.
+hamin: You're shivering. In July.
+you: I didn't know the sea got cold at night. We only moved here last week.
+you: I thought beaches were a daytime thing.
+hamin: It's a night thing too. Just a different one.
+> He sits down — not next to the light, but a polite metre away. He presses record again. He doesn't explain.
+you: What are you recording?
+hamin: The sea.
+you: Why?
+hamin: I might go to Seoul. Next year, maybe. It's a long story.
+hamin: There's no sea in Seoul.
+> The light holds the can in both hands and doesn't drink it. For a while there is only the water.
+you: It's louder at night. The sea.
+hamin: It's the same.
+hamin: Everything else is quieter.
+you: This is nice. Thank you. It's not my favourite, though.
+hamin: …You're reviewing a free drink.
+you: I'm just saying. For the record.
+hamin: What is your favourite, then?
+@if var.drink == "peach"
+    you: Peach iced tea.
+    hamin: You're shivering. And your favourite drink comes with ice.
+    you: It's a summer drink. It's summer.
+    hamin: It's summer for everyone except you.
+@elif var.drink == "choco"
+    you: Hot chocolate. I checked the machine already. It's sold out.
+    hamin: So you just sat here. Being cold.
+    you: I was being brave about it.
+    hamin: You were being cold about it.
+@elif var.drink == "coffee"
+    you: Black coffee.
+    hamin: …
+    hamin: Are you forty?
+@else
+    you: Grape soda.
+    hamin: That's not a drink.
+    hamin: That's a colour.
+> The shape of light laughs.
+> A short, surprised, real laugh that goes out over the water and doesn't come back.
+> The phone, still held very carefully towards the sea, catches every bit of it.
+hamin: …
+hamin: Next time, then.
+you: Next time what?
+hamin: That one. The machine doesn't have it. So. Next time.
+> From the top of the seawall, a voice calls a name. It comes through as a smear of static — the one word ECHO has never been able to resolve.
+you: That's me. I have to go.
+you: Thanks for the— corn.
+hamin: Corn tea.
+you: Corn tea. Good luck in Seoul.
+> The light gets up, brushes off sand that isn't there, and goes.
+> The boy doesn't watch it leave. He watches the water, very hard, the way you do when you are trying not to watch something leave.
+> He lets the recording run to the end anyway. Four minutes. Twelve seconds.
+@textbox normal
+@fx memory n=0.3
+@show hamin surprised at=c
+@cam closeup hamin
+> Hamin hasn't moved. He is looking at the place in the sand where the light was sitting.
+@if var.drink == "peach"
+    hamin: …Peach iced tea.
+@elif var.drink == "choco"
+    hamin: …Hot chocolate.
+@elif var.drink == "coffee"
+    hamin: …Black coffee.
+@else
+    hamin: …Grape soda.
+hamin: You had one tonight. Outside, in the rain. I *said* something about it.
+hamin: I said something about it, and I didn't—
+> He stops. Starts again, slower.
+hamin: I've listened to that laugh a lot. And I didn't recognise it when it was standing right next to me.
+> You remember the corn tea. You had forgotten the boy.
+> You kept the can for a while. A windowsill in the next city, and the one after that — until one move, it didn't make it into a box.
+* [sincere] "That was me. I remember the corn tea."
+    @rel hamin trust+1 closeness+1
+    you: I don't think I ever drank it. I just held it until it went cold.
+    hamin: That was the point. The holding.
+    hamin: I didn't know how to say "are you okay." So I bought a can.
+* [playful] "In my defence, that was a very funny thing to say to a stranger."
+    @rel hamin closeness+1
+    hamin: I wasn't trying to be funny.
+    you: I know. That's why it was funny.
+    hamin[smile]: …I've been told that before. Never as a compliment.
+* [quiet] Laugh. The same laugh, just a little lower now.
+    @rel hamin closeness+1 trust+1
+    > It comes out on its own. Short. Surprised. It goes out over the water and doesn't come back.
+    hamin[surprised]: …
+    hamin[smile]: Yeah. {p}That's the one.
+@show hamin thinking at=c
+@cam wide
+you: We were only in Busan for the summer. We left four days later.
+you: We always left. New city, new school. I got good at it.
+hamin: You were good at it. You didn't look back once. I checked.
+> He winces slightly, as if he hadn't meant to say the last part.
+hamin: I went back. The next night. With two cans. Just in case.
+hamin: That's not— I wasn't waiting. I just had a spare.
+you: What happened to the spare?
+hamin: I drank both of them. Corn tea. I was awake until four.
+> The laugh gets out of you again before you can stop it. He looks, for a moment, extremely pleased with himself, and then extremely embarrassed about being pleased.
+hamin: It's at two minutes and forty-seven seconds. The laugh. On the recording.
+you: You know the timestamp.
+hamin: It's a long recording. You learn where things are.
+* [sincere] "How many times have you listened to it?"
+    @rel hamin trust+1
+    hamin: Some.
+    hamin: …My old phone had a play count. Three hundred and eleven. But some of those were accidents.
+    you: How many were accidents?
+    hamin[shy]: Four.
+* [playful] "So I've been living in your phone for six years. Rent-free."
+    @rel hamin closeness+1
+    hamin[laugh]: Two phones. I moved you over when I upgraded.
+    hamin: …That sounded much stranger out loud than in my head.
+* [romantic] "Play me the part you listen to." {if hamin.closeness >= 2}
+    @rel hamin romance+1 closeness+1
+    > He takes out his phone. Scrolls — not far. It's near the top.
+    > He holds it out between you at arm's length, the way he held it six years ago, and presses play at two forty-seven.
+    @sfx wave
+    > The sea. Then your laugh, younger, caught off guard. Then the sea again, as if nothing happened.
+    hamin[shy]: That part.
+    hamin: In Seoul, the first year, the dorm was never quiet. I'd put that on and it was.
+@show hamin thinking at=c
+@cam closeup hamin
+hamin: Can I say something stupid?
+you: Go ahead.
+hamin: I've been talking to you like a bank teller all night. "Please." "If that's okay." "Would you like a paper towel."
+hamin: I think I can stop being careful now.
+# SPEECH SHIFT: casual from here (ko 반말 / ja plain)
+hamin[smile]: With you, I mean. If that's— {p}no. I'm just stopping. {{playerName}}.
+> He says your name plainly, like something he has been carrying with both hands and has finally decided to set down.
+@if rooms() < 6
+    hamin: Daniel's going to be unbearable about this. He said three a.m. It's not even three.
+@else
+    hamin: Daniel's going to be unbearable about this. He said three a.m. He was almost right.
+you: What did you want? Back then. The recording was for future you. What did you want him to have?
+hamin: The sea.
+you: That's what you recorded. I asked what you wanted.
+hamin[thinking]: …You're shivering less than before. The room's warmer than it was when we came in.
+you: Hamin.
+hamin: Sorry. I do that.
+hamin: Someone asks me something about me, and I answer with the weather.
+* [sincere] "I'll wait. Take the long way round if you need to."
+    @rel hamin trust+1
+    hamin: The long way's all weather.
+    you: Then I'll hear about a lot of weather.
+    hamin[smile]: …Okay. Give me a second.
+* [careful] "You don't have to answer. I just wanted you to know someone asked."
+    @rel hamin trust+2
+    hamin: …Nobody really asks.
+    hamin: That's my fault. I don't leave a gap for it. I fill the gap with paper towels.
+* [romantic] Sit down in the sand beside him, close enough that the wind stops. {if hamin.closeness >= 2}
+    @rel hamin romance+1 closeness+1
+    > You sit. After a second, he sits too — not a polite metre away this time.
+    > Close enough that the wind off the water has to go around both of you.
+    hamin[shy]: …That's cheating. Now I have to answer.
+@show hamin shy at=c
+hamin: It's not a big deal, but—
+hamin: I wanted someone to hear it. Not the sea. The part where somebody laughed.
+hamin: And I wanted to be the kind of person who says "stay a bit." Instead of "here, it's hot, it's corn tea."
+hamin: I didn't say it. You left. That was fine. Everybody leaves the beach eventually. That's how beaches work.
+> The next wave comes in, and goes out, and takes a little of the sand from under your shoes with it.
+* [sincere] "Say it now, then. I'm still here."
+    @rel hamin trust+1 romance+1
+    hamin: …
+    hamin[shy]: Stay a bit.
+    you: Okay.
+    hamin[surprised]: That's it? Just "okay"?
+    you: You asked. I said okay. That's how it works.
+    hamin[laugh]: …Six years. And it was that easy.
+* [playful] "For the record, the corn tea was a strong opening."
+    @rel hamin closeness+1
+    hamin[laugh]: It was the only hot one.
+    hamin: …Stay a bit. Is what I meant. Just so it's been said.
+* [quiet] Don't answer. Don't leave. Let the next wave come in. {if hamin.trust >= 2}
+    @rel hamin trust+1 romance+1
+    > You don't say anything. You just don't go. Another wave comes in. Then another.
+    > After the third one, he laughs under his breath, as if you'd answered him out loud.
+    hamin: Okay. Yeah. That's clearer anyway.
+@textbox echo
+echo: Subject resolved. Two minutes and forty-seven seconds. Thank you.
+echo: I have wondered about that laugh for six years. I am glad it belongs to someone.
+@textbox normal
+@cam wide
+> Somewhere up the beach, the reconstruction is starting to fray — the far lights of the city going soft at the edges, the seawall losing its corners.
+hamin: It's ending.
+hamin: I always stop it before the end. The last ten seconds are just me breathing and pressing the wrong button.
+* [romantic] Take hold of his coat sleeve, lightly, the way you'd hold a can that's too hot. {if hamin.romance >= 2}
+    @rel hamin romance+1
+    > He looks down at your hand on his sleeve. He doesn't move his arm.
+    > He goes very carefully still, like someone who's been handed something full to the brim and doesn't want to spill it.
+    hamin[shy]: …Okay.
+    hamin: That's— {p}yeah. Okay. Leave it there.
+* [sincere] "Thank you for the corn tea. I never said it properly."
+    @rel hamin trust+1
+    hamin: You said "thanks for the corn."
+    you: That's what I mean. Not properly.
+    hamin[smile]: It counted. I counted it.
+* [playful] "You still owe me a drink. The right one, this time."
+    @rel hamin closeness+1
+    hamin[smile]: I know.
+    hamin: I remembered what it was before I remembered it was you. Tonight. That probably tells you everything about me.
+@sfx wave
+> The last ten seconds play out. The sea, a boy breathing, a button pressed wrong.
+> Then the sand is carpet, and the moon is a ceiling light, and you are both standing in the second-floor hallway with salt that isn't there drying on your shoes.
+@textbox echo
+echo: RECORD 02 — OWNER: HAMIN. UNRESOLVED SUBJECTS: 0.
+@textbox normal
+@fx off
+@amb none
+@flag room_hamin
+@unlock memory:hamin
+@autosave
+@goto hub_after_room
+
+=== hamin_hub
+@if flag.room_hamin and not flag.hamin_postchat
+    @show hamin smile at=c
+    > Hamin is sitting on the arm of the lobby sofa with one earbud in. When he sees you, he takes it out.
+    hamin: I was checking it was still on there. The recording.
+    hamin: It is. ECHO didn't eat it. I thought it might keep it. It seemed to like it.
+    @show daniel laugh at=l
+    daniel: Wait. Wait wait wait. Did he just talk to you normally?
+    @if rooms() <= 6
+        daniel: It's not even three! I said three! Who did it? Was it me? It was me, right?
+    @else
+        daniel: I said three a.m.! I was basically right! Who did it? Was it me? It was me, right?
+    hamin: It wasn't you.
+    daniel[laugh]: I'm counting it anyway.
+    @hide daniel
+    > Daniel wanders off to tell Songha, who can be heard saying he doesn't care, in the voice of someone who cares a little.
+    hamin: He's going to tell everyone.
+    hamin: That's fine. It's fine. I'm going to go and stand in a different room for a while.
+    > He doesn't go anywhere. He moves the earbud from one hand to the other.
+    hamin: I listened to it again. Just now. It's different, knowing whose it is.
+    you: Different how?
+    hamin[thinking]: Before, it was a laugh. Now it's you laughing at me.
+    hamin[smile]: Which is worse. And better. Mostly better.
+    * [playful] "Did you just skip straight to two forty-seven?"
+        @rel hamin closeness+1
+        hamin: I skipped to two forty-five. I'm not an animal. You need the run-up.
+    * [sincere] "How are you? Actually."
+        @rel hamin trust+1
+        hamin: Actually?
+        hamin: Like I've been holding my breath since I was fourteen and someone just told me I could stop.
+        hamin: …That's too much. Forget that. I'm fine. I'm good.
+        you: I'm not forgetting it.
+        hamin[shy]: No. I didn't think you would.
+    * [romantic] Take the earbud he's been passing from hand to hand. {if hamin.closeness >= 3}
+        @rel hamin romance+1 closeness+1
+        > You hold out your hand. He looks at it, and then puts the earbud in your palm like it might be the wrong thing to hand someone.
+        @sfx wave
+        > The sea, very small, in one ear. The lobby, very ordinary, in the other. He leans in just enough to share the cord.
+        hamin: Two forty-five. Wait for it.
+        > You wait for it. So does he. Neither of you is listening to the sea at all.
+    @flag hamin_postchat
+@elif flag.room_hamin
+    @show hamin smile at=c
+    @if rooms() >= 6
+        hamin: Everyone's eaten now. I checked. Even Songha, and he lied about it twice.
+        hamin: You haven't. There's half a kimbap on the desk with your name on it. Literally. I wrote it.
+    @else
+        hamin: I'm still here. The recording's still there.
+        hamin: …I just wanted to say something to you without a reason. That's the reason.
+@else
+    @show hamin neutral at=c
+    hamin: Have you eaten anything?
+    hamin: You had a drink. That isn't dinner. I'm only saying.
+    @if rooms() >= 2
+        hamin: Hyunjun has a bag of crackers. I'll ask him. He'll say yes to me. He says yes to anyone who asks nicely.
+    @else
+        hamin: Hyunjun has a bag of crackers. Justin has most of them. I'll negotiate.
+    > He is already turning towards the other side of the lobby, the way someone turns towards a task they've been waiting for.
+    hamin: …My door is the one that sounds like the sea. When you're ready. There's no hurry.
+@hub act2
+
+=== hamin_route
+@chapter route
+@time 03:50
+@var route = "hamin"
+@bg studio_lounge t=fade d=1.4
+@amb room
+@music quiet
+@cam wide
+> Seventy minutes left. The building seems to know it. The lights on the stairs have started dimming one landing at a time, like someone going round switching things off early.
+> You find Hamin on the third floor, in the lounge that was a café for about a year, until the espresso machine died and nobody could afford to revive it.
+> The machine is still here. So is a kettle, which works.
+> And, as of tonight, a row of paper cups on the counter, lined up with a precision that is almost funny.
+@show hamin neutral at=c
+> Each cup has a name on it in marker. He's filling them with barley tea, one by one, to exactly the same line.
+> CHARLIE (ATE NOTHING). JUSTIN (ATE HYUNJUN'S). HYUNJUN (BOUGHT TWO, GAVE ONE AWAY). SONGHA (SAID HE ATE. DIDN'T).
+> Yours just says {{playerName}}. Spelled right. You never spelled it for him.
+hamin[smile]: Oh. Hi. Yours is the fourth one.
+hamin: It's barley tea. I wanted to make toast, but the toaster's already in a box for the renovation crew.
+> You count the cups. Then you count them again.
+you: There are eight cups.
+hamin: Yes.
+you: There are nine of us.
+hamin: I counted. Twice.
+you: Count again.
+> He counts. He touches each cup lightly as he goes, the way teachers count heads on a school trip. He gets to the end, and stops.
+hamin[surprised]: …Oh.
+hamin[thinking]: I didn't count me.
+hamin: That's sort of the whole problem, isn't it. In one row of cups.
+* [sincere] Take a ninth cup from the stack, write HAMIN on it, and fill it.
+    @rel hamin trust+1 romance+1
+    > You write his name. Under it, after a moment's thought: (ATE NOTHING. COUNTED TO EIGHT TWICE).
+    > He reads it. He reads it again. He puts his hand over his mouth, which is how you learn he does that when he's trying not to laugh.
+    hamin[laugh]: That's slander.
+    you: Is it wrong?
+    hamin: …No.
+* [playful] "Eight cups. Very efficient. Very sad."
+    @rel hamin closeness+1
+    hamin[laugh]: It's not sad. It's a rounding error.
+    you: You rounded yourself down to zero.
+    hamin: …Okay, when you say it like that, it's a bit sad.
+* [quiet] Pour half your tea into a spare cup and slide it across to him.
+    @rel hamin trust+1 closeness+1
+    > He looks at the cup, then at you, then at the cup, like it's a trick question he wants to get right.
+    hamin: Now you've got half.
+    you: Now we've both got half.
+    hamin[shy]: …That's worse maths and a better answer.
+@show charlie surprised at=l
+charlie: Wait, what's happening? Is that tea? Is one of those mine?
+hamin: The one that says "Charlie".
+charlie: It says "Charlie, ate nothing".
+hamin: Is it wrong?
+charlie[laugh]: …No. Thanks, hyung. You're the best. Don't tell the others I said that.
+@hide charlie
+> Justin appears in the doorway, takes the cup labelled JUSTIN, salutes with it, and leaves without breaking stride.
+> Hyunjun's voice floats up the stairwell a moment later: "Justin! Those were my *good* crackers!"
+@sfx phone
+@textbox phone
+songha: Reminder: everyone in the lobby by 04:55. This is the only thing on the schedule.
+daniel: songha there is no schedule
+songha: There is now. It has one item. Respect the item.
+hanbi: i have the charger if anyone's low
+@textbox normal
+hamin[smile]: He made a schedule with one thing on it.
+hamin: That's the most relaxed I've ever seen him.
+@cam shoulder hamin
+> You take the window seat. Hamin stands for a second, looking at the old window frame, the one with the gap along the bottom that lets September in.
+hamin: Swap with me.
+you: Why?
+hamin: No reason.
+> There is a reason. The reason is whistling faintly through the frame.
+> You swap. He sits in the draft like it's the obvious place for a person to sit.
+@if flag.cold
+    > Then he holds out his coat — long, charcoal, still a little cold from outside — and waits.
+    hamin: Do you want this? You said "a little", outside. When we met.
+    hamin: I've been waiting all night for it to turn into "a lot".
+    > You take it. It is enormous, and it smells faintly of rain, and he looks at it on your knees like a job well done.
+you: You haven't sat down since midnight.
+hamin: I sat in the room. On the sand.
+you: That was a memory. It doesn't count.
+hamin[thinking]: …It's easier. Noticing other people.
+hamin: If Charlie hasn't eaten, I can fix that. It's a cup. It's a problem with a cup-shaped answer.
+hamin: If I haven't— {p}I don't know what shape that is.
+* [sincere] "Then let me do the noticing for a while. You can have a break."
+    @rel hamin trust+1 romance+1
+    hamin[surprised]: …You can't just say that.
+    you: I just did.
+    hamin[shy]: You can't just say it and then look at me like you're taking notes.
+* [playful] "Okay. Report: Hamin. Sitting in a draft on purpose. Pretending not to be cold."
+    @rel hamin closeness+1
+    hamin[laugh]: I'm not cold.
+    > His ears are pink. It could be the cold. It is probably not the cold.
+* [romantic] "The window's fine. I'm warm. You can stop checking." {if hamin.romance >= 2}
+    @rel hamin romance+1 closeness+1
+    > He was checking. His eyes had gone to the window frame for the fourth time in a minute.
+    > He looks at you instead. That seems to be harder for him. He does it anyway.
+    hamin: …Okay. I'm looking.
+    hamin[shy]: This is much worse than the window.
+@cam closeup hamin
+hamin: It's not a big deal, but—
+> He stops. You wait. He seems surprised you're waiting.
+hamin: I'd like to hear it one more time. Before five. With you there.
+hamin: Not for the laugh. Well. Partly for the laugh.
+hamin: Mostly because tomorrow the building's gone, and I'd like the last time to be one where I wasn't on my own.
+hamin: …That's it. That's the whole want. I told you it wasn't a big deal.
+@sfx echo
+@textbox echo
+echo: RECORD 02 — OWNER: HAMIN. REQUEST RECEIVED.
+echo: The record is sealed for preservation review. However, I am retiring in sixty-four minutes.
+echo: I have decided to be flexible.
+@textbox normal
+hamin[surprised]: …Was it listening this whole time?
+@textbox echo
+echo: I am an archive. Listening is most of the job.
+@textbox normal
+@letterbox on
+@music hamin
+@sfx whoosh
+@bg mem_beach t=memory d=2.6
+@amb ocean
+@fx waves n=1
+@cam orbit
+> The lounge doesn't disappear so much as get quieter, until the quiet has a tide in it.
+> Sand. The long dark curve of the water. The seawall, and the vending machine — in the right place, this time.
+> It's the same beach. But it isn't July, and nobody on it is fourteen.
+> It's four in the morning in September, and it's the two of you, exactly as you are.
+@show hamin surprised at=c
+hamin: This isn't the recording.
+@textbox echo
+echo: No. The recording ended six years ago.
+echo: This is a room I have not made before. I do not have a record for it. I am, if you like, taking notes.
+@textbox normal
+> Hamin walks up the beach to the vending machine without saying anything. You hear the clunk of one can. A pause. Then another.
+> He comes back holding them out at arm's length, one in each hand. The same way he held the phone. The same way he held the can, six years ago.
+@if var.drink == "peach"
+    hamin: Peach iced tea. It has it now.
+    hamin: It's cold. You'll shiver. I've made my peace with that.
+@elif var.drink == "choco"
+    hamin: Hot chocolate. It isn't sold out.
+    hamin: I checked twice. I didn't want to come back with corn tea again.
+@elif var.drink == "coffee"
+    hamin: Black coffee. For the forty-year-old.
+    hamin: I've been waiting six years to say that.
+@else
+    hamin: Grape soda.
+    hamin: It's still a colour. But it's your colour, so.
+hamin: And corn tea. For me. Don't tell anyone I actually like it.
+@textbox echo
+echo: I added that drink to the machine. That is not how archives work.
+echo: The owner said "next time." I have kept the phrase on file for six years. It seemed unresolved.
+@textbox normal
+> You take the can. It's the right one. Of course it is.
+> He has been getting everything right all night. The heater. The draft. Charlie's paper towels. Eight cups. Your name, spelled right.
+you: You notice everything.
+hamin: Not everything.
+hamin: {p}I'm trying.
+you: Trying to notice what?
+hamin[thinking]: Me. What I want. It's harder.
+hamin: It doesn't stand in the rain holding a can. It doesn't shiver where I can see it.
+hamin[smile]: But I'm getting better. I noticed one thing tonight, at least.
+you: What?
+hamin: That I didn't want you to go back downstairs.
+you: Can I tell you what I noticed? About you. Tonight.
+hamin[surprised]: …Is it bad?
+you: You put yourself in the draft. Every time there was one.
+you: You say "sorry" right before you say anything true. You wrote a name on every cup but yours.
+you: And when something's funny, you cover your mouth. Like a laugh is something you're not supposed to spend.
+hamin: …
+hamin[shy]: That's a list.
+you: I was keeping one.
+> He sits down on the sand. After a second, so do you. He takes out his phone.
+hamin: Can I record a new one?
+hamin: Four minutes. You don't have to do anything. Just— be here. Be normal.
+> He holds the phone out towards the water at arm's length, very seriously. His whole back is concentrating.
+> It lasts about forty seconds before you have to do something.
+* [playful] Lean in, very seriously, and whisper "the sea" into the microphone.
+    @rel hamin closeness+1
+    you: The sea.
+    hamin: What are you—
+    you: For context. In case future you forgets what it is.
+* [sincere] "Hi, future Hamin. You counted to eight twice tonight. It's okay. Someone else counted to nine."
+    @rel hamin trust+1 romance+1
+    hamin[surprised]: You can't put that on a—
+    you: Already did. It's recording.
+* [quiet] Hold your can out towards the sea too, at arm's length, exactly like him.
+    @rel hamin closeness+1
+    > Two people, side by side, holding things out to the ocean like offerings. Deadly serious. Neither of you blinks.
+    > The sea does not respond. It continues to be the sea.
+> And he laughs.
+> Not the small one that's gone before you see it. The rare, open one — head tipped down, shoulders shaking, surprised out of him like a cork.
+> It goes out over the water. The phone, held very carefully towards the sea, catches every bit of it.
+@sfx wave
+@video vid_hamin
+@unlock cinematic:vid_hamin
+@cg cg_hamin_moment
+@unlock cg:cg_hamin_moment
+> He lets it run to the end, the way he did last time.
+> Then he scrubs back and holds the phone between you, and you both listen to him laughing at a wave.
+hamin[surprised]: …That's me.
+hamin: I've never heard it from the outside. I didn't know it sounded like that.
+you: Like what?
+hamin[shy]: Like someone who's having a good time.
+hamin: …Like someone you'd want to stay a bit for.
+@if hamin.romance >= 4
+    > He puts the phone face-down on the sand. He looks at your hand on the can, then at your face, then — carefully — asks.
+    hamin: Can I— {p}your hand. Is that okay?
+    * [romantic] Give him your hand.
+        @rel hamin romance+1
+        > His hand is cold from the corn tea. Yours is cold from the other can. Neither of you does anything to fix it.
+    * [sincere] "You don't have to ask twice."
+        @rel hamin trust+1
+        hamin[smile]: I know. I wanted to ask once, properly.
+        > His hand is cold from the corn tea. Yours is cold from the other can. Neither of you does anything to fix it.
+    > For a while there is only the water.
+    > Then, very quietly, slightly off-key, he starts to hum.
+    > It takes you a moment. The laundromat song. The one that's been playing behind Studio 25 since two thousand and ten.
+    you: You're humming.
+    hamin: You were humming it at the door. Before any of this started.
+    hamin[laugh]: It's been stuck in my head for three hours. I've decided it's your fault.
+    hamin: I also know you finished your drink in six sips. And you always look at the exit when you walk into a room. You didn't, in here.
+    you: That's a list.
+    hamin[shy]: You started it. We're even.
+    > He leans in slowly, giving you all the time in the world to lean away.
+    > You don't. His forehead rests against yours — cool, light — for the length of one wave coming in and going out.
+    hamin: It's louder at night.
+    you: It's the same.
+    hamin: Everything else is quieter.
+@else
+    > He puts the phone face-down on the sand, and then, after a visible internal debate, shifts a little closer.
+    hamin: Is this okay?
+    * [romantic] Close the last bit of distance, until your shoulder rests against his.
+        @rel hamin romance+1
+        > He goes still, then un-still, then settles, like a bird deciding a branch will hold.
+        hamin[shy]: Okay. {p}Good.
+        hamin: I was going to stay like this anyway. But it's nicer that it's allowed.
+    * [sincere] "It's okay."
+        @rel hamin trust+1
+        hamin[smile]: Okay.
+        > A few inches of sand between you. Not nothing. Not far. The wind has to go around you both, and it does.
+    > For a while there is only the water.
+    you: It's louder at night.
+    hamin: It's the same.
+    hamin[smile]: Everything else is quieter. That's why you can hear it.
+    hamin: …That's why I could hear you, I think. Tonight. Everyone else was loud, and you were just there. Quietly. Being cold.
+hamin: At five, everyone leaves the building.
+you: Then we leave together. That's different from leaving.
+> He turns that over for a while, like a shell he's checking for cracks. He doesn't find any.
+hamin: Yeah. {p}It is.
+@cg off
+@textbox echo
+echo: Recording saved. Four minutes, twelve seconds. I have filed it next to the other one.
+echo: They are the same length. I did not plan that. I would like it noted that I did not plan that.
+@textbox normal
+@fx off
+@letterbox off
+@bg studio_lounge t=slow d=2
+@amb room
+@music quiet
+@cam wide
+@show hamin smile at=c
+> The lounge again. The kettle, cooling. Eight paper cups, empty now, and one more — his — that you didn't notice him finish.
+> Outside the window, the sky over Mapo has gone from black to the dark blue it turns just before it starts thinking about morning.
+hamin: Nine cups. All empty.
+hamin: That's the first time tonight the maths has worked.
+@if flag.cold
+    > You go to give back his coat. He shakes his head and tugs the collar up a little instead, so it sits properly.
+    hamin: Keep it till we're outside. The stairs are cold. I checked.
+@sfx chime
+@textbox echo
+echo: All recipients, please come to the lobby. It is nearly time.
+@textbox normal
+hamin: That's us.
+> He stacks the cups — all nine — and puts them in the bin behind the counter, which of course he knows the location of.
+> At the door, he stops, and waits for you. Not ahead. Not behind. Level.
+@time 04:57
+@goto act4_choice
+
+=== hamin_ending
+@chapter ending
+@bg studio_lobby t=fade d=1.2
+@music echo
+@amb room
+@fx memory n=0.6
+@time 04:58
+> The Archive Wall has gone almost dark. Hundreds of little glass boxes, and only one of them still lit.
+@textbox echo
+echo: RECORD 02 — OWNER: HAMIN. SELECTED FOR PRESERVATION.
+echo: Contents: four minutes and twelve seconds of sea. One laugh, at two minutes and forty-seven seconds.
+echo: Addendum, recorded this morning: four further minutes of sea. One further laugh. The owner's. I have included it.
+echo: I hope that is acceptable. I did not ask. I am retiring. I have become reckless.
+@textbox normal
+@sfx chime
+> On the front desk, a small square of glass fills slowly with light, the way a tide pool fills.
+@show daniel laugh at=l
+daniel: The sea. Out of everything in this building. You picked eight minutes of *water*.
+@show hamin shy at=c
+hamin: It's good water.
+@show songha smile at=r
+songha: It's a solid choice. Short runtime. Easy to store. Emotionally efficient.
+daniel[laugh]: He's reviewing it like a fridge.
+@hide all
+@show charlie surprised at=l
+charlie: Wait, what's happening? Whose is the second laugh?
+> Everyone turns to look at Charlie, except Hamin, who looks at the glass card with extreme concentration.
+@show hyunjun laugh at=r
+hyunjun: Charlie. Buddy. Read the room.
+charlie: I *am* reading the room! That's why I'm asking!
+@hide all
+@show hanbi smile at=l
+> Hanbi doesn't say anything. He sets his phone charger on the desk beside the card, as if the glass might need it.
+> On his way past, he gives Hamin's shoulder one quiet pat.
+@show haruta smile at=r
+haruta: It's a good ending. The picture stops, and the sound keeps going for a moment. That's always the best part.
+@show justin smile at=c
+justin: Play it on the speakers. I'll do a slow one. Very emotional. Sea choreography.
+hamin[laugh]: Please don't.
+justin: Too late. I've already started. This is a wave.
+@hide all
+@show hamin smile at=c
+> The card cools. It's a small thing, heavier than it looks.
+> He picks it up and — without a word, the way he did everything tonight — holds it out to you at arm's length. So you can see it first.
+@call echo_farewell
+@bg dawn_cafe t=slow d=2.4
+@time 05:40
+@music hamin
+@amb cafe
+@fx dust n=0.4
+@cam wide
+> The café two streets from Studio 25 opens at half past five, for taxi drivers and bakers and, apparently, the two of you.
+> Four tables. One radiator. A window the sun is just starting to find.
+> Hamin went up to the counter while you were still getting settled.
+> He came back with a number on a wooden block and sat down across from you as if nothing had happened.
+> Something has happened. You can tell by how carefully he isn't looking at the counter.
+@show hamin neutral at=c
+you: I haven't ordered yet.
+hamin: I know.
+> The owner brings two cups on a tray. One is plain barley tea. His. She puts the other one in front of you.
+@if var.drink == "peach"
+    > A tall glass of peach iced tea. At six in the morning. In September.
+    hamin: They don't have it in cans. I asked if she could make it. She had peaches. She seemed excited, honestly.
+    hamin: Less ice than normal. You were holding the can by the rim outside, so your fingers wouldn't get cold. So — less ice.
+@elif var.drink == "choco"
+    > A hot chocolate, steaming just slightly less than hot chocolate usually steams.
+    hamin: I asked for it a bit cooler than normal.
+    hamin: You hold hot things through your sleeve and then wait for them anyway. So I thought — skip the waiting.
+@elif var.drink == "coffee"
+    > A black coffee in a heavy white cup, nothing in it, nothing beside it.
+    hamin: You made a face at the can outside. But you finished it. So I think the face was about the can, not the coffee.
+    hamin: I asked what beans they use. I don't know anything about beans. I nodded a lot.
+@else
+    > A can of grape soda, sweating a little, standing very upright in the middle of a café that does not sell anything in cans.
+    hamin: They didn't have it. There's a convenience store on the corner.
+    hamin: I asked if I could bring it in. She said it was the strangest thing anyone had asked her all week. I think it was a compliment.
+you: When did you even—
+hamin: While you were taking your coat off.
+hamin: I said "next time". Six years ago. I don't say a lot of things. So I try to keep the ones I do.
+@cg cg_hamin_ending
+@unlock cg:cg_hamin_ending
+> The sun gets the rest of the way through the window, lands on the table, and stays there, as if it's been told this is the place.
+> He is watching you take the first sip. Not the drink. You. Checking it's right, the way he's checked everything all night.
+> It's right.
+hamin: It's not a big deal, but—
+hamin: This place opens at five-thirty. Every day.
+hamin: I read the sign. Twice.
+* [sincere] "Tomorrow, then. And the day after that."
+    @rel hamin romance+1
+    hamin[surprised]: …You don't have to decide the day after that right now.
+    you: I just did.
+    hamin[shy]: You keep doing that. Deciding things out loud before I've finished being nervous about them.
+* [playful] "Are you asking me to breakfast, or reading me the opening hours?"
+    @rel hamin closeness+1
+    hamin[laugh]: Both. It's more efficient.
+    hamin: …Breakfast. I'm asking you to breakfast. Songha would be proud of how long it took me to say that.
+* [quiet] "I unpacked the kettle last week. I think that means I'm staying."
+    @rel hamin trust+1
+    hamin: The kettle.
+    you: It's always the last thing. If the kettle's out, I'm not leaving.
+    hamin[smile]: …Then I'll stop checking the exits for you.
+> You have always left. New city, new school, a season and then the boxes again. You always left in spring.
+> It is September. Spring is a long way off. And for the first time, you aren't counting towards it.
+@if hamin.romance >= 4
+    > On the table, his hand has ended up next to yours. Not on it. Next to it. Close enough that it's a question.
+    > You answer it. His fingers are still a little cold from the walk over. That's fine. You have a hot drink, or a cold one, and all morning.
+    hamin: Stay a bit.
+    you: I'm staying.
+    hamin[smile]: …Yeah. I noticed.
+@else
+    > He slides the sugar over to you without being asked, even though you don't take any. Then he realises, and slides it back, and hides his face in his cup.
+    hamin: Stay a bit.
+    you: I'm staying.
+    hamin[smile]: …Good. I'll get the next one. Same thing?
+    you: You already know.
+    hamin: I already know.
+@cg off
+@ending hamin
+@credits
+@end
+
+=== hamin_newmem
+@chapter newmem
+@bg dawn_street t=fade d=1.2
+@amb city
+@music hamin
+> A week later. The laundromat behind Studio 25 is still open, because it is always still open.
+> Next door, the building is wrapped in green scaffold netting. Someone has taped a sign to the door: RENOVATION IN PROGRESS. PLEASE DO NOT KNOCK.
+> Someone else has written underneath it, very small, in pencil: *It's okay. It's resting.*
+> You are here to wash one coat. It is going as well as can be expected.
+@show hamin surprised at=c
+hamin: {{playerName}}?
+> Hamin, holding a laundry bag the size of a small person, standing in the doorway.
+hamin: Our machine broke. The dorm one. Justin put a hoodie in with a pen in the pocket. Everything I own is now slightly blue.
+hamin[smile]: I remembered this place never closes.
+> He looks into your machine. He looks at you. He looks back into your machine.
+hamin: There's a red sock in there with your coat.
+you: There's no red sock.
+hamin: There's a red sock.
+> There is a red sock. Nobody knows where it came from.
+> He fishes it out and sets it on top of the dryer, like a lost cat waiting to be claimed.
+hamin: The dryer takes forty minutes.
+you: That's a long time.
+hamin: It's fine.
+> He goes back outside. You hear the vending machine by the old door, the one still humming under the scaffolding. The clunk of one can. A pause. Then another.
+> He comes back holding them out at arm's length, one in each hand. He doesn't ask which one is yours. He doesn't need to.
+hamin: I brought two. Just in case.
+you: In case of what?
+hamin[thinking]: …In case you were here. I didn't know you'd be here.
+hamin[shy]: I'm going to stop explaining now.
+@sfx phone
+@textbox phone
+daniel: who has a working washing machine. asking for a friend. the friend is justin. justin is blue
+hanbi: laundromat behind the studio. hamin's already there
+daniel: HAMIN IS WHERE
+@textbox normal
+hamin[laugh]: …We have maybe ten minutes.
+> You sit on the bench by the window with your cans and watch the dryer go round.
+> The radio on the counter is playing the same song it has always played. After a while, slightly off-key, he hums along.
+> After a while, so do you.
+@end

@@ -1,0 +1,491 @@
+# FRIENDSHIP — "Stay with everyone." (route 03:50→04:55, ending, post-game)
+# All eight rooms are done by now: Hamin and Haruta speak casually with {{playerName}}.
+
+=== friendship_route
+@chapter route
+@time 03:50
+@var route = "friendship"
+@bg studio_lobby t=fade
+@amb room
+@music studio
+@hide all
+@cam wide
+> *Stay with everyone.* It comes out simpler than you expected.
+> Like it was the answer the whole time, and just needed saying in a room with people in it.
+@show daniel laugh at=c
+daniel: Correct answer. Ding ding ding. No notes.
+@show hyunjun laugh at=r
+hyunjun: Everyone! We get everyone! That's the best answer! That's the most answer!
+@show songha thinking at=l
+songha: Okay. Seventy minutes. First, we—
+> He has the notebook out. Seven people groan in perfect unison.
+@hide all
+@show hanbi smile at=c
+hanbi: Roof.
+> Everyone is already moving towards the stairs.
+@show songha surprised at=l
+songha: Why does everyone listen to him and not me?
+hanbi: I don't say much. So it counts more.
+songha[laugh]: That's so unfair. That's so unfair and so correct.
+@hide all
+@show hyunjun smile at=l
+hyunjun: Justin and I will do one more store run. One more! The last one! We'll meet you up there!
+@show justin smile at=r
+justin: I'm going to steal everything he buys. For balance.
+@hide all
+@bg studio_hall t=fade
+@fx memory n=0.4
+@amb none
+> On the way up, you pass the Hall of Doors. It's dim now. Eight doors stand open, their symbols gone soft and grey, like chalk after rain.
+> At the end of the corridor, where there used to be only wall, a ninth door stands open too.
+@show justin neutral at=l
+justin: It's weird. Like a practice room after everyone's gone home.
+@show hanbi smile at=r
+hanbi: It's nice, though. Everything that was in there… it's out here now.
+@hide all
+@bg studio_rooftop t=slow d=2
+@amb night
+@fx stars n=1
+@music fun
+@cam reveal
+> The rooftop door sticks, and then gives, and then the whole sky is there.
+> The rain has washed Mapo clean. The streets below are wet and orange. Above them, the kind of stars Seoul almost never lets you see.
+> Someone drags up the blankets from the lobby. Someone else brings the cushions from Charlie's fort, which he insists on rebuilding at once.
+@show charlie smile at=c
+charlie: Fort two. Rooftop edition. Now with sky.
+@hide all
+@sfx step
+> Twelve minutes later, Hyunjun and Justin come through the door with two bags each, out of breath.
+> They are arguing about whether shrimp crackers are "a snack" or "a lifestyle."
+> Right behind them, there is a knock on the rooftop door, and a delivery rider in a helmet holding a warm, heavy bag.
+@show songha smile at=c
+songha: Tteokbokki. From the twenty-four-hour place in Hapjeong. I ordered at 03:51.
+@show daniel surprised at=r
+daniel: You made a plan that *worked*?
+songha: It's been a long night. I've been learning. I cut every step except the one that mattered.
+@show charlie laugh at=l
+charlie: Tteokbokki *and* convenience store! Both! Both is a food group! I said this hours ago!
+@hide all
+> It becomes a feast on a blanket: rice cakes too hot to eat, ramen going soft, kimbap, chips, a bag of tangerines nobody remembers buying.
+@show hyunjun smile at=c
+hyunjun: {{playerName}}. I got you something. Don't make it a thing.
+@if var.snack == "kimbap"
+    > A triangle kimbap. Tuna mayo. The correct answer, he told you hours ago, when you picked one out of his bag. He remembered.
+@elif var.snack == "banana"
+    > A carton of banana milk, straw already stuck to the side. The one you rescued from Justin, hours ago. He remembered.
+@elif var.snack == "icecream"
+    > An ice cream bar, a little soft from the run up the stairs. Rain or not, hours ago, that was your pick. He remembered.
+@else
+    > A little of everything, all in a pile, as if he couldn't decide and refused to have to.
+hyunjun: It's a thing. I know. I made it a thing.
+@hide all
+@show hamin smile at=l
+> Hamin sits down next to you and slides a can along the blanket until it touches your hand. He doesn't comment on it. He doesn't need to.
+@show haruta smile at=r
+haruta: Can I have the corner piece of tteokbokki? The burnt one. I want it. I'm saying that out loud.
+@show daniel laugh at=c
+daniel: Haruta wants something! Everybody, silence! Give the man the burnt one!
+haruta[laugh]: You don't have to *announce* it.
+@hide all
+@textbox echo
+echo: Recipients. May I ask what this activity is called?
+@textbox normal
+@show daniel laugh at=c
+daniel: A picnic, ECHO.
+@textbox echo
+echo: At 04:12?
+@textbox normal
+@show hyunjun laugh at=r
+hyunjun: *Especially* at 04:12.
+@textbox echo
+echo: Noted. I have created a new category.
+@textbox normal
+@hide all
+@music fun
+@show daniel smile at=c
+daniel: Okay. Game. Because I physically cannot help it.
+daniel: "Most likely to." I say a thing, everyone points at who it is. No arguing. Only pointing.
+daniel: Most likely to still be awake at five a.m.
+> Eight fingers point at Daniel. Daniel points at the rooftop speaker.
+daniel: ECHO. Obviously. It's literally its job.
+@textbox echo
+echo: Until 05:00. Then I will be asleep. I will not be pointing at anyone.
+@textbox normal
+daniel[laugh]: Most likely to cry at the group photo.
+> Everyone points at Hyunjun. Hyunjun, after a moment of dignified consideration, points at himself.
+@show hyunjun shy at=r
+hyunjun: That's fair. That's completely fair. I'm going to cry at it tomorrow as well.
+daniel: Most likely to make a schedule for the group chat.
+@show songha neutral at=l
+songha: I don't need you to point. I know.
+> Everyone points anyway. Songha points at himself too, a little proudly.
+@hide all
+@show daniel smile at=c
+daniel: Most likely to fall asleep before the game's over.
+> Nobody needs to point. Charlie is already asleep, curled inside Fort Two, holding a tangerine.
+@hide all
+@show daniel neutral at=c
+daniel: Most likely to leave first—
+> He stops. It's too close to something. The rooftop goes quiet for half a second, and everyone is very carefully not looking at you.
+daniel[smile]: No. Scratch that. New one. Most likely to *come back*.
+> Eight fingers, one after the other, point at you.
+* [sincere] Point at yourself too.
+    @rel daniel trust+1
+    @rel hyunjun trust+1
+    @rel charlie trust+1
+    > It feels like signing something. It feels like a promise that you want to keep.
+    daniel[laugh]: Unanimous! First unanimous vote of the night!
+* [playful] Point at Daniel. "You're coming back for the claw machine."
+    @rel daniel closeness+1
+    @rel justin closeness+1
+    daniel: …I *am* coming back for the claw machine. That's an accurate point. I respect it.
+    justin: The building's being renovated, Daniel.
+    daniel: Then I'll come back for the new claw machine.
+* [quiet] Point at all of them, one by one.
+    @rel hanbi closeness+1
+    @rel hamin closeness+1
+    @rel haruta closeness+1
+    @rel songha closeness+1
+    > It takes a while. Nobody interrupts. When you reach the last one, Hanbi is smiling at his shoes.
+@hide all
+@music quiet
+@amb wind
+> After the food, the rooftop goes horizontal. Nine people lying on blankets, looking up, trading half-sentences with the sky.
+> Charlie falls asleep for eleven minutes and wakes up in the middle of an argument about which constellation is shaped like a ladle.
+> You get up to stretch. Somehow that turns into going round the roof, one person at a time.
+@show hamin smile at=c
+@cam closeup hamin
+hamin: Are you cold?
+you: A little.
+hamin: Okay.
+> He lifts one side of his coat, and waits. Not assuming. Just offering.
+> You nod. He puts it round your shoulders and goes back to looking at the sky like nothing happened.
+hamin: I didn't use to ask. I just used to move people out of the wind. I'm trying to ask now.
+@hide all
+@show haruta smile at=c
+@cam closeup haruta
+haruta: I've decided something. I'm staying up here until the power goes. Not because everyone is.
+haruta: Because I want to. That's the whole reason. It's strange how good that feels to say.
+you: Say it again.
+haruta[laugh]: I want to. There. Twice in one night. Somebody should write it down.
+@hide all
+@show justin neutral at=c
+@cam closeup justin
+> Justin is sitting on the ledge-side bench, not dancing. His fingers tap on his knee: five, six, seven, eight.
+justin: I'm not doing a bit, by the way. Right now. This is just me.
+justin: It's quieter than I thought. Being just me. It's… okay, actually.
+you: It suits you.
+justin[smile]: Don't tell anyone. I have a reputation.
+@hide all
+@show songha smile at=c
+@cam closeup songha
+> Songha has put the notebook face down on the blanket. He points up at a star, very confidently.
+songha: That one's called Gerald.
+you: It is not called Gerald.
+songha[laugh]: It is tonight. I've decided. No plan, no research. Just Gerald.
+you: What's it really called?
+songha: No idea. I'll look it up. Later. Not tonight.
+@hide all
+@show hanbi smile at=c
+@cam closeup hanbi
+> Hanbi turns his sketchbook round. Nine tiny figures on a rooftop. One of them is holding a can. One of them is pointing at a star named Gerald.
+hanbi: It's rough. I'll fix the hands later.
+hanbi: I'm glad you came tonight. {p}That's all. I wanted to say it out loud.
+@hide all
+@show hyunjun thinking at=c
+@cam closeup hyunjun
+hyunjun: I hate this part. The part where you can see the end coming.
+hyunjun: But it's still happening. Right now. And after it's over, it'll still have happened. That's… that's something, right?
+you: That's everything.
+hyunjun[smile]: Okay. Yeah. I'm writing that on my hand.
+@hide all
+@show charlie smile at=c
+@cam closeup charlie
+charlie: Where are you going after this?
+you: Home. I think. Wherever that is this month.
+charlie: Wherever the snacks are. That's the rule. You made that one up, you know. Years ago.
+charlie[laugh]: There are so many snacks up here. So technically you're home.
+@hide all
+@show daniel smile at=c
+@cam closeup daniel
+> Daniel is lying flat on his back with his arms spread out, doing nothing at all.
+daniel: I haven't planned anything for the next ten minutes. No game. Nothing.
+daniel: It's terrifying. It's fine. It's actually really fine.
+> You lie down next to him. Neither of you says anything for a while. He doesn't fill it.
+daniel: …Is this boring for you?
+you: No.
+daniel[smile]: Me neither. Weird. Good weird.
+@hide all
+@cam wide
+@music quiet
+> The sky goes from black to the deep blue that comes just before the deep blue that comes before morning.
+> Across the rooftops, one window lights up. Someone else in Mapo is awake, making coffee, starting a day. It feels like being waved at.
+> Justin and Hyunjun are sharing the last bag of shrimp crackers. Nobody is stealing. It is, as Hyunjun says, historic.
+@show songha neutral at=l
+songha: What's everyone doing tomorrow? Honestly. Not the schedule.
+@show charlie thinking at=r
+charlie: Sleeping until two. Then eating. Then sleeping.
+@hide all
+> Then it's your turn. You have moved house more times than you can count on both hands. You know exactly what you usually say next.
+* [sincere] "I think I'm going to stay. In this city. For a while."
+    @rel songha trust+1
+    @rel hanbi trust+1
+    @rel hyunjun trust+1
+    @rel charlie trust+1
+    > It's the first time you've said it out loud. It sounds truer outside your head than it did in it.
+    songha[smile]: Then I'm adding you to the schedule. Permanently. You can't unsubscribe.
+* [playful] "Unpacking. There are boxes in my room I've been ignoring for a month."
+    @rel daniel closeness+1
+    @rel justin closeness+1
+    @rel charlie closeness+1
+    daniel: We'll help. Nine people can unpack anything. We'll make it a game.
+    justin: He will actually make it a game.
+    you: …Then I guess I'm staying long enough to unpack.
+* [quiet] "Maybe I'll stay." Say it quietly. Only the sky has to hear.
+    @rel hamin trust+1
+    @rel haruta trust+1
+    @rel hanbi closeness+1
+    > It isn't only the sky. Hamin hears it. You can tell because he doesn't turn his head, and because he smiles.
+@hide all
+@sfx chime
+@textbox echo
+echo: Recipients. It is almost 04:57.
+echo: Please come down to the lobby. I have one question. And then I have to go.
+@textbox normal
+@show daniel neutral at=c
+daniel: …Do we have to go down?
+@show hanbi smile at=l
+hanbi: We'll come back up. After. Come on.
+@hide all
+> Nine people fold up the blankets badly and go down the stairs together, slower than they need to.
+@time 04:57
+@goto act4_choice
+
+=== friendship_ending
+@chapter ending
+@bg studio_lobby t=fade
+@amb room
+@music echo
+@hide all
+@cam wide
+@textbox echo
+echo: Tonight. All nine of you.
+echo: I have checked. There is no record of tonight. Nobody submitted one. It has not had time to become old yet.
+@textbox normal
+@show daniel smile at=c
+@if flag.group_photo
+    > Daniel is already digging in his pocket. He pulls out a square of expired instant film, a little bent at one corner.
+@else
+    > Daniel is already digging through the front desk drawer, and comes up with the old instant camera and a single square of film.
+daniel: Then here. Scan this. It's the only record we've got.
+> He lays it on the glass of the terminal. Nine people, badly framed, laughing at something none of them can remember.
+@sfx echo
+@fx memory n=1
+@textbox echo
+echo: …Oh.
+echo: RECORD 10. TYPE: PHOTOGRAPH. DATE: TONIGHT.
+echo: OWNERS: HANBI. HAMIN. SONGHA. CHARLIE. HYUNJUN. HARUTA. JUSTIN. DANIEL. {{playerName}}.
+echo: UNRESOLVED SUBJECTS: 0.
+echo: For six years, every record I kept had someone missing from it. Someone I could not name.
+echo: This one has nobody missing. I did not know a record could look like this.
+@textbox normal
+> In the terminal's slot, a card of glass begins to glow. The photograph surfaces inside it slowly, like something rising through water.
+> It comes out warm. Somehow it comes out warm.
+@hide all
+@show hyunjun sad at=r
+hyunjun: I said I'd cry at it. I'm crying at it. Nobody look at me.
+@show justin smile at=l
+justin: Everyone's looking at you.
+hyunjun[laugh]: I know! It's fine! It's a happy one!
+@hide all
+@show charlie thinking at=c
+charlie: Okay, but who keeps it? There's one card. There are nine of us.
+@show songha thinking at=l
+songha: A rotation. A week each. And before anyone says no—
+> Nobody says no. For the first time all night, nobody says no to the schedule.
+songha[surprised]: …Oh. Okay. Wow. It feels different when people agree.
+@show charlie smile at=r
+charlie: {{playerName}} goes first.
+charlie: You're the one who always leaves, right? So if you have it, you have to come back. To hand it over. That's the rule.
+@hide all
+> Eight people look at you. Nobody is teasing. It's the way people look at someone when they're handing them something that matters.
+* [sincere] "Then I'll come back. That's a promise."
+    @rel charlie trust+1
+    @rel songha trust+1
+    charlie[laugh]: It's in the schedule now. Songha wrote it down. It's legally binding.
+* [playful] "One week, and then I'm fighting Songha for a second week."
+    @rel songha closeness+1
+    @rel daniel closeness+1
+    songha[laugh]: I'll allow one appeal.
+* [quiet] Take the card in both hands, and hold it like it might still be warm tomorrow.
+    @rel hanbi closeness+1
+    @rel hamin closeness+1
+    > It is. You don't know that yet. But it is.
+@hide all
+> The Archive Wall has begun to dim, box by box, from the top down. Nobody needs to be told what that means.
+@show justin smile at=l
+justin: Thanks for keeping my stuff, ECHO. Even the embarrassing stuff.
+@show haruta smile at=r
+haruta: Thank you. Really. It was a good screening.
+@show hyunjun sad at=c
+hyunjun: Sleep well, okay? You earned it. Best building ever.
+@hide all
+@show hamin neutral at=c
+hamin: You kept the light on for a long time. Somebody should notice that. {p}We noticed.
+@hide all
+@call echo_farewell
+@time 05:40
+@bg dawn_rooftop t=slow d=2.4
+@amb birds
+@fx light n=0.8
+@music dawn
+@cam reveal
+> Afterwards, without the lights, the building is just a building. You climb the stairs by phone torch, all nine of you, back to the roof.
+> The sky over Mapo has gone the colour of peach tea left out overnight. Somewhere, a bus is starting its first route.
+@show charlie sad at=c
+charlie: My phone's dead. Again. Does anyone—
+> Hanbi hands him the battery pack without looking. The battery pack does a full lap of the roof before it comes back to him, with a little less charge.
+@hide all
+@show songha smile at=l
+songha: New schedule. Nothing until noon. That's it. That's the whole schedule.
+@show justin laugh at=r
+justin: Best schedule you've ever made.
+songha[laugh]: I know. I'm framing it.
+@hide all
+@show daniel laugh at=c
+daniel: Numbers! Everyone! I'm making a group chat. It's called "Stuck-in-a-Talking-Building Friends."
+@show charlie laugh at=r
+charlie: I'm renaming it "Ghost and Eight Others."
+@show songha smile at=l
+songha: I'm pinning a schedule to it. Don't mute it.
+@hide all
+@sfx phone
+> Your phone buzzes once. Then eight more times, in a row, like a small applause.
+> Nine names in a list. You have never been in a group chat you didn't leave within a year. You look at this one for a long moment.
+> Then, one at a time, they take your phone and save themselves into it properly.
+> Songha saves himself as "Songha (schedule)." Daniel saves himself as "Daniel ★ Leader ★" and Justin changes it to "Daniel" before the phone comes back.
+> Hanbi's contact has no note at all. Just his name, and a small drawing of a pencil where the photo would go.
+@show charlie laugh at=c
+charlie: I saved myself as "Charlie (youngest, not my fault)." For legal reasons.
+@cg cg_friendship
+@unlock cg:cg_friendship
+@music credits
+> The sun comes up over the rooftops of Mapo.
+> Nine people stand at the edge of a building that won't exist next week, squinting at it like it's the first sunrise ever made.
+> Nobody says anything clever. Hyunjun is still crying a bit. Justin is doing one slow, silly spin. Haruta is humming something that isn't from any film.
+@cg off
+@show haruta smile at=l
+haruta: That would be a good last shot. If this were a film.
+@show hamin smile at=r
+hamin: It isn't the last one, though.
+haruta[laugh]: No. It isn't.
+@hide all
+> The glass card is in your coat pocket. You keep touching it, the way you check for keys. It is still, somehow, a little warm.
+@sfx step
+> Down in the alley, a van pulls up. Renovation crew. It's time to go.
+@show hyunjun smile at=l
+hyunjun: Breakfast? Right now? There's a place by the station that does—
+@show songha laugh at=r
+songha: Next week. It's on the schedule. Go home, sleep.
+hyunjun[laugh]: Next week, then. I'm holding everyone to it. I'm writing it on my other hand.
+@show charlie smile at=c
+charlie: I'm sleeping until two. Nobody text me until two. Actually, text me. I want the texts.
+@hide all
+@show hanbi smile at=c
+hanbi: {{playerName}}. See you.
+> He says it the way people say it when they mean the next time is already real. Not a door closing. A door propped open with a shoe.
+* [sincere] "See you. I mean it."
+    @rel hanbi trust+1
+    hanbi: I know. I can tell.
+* [playful] "See you next week. It's on Songha's schedule."
+    @rel songha closeness+1
+    songha: Finally. Someone who reads the schedule.
+* [quiet] Hold up the glass card, just a little. Proof.
+    @rel hanbi closeness+1
+    hanbi[smile]: …Yeah. See you.
+@hide all
+> And then it's everyone at once, overlapping, on the stairs, in the alley, under the laundromat's light.
+@show hamin smile at=l
+hamin: Text when you get home. So we know.
+@show haruta smile at=r
+haruta: See you, {{playerName}}. Next week. I'll pick the film, if we watch one. I already know which.
+@show daniel laugh at=c
+daniel: See you! See you! I'm saying it twice so it counts double!
+@hide all
+> You have always been the one who leaves. You're leaving now, down the stairs, past the laundromat, out into the morning.
+> But it's different. You know exactly where you're coming back to.
+@ending friendship
+@credits
+@end
+
+=== newmem_group
+@chapter newmem
+@bg dawn_cafe tint=night t=fade
+@amb cafe
+@music fun
+@hide all
+@cam wide
+> A week later. A tteokbokki place two streets over from where Studio 25 used to be. It's loud, it's steaming, and it closes at midnight. Songha has checked.
+@show songha neutral at=l
+songha: We booked for seven. It's seven-twenty. Where's Hyunjun?
+@show daniel laugh at=r
+daniel: He texted "one more stop" forty minutes ago. That's all. Just "one more stop."
+@hide all
+@show hanbi neutral at=c
+hanbi: He's fine. He shared his location. He's… walking in circles near the station.
+songha: That's not fine. That's Hyunjun.
+@hide all
+@sfx bell
+@show hyunjun laugh at=c
+hyunjun: I'm here! I got off one stop early to walk past the old building. It's all scaffolding now. It looks like it's wearing a jacket.
+@show justin smile at=r
+> Justin takes a fish cake off Hyunjun's plate before he has even sat down.
+hyunjun: You didn't even wait for me to sit!
+justin: I waited a week.
+@hide all
+@show haruta smile at=l
+haruta: I'll order. The cheese one, extra rice cakes. I want the cheese one. I decided on the train.
+@show daniel surprised at=r
+daniel: Haruta ordered for the table! Everyone, a round of applause!
+haruta[laugh]: Please don't clap. The whole restaurant is looking.
+@hide all
+@show charlie thinking at=c
+charlie: Wait, what's happening? Why is everyone clapping?
+all: Sit down, Charlie.
+@hide all
+@show hamin smile at=c
+@if var.drink == "peach"
+    > Hamin slides a peach iced tea across the table to you without a word. The restaurant doesn't even sell peach iced tea. He must have brought it.
+@elif var.drink == "choco"
+    > Hamin slides a hot chocolate across the table to you without a word. The restaurant doesn't even sell hot chocolate. He must have brought it.
+@elif var.drink == "grape"
+    > Hamin slides a grape soda across the table to you without a word. The restaurant doesn't even sell grape soda. He must have brought it.
+@else
+    > Hamin slides a black coffee across the table to you without a word. The restaurant doesn't even sell coffee. He must have brought it.
+hamin: You were going to forget to drink anything. You always do when it's loud.
+@hide all
+@show hanbi smile at=l
+> Hanbi's phone is at ninety-four percent. Everyone else's is under twenty. He puts the charger in the middle of the table like a centrepiece.
+@show songha smile at=r
+songha: Okay. Agenda. Item one: whose week is it with the card?
+> Everyone looks at you. The glass card is in your coat pocket. You checked for it three times on the way here.
+you: Mine. Still mine. It's been one week exactly.
+songha[laugh]: Then you have to hand it over. That was the rule.
+@hide all
+> You put it on the table between the tteokbokki and the charger. Nine people, badly framed, laughing, catching the restaurant light.
+@show daniel smile at=c
+daniel: New rule. Whoever has it next has to host. Which means another dinner. Which means next week. Which means—
+@show charlie laugh at=r
+charlie: Which means we just keep doing this forever?
+daniel: Exactly. That's the whole plan.
+@hide all
+> By the door, Daniel has found a claw machine the size of a fridge. He has already spent four thousand won on it.
+@show daniel laugh at=r
+daniel: It's a different claw machine. It's a *new* claw machine. The old grudge doesn't apply.
+@show justin smile at=l
+justin: You've lost five times.
+daniel: Five times to a *new* machine. That's a fresh start.
+@hide all
+> The food arrives, too hot and too much. Somebody knocks over a cup. Somebody starts laughing and can't stop.
+> It isn't a memory yet. It's just Tuesday. You stay until they close.
+@end

@@ -1,0 +1,35 @@
+{
+  "character": "hamin",
+  "canonicalAsset": "assets/characters/hamin/identity/canonical.webp",
+  "status": "LOCKED v6 (gpt_image_2_5 high, photo-anchored, mature; 2026-09-29)",
+  "visualNotes": [
+    "ocean / midnight blue / silver"
+  ],
+  "hairNotes": [
+    "black with midnight-blue sheen",
+    "soft medium-short layers, light fringe, loose side part"
+  ],
+  "faceNotes": [
+    "calm soft eyes",
+    "clean gentle features",
+    "still, watchful"
+  ],
+  "bodyNotes": [
+    "tall, lean",
+    "still posture"
+  ],
+  "outfit": "navy knit over white tee, long charcoal coat, dark slacks, silver chain bracelet",
+  "generationMethod": "gpt_image_2_5 quality=high 9:16; image_references = producer-uploaded public profile photo; prompt v6 in production/ART_PROMPTS.md. Expression variants use image_references = [canonical job id, reference photo].",
+  "doNotChange": [
+    "hair colour",
+    "hair silhouette",
+    "outfit",
+    "face structure",
+    "colour motif"
+  ],
+  "sources": "research/characters/hamin.md (public basis) + research/CHARACTER_BIBLE.md (fiction)",
+  "jobs": {
+    "canonical": "40e3e5a6-7865-45ba-bdbc-e284cc96fb67",
+    "referencePhotoMediaId": "a8741f2c-472a-4007-ac58-aaa672aff47f"
+  }
+}

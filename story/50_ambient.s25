@@ -1,0 +1,207 @@
+# AMBIENT HUB CHATTER — speech bubbles while the player roams.
+# Members only. 2–4 lines per scene, <= 12 words per line. No commands, no menus.
+# amb_a1_*  = Act I (before the doors)
+# amb_a2e_* = Act II early (0–3 rooms done)
+# amb_a2l_* = Act II late (4–7 rooms done; after interlude_2, before or after interlude_3)
+# Never refer to a specific room's contents: rooms are done in any order.
+
+# ------------------------------------------------------------------ Act I
+
+=== amb_a1_claw
+daniel: This claw machine is rigged. I can feel it.
+justin: You've lost three times.
+daniel: Four. Don't round down to be nice.
+
+=== amb_a1_charger
+charlie: Does anyone have a charger? I'm at nine percent.
+hanbi: Here.
+charlie: Why do you always have one?
+
+=== amb_a1_schedule
+songha: We have until five. I'm making a timetable.
+hyunjun: Can the timetable have snacks in it?
+songha: Snacks are slot three.
+
+=== amb_a1_crackers
+hyunjun: Where did my crackers go?
+justin: What crackers?
+hyunjun: The ones in your hand, Justin.
+
+=== amb_a1_turn
+justin: Hyunjun. The turn from last week. Watch.
+hyunjun: You're half a count late.
+justin: On purpose. It's called style.
+
+=== amb_a1_wall
+charlie: Wait, what's happening? Why is the wall glowing?
+daniel: It's been glowing for twenty minutes.
+charlie: Well, nobody told me.
+
+=== amb_a1_coat
+hamin: Hanbi, your coat's still wet.
+hanbi: It's fine.
+hamin: Put it on the radiator. Please.
+
+=== amb_a1_ramen
+daniel: Haruta. Favourite ramen. Go.
+haruta: Anything is fine.
+daniel: That's not a ramen.
+
+=== amb_a1_flyer
+haruta: This flyer is for a film night. Eight years ago.
+songha: Someone should really take it down.
+haruta: I think it's nice that nobody did.
+
+=== amb_a1_speakers
+songha: If it's a speaker array, where are the speakers?
+daniel: Maybe the building's just like that.
+songha: Buildings are not "just like that."
+
+=== amb_a1_selfie
+daniel: Everyone look mysterious. It's for the atmosphere.
+charlie: I can't look mysterious. My face won't do it.
+daniel: Try looking hungry. Basically the same.
+
+=== amb_a1_sofa
+hyunjun: This sofa has a spring that bites.
+hamin: Sit on the left side.
+hyunjun: How do you already know that?
+
+=== amb_a1_rain
+charlie: It's really pouring out there.
+justin: Good. Now nobody can leave.
+hanbi: Anyone can leave. Nobody wants to.
+
+# ------------------------------------------------------------------ Act II early
+
+=== amb_a2e_hum
+hyunjun: Can anyone else hear the doors humming?
+songha: It's the lights. Probably.
+hyunjun: You said "probably." You never say "probably."
+
+=== amb_a2e_diagnostic
+songha: ECHO, run a diagnostic, please.
+songha: …It said "no, thank you."
+daniel: Polite building. I keep saying it.
+
+=== amb_a2e_hungry
+hanbi: Is anyone hungry?
+hamin: You are. You just haven't noticed yet.
+hanbi: …Maybe a little.
+
+=== amb_a2e_claw
+daniel: Round five. I've studied the claw. It has patterns.
+charlie: It just picked up nothing again.
+daniel: That's a pattern.
+
+=== amb_a2e_premiss
+charlie: Is it weird that I miss ECHO already?
+justin: It hasn't gone anywhere.
+charlie: I'm pre-missing it. It's efficient.
+
+=== amb_a2e_stairs
+haruta: The third stair from the top creaks.
+hamin: The fifth one does too.
+haruta: We should warn Daniel. He jumps them.
+
+=== amb_a2e_eightcount
+justin: Hyunjun. Eight-count. With me.
+hyunjun: Right now? In the lobby?
+justin: The lobby has the best floor in the building.
+
+=== amb_a2e_rule
+songha: I've written "rule one" on every page.
+hanbi: Why?
+songha: So I never forget it's the rule.
+
+=== amb_a2e_pocket
+justin: Your pocket is crinkling.
+hyunjun: No it isn't.
+justin: It's crinkling in the exact shape of jelly.
+
+=== amb_a2e_quiet
+daniel: Why is everyone so quiet?
+hanbi: It's okay to be quiet sometimes.
+daniel: …I'm trying it. It's really hard.
+
+=== amb_a2e_upstairs
+charlie: Wait, what's happening? Is someone going upstairs?
+songha: Not right now.
+charlie: Okay. But tell me first next time.
+
+=== amb_a2e_tea
+hamin: The kettle in the lounge still works.
+haruta: Would anyone like tea?
+songha: Everyone. Everyone would like tea.
+
+=== amb_a2e_strawberry
+hyunjun: My hair looks like a wet strawberry.
+charlie: It looks nice!
+hyunjun: A nice wet strawberry.
+
+# ------------------------------------------------------------------ Act II late
+
+=== amb_a2l_fort
+charlie: Nobody touch the fort. The fort has rules.
+daniel: What are the rules?
+charlie: Unclear. But very serious.
+
+=== amb_a2l_ghost
+hyunjun: The ghost just yawned.
+songha: Ghosts don't yawn.
+hyunjun: Then not a ghost. Case closed.
+
+=== amb_a2l_floor
+justin: If I lie down, I'm not getting up.
+hyunjun: So lie down.
+justin: …Okay. I live here now.
+
+=== amb_a2l_behind
+songha: We're forty minutes behind schedule.
+hanbi: There is no schedule.
+songha: …There's a small schedule.
+
+=== amb_a2l_shoes
+hyunjun: I've started hiding snacks in my shoes.
+justin: I know. I checked.
+hyunjun: You *checked*?
+
+=== amb_a2l_plugged
+charlie: Hanbi. Charger. Again. Sorry.
+hanbi: It's already plugged in. By your hand.
+charlie: When did you— thank you.
+
+=== amb_a2l_note
+hamin: I keep thinking about her library note.
+songha: The bossy one?
+hamin: I'd like to be that sure about anything.
+
+=== amb_a2l_touched
+daniel: I almost had it. The claw touched it.
+justin: Touching isn't winning.
+daniel: Touching is emotionally winning.
+
+=== amb_a2l_card
+hyunjun: One card. Just one. That's so small.
+hanbi: We'll figure it out.
+hyunjun: Later. I know. Later.
+
+=== amb_a2l_hour
+haruta: It's so quiet at this hour.
+hamin: The vending machine's the loudest thing now.
+haruta: Like a film, just before the music starts.
+
+=== amb_a2l_lying
+charlie: Wait, what's happening? Why is everyone lying down?
+daniel: It's nearly three. This is what three looks like.
+charlie: Oh. Okay. Budge up.
+
+=== amb_a2l_fiveminutes
+daniel: I haven't talked for five whole minutes.
+songha: I noticed. It was nice.
+daniel: …It was, actually.
+
+=== amb_a2l_goodnight
+songha: ECHO just said "goodnight" to the vending machine.
+hanbi: That's sweet.
+songha: That's a bug. …It's sweet.

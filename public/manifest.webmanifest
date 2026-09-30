@@ -1,0 +1,10 @@
+{
+  "name": "00:25 — Stay Until Morning",
+  "short_name": "00:25",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#05060c",
+  "theme_color": "#0b1030",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

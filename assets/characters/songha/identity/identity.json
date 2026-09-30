@@ -1,0 +1,33 @@
+{
+  "character": "songha",
+  "canonicalAsset": "assets/characters/songha/identity/canonical.webp",
+  "status": "LOCKED v6 (gpt_image_2_5 high, photo-anchored, mature; 2026-09-29)",
+  "visualNotes": [
+    "navy / stars / clocks"
+  ],
+  "hairNotes": [
+    "very thick voluminous near-black",
+    "medium length, small flick at the back"
+  ],
+  "faceNotes": [
+    "gentle slightly-downturned eyes, double lids",
+    "straight nose"
+  ],
+  "bodyNotes": [
+    "average, steady grounded posture"
+  ],
+  "outfit": "navy varsity jacket with cream sleeves and star patch, white tee, grey trousers, wristwatch, notebook",
+  "generationMethod": "gpt_image_2_5 quality=high 9:16; image_references = producer-uploaded public profile photo; prompt v6 in production/ART_PROMPTS.md. Expression variants use image_references = [canonical job id, reference photo].",
+  "doNotChange": [
+    "hair colour",
+    "hair silhouette",
+    "outfit",
+    "face structure",
+    "colour motif"
+  ],
+  "sources": "research/characters/songha.md (public basis) + research/CHARACTER_BIBLE.md (fiction)",
+  "jobs": {
+    "canonical": "01a7998c-f0c2-4ade-bfe2-9f9e556a5095",
+    "referencePhotoMediaId": "0dc582ca-0ec7-47b0-8d80-57a58251192e"
+  }
+}

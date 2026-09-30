@@ -1,0 +1,28 @@
+{
+  "name": "stay-until-morning",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "00:25 — Stay Until Morning. Unofficial fan-made fictional visual novel.",
+  "scripts": {
+    "dev": "vite",
+    "locales": "vite-node tools/build-locales.ts",
+    "build": "npm run locales && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "story:stats": "vite-node tools/story-stats.ts",
+    "story:check": "vite-node tools/story-stats.ts"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/three": "^0.186.0",
+    "typescript": "~5.9.0",
+    "vite": "^8.0.0",
+    "vite-node": "^5.0.0",
+    "vitest": "^5.0.0"
+  }
+}

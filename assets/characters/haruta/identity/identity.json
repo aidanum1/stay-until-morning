@@ -1,0 +1,32 @@
+{
+  "character": "haruta",
+  "canonicalAsset": "assets/characters/haruta/identity/canonical.webp",
+  "status": "LOCKED v6 (gpt_image_2_5 high, photo-anchored, mature; 2026-09-29)",
+  "visualNotes": [
+    "violet / cinema / projector light"
+  ],
+  "hairNotes": [
+    "dark brown with subtle violet sheen",
+    "tidy side-swept fringe, clean nape"
+  ],
+  "faceNotes": [
+    "composed, gentle, neat features"
+  ],
+  "bodyNotes": [
+    "average, upright polite posture"
+  ],
+  "outfit": "white collared shirt, charcoal cardigan, slim black trousers, loafers, violet film-strip pin",
+  "generationMethod": "gpt_image_2_5 quality=high 9:16; image_references = producer-uploaded public profile photo; prompt v6 in production/ART_PROMPTS.md. Expression variants use image_references = [canonical job id, reference photo].",
+  "doNotChange": [
+    "hair colour",
+    "hair silhouette",
+    "outfit",
+    "face structure",
+    "colour motif"
+  ],
+  "sources": "research/characters/haruta.md (public basis) + research/CHARACTER_BIBLE.md (fiction)",
+  "jobs": {
+    "canonical": "0bec4c3b-700e-4c47-897e-5febfd832ad0",
+    "referencePhotoMediaId": "3605d717-37e6-42c0-bf52-fb48f536bccf"
+  }
+}

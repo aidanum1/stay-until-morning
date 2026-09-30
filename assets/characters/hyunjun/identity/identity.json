@@ -1,0 +1,35 @@
+{
+  "character": "hyunjun",
+  "canonicalAsset": "assets/characters/hyunjun/identity/canonical.webp",
+  "status": "LOCKED v6 (gpt_image_2_5 high, photo-anchored, mature; 2026-09-29)",
+  "visualNotes": [
+    "streetlights / pink-magenta / rain reflections"
+  ],
+  "hairNotes": [
+    "rose-pink fading to magenta tips",
+    "fluffy textured medium-short"
+  ],
+  "faceNotes": [
+    "bright open boyish face",
+    "natural flush",
+    "big easy grin"
+  ],
+  "bodyNotes": [
+    "average height",
+    "always mid-motion"
+  ],
+  "outfit": "oversized cream hoodie under black bomber with magenta lining, silver ear cuff, sneakers",
+  "generationMethod": "gpt_image_2_5 quality=high 9:16; image_references = producer-uploaded public profile photo; prompt v6 in production/ART_PROMPTS.md. Expression variants use image_references = [canonical job id, reference photo].",
+  "doNotChange": [
+    "hair colour",
+    "hair silhouette",
+    "outfit",
+    "face structure",
+    "colour motif"
+  ],
+  "sources": "research/characters/hyunjun.md (public basis) + research/CHARACTER_BIBLE.md (fiction)",
+  "jobs": {
+    "canonical": "0926fc1a-fdfe-484a-beb3-974f067b0b59",
+    "referencePhotoMediaId": "18b6a6c9-2eda-4cce-b363-18c5f0274578"
+  }
+}

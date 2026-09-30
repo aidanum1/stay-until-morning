@@ -1,0 +1,34 @@
+{
+  "character": "charlie",
+  "canonicalAsset": "assets/characters/charlie/identity/canonical.webp",
+  "status": "LOCKED v6 (gpt_image_2_5 high, photo-anchored, mature; 2026-09-29)",
+  "visualNotes": [
+    "warm sunlight / amber"
+  ],
+  "hairNotes": [
+    "warm chestnut-brown with amber highlights",
+    "soft tousled waves, off-centre fringe"
+  ],
+  "faceNotes": [
+    "youngest-looking",
+    "bright expressive face, wide smile"
+  ],
+  "bodyNotes": [
+    "slightly shorter than the others",
+    "bouncy"
+  ],
+  "outfit": "cream cable-knit cardigan over sunflower-yellow tee, light-wash jeans, amber beaded bracelet, canvas tote",
+  "generationMethod": "gpt_image_2_5 quality=high 9:16; image_references = producer-uploaded public profile photo; prompt v6 in production/ART_PROMPTS.md. Expression variants use image_references = [canonical job id, reference photo].",
+  "doNotChange": [
+    "hair colour",
+    "hair silhouette",
+    "outfit",
+    "face structure",
+    "colour motif"
+  ],
+  "sources": "research/characters/charlie.md (public basis) + research/CHARACTER_BIBLE.md (fiction)",
+  "jobs": {
+    "canonical": "3203d473-c76b-4794-ab7e-81a6cd5785c3",
+    "referencePhotoMediaId": "ce8e9b29-d631-48bc-a487-eaef9018c7b6"
+  }
+}

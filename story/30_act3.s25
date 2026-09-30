@@ -1,0 +1,275 @@
+# ACT III — The Ninth Memory (03:30 → 03:50)
+# Runs after all eight rooms. Hamin and Haruta speak casually here (their rooms are done).
+
+=== act3_start
+@chapter act3
+@bg studio_hall t=fade d=1.6
+@amb room
+@music tension
+@fx memory n=0.8
+@time 03:30
+@cam reveal
+> Eight doors, all of them dark now. Eight records returned. The Hall of Doors should be finished.
+> It isn't. At the end of the corridor, where there was only wall an hour ago, there is a ninth door.
+> It has no symbol. Just a small brass plate, the kind that used to be on the front desk, and on it a name.
+> Yours.
+@textbox echo
+echo: RECORD 09 — OWNER: {{playerName}}. TYPE: LETTER. DATE: SIX YEARS AGO. STATUS: SEALED.
+echo: I did not know this record existed until 00:25. It was filed under FRONT DESK — MISC. I apologise. My filing was not always good.
+@textbox normal
+@show songha thinking at=l
+songha: A letter. You wrote a Future Letter. While you worked here.
+@show daniel surprised at=r
+daniel: You never said!
+* [sincere] "I forgot. I honestly forgot."
+    @rel songha trust+1
+    > It's true. You remember the desk, the forms, the pencils. You don't remember sitting down and writing one yourself.
+    songha: …Okay. That's allowed. It was six years ago.
+* [playful] "Everyone who worked here had to. It was in the contract."
+    @rel daniel closeness+1
+    daniel[laugh]: There was a *contract*?
+    > There wasn't. There was a founder who said "you too" and pushed a form across the desk. Same thing.
+* [quiet] Look at the brass plate and say nothing.
+    @rel hanbi trust+1
+    > The name is in your own handwriting. Younger. Rounder. Somebody who pressed too hard with the pencil.
+@hide all
+@show hanbi neutral at=c
+hanbi: It's the same rule. Nobody has to open anything.
+@show hamin neutral at=l
+hamin: It's yours. You decide.
+@hide all
+@textbox echo
+echo: The owner's consent is required. I will wait. I have been waiting six years. A few more minutes will not register.
+@textbox normal
+~ ask
+* "Open it."
+    @sfx door
+    @goto act3_room
+* "Not yet."
+    @flag ninth_hesitated
+    @rel hanbi trust+1
+    @rel haruta trust+1
+    @show haruta smile at=c
+    haruta: That's fine. We're not going anywhere.
+    @show charlie smile at=r
+    charlie: Yeah! We'll just — stand here. In a hallway. At three-thirty in the morning. Like normal people.
+    @hide all
+    > They do, too. Nobody checks the time. Nobody says "we've only got until five." Eight people lean on a wall and wait for you.
+    > Hyunjun starts humming something. Justin taps the beat on the radiator. It is, absurdly, comfortable.
+    > After a while, the door doesn't seem so heavy.
+    @goto .ask
+
+=== act3_room
+@bg studio_frontdesk t=memory d=2
+@music memory
+@amb rain
+@fx dust n=0.8
+@letterbox on
+@cam wide
+@textbox memory
+> The front desk of Studio 25, six years ago. Rain on the window. A radio somewhere playing a song that was already old.
+> ECHO has rebuilt it from the inside out: the sign-up forms, the jar of pencils, the corkboard. A stack of moving boxes by the wall, half-taped, with a city name on each one.
+> Busan. Seoul. Seoul again. A city abroad, the name in a different alphabet. Seoul.
+> And at the desk, a figure of soft light. Sixteen. Sleeves too long. Writing something with a pencil pressed far too hard.
+@textbox normal
+@show charlie surprised at=l
+charlie: The boxes have *labels*. That's so many cities.
+@show hyunjun thinking at=r
+hyunjun: You moved that much?
+* [sincere] "Every couple of years. Sometimes less."
+    @rel hyunjun closeness+1
+    > It's a strange thing to say out loud in a room made of your own past. The boxes make it look like a fact instead of a feeling.
+    hyunjun: That's… that's a lot of last days.
+* [playful] "I was very good at packing."
+    @rel charlie closeness+1
+    charlie[laugh]: Okay, but were you good at *unpacking*?
+    > You look at the boxes. Half-taped. You don't answer, and he's kind enough to let it go.
+* [quiet] Nod.
+    @rel hamin trust+1
+    > Hamin glances at the boxes, then at you, and doesn't ask anything. He just moves a little closer to where you're standing.
+@hide all
+@textbox echo
+echo: Playing the record.
+@textbox normal
+@textbox memory
+> The figure at the desk finishes writing. Folds the paper twice. Slides it into the slot — the one that sticks — and has to push it with two fingers.
+voice: You too, kid. Everybody who works here writes one. Studio rules.
+> The founder, off to one side, sleeves rolled up, laughing at something on her phone. Seo Yeonhwa. You had forgotten her voice. You had not forgotten her laugh.
+you: What if I'm not here to read it?
+voice: Then it'll wait. That's what the building's for.
+@textbox normal
+@hide all
+@sfx page
+> The letter unfolds in the air in front of you, the way ECHO unfolds everything — too carefully, like it's afraid of tearing.
+> You know the handwriting. You don't know the words until you read them.
+@textbox memory
+> "Dear future me. I don't know where you are when you read this. I don't know what city. I've stopped guessing."
+> "I hope you're okay. I hope you found people. I hope you stayed long enough that somebody learned how you take your drink."
+> "I hope, by the time you read this, you've found a place you want to stay."
+@textbox normal
+@wait 1.2
+@show hanbi sad at=c
+> Hanbi is the first to speak, and it isn't with words. He takes a breath in, holds it, lets it go.
+hanbi: …That's a lot to ask of a letter.
+@show songha thinking at=l
+songha: It's not asking the letter. It's asking you.
+@hide all
+* [sincere] "I don't know if I did."
+    @rel hanbi trust+1
+    @rel songha trust+1
+    > It comes out steadier than you expected. Nobody rushes to fill the silence after it.
+    @show hamin neutral at=c
+    hamin: You're here.
+    > Two words. He means tonight. He might mean more than tonight. He doesn't explain, and you don't ask him to.
+    @hide all
+* [playful] "Well. The drink part is covered."
+    @rel hamin closeness+1
+    @rel hyunjun closeness+1
+    @show hyunjun laugh at=r
+    hyunjun: It's *so* covered. Half this building knows your order now.
+    @show hamin shy at=l
+    > Hamin looks at the floor with the specific expression of somebody who has been caught remembering something.
+    @hide all
+* [quiet] Fold the letter back up and hold it.
+    @rel haruta trust+1
+    @rel daniel trust+1
+    > The paper is warm, the way ECHO's things are warm. Daniel looks like he wants to say a joke and decides, visibly, not to.
+    @show haruta smile at=c
+    haruta: You don't have to answer it tonight. It's a letter. It's patient.
+    @hide all
+@goto act3_link
+
+=== act3_link
+@cam pushin
+@sfx echo
+@textbox echo
+echo: Cross-reference complete.
+echo: RECORD 01 through 08 each contain one unresolved subject. RECORD 09 resolves them.
+echo: Displaying.
+@textbox normal
+@bg mem_patchwork t=memory d=2
+@fx memory n=1.2
+@cg cg_ninth
+@unlock cg:cg_ninth
+> The front desk folds away. In its place, a room made of other rooms.
+> A beach at night. The last train. An airport board. A cinema seat. A doorway with a key ring on the hook. A rooftop. A lounge sofa. A photo booth.
+> Eight rooms, stitched together at the edges like a quilt. And in every one of them, standing where the silhouette stood: a younger version of you, in a coat with sleeves too long.
+@textbox echo
+echo: Subject: {{playerName}}. Appears in eight records over six years, in four cities.
+echo: Encounters were brief. None exceeded one night. None were repeated. The subject was, on each occasion, about to leave.
+echo: CAUSAL LINK: NONE FOUND.
+echo: I searched for one. For some time. There is no pattern. There is no signal. There is no schedule. I am sorry if that is disappointing.
+@textbox normal
+@cg off
+@show songha thinking at=l
+songha: No pattern. Eight times. That's — statistically, that's —
+@show charlie surprised at=r
+charlie: It's fate. Right? That's what this is. It has to be. Nine people, one building, the same night —
+songha: It's not fate. ECHO just said. It looked.
+charlie: ECHO's a *filing system*, hyung. It wouldn't know fate if fate walked in and asked for the wifi password.
+@hide all
+@show hamin neutral at=c
+hamin: Does it matter?
+@show charlie thinking at=l
+charlie: …What?
+hamin: Whether it was fate. Does it change what happened?
+@hide all
+* [sincere] "I think I'd rather it wasn't."
+    @flag not_destiny
+    @rel hamin romance+1
+    @rel songha closeness+1
+    > It surprises you as you say it, and then it doesn't. If it were fate, none of it would have been anyone's choice.
+    > A kid who gave a stranger a hot can on a beach. A kid who stayed on a train. A kid who said "you don't have to stop."
+    > Those were chosen. Every one of them.
+    @show hanbi smile at=c
+    hanbi: …Yeah.
+    hanbi: I'd rather have chosen it too.
+    @hide all
+* [playful] "If it's fate, fate has terrible timing. Six years?"
+    @flag not_destiny
+    @rel daniel closeness+1
+    @rel hyunjun closeness+1
+    @show daniel laugh at=r
+    daniel: Fate showed up eight times and forgot to introduce itself. Fate's a mess.
+    @show hyunjun smile at=l
+    hyunjun: To be fair. So were we. I didn't even get a name.
+    > Hyunjun says it lightly. It isn't light. Nobody pretends it is.
+    @hide all
+* [quiet] "It happened. That's enough."
+    @flag not_destiny
+    @rel haruta romance+1
+    @rel justin trust+1
+    @show haruta smile at=c
+    haruta: That's the whole film, I think. Someone was there. Someone noticed. That's — that's the whole film.
+    @show justin smile at=r
+    justin: No plot twist. Just people. I can work with that.
+    @hide all
+@show songha neutral at=l
+> Songha looks at his notebook for a long moment. Then he closes it.
+songha: Okay. No pattern. I'm writing down "no pattern" and I'm going to let that be an answer.
+@show daniel smile at=r
+daniel: Look at him. Growth. At three-forty in the morning.
+songha: Shut up, Daniel.
+daniel[laugh]: Growth *and* warmth.
+@hide all
+@goto act3_founder
+
+=== act3_founder
+@bg studio_frontdesk t=fade d=1.4
+@fx dust n=0.5
+@music quiet
+@textbox echo
+echo: One more item is attached to RECORD 09. It is not the owner's. It is the founder's. She asked that it be played "to whoever's left at the end."
+echo: You are whoever is left. Playing.
+@textbox normal
+@sfx projector
+voice: Hello. If you're hearing this, it's the last night, and ECHO's being dramatic about it. Ignore that. It gets like this.
+voice: I built this place because people kept saying "someday." Someday I'll record that song. Someday I'll tell them. Someday I'll go back.
+voice: So I gave someday a mailbox. That's all the Future Letter Project ever was. A mailbox for later.
+voice: But here's the thing I figured out too late, kids, and I want you to have it now, for free:
+voice: Archives are for keeping. People aren't.
+voice: Don't keep each other. Meet each other. Again. On purpose. That's the trick. Okay. That's the message. Somebody turn the lights off when you go.
+@sfx click
+@wait 1.5
+@show hanbi thinking at=l
+hanbi: …"Meet each other again. On purpose."
+@show hyunjun smile at=r
+hyunjun: That's the best advice I've ever gotten from a wall.
+@hide all
+@textbox echo
+echo: It is 03:50. Time remaining: seventy minutes.
+echo: The building is yours until then. I have no further records. I have no further rules.
+echo: Recipient {{playerName}} — you have been in eight of our memories tonight. Where would you like to be, for the ninth?
+@textbox normal
+@letterbox off
+@time 03:50
+@autosave
+@goto act3_choice
+
+=== act3_choice
+@bg studio_lobby t=fade d=1.4
+@music studio
+@amb room
+@fx dust n=0.4
+@cam wide
+> The lobby again. Everyone drifts apart the way people do at the end of a long night, not leaving — just spreading out into the building.
+> Somebody goes up to the roof. Somebody goes to the practice room. Somebody sits on the worst sofa in Seoul.
+> Seventy minutes. One building. Where do you want to be?
+* Find Hamin. {if top() == "hamin" or hamin.romance >= 1 or hamin.closeness >= 3 or hamin.trust >= 5}
+    @goto hamin_route
+* Find Hyunjun. {if top() == "hyunjun" or hyunjun.romance >= 1 or hyunjun.closeness >= 3 or hyunjun.trust >= 5}
+    @goto hyunjun_route
+* Find Charlie. {if top() == "charlie" or charlie.romance >= 1 or charlie.closeness >= 3 or charlie.trust >= 5}
+    @goto charlie_route
+* Find Haruta. {if top() == "haruta" or haruta.romance >= 1 or haruta.closeness >= 3 or haruta.trust >= 5}
+    @goto haruta_route
+* Find Justin. {if top() == "justin" or justin.romance >= 1 or justin.closeness >= 3 or justin.trust >= 5}
+    @goto justin_route
+* Find Songha. {if top() == "songha" or songha.romance >= 1 or songha.closeness >= 3 or songha.trust >= 5}
+    @goto songha_route
+* Find Hanbi. {if top() == "hanbi" or hanbi.romance >= 1 or hanbi.closeness >= 3 or hanbi.trust >= 5}
+    @goto hanbi_route
+* Find Daniel. {if top() == "daniel" or daniel.romance >= 1 or daniel.closeness >= 3 or daniel.trust >= 5}
+    @goto daniel_route
+* Stay with everyone.
+    @goto friendship_route

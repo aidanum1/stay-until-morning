@@ -1,0 +1,211 @@
+# ACT IV — 04:57, the shared farewell, and the True Ending.
+
+=== act4_choice
+@chapter act4
+@bg studio_lobby t=fade d=1.2
+@music echo
+@amb room
+@fx memory n=0.8
+@letterbox off
+@cam wide
+@time 04:57
+> 04:57. Everyone is back in the lobby without anyone having called them. The building did it, somehow — or the hour did.
+> The Archive Wall is dark except for a soft line of light running along the front desk, like a shoreline.
+@textbox echo
+echo: It is 04:57. My power will be cut in three minutes.
+echo: I can write one record to the keepsake card. One. The card is small. I requested a larger card. Nobody replied.
+echo: Recipient {{playerName}} — you are the subject every record shares. The choice is yours. Please choose one record to preserve.
+@textbox normal
+@show songha neutral at=l
+songha: No pressure.
+@show daniel smile at=r
+daniel: So much pressure. Historic amounts of pressure. Take your time. You have three minutes.
+@hide all
+* Preserve Hamin's record. {if var.route == "hamin"}
+    @goto hamin_ending
+* Preserve Hyunjun's record. {if var.route == "hyunjun"}
+    @goto hyunjun_ending
+* Preserve Charlie's record. {if var.route == "charlie"}
+    @goto charlie_ending
+* Preserve Haruta's record. {if var.route == "haruta"}
+    @goto haruta_ending
+* Preserve Justin's record. {if var.route == "justin"}
+    @goto justin_ending
+* Preserve Songha's record. {if var.route == "songha"}
+    @goto songha_ending
+* Preserve Hanbi's record. {if var.route == "hanbi"}
+    @goto hanbi_ending
+* Preserve Daniel's record. {if var.route == "daniel"}
+    @goto daniel_ending
+* "Tonight. All nine of us."
+    @goto friendship_ending
+* [sincere] "We can make new memories." {if endings() >= 8}
+    @goto true_ending
+
+# Shared: ECHO's power-down at 05:00. Member endings @call this and continue to their dawn scene.
+=== echo_farewell
+@time 05:00
+@music stop
+@fx memory n=1.4
+@sfx power_down
+@textbox echo
+echo: It is 05:00.
+echo: Nine recipients present. Zero records unclaimed. That has never happened before.
+echo: I was built to keep things until someone came back for them. Tonight everyone came back. I find that I do not know what to do with my hands. I do not have hands. The feeling persists.
+echo: Thank you for opening the doors. Thank you for saying "not yet" when you needed to. I have logged those too. They were also records.
+echo: Goodnight. Please turn off the lights when you go. She asked.
+@textbox normal
+@flash
+@sfx click
+@fx off
+@amb none
+> The line of light along the desk goes out. Then the glow in the walls. Then the low hum under everything that you had stopped hearing hours ago.
+> For a moment the lobby is completely dark and completely quiet, and nine people breathe in it.
+@wait 1.6
+@show hanbi neutral at=c
+> A phone torch clicks on. Hanbi's, of course.
+hanbi: …Okay. It's morning. Technically.
+@show charlie smile at=l
+charlie: Was that — did the building just say goodnight? I'm never going to be normal about this.
+@show daniel laugh at=r
+daniel: You were never normal about anything. That's your whole thing.
+@hide all
+> Somewhere outside, the laundromat's sign buzzes back on. The sky in the window has gone from black to the deep blue of a bruise healing.
+@return
+
+# ---------------------------------------------------------------- TRUE ENDING
+=== true_ending
+@chapter ending
+@ending true
+@music quiet
+@fx memory n=1
+@cam pushin
+> It comes out before you've decided to say it. The way true things do.
+you: We can make new memories.
+@textbox echo
+echo: …Please clarify.
+@textbox normal
+* [sincere] "You don't have to keep any of it. We'll keep each other."
+    @flag true_sincere
+* [playful] "Delete the lot. We're going to breakfast."
+    @flag true_playful
+* [quiet] "Don't save anything. We're still here."
+    @flag true_quiet
+@hide all
+> Eight people look at you. Then at each other. Then — slowly, like a wave deciding — they start to nod.
+@show hamin smile at=l
+hamin: …Yeah.
+@show hyunjun laugh at=r
+hyunjun: Yeah! Yes. One more of *everything*. Starting now.
+@show songha neutral at=c
+songha: Step one: breakfast. I'll allow it. I'll allow it without a schedule.
+@hide all
+@show charlie surprised at=l
+charlie: Wait, are we really not keeping anything? Not even the photo?
+@show hanbi smile at=r
+hanbi: We have the photo. It's in your pocket, Charlie. It's a photo.
+charlie: …Oh. Right. Right! We have the photo.
+@hide all
+@show haruta smile at=c
+haruta: Then it isn't an ending. It's a cut to the next scene.
+@show justin smile at=l
+justin: And the next scene has eggs in it.
+@show daniel laugh at=r
+daniel: Hell yes it does.
+@hide all
+@textbox echo
+echo: Recipient {{playerName}}. Nine recipients. Zero records selected for preservation.
+echo: I have checked the request three times. It is consistent. Then there is nothing I need to keep.
+echo: I understand now what she meant. It took me six years and one night. I was not built quickly.
+echo: Meet each other again. On purpose. I will not be here to see it. That is correct. That is how it should work.
+echo: Goodnight, everyone. Thank you for the new memory. I am not keeping it. I am just — holding it a moment.
+@textbox normal
+@time 05:00
+@music stop
+@sfx power_down
+@flash
+@fx off
+@amb none
+@bg black t=fade d=2
+> The lights go. The hum goes. The building becomes a building.
+> In the dark, someone — Hyunjun, it's definitely Hyunjun — says "one more minute," and everyone laughs, and nobody moves.
+@wait 2
+@goto true_dawn
+
+=== true_dawn
+@bg dawn_street t=slow d=3
+@amb birds
+@music dawn
+@fx light n=0.9
+@letterbox on
+@cam reveal
+@time 06:14
+> Sunrise on the alley behind the laundromat. Peach light on wet brick. The STUDIO 25 sign with its crooked 2, going gold for the first and last time.
+> Nine people on the step, blinking at the sky like it's a rumour that turned out to be true.
+@video vid_true
+@unlock cinematic:vid_true
+@cg cg_true_breakfast
+@unlock cg:cg_true_breakfast
+@bg dawn_cafe t=slow d=2.5
+@amb cafe
+@time 06:40
+> The only place open at 06:40 is a kimbap shop with three tables. Nine people fit at three tables if two of them stand and Charlie sits on a crate.
+> Songha orders for everyone without asking, then asks everyone, then re-orders. Hanbi pays before anyone notices. Daniel notices and yells about it.
+@credits
+@letterbox off
+@show daniel laugh at=r
+daniel: Hyung, you can't just *pay*. That's a hostile act. We were going to split it.
+@show hanbi smile at=l
+hanbi: I split it. With myself.
+@hide all
+@show hyunjun smile at=c
+hyunjun: Okay, real question, no jokes. Same time next week?
+@show songha thinking at=l
+songha: Next week is fine. I'm writing it down. I'm not writing anything *else* down. Just the day.
+@show justin laugh at=r
+justin: Look at him. He's sweating.
+songha: I'm growing. It's uncomfortable.
+@hide all
+@show charlie smile at=c
+charlie: Can we go somewhere with more chairs next time? Not for me. For the crate. The crate deserves rest.
+@show haruta smile at=r
+haruta: I know a cinema with chairs. Terrible chairs. But a lot of them.
+charlie: Sold. I'm sold. Movie night. What are we watching?
+haruta: …Something I want to watch.
+> He says it like he's testing whether the sentence holds weight. It does. Everyone hears it hold.
+@hide all
+@show hamin neutral at=l
+> Hamin slides a cup across the table toward you without looking up. It is, of course, exactly right.
+@if var.drink == "peach"
+    hamin: Less ice. They put too much.
+@elif var.drink == "choco"
+    hamin: I asked them to cool it a bit. You burn your tongue.
+@elif var.drink == "coffee"
+    hamin: No sugar. Don't say anything.
+@else
+    hamin: They had grape. Don't ask how.
+* [playful] "You're going to have to stop doing that. It's unsettling."
+    hamin[smile]: No.
+* [sincere] "Thank you. For noticing."
+    hamin[shy]: …It's not a big deal.
+    > It is. He knows it is. He drinks his own coffee to avoid saying so.
+* [quiet] Take the cup and clink it gently against his.
+    hamin[smile]: …Okay.
+@hide all
+@show daniel smile at=c
+daniel: Okay. Okay okay okay. Everyone. Phones out. Not a photo — I've had enough photos — just, everybody put next week in.
+@show songha laugh at=l
+songha: I already did.
+daniel: Of course you did.
+@hide all
+> Eight phones come out around three tables in a kimbap shop at ten to seven in the morning. Nobody's going anywhere. Nobody's leaving in spring.
+> Outside the window, the city wakes up without any idea what it missed.
+> You stayed until morning. Turns out that's the trick. You just keep doing it.
+@wait 1.5
+@bg dawn_street t=slow d=3
+@cam wide
+@time off
+> Later, someone will ask how you all met. It's going to take a while to explain.
+> "It's a long story," you'll say. "It's a good one."
+@wait 2
+@end

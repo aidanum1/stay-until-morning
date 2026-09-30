@@ -1,0 +1,851 @@
+# CHARLIE — "Where Home Is"
+# Route theme: belonging. Seed var: var.homeword (place / people / smell).
+# Past: five winters ago, an airport departures lounge, every flight delayed. Never romantic.
+
+=== charlie_intro
+@show daniel smile at=l
+@show charlie laugh at=r
+> Charlie and Daniel are standing in front of the Archive Wall with the posture of two people about to get in trouble on purpose.
+daniel: Okay. Ask it something.
+charlie: Why do I have to ask it?
+daniel: You're the youngest. If it gets mad at you, it's cute.
+charlie[thinking]: That's… actually fair. ECHO! What's the wifi password?
+@textbox echo
+echo: There is no wifi. The router was removed in March.
+echo: Its password was "studio25studio25". Nobody changed it for six years.
+@textbox normal
+charlie[laugh]: It *answered*. Hyung. It answered me.
+daniel[laugh]: Ask it what it had for dinner.
+@textbox echo
+echo: I do not eat. I have archived three hundred and eleven references to tteokbokki. I feel I understand it.
+@textbox normal
+daniel: Respect. I'm going to go ask it about the claw machine.
+@hide daniel
+> Charlie turns, sees you, and lights up the way a hallway light does when it senses movement. Instantly. Slightly too bright.
+charlie[smile]: {{playerName}}! Perfect. You can be the witness. The building talks back.
+* [playful] "Did you ask it the important questions?"
+    @rel charlie closeness+1
+    charlie[laugh]: Wifi, dinner. Next is "are you haunted." I'm working up to it.
+* [curious] "What does it know about you?"
+    @rel charlie trust+1
+    charlie[thinking]: Apparently that I sent it something. Which is news to me.
+* [quiet] Look up at the glowing wall with him.
+    @rel charlie trust+1
+    > He looks up too. Neither of you says anything for a second, and he seems glad of the company more than the conversation.
+charlie: I think I sent a photo? When I was fourteen. I took photos of everything back then.
+charlie: Ceilings. My shoes. Other people's dogs. If my record is a dog, I'm going to be so happy.
+> He says it like a joke. His eyes go to the Wall anyway, running along the rows, looking for number four.
+charlie[smile]: Okay, sorry, I'm doing a survey. Very scientific. Everybody has to answer.
+charlie: When someone says "home," what's the first thing you get? Don't think. A place, people, or a smell?
+* [sincere] "A place. A window, usually. Some specific window."
+    @var homeword = "place"
+    charlie[surprised]: A window! Specific. I love that. Which window?
+    you: It changes. There's always one, though.
+    charlie[smile]: Best answer so far. Hanbi-hyung said "a chair." Just "a chair." Then he went back to drawing.
+* [careful] "People. Whoever's still up."
+    @var homeword = "people"
+    charlie[smile]: Whoever's still up. Oh, that's nice. That's really nice.
+    charlie: Then tonight you're extremely at home. Nobody here is sleeping. Hyunjun-hyung won't allow it.
+* [playful] "A smell. Laundry soap. Is that weird?"
+    @var homeword = "smell"
+    charlie[laugh]: No! Most honest answer yet. Daniel-hyung said "me." That's not a smell.
+    daniel: It could be!
+    charlie: And the laundromat's right downstairs. You basically walked into your own answer.
+charlie[thinking]: Mine changes. Depends on the day. And on who's asking, honestly.
+charlie: Right now it's this sofa. It's a very good sofa. Don't tell Songha-hyung I've claimed it.
+@show songha neutral at=l
+songha: I can hear you. It's not your sofa.
+charlie[laugh]: It's everyone's sofa. I'm just holding it for them.
+@hide songha
+charlie[smile]: Go on, talk to the others. I'll hold a seat. That's what I do. I hold seats.
+@hub act1
+
+=== charlie_intro_repeat
+@show charlie smile
+charlie: Survey update: Justin-hyung said "a smell," and then said the smell was his own shampoo.
+charlie[laugh]: I'm counting it. Data is data.
+charlie: Left cushion's yours, by the way. It sags the least. I've done research.
+@hub act1
+
+=== charlie_door
+@bg studio_hall t=fade
+@show charlie smile at=c
+> Door four has a small panel above it that nobody noticed until tonight. It flickers between words, trying to settle on one.
+> DEPARTING. BOARDING. DELAYED. It lands on DELAYED and stays there, pleased with itself.
+charlie[laugh]: Oh, that's rude. My own door is making fun of me.
+charlie: Also accurate. I've been walking past it for an hour like it's someone I met once and can't remember the name of.
+> He rocks back on his heels. His canvas tote is over one shoulder, and he's been holding the strap in a fist for a while now.
+charlie[thinking]: Okay. Real talk. I remember what the photo is.
+charlie: It's an airport. The departures board. That's it. That's the whole photo. Very boring. Zero dogs.
+charlie[shy]: But I remember being really awake. That whole night. Like everything was about to happen.
+charlie: And then it didn't. I just got on a plane. It was fine. It's fine!
+> Two "fine"s. He hears it too, and laughs at himself, which is the most Charlie way possible to be caught.
+charlie[smile]: So, yes. You can open it. I want you to. I think I want you in there more than I want to see it, if that makes sense.
+charlie: Can I hold your sleeve on the way in, though? Just the sleeve. Sleeves are allowed.
+* "Open it."
+    charlie[laugh]: Okay! Okay. Sleeve. Going in.
+    > His fingers catch the edge of your coat sleeve, light as a bookmark.
+    @goto charlie_room
+* "Not yet."
+    @rel charlie trust+1
+    charlie[smile]: Honestly? Yeah. Good. It's been delayed five years. It can be delayed one more hour.
+    charlie[laugh]: Come find me when you want. I'll be on the sofa. You know the sofa.
+    > The panel flickers, DELAYED, DELAYED, and he salutes it on his way past, very seriously.
+    @hub act2
+
+=== charlie_room
+@bg mem_airport t=memory d=2
+@music charlie
+@amb night
+@fx dust n=0.5
+@hide all
+@textbox echo
+echo: RECORD 04 — OWNER: CHARLIE. TYPE: PHOTOGRAPH.
+echo: DATE: DECEMBER, FIVE YEARS AGO. 23:52. LOCATION: DEPARTURES, GATE AREA C.
+echo: STATUS OF ALL FLIGHTS: DELAYED. UNRESOLVED SUBJECTS: 1.
+@textbox normal
+@cam reveal
+> The door opens onto an airport at night. The particular kind of empty that only happens when every plane has decided not to go.
+@fx snow n=0.6
+> Rows of joined seats. A coffee kiosk with its shutter down. Tall windows full of snow, falling sideways into the dark.
+> And the board. A departures board the size of a wall, every line glowing amber, every line saying the same word.
+> DELAYED. DELAYED. DELAYED. A whole building agreeing with itself.
+@show charlie surprised at=c
+charlie: Oh no. It even smells right. Floor cleaner and cold coffee. How does it know that?
+@textbox echo
+echo: The photograph contains the floor. Floors have a smell. I extrapolated.
+@textbox normal
+charlie[laugh]: That's terrifying. Great job.
+> He still has hold of your sleeve. He doesn't seem to have noticed.
+@if rooms() == 0
+    > Near the windows, something flickers. A shape made of light, two seats from the end of a row. No face. Just the outline of someone waiting.
+    charlie[thinking]: Who's that? ECHO, is that a person?
+    @textbox echo
+    echo: Unresolved subject. Present in the photograph. I have not been able to identify them.
+    @textbox normal
+    charlie: Huh. Spooky. Friendly spooky. It's sitting like someone who's been told "twenty more minutes" four times.
+@else
+    > Near the windows, something flickers. A shape made of light, two seats from the end of a row. Waiting.
+    charlie[surprised]: Wait. Wait, wait. That's the glowing person. Everyone keeps talking about the glowing person.
+    charlie[thinking]: It's in mine too?
+    > He looks at the silhouette. Then, slowly, he looks at you.
+    charlie: …Is it you again?
+    @if rooms() >= 4
+        charlie[laugh]: Sorry. You don't have to answer. The others said you've been in, like, every single one.
+        charlie: At this point, if it *isn't* you, I'm going to be offended on your behalf.
+    @else
+        charlie[smile]: You don't have to know yet. I just kind of hope so.
+* [playful] "Maybe it's a very patient ghost."
+    @rel charlie closeness+1
+    charlie[laugh]: A ghost with a delayed flight. That's the saddest ghost. We have to help it.
+* [sincere] "Let's go closer. Together."
+    @rel charlie trust+1
+    charlie[smile]: Together. Yeah. Good word.
+* [quiet] Let him keep hold of your sleeve.
+    @rel charlie trust+1 closeness+1
+    > He glances down, finally notices his own hand, and doesn't let go. He just adjusts his grip, like it's a bag strap. Like it's normal.
+@hide all
+@textbox memory
+> The room takes a breath. The airport fills in around its own edges: a clock over the gate reading 23:52, a cleaning cart parked and abandoned.
+> At the end of the row, a fourteen-year-old boy is lying across three chairs with his backpack for a pillow, holding a phone above his face.
+> Younger Charlie. Shorter hair. Hoodie sleeves pulled over his hands. One knee bouncing like he's waiting for a starting gun.
+> Two seats down, the light-shape sits with its coat buttoned to the chin, folding and unfolding a boarding pass until it's gone soft.
+charlie: Is yours delayed too?
+you: Everything's delayed. The board said so. It's very confident about it.
+charlie: Mine was supposed to go at eight. Then nine. Then "later." Later's not a time.
+you: Later's a mood.
+voice: We apologise for the continued delay. We thank passengers for their patience.
+charlie: I'm not patient. I've never been patient. They keep thanking me for something I'm not doing.
+you: Take the compliment. It's the only free thing in here.
+charlie: Ha. Okay. Where are you going?
+you: Where I'm moving. Again.
+charlie: So where are you from?
+you: Here, sort of. Before that, somewhere else. Before that, it's a long list.
+charlie: No, really. Where are you *from*?
+> The light-shape laughs, surprised into it.
+you: You're supposed to accept the first answer. That's how the question works.
+charlie: I never accept the first answer. People ask me all the time. I've got three.
+you: Three answers?
+charlie: A short one, a long one, and one where I draw a map on a napkin. Nobody ever gets the napkin one.
+you: Okay. Then where are *you* from? No, really.
+charlie: …Oh. You're good at this.
+> He thinks about it for a long time, for fourteen. Long enough that the board clicks over, and another line says DELAYED.
+charlie: I'm from the window seat on the bus to school. No, really? My room, but only when it's raining.
+charlie: No, really? …I don't know. I'm between. That's where I'm from. I'm from between.
+you: Between is a place. We're sitting in it.
+charlie: This is the worst place. There's no food. The kiosk closed at ten.
+> The light-shape unbuttons one pocket, then another, and produces, like a magic trick nobody asked for, a handful of coins.
+you: The vending machine by the toilets still works. I checked. Twice.
+> Two kids from nowhere-in-particular, splitting one bag of something salty and one can of something sweet, cross-legged under a board that won't make up its mind.
+charlie: Okay. New answer. Final answer. Where are we from?
+@textbox normal
+you: Wherever the snacks are.
+@textbox memory
+> The light-shape says it at exactly the same moment. Two voices, five years apart, landing on the same four words.
+charlie: Wherever the snacks are. Yes. That's it. That's a country now. We live there.
+charlie: Wait. I have to take a picture. For this letter-to-the-future thing. You're supposed to send one photo of something that matters.
+you: The board? It's a list of places nobody's going.
+charlie: That's why. Future me should know what between looks like.
+> He holds the phone up. The light-shape leans in and points past his shoulder, at one line near the bottom of the board.
+you: That one's mine. Gate thirty-one. Whenever it decides to exist.
+@sfx shutter
+> The shutter sound is far too loud in all that quiet. The photo catches the whole board, every DELAYED, and in the bottom corner, a hand pointing at a gate.
+> A while later, gate thirty-one decides to exist. The light-shape stands, buttons its coat, and hesitates.
+you: Good luck with between.
+charlie: Good luck with wherever. Eat snacks there.
+> Then it goes. First, the way it always went. Looking back exactly once.
+@textbox normal
+@show charlie surprised at=c
+@cam closeup charlie
+charlie: You said it.
+charlie: You said "wherever the snacks are." Before the ghost did. At the same time as the ghost.
+@if rooms() == 0
+    charlie[surprised]: That was — no. No way. That was *you*?
+    > You look down at your own hand. The same hand as the one in the corner of the photo. You've been pointing at gates your whole life.
+@else
+    charlie[laugh]: It *is* you. Again. Oh my god. You're everywhere. You're like weather.
+    > You look down at your own hand. The same hand as the one in the corner of the photo.
+> Gate thirty-one. A night flight to Seoul, a winter behind a front desk, and a kid on three chairs who would not accept the first answer.
+@textbox echo
+echo: Unresolved subject: resolved. Good evening, {{playerName}}.
+echo: Adding to file: "Wherever the Snacks Are." Classified as a place name. It is not on any map. I have checked.
+@textbox normal
+* [sincere] "I remember. Gate thirty-one. You had three answers."
+    @rel charlie trust+1
+    charlie[shy]: I still have three answers. You remembered the *gate number*?
+    you: It took four hours to exist. You remember a gate like that.
+* [playful] "So I've been a citizen of Wherever the Snacks Are this whole time."
+    @rel charlie closeness+1
+    charlie[laugh]: Founding citizen! There's two of us. We need a flag. It should be a chip bag.
+* [quiet] Hold up your hand, pointing, the way it is in the photo.
+    @rel charlie trust+1 closeness+1
+    > He looks at your hand. Then he laughs, a real one, surprised out of him, and lines his own finger up next to yours.
+    charlie[laugh]: Gate thirty-one. Whenever it decides to exist.
+charlie[thinking]: I was so annoyed when you left first. Not at you. At the board. Like, why does *that* gate get to exist?
+charlie: Then I sat there three more hours and finished the snacks by myself. Which was, honestly, a good night. Weird. But good.
+charlie[smile]: I think about it more than I knew. I didn't know I did, until the door.
+@textbox echo
+echo: Note. The owner's associations are exceeding the photograph.
+echo: I am reconstructing things that were never in the frame. This is irregular. I will allow it.
+@textbox normal
+@bg mem_home t=memory d=2.5
+@fx light n=0.8
+@cam pan
+> The board doesn't switch off. It softens. Its amber bleeds out into the air until the whole gate area is lit like late afternoon.
+> Then the seats aren't seats. They're a kitchen counter. A school corridor. The bottom of a street, wet and shining.
+> The walls keep changing, the way rooms do when you wake up in a car and can't tell yet which city you're in.
+charlie[surprised]: Oh — that's the kitchen light. The one that buzzes.
+charlie: And that's the corridor at my second school. Floor polish and someone's orange. There was always someone's orange.
+charlie[laugh]: And the hill! The street with the hill! When it rained, the water raced you to the bottom. It always won.
+> He turns in a slow circle, pointing, the way you'd show someone around a house if the house were made of years.
+charlie[smile]: Sorry. It's a lot of homes. I have a lot of homes. It's not sad, I promise. It's just a lot of doors.
+* [curious] Ask about the kitchen light.
+    @rel charlie closeness+1
+    charlie[smile]: It buzzed so loud. Like a fridge having thoughts. Whoever got home last found it on.
+    charlie: That was the rule. Nobody comes home to a dark kitchen. I still do it. Every place I live, one light on.
+* [curious] Ask about the street with the hill.
+    @rel charlie closeness+1
+    charlie[laugh]: I raced the rain down it every day for a year. My shoes never dried. Not once. Wettest socks in the whole neighbourhood.
+    charlie: The shop at the bottom knew my name. Nobody asked where I was from there. I was just "the one with the wet shoes."
+* [quiet] Listen for the laughter coming from somewhere under the floor.
+    @rel charlie trust+1 closeness+1
+    > It's faint. Someone laughing at a television, through the floorboards, the way people laugh when they think nobody can hear.
+    charlie[shy]: …That's the lady from downstairs. She watched game shows with her window open and shouted the answers.
+    charlie: Wrong every time. Never once embarrassed. Falling asleep to that is a home. That one's definitely a home.
+> You watch the rooms change around him: kitchen, corridor, hill, kitchen. A question you've been asked your whole life turns itself around in your mouth.
+you: When someone asks where home is, what do you say?
+charlie[thinking]: Ooh. Okay. Depends who's asking.
+charlie: Taxi drivers get one word. The city. Done. Taxi drivers do not want the napkin.
+charlie: Teachers, forms, anyone with a clipboard: the long version. Dates. Places. In order. I'm really good at it. I've practised.
+charlie[smile]: People who say "no, really" get the napkin. Arrows everywhere. They always say "wow" and then look a little worried.
+you: And what do you actually say?
+> He opens his mouth, and nothing's ready. For once, nothing's ready.
+charlie[sad]: …I say "what about you?"
+charlie: People love talking about home. You ask, they light up, they talk for ten minutes, and nobody notices I didn't answer.
+charlie[smile]: It's a really good trick. You're the first person who's ever caught it. Well. Second. The first was also you. Five years ago. Annoying.
+* [sincere] "You don't have to pick one. You're allowed all of them."
+    @rel charlie trust+2
+    charlie[surprised]: …All of them?
+    you: The kitchen, the hill, the corridor. Nobody gets to make you choose.
+    charlie[shy]: Nobody's ever said that like it was allowed. They say it like it's a problem I'll solve later.
+* [playful] "I want the napkin version. Full map. All the arrows."
+    @rel charlie closeness+1
+    charlie[laugh]: Oh, you're going to *regret* that. I'll need two napkins. Three.
+    charlie[smile]: …You'd actually follow the arrows, though. I can tell. That's the difference.
+* [romantic] "Then I'm asking properly. Where's home, Charlie? No, really." {if charlie.closeness >= 2}
+    @rel charlie romance+1 trust+1
+    > He looks at you like you've caught him halfway through a doorway.
+    charlie[shy]: That's cheating. You can't use my own game on me.
+    charlie: …Right now? Honestly? Somewhere around here.
+    > He doesn't point at a room when he says it. He doesn't point at anything at all.
+charlie[thinking]: Can I tell you a thing I've never said out loud? It's only a bit sad. Like fifteen percent.
+charlie: Every new place, I'm the loud one. First week, I learn everyone's name. I bring snacks. I make everybody laugh.
+charlie: Because if I make it feel like home for everyone else, then I'm in it too. Right? I built it. I get to live there.
+charlie[sad]: Except sometimes I hold the door open so well, I forget to walk through it.
+> Behind him, the corridor turns back into the kitchen. The buzzing light. Left on for whoever gets home last.
+* [romantic] Sit down on the kitchen floor and make room for him beside you. {if charlie.trust >= 2}
+    @rel charlie romance+1
+    > The floor of the memory is warm, like tiles that have had sun on them all afternoon. You sit, and pat the space next to you.
+    > He stares for a second. Then he sits, knees up, his shoulder almost against yours. Almost.
+    charlie[shy]: You saved me a seat. On the floor of my own kitchen. That's *my* move. You stole my move.
+    you: You can have it back later.
+    charlie[smile]: …No. Keep it. Turns out I like it better when someone does it to me. New information. Filing it.
+* [romantic] "Then walk through it. I'll hold the door." {if charlie.closeness >= 3}
+    @rel charlie romance+1
+    charlie[surprised]: …
+    charlie[shy]: Okay, that was — you can't just say things like that in a kitchen.
+    > But he takes one step anyway, across a threshold that's half corridor and half kitchen, and stands there grinning like he's won something.
+* [sincere] "You're allowed to be the one who gets looked after."
+    @rel charlie trust+1
+    charlie[thinking]: …That sounds like a poster in a school hallway. With a cat on it.
+    charlie[smile]: I'm going to think about it anyway. Later. When you're not looking.
+* [quiet] Stand beside him and watch the rooms change.
+    @rel charlie trust+1
+    > You don't say anything. Neither does he. The rooms keep shifting, and for once he doesn't narrate them.
+    > It's the quietest you've seen him all night. It suits him, like a coat he forgot he owned.
+@textbox echo
+echo: Record 04 is reaching the edge of its frame. Reconstruction will close in one minute.
+echo: …I have made the minute slightly longer. Please do not tell the building.
+@textbox normal
+charlie[laugh]: ECHO's breaking rules for us. We're a bad influence.
+charlie[smile]: Hey. {{playerName}}. Thank you for pointing at that gate.
+charlie: Future me got the photo and had no idea what it meant. Now he knows. It's a map. With one arrow.
+* [romantic] "Show me one more. Any room you want." {if charlie.romance >= 1}
+    @rel charlie romance+1 closeness+1
+    charlie: Can I—? Just to steer.
+    > He lifts a hand toward your elbow and waits. You nod. He turns you, very carefully, toward the window.
+    > Outside it isn't any city he's lived in. It's the alley behind Studio 25, the laundromat light spilling out across the wet ground. Tonight.
+    charlie[shy]: …Huh. ECHO put that one in. I didn't ask for that one.
+    @textbox echo
+    echo: I did not add it. It was already there.
+    @textbox normal
+    > Charlie doesn't say anything to that. His ears have gone pink. He looks at the alley for a long time.
+* [playful] "Wherever the snacks are. Race you back to the lobby?"
+    @rel charlie closeness+1
+    charlie[laugh]: You're on. Loser buys. Winner still has to share. That's the law of the country.
+* [quiet] Stay until the last light goes out.
+    @rel charlie trust+1
+    > You stay. He stays. The kitchen light buzzes, and then it doesn't, and the room goes soft and grey around the two of you.
+@fx off
+@bg studio_hall t=fade
+@music studio
+@show charlie smile at=c
+> The door lets you back out into the hall. The little panel above door four has changed its mind.
+> It doesn't say DELAYED any more. It says ARRIVED.
+charlie[laugh]: Oh, come *on*. That's so cheesy. I love it. Don't look at me right now.
+@flag room_charlie
+@unlock memory:charlie
+@autosave
+@goto hub_after_room
+
+=== charlie_hub
+@if flag.room_charlie and not flag.charlie_postchat
+    @show charlie laugh at=c
+    @show songha thinking at=l
+    @show hamin neutral at=r
+    > Charlie is on the sofa, explaining something with both arms to Songha and Hamin.
+    charlie: It's a country. It's called Wherever the Snacks Are. Population: two.
+    songha: That's not a country. It doesn't have borders.
+    charlie: The borders are wherever the snacks are. Keep up, hyung.
+    hamin: …Does it have a flag?
+    charlie[smile]: Thank you, Hamin-hyung. Yes. It's a chip bag. Obviously.
+    songha[laugh]: I'm going to go check the schedule. Somebody in this building has to be a normal person.
+    @hide songha hamin
+    > There's a gap on the sofa next to Charlie. The left cushion, the one that sags the least. His tote bag is sitting in it, holding the space.
+    > He moves the bag without looking, like the seat was never anybody else's.
+    charlie: Sit. I saved it. I've been defending it from Justin-hyung for twenty minutes. He tried to lie down on it.
+    charlie[laugh]: I told him it was for my fellow citizen. He said "your *what*." I stand by it.
+    > You sit. The sofa lets out a long, old sigh, and so, very quietly, does Charlie.
+    charlie[thinking]: I keep thinking about the gate. You got on that plane and came *here*. To this building. That winter.
+    charlie: And I flew the other way. And now we're on the same sofa. That's a lot of flying to end up on one sofa.
+    * [sincere] "I'm glad it was you. On the three chairs."
+        @rel charlie trust+1
+        charlie[shy]: Me too. Obviously. I was a very good airport kid. Very sticky.
+    * [playful] "You know I definitely left first. That's on the record now."
+        @rel charlie closeness+1
+        charlie[laugh]: You did. You always leave first. It's your thing. I've decided I'm going to fight your thing.
+    * [romantic] Lean back until your shoulder rests against his. {if charlie.romance >= 2}
+        @rel charlie romance+1
+        > He goes very still, like someone who's just had a bird land on the bench beside him.
+        charlie[shy]: …Okay. This is fine. This is a normal sofa experience. I'm being extremely normal.
+        > He isn't. Neither are you. Neither of you moves.
+    charlie[smile]: Anyway. Seat's yours. Whenever. That's the rule on this sofa now.
+    @flag charlie_postchat
+@elif flag.room_charlie
+    @show charlie smile at=c
+    @if rooms() >= 6
+        charlie: Seat's still yours. Hyunjun-hyung's tried to take it three times. I have been ruthless.
+    @else
+        charlie: Left cushion's still yours. I'm not saying I've been guarding it. I've been guarding it.
+    charlie[laugh]: My door says ARRIVED now. I went and checked. Twice. Don't tell anyone.
+@else
+    @show charlie smile at=c
+    > Charlie has one earbud in and the other hanging loose on its cable, swinging a little, like it's waiting for someone.
+    charlie: Hey! Want half? It's the same song on repeat. I'm not telling you what song. It's embarrassing.
+    * [playful] Take the earbud.
+        @rel charlie closeness+1
+        > It's something bright and slightly old, with far too many handclaps. He mouths every word, completely unashamed.
+        charlie[laugh]: See? Embarrassing. But good. Embarrassing *and* good is my favourite category.
+    * [quiet] "Maybe later. How's your door?"
+        @rel charlie trust+1
+        charlie[thinking]: My door says DELAYED. I think it's personal.
+        charlie[smile]: I'll go in. With you, probably. No rush. I mean, there's a rush until five a.m. But not a *rush* rush.
+@hub act2
+
+=== charlie_route
+@chapter route
+@time 03:50
+@var route = "charlie"
+@bg studio_rooftop t=fade d=1.6
+@amb night
+@fx stars n=0.6
+@music quiet
+@cam reveal
+> The door to the roof is propped open with a paint can that has been there so long it's become part of the building.
+> The rain is gone. Mapo has been washed and hung back out to dry, every window and wet rooftop shining.
+> Charlie is sitting on an upturned crate beside the laundromat's vent, where warm air breathes up out of the building in slow, clean puffs.
+> Next to him is a second crate. His tote bag sits on it, very upright, like it's been told to hold the seat and is taking the job seriously.
+@show charlie smile at=c
+charlie: That seat's taken.
+* [playful] "By who?"
+    charlie[laugh]: Some person. Took forever. I was starting to think their flight got called.
+* [sincere] "I was hoping it was mine."
+    @rel charlie closeness+1
+    charlie[shy]: …Okay, you're not supposed to say it back that nicely. I had a whole bit ready.
+* [quiet] Wait for him to move the bag.
+    @rel charlie trust+1
+    > He moves it. Of course he moves it. He was always going to move it.
+> You sit. The crate wobbles. So does his, in sympathy.
+@if var.homeword == "smell"
+    charlie: I picked the vent on purpose. Laundry soap. You said. I've been sitting in your answer for ten minutes.
+@elif var.homeword == "people"
+    charlie: You said home was "whoever's still up." So. I'm still up. I'm the most up anyone has ever been.
+@elif var.homeword == "place"
+    charlie: You said home was a window. So I found you one. Third floor, across the street. Yellow curtain. Light's been on since I got here.
+    charlie: I've decided someone in there is reading a very good book. I've decided it's your window now.
+@else
+    charlie: I picked the warm spot. The vent. It smells like clean laundry. Tell me that's not a home.
+@if charlie.romance >= 4
+    @if var.drink == "peach"
+        > He holds out a can of peach iced tea, cold enough to sweat.
+    @elif var.drink == "choco"
+        > He holds out a can of hot chocolate, wrapped in his cardigan sleeve so it won't burn your fingers.
+    @elif var.drink == "coffee"
+        > He holds out a can of black coffee, and pulls a face at it, and holds it out anyway.
+    @elif var.drink == "grape"
+        > He holds out a can of grape soda. It is aggressively purple.
+    @else
+        > He holds out a can from the machine downstairs, still cold from the chute.
+    charlie: You had one at the door. At midnight. I notice stuff now. Hamin-hyung is a bad influence and he doesn't even know it.
+@else
+    > He holds out a can of hot chocolate from the machine downstairs. He's got one for himself, too.
+    charlie: I didn't know what you drink, so I got what I'd want. That's how I buy everyone presents. It works about sixty percent of the time.
+@if flag.cold
+    charlie[smile]: Also, Hamin-hyung said you were cold earlier. He told me to tell you the vent is warm. He was very specific about it.
+> Below, the laundromat dryers are still turning. Somewhere, a delivery scooter goes by, and then the street is quiet again.
+charlie[thinking]: So. Not fate.
+charlie: I really wanted it to be. In the archive. I asked out loud, in front of everyone. Songha-hyung made his spreadsheet face.
+charlie: Because if it's fate, then it's not an accident that I keep ending up in places. Somebody meant it. There's a reason.
+charlie[smile]: But it wasn't. It was just you, being in airports. And me, being in airports. And both of us noticing.
+charlie: Which is kind of better? It means we picked it. You can't pick fate. You *can* pick a sofa.
+* [sincere] "I'd rather be picked than planned."
+    @rel charlie trust+1 romance+1
+    charlie[shy]: …Okay, write that down. No. Don't. I'll remember it. I'm going to remember it forever, probably, against my will.
+* [playful] "Fate would've at least given us a working coffee kiosk."
+    @rel charlie closeness+1
+    charlie[laugh]: Fate gave us one vending machine by the toilets. Fate has a *budget*.
+* [quiet] Sit with that for a while.
+    @rel charlie trust+1
+    > You sit with it. The vent breathes. Charlie drums two fingers on his can, then stops, like he's decided to try being still and see what happens.
+charlie[thinking]: Can I tell you something about them? The group. It's not a secret. They just don't know it.
+charlie: When I joined, I did my first-week thing. Names, snacks, jokes. Full power. I was *exhausting*.
+charlie[laugh]: And on day four, Hanbi-hyung just handed me a charger. Didn't say anything. Mine was on two percent. I hadn't told anyone.
+charlie: And Hamin-hyung saved me a seat at dinner. And Daniel-hyung started stealing my jokes, which is basically a hug.
+charlie[smile]: That was the first place I didn't have to hold the door. Somebody was already holding it. I just walked in.
+* [sincere] "They love you. It's very obvious from the outside."
+    @rel charlie trust+1
+    charlie[shy]: …Is it? Oh no. Don't tell them it's obvious. They'll get smug.
+* [playful] "Daniel stealing your jokes is basically a hug?"
+    @rel charlie closeness+1
+    charlie[laugh]: The highest form. When he steals a joke and it lands, he looks at me first. Every time. That's love, in Daniel.
+* [quiet] "And tonight? Did you have to hold the door?"
+    @rel charlie trust+1 romance+1
+    charlie[thinking]: …No. Tonight someone walked through it with me. Holding my sleeve. Well. I was holding theirs.
+@sfx phone
+@textbox phone
+daniel: CLAW MACHINE UPDATE. it gave me a dinosaur and then TOOK IT BACK. is that legal
+songha: Reminder: lobby at 04:57. Not 04:58. That means you, Charlie.
+hyunjun: is everyone on the roof?? can i come on the roof
+haruta: Hyunjun, come and finish the film with me. I'll let you pick the snacks.
+hanbi: Leave them be.
+@textbox normal
+charlie[laugh]: Hanbi-hyung used three words. That's a speech, for him.
+> He types back with both thumbs, tongue at the corner of his mouth. He turns the screen so you can read it before he sends.
+@textbox phone
+charlie: ROOF IS FULL. population 2
+@textbox normal
+charlie[smile]: They're going to be so annoying about this at breakfast. I'm looking forward to it, honestly.
+> He puts the phone face-down on his knee. Then picks it back up, like he's remembered something.
+charlie: Oh. Wait. Look. I found it. After the room. It was in a backup of a backup of a phone I dropped in a pool.
+> He turns the screen. The photograph. Five years old, a little grainy: the amber board, the line of DELAYEDs, the snow in the windows.
+> And in the corner, a hand. Your hand. Pointing, very sure of itself, at a gate that didn't exist yet.
+charlie: Your hand's been on my phones for five years. It's moved with me three times. It's been to more places than most of my shoes.
+* [playful] "My hand's very well travelled."
+    @rel charlie closeness+1
+    charlie[laugh]: It's the most travelled hand I know. It should get a stamp every time I change phones.
+* [sincere] "I'm glad it went with you."
+    @rel charlie trust+1 romance+1
+    charlie[shy]: …Yeah. Me too. It was nice. Having something from between that came along.
+* [quiet] Look at the photo for a long moment.
+    @rel charlie trust+1
+    > You look at it. He lets you. He doesn't fill the silence with anything, which for Charlie is a kind of present.
+charlie[thinking]: Okay. My turn. You asked me in the room, so I get to ask you.
+charlie: When someone asks where home is, what do you say?
+> It's a strange thing to be asked by someone who means it. Normally it's small talk. Normally you have an answer ready.
+* [sincere] "Wherever I live now. It's a different answer every couple of years."
+    @rel charlie trust+1
+    charlie: So you have even *more* answers than me. That's not fair. I thought I was winning.
+    you: I'm not sure it's a game you want to win.
+    charlie[smile]: No. Probably not. But I'd still like to be on the same team.
+* [playful] "Wherever the snacks are. Obviously."
+    @rel charlie closeness+1
+    charlie[laugh]: Correct. Citizen. But that's the airport answer. I'm asking the roof question.
+* [quiet] "Honestly? I usually say 'what about you?'"
+    @rel charlie trust+1 closeness+1
+    charlie[surprised]: …Oh no.
+    charlie: That's *my* trick. You have my trick. We've been doing the same trick at each other all night.
+    charlie[laugh]: No wonder neither of us ever answered anything.
+> The truth is simpler and harder. You were always the one who left. New city, new school, new front desk. Always in spring.
+> You got very good at arriving. Nobody ever taught you how to stay.
+charlie: Okay, easier question. Out of all of them. Which one was your favourite?
+* [sincere] "A flat with a window over a bus stop. I used to watch people wait."
+    @rel charlie trust+1
+    charlie[smile]: Of course you did. You're a professional at waiting places. You're the champion of between.
+    you: I used to guess where they were going.
+    charlie[laugh]: Were you right?
+    you: I never found out. That was the good part.
+* [playful] "The one with the good bakery downstairs. I was loyal to that bakery."
+    @rel charlie closeness+1
+    charlie[laugh]: Wherever the snacks are. You never changed. You're so consistent. It's beautiful.
+    you: They knew my order by the second week.
+    charlie[smile]: See? That's a home. Anywhere they know your order. That's the rule.
+* [quiet] "Here, I think. That one winter. The front desk."
+    @rel charlie trust+1 closeness+1
+    charlie[surprised]: Studio 25? Really?
+    you: I knew where the spare pencils were. Nobody's ever needed me to know something like that before.
+    charlie[shy]: …That's a good reason. That's the best reason, actually.
+charlie[thinking]: Your letter. In the ninth room. "I hope, by the time you read this, you've found a place you want to stay."
+charlie: Did you? Find it?
+you: I don't know yet. Ask me in the morning.
+charlie[smile]: Deal. I'm writing that down. In my head. Morning. Ask about the place.
+@sfx echo
+@textbox echo
+echo: Recipient {{playerName}}. Owner Charlie. Forgive the interruption.
+echo: There is a residual fragment in Record 04. It is not a memory. I am not sure what it is.
+echo: I would like you both to see it before I sleep.
+@textbox normal
+charlie[surprised]: A fragment? Like a deleted scene?
+@textbox echo
+echo: Like a gate that has not been assigned.
+@textbox normal
+charlie[laugh]: That's the most ECHO thing ECHO has ever said. Okay. I consent. Do you?
+* [sincere] "Both of us. Yes."
+    @rel charlie trust+1
+    charlie[smile]: Both of us. Okay. Sleeve?
+    > You hold out your arm. He takes the sleeve, lightly, like the first time.
+* [playful] "Only if there are snacks this time."
+    @rel charlie closeness+1
+    charlie[laugh]: ECHO. Are there snacks.
+    @textbox echo
+    echo: There are no snacks. There is a very good view.
+    @textbox normal
+    charlie: We'll allow it.
+@letterbox on
+@music charlie
+@bg mem_airport t=memory d=2.4
+@fx snow n=0.4
+@hide all
+@cam pushin
+> The roof folds away like a paper map. Then there is the airport again: the rows of joined seats, the shuttered kiosk, the snow in the tall windows.
+> But it's empty. No fourteen-year-old on three chairs. No light-shape two seats down. Just the two of you, and the board.
+@show charlie surprised at=c
+charlie: Oh, it's so quiet. It wasn't this quiet. There was a floor-polishing machine going round and round all night like a sad robot.
+> He walks to the end of the row, to the three chairs, and lies down across them, backpack-less, one arm over his face.
+charlie[laugh]: They're so small! They were *huge*. I used to fit with room left over.
+you: You've grown.
+charlie: Rude. Accurate. Rude.
+> He sits up. His feet were hanging off the end. He looks at the chairs the way people look at a school they've gone back to visit.
+charlie[smile]: It's weird. I thought I'd feel lonely in here. I felt lonely in here, last time. Until you.
+@cam pan
+@sfx click
+> The board is still amber. Still enormous. And then, with the clatter of a hundred small shutters, its lines begin to change.
+> THE KITCHEN WITH THE LIGHT ON — BOARDING.
+> THE STREET WITH THE HILL — BOARDING.
+> STUDIO 25, LEFT CUSHION — BOARDING.
+> WHEREVER THE SNACKS ARE — ON TIME.
+charlie: On time! Our country's on time! That has *never* happened.
+> One line at the very bottom stays blank. A gate number, and nothing next to it. GATE 31.
+@textbox echo
+echo: That is the fragment. A departure without a destination. It has been in the photograph for five years.
+echo: I thought it was an error. I have learned tonight that I am sometimes wrong about errors.
+@textbox normal
+charlie[thinking]: It's your gate. The one you pointed at.
+> It's the line under your finger in the photo. Five years, and nobody ever filled it in.
+charlie: ECHO. Can we write it? The destination?
+@textbox echo
+echo: You may try. The board accepts only true answers. I built it that way. I do not know why. It seemed correct.
+@textbox normal
+charlie[smile]: Okay. Last round, then. Rematch.
+@cam closeup charlie
+charlie: Where are you from?
+* [playful] "Wherever the snacks are."
+    charlie[laugh]: Classic. Respect. No, really.
+* [sincere] "Everywhere, a little. Nowhere for long."
+    charlie: That's the long version. No, really.
+* [quiet] "A lot of places. I was always the one who left."
+    charlie[smile]: I know. I was there for one of them. No, really.
+@sfx click
+> The board clatters. The line stays blank.
+you: Seoul, this time. Mapo. A flat full of boxes I still haven't unpacked.
+charlie: No, really.
+> Blank. He's grinning, but he isn't joking. He's asking the way you asked him, on the floor under this board: all the way down.
+you: A front desk, one winter. An airport floor, one night.
+charlie[shy]: …That's a really good answer. No, really.
+> Blank. Still blank. The board is patient. It has waited five years. It can wait one more breath.
+* [sincere] Say the thing you actually think.
+    @rel charlie trust+1
+* [romantic] Look at him instead of the board. {if charlie.romance >= 3}
+    @rel charlie romance+1
+    > You look at him. He's already looking at you. He's probably been looking at you for a while.
+* [quiet] Take a breath first.
+    @rel charlie trust+1
+you: Maybe home can be a person.
+> Every shutter on the board stops at once. The whole airport goes quiet, the way a room does when someone sets a glass down very carefully.
+charlie: That sounds dangerous.
+you: Why?
+charlie[shy]: Because I was about to say the same thing.
+@sfx chime
+> At the bottom of the board, the blank line clatters, and fills. Not with a city. Not with a place at all.
+> GATE 31 — ARRIVED.
+charlie[laugh]: ARRIVED! Again! It's a whole theme! ECHO, you're so dramatic.
+@textbox echo
+echo: I did not choose it. The board did. I only built the board.
+@textbox normal
+charlie[thinking]: ECHO. Can you keep this one? This version. With ARRIVED on it.
+@textbox echo
+echo: I can keep one record. The choice will be made at 04:57. It is not mine to make.
+echo: But I will remember that you asked. For the time I have left, I will remember it very hard.
+@textbox normal
+charlie[smile]: That's the nicest thing a building's ever said to me.
+@video vid_charlie
+@unlock cinematic:vid_charlie
+@bg mem_home t=flash
+@fx light n=1
+@cg cg_charlie_moment
+@unlock cg:cg_charlie_moment
+> The snow in the windows turns to light. Late-afternoon light, the kind that lands on kitchen floors and school corridors and the bottom of a hill.
+> Charlie lifts his hand and points at the board. At GATE 31. Then he looks at you, and waits, and you understand he's asking.
+> You lift yours, too. Two hands, in the corner of a photograph nobody is taking.
+@if charlie.romance >= 4
+    charlie[shy]: Can I—? This time. Not the sleeve.
+    > You nod. His hand drifts sideways until his little finger hooks yours. When you don't move away, the rest of his hand follows.
+    charlie: Okay. Holding hands in an airport. People do this in films right before somebody runs for a plane.
+    you: Nobody's running.
+    charlie[smile]: Nobody's running. Say it again. I want it on the record.
+    you: Nobody's running.
+    charlie: …Is it okay if I—
+    you: Yes.
+    > He leans in until his forehead rests against yours. Briefly. Lightly. The way you'd touch a window to check if the sun has warmed it yet.
+    charlie[shy]: You remembered the gate number. I remembered your drink. We're so embarrassing. We're the most embarrassing people in this building.
+    > He doesn't let go of your hand. The board hums above you, every line on time.
+@else
+    charlie[shy]: …Can I stand a bit closer? Airports are cold. It's a known fact.
+    you: It's full of sunlight now.
+    charlie[laugh]: Known fact. You can't argue with known facts.
+    > He shuffles over until his shoulder is against yours. Just the shoulder. Like someone who saved a seat all night and has finally sat in it.
+    charlie: That was dangerous. What you said. I'm going to be thinking about it until at least Thursday.
+@cg off
+@letterbox off
+@bg studio_rooftop t=memory d=2
+@fx stars n=0.4
+@music charlie
+@time 04:41
+@show charlie smile at=c
+> The roof comes back all at once. Cold air, damp crates, the vent breathing laundry soap into the dark.
+> In the east, over the low roofs toward the river, the sky is starting to think about getting lighter.
+charlie[thinking]: Hey. Your letter said "a place you want to stay."
+charlie: I'm not saying I'm a place. I'm not a place. I'm a guy on a crate.
+charlie[smile]: But if you ever want to stay somewhere for a bit, as a trial, I'm very easy to stay with. I leave the kitchen light on. It's a whole policy.
+* [romantic] "Leave it on for me, then." {if charlie.romance >= 3}
+    @rel charlie romance+1
+    charlie[shy]: …Yeah. Okay. Yes. It'll be on. Always. Even when the electricity bill is scary.
+* [sincere] "I think I'd like to stay. At least until morning."
+    @rel charlie trust+1
+    charlie[smile]: Until morning's good. Morning's a great start. We can renegotiate at breakfast.
+* [playful] "Does the policy include snacks?"
+    @rel charlie closeness+1
+    charlie[laugh]: Snacks are the *foundation* of the policy. Honestly, what kind of citizen are you?
+> He fishes in his tote and comes out with his earbuds, the cable tangled into a small, determined knot.
+charlie: Fourteen minutes left. Want half? It's the embarrassing song. The one with too many handclaps.
+> You take the left one. He takes the right. The cable's too short, so you have to sit closer. He does not apologise for the cable.
+> The song is bright and a little old and very sure of itself. He mouths the words at the sky, and misses one, and laughs.
+charlie[smile]: I'm going to hear this song in, like, ten years, at a supermarket. And I'm going to think about this roof.
+you: That's a lot of pressure for one song.
+charlie: It can handle it. It's got handclaps.
+@time 04:55
+@sfx echo
+@textbox echo
+echo: All recipients. It is 04:55. Please come to the lobby. I have one decision left, and it is not mine to make.
+@textbox normal
+charlie: That's us.
+> He stands, slings the tote over his shoulder, and holds the roof door open. Then he stops.
+charlie[smile]: No, wait. Not "after you." Together. Same time. Nobody leaves first.
+> You go down the stairs side by side, which on a staircase this narrow is not efficient at all. Neither of you suggests otherwise.
+@time 04:57
+@goto act4_choice
+
+=== charlie_ending
+@chapter ending
+@bg studio_lobby t=fade
+@music echo
+@time 04:58
+@textbox echo
+echo: Record 04 selected. Owner: Charlie. Writing now.
+@textbox normal
+@cam pushin
+> In the Archive Wall, box number four slides open by itself. A single glass card rises out of it, amber at the edges, warm as a cup.
+> The photograph burns into it slowly. The board. Every DELAYED. And in the bottom corner, small and permanent now: a hand, pointing at a gate.
+@cam wide
+@show daniel laugh at=r
+daniel: The *airport*. Of course. Not even surprised. They've been making Charlie noises on the roof for an hour.
+@show hyunjun smile at=l
+hyunjun: Charlie. Charlie. Are you crying?
+@show charlie laugh at=c
+charlie: No! The card's shiny! It's reflecting into my eyes! That's science!
+@hide daniel hyunjun
+@show songha smile at=l
+songha: Noted. Charlie will be unbearable for approximately one week.
+@show hanbi smile at=r
+hanbi: …Two.
+@hide songha hanbi
+@show hamin smile at=l
+hamin: Three. He's already planning how to tell the story.
+@show haruta smile at=r
+haruta: It's a good story, though. I'd watch it. Twice.
+@hide hamin haruta
+@show justin laugh at=l
+justin: I'm choreographing the snack part.
+charlie: Nobody is choreographing the snack part.
+justin: The snack part is the entire piece.
+@hide justin
+> The card finishes glowing. Charlie picks it up the way you'd pick up something asleep.
+charlie[smile]: It's warm. Why is it warm?
+@textbox echo
+echo: I kept it somewhere safe for five years. It has not had time to cool.
+echo: Thank you, Charlie. Thank you, {{playerName}}. It was a good record to keep.
+@textbox normal
+@call echo_farewell
+@bg dawn_river t=slow d=2.6
+@music charlie
+@amb birds
+@fx light n=0.6
+@time 05:52
+@cam reveal
+> The Han river turns out to be a twenty-minute walk from Studio 25, if you walk slowly and stop twice at the same convenience store.
+> The others went ahead to find breakfast. Songha sent a pin. Charlie said "we'll catch up," in a voice that clearly meant "eventually."
+> The water is pale gold and very still. A cyclist goes past. A man walks a small dog that wants to meet everyone.
+@show charlie smile at=c
+charlie: Morning. Officially. The sky did the thing.
+> He holds the glass card up to the sunrise. The light goes straight through it, and for a second there's an amber departures board floating over the river.
+charlie[thinking]: So. It's morning. You said to ask in the morning.
+charlie: Did you find it? The place you want to stay?
+* [sincere] "I think I'm going to unpack the boxes."
+    @rel charlie trust+1
+    charlie[surprised]: …The boxes. In your flat. The ones you haven't unpacked.
+    you: All of them.
+    charlie[shy]: Okay, that's — that's honestly the most romantic thing anybody's ever said to me, and it was about cardboard.
+* [playful] "Ask me the long way."
+    @rel charlie closeness+1
+    charlie[laugh]: Fine. Where are you from? No, really.
+    you: Here. This morning, here.
+    charlie[smile]: …Yeah. That one goes on the board.
+* [quiet] Sit down on the bench and leave space beside you.
+    @rel charlie trust+1
+    > He looks at the space. Then at you. Then he sits, and doesn't say anything clever, which is how you know it landed.
+@if charlie.romance >= 4
+    > He sits close. Then closer. He holds up his hand, palm open, a question, and you fit yours into it.
+    charlie: This bench. Can this be ours?
+    you: Ours?
+    charlie[smile]: Not the country's. Not everyone's. Ours. I've never called anything that before. I've been saving it.
+    > He leans his head on your shoulder, carefully, like checking the weight will hold. It holds.
+    charlie: You said home could be a person. I've been thinking about it since the roof. I've got a follow-up.
+    you: Go on.
+    charlie[shy]: Maybe it can be a person *and* a bench. And a kitchen with the light on. You're allowed all of them. Someone told me that.
+@else
+    > He sits next to you, shoulder to shoulder, the card balanced on his knee where the light keeps finding it.
+    charlie: This bench is ours now. The country's, I mean. Population two. I'm annexing it.
+    you: Ours.
+    charlie[smile]: …Yeah. Ours. That sounds good. That sounds really good out loud.
+    charlie: You said home could be a person. I'm still scared of that sentence. In a good way. Like a big wave. Like a first day.
+@cg cg_charlie_ending
+@unlock cg:cg_charlie_ending
+> The river keeps catching the light. Somewhere behind you, the city is waking up in kitchens: kettles, radios, somebody's first alarm.
+> You don't have a flight. You don't have a gate. For the first time in a long time, nobody is waiting for you to leave.
+charlie: Hey. {{playerName}}.
+you: Hm?
+charlie[smile]: When someone asks you where home is. Today. What do you say?
+you: I'll say "what about you?"
+charlie[laugh]: And I'll say "you first." And we'll be stuck on this bench forever.
+you: Sounds dangerous.
+charlie[shy]: …Yeah. That's the good part.
+@cg off
+@sfx phone
+@textbox phone
+songha: Breakfast. Table for nine. We saved two seats. Where are you.
+daniel: they're on a bench being sappy. i can feel it from here
+hamin: Charlie. Your food is getting cold.
+@textbox normal
+charlie[laugh]: They saved us seats. Somebody saved *me* a seat.
+> He stands, and holds out a hand to pull you up off the bench. You take it. He doesn't let go right away.
+charlie[smile]: Come on. Home's having breakfast without us.
+@ending charlie
+@credits
+@end
+
+=== charlie_newmem
+@chapter newmem
+@bg studio_lobby_morning t=fade
+@music fun
+@amb city
+@textbox phone
+@sfx phone
+charlie: unpacking help has arrived
+charlie: by which i mean me. i am the help. open the door
+charlie: also i brought everyone's stuff. it's heavy. hurry
+@textbox normal
+> A week later, the boxes in your flat are finally open. Mostly. Charlie arrives carrying a bag in each hand and a third one in his teeth.
+@show charlie laugh at=c
+charlie: Okay. Deliveries. From the group. I'm the postman. The postman is also staying for lunch.
+> He unpacks them onto the floor like a very proud magician.
+charlie: From Hanbi-hyung: a phone charger. He says everyone always forgets, and you'll need one here.
+charlie: From Songha-hyung: a label maker. He's already labelled it. It says LABEL MAKER.
+charlie[smile]: From Haruta-hyung: a plant. There was a note. "I chose this one myself." He underlined "myself" twice.
+charlie[laugh]: And from Daniel-hyung: this dinosaur. He says he won it. He did not win it. Justin-hyung saw him buy it.
+> You hold up an unopened box of snacks with a sticky note on top, in Hyunjun's handwriting: *half of these were for you. justin ate the other half.*
+charlie: That's accurate. I watched it happen.
+> You put the kettle on. He argues, seriously and at length, about which cupboard the mugs belong in. He loses. He moves them anyway, when he thinks you're not looking.
+charlie[thinking]: Oh. Last thing. This one's from me.
+> It's the photograph, printed, a little grainy. The amber board. Every DELAYED. A hand in the corner, pointing at a gate.
+> He sticks it to your fridge with a magnet shaped like a slice of toast, and steps back, and nods at it.
+charlie[smile]: There. Now you're from here. It's on the fridge. That's legally binding.
+* [playful] "Is that how it works?"
+    charlie[laugh]: That's exactly how it works. Ask any fridge.
+* [sincere] "Thank you. It looks right there."
+    charlie[shy]: …Yeah. It does. I thought it would. I was a bit nervous it wouldn't.
+* [quiet] Stand next to him and look at it for a while.
+    > He leans a little into your shoulder, the way people lean on a fence they trust, and doesn't say anything for almost a whole minute. A personal record.
+> When he finally leaves, it's dusk. You walk him to the door.
+> On the way out, without saying anything, he reaches past you and switches on the kitchen light.
+charlie: Policy.
+> The door closes. The light stays on. It buzzes, just a little, like a fridge having thoughts.
+@end

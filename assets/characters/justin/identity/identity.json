@@ -1,0 +1,33 @@
+{
+  "character": "justin",
+  "canonicalAsset": "assets/characters/justin/identity/canonical.webp",
+  "status": "LOCKED v6 (gpt_image_2_5 high, photo-anchored, mature; 2026-09-29)",
+  "visualNotes": [
+    "red accents / white / motion trails"
+  ],
+  "hairNotes": [
+    "medium-long textured warm-brown",
+    "loose fringe, longer nape"
+  ],
+  "faceNotes": [
+    "soft but defined features"
+  ],
+  "bodyNotes": [
+    "tallest",
+    "long limbs, loose dancer posture"
+  ],
+  "outfit": "white hoodie with red cuffs, black joggers with red stripe, white high-tops, headphones on neck",
+  "generationMethod": "gpt_image_2_5 quality=high 9:16; image_references = producer-uploaded public profile photo; prompt v6 in production/ART_PROMPTS.md. Expression variants use image_references = [canonical job id, reference photo].",
+  "doNotChange": [
+    "hair colour",
+    "hair silhouette",
+    "outfit",
+    "face structure",
+    "colour motif"
+  ],
+  "sources": "research/characters/justin.md (public basis) + research/CHARACTER_BIBLE.md (fiction)",
+  "jobs": {
+    "canonical": "2d44d882-afcb-4bb7-a912-0e293860392f",
+    "referencePhotoMediaId": "4a7fe3f1-2505-4373-850d-63321c6ea89c"
+  }
+}

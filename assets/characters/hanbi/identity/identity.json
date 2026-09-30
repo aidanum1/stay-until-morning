@@ -1,0 +1,33 @@
+{
+  "character": "hanbi",
+  "canonicalAsset": "assets/characters/hanbi/identity/canonical.webp",
+  "status": "LOCKED v6 (gpt_image_2_5 high, photo-anchored, mature; 2026-09-29)",
+  "visualNotes": [
+    "teal / graphite / sketch-to-colour"
+  ],
+  "hairNotes": [
+    "teal / sea-blue",
+    "medium-length textured, soft centre-parted fringe"
+  ],
+  "faceNotes": [
+    "calm soft even features",
+    "gentle eyes"
+  ],
+  "bodyNotes": [
+    "average, relaxed grounded posture"
+  ],
+  "outfit": "long graphite coat, teal knit scarf, charcoal turtleneck, pencil behind ear, sketchbook",
+  "generationMethod": "gpt_image_2_5 quality=high 9:16; image_references = producer-uploaded public profile photo; prompt v6 in production/ART_PROMPTS.md. Expression variants use image_references = [canonical job id, reference photo].",
+  "doNotChange": [
+    "hair colour",
+    "hair silhouette",
+    "outfit",
+    "face structure",
+    "colour motif"
+  ],
+  "sources": "research/characters/hanbi.md (public basis) + research/CHARACTER_BIBLE.md (fiction)",
+  "jobs": {
+    "canonical": "23785210-3848-4be9-a420-d057a926f5e0",
+    "referencePhotoMediaId": "694d07f8-0c89-4be8-bc56-a8dcb58cb7e8"
+  }
+}

@@ -1,0 +1,304 @@
+# PROLOGUE — 00:25
+# Canon voice sample. Present tense narration, gender-neutral protagonist.
+
+=== prologue_start
+@chapter prologue
+@bg black t=cut
+@music stop
+@amb rain
+@time 00:12
+@textbox phone
+@sfx phone
+unknown: Your memory will be returned at 00:25.
+unknown: Studio 25. Final Night.
+@textbox normal
+> No sender. No number. Just the two lines, glowing in the dark of a room that still has half-unpacked boxes in the corner.
+> Studio 25.
+> It has been years since anyone said that name out loud. Longer since you did.
+@textbox phone
+@sfx phone
+unknown: Recipient — please confirm your name.
+@textbox normal
+@name
+> Whoever sent it already knows. The message just wants to hear it from you.
+> {{playerName}}. The phone accepts it without comment.
+* [curious] Grab a coat. Go.
+    @var tone = "curious"
+    > Curiosity has never once in your life been a good enough reason to go out at midnight.
+    > You go anyway.
+* [careful] Look up the address first.
+    @var tone = "careful"
+    > Mapo. A narrow building behind a laundromat. Permanently closed, according to the map.
+    > Closed places don't send messages. You go to find out why this one did.
+* [playful] Reply: "Who is this?"
+    @var tone = "playful"
+    @textbox phone
+    unknown: A record.
+    @textbox normal
+    > That is somehow worse than no answer. You go.
+@goto prologue_alley
+
+=== prologue_alley
+@bg studio_ext_night t=slow d=2.4
+@fx rain n=1
+@music quiet
+@time 00:19
+@cam reveal
+> The laundromat is still open. It is always still open. Its light spills out across the wet alley like somebody left a door unlocked for the whole street.
+> Behind it: four storeys of grey brick, one window lit on the ground floor, and a sign you haven't read in a very long time.
+> STUDIO 25. The 2 still hangs slightly crooked.
+> You spent one winter behind that front desk. Sixteen, new in the city again, handing out sign-up forms and pencils to people who wanted to talk to their future selves.
+> You left in spring. You always left in spring.
+@sfx vending
+> The vending machine by the door is still humming. Of course it is.
+* [sincere] Peach iced tea.
+    @var drink = "peach"
+    > It rolls down the chute cold and sweet, exactly as bad for you as you remember.
+* [quiet] Hot chocolate.
+    @var drink = "choco"
+    > The can is almost too hot to hold. You hold it anyway.
+* [careful] Black coffee.
+    @var drink = "coffee"
+    > It is bitter and it is warm and it is exactly what one in the morning deserves.
+* [playful] Grape soda.
+    @var drink = "grape"
+    > It tastes purple. Some things are not meant to be improved upon.
+@sfx can
+> You are not the only one here.
+@goto prologue_meet
+
+=== prologue_meet
+@cam wide
+> Under the awning, out of the rain, eight young men are having what looks like a very serious argument in very quiet voices.
+@show songha thinking at=l
+songha: — I'm just saying, if it were a scam, it would ask for money. It didn't ask for money.
+@show daniel laugh at=r
+daniel: Maybe it's the kind of scam that asks for money *later*.
+@show hyunjun smile at=c
+hyunjun: Or maybe it's a surprise party! A really late one. For all of us. At the same time.
+songha[neutral]: Nobody has a birthday today, Hyunjun.
+hyunjun: That's what makes it a surprise.
+> One of them — tall, pink hair gone soft in the damp — sees you and stops mid-sentence.
+hyunjun[surprised]: Oh. Hi!
+@hide songha daniel
+@cam closeup hyunjun
+hyunjun: Did you— wait. Sorry. Did you get a weird message too?
+* [sincere] "Your memory will be returned at 00:25?"
+    hyunjun[laugh]: That's the one! Guys, it's not just us!
+* [playful] "Is this the surprise party?"
+    @rel hyunjun closeness+1
+    hyunjun[laugh]: See? *See?* Somebody gets it.
+* [quiet] Hold up your phone so he can see the screen.
+    hyunjun[smile]: Same words. Same time. Okay, that's officially creepy. Cool-creepy.
+@cam wide
+> All eight of them turn to look at you, the way a group of friends turns to look at the one stranger at the party.
+@show daniel smile at=r
+daniel: So that makes nine of us. Nine people, one closed building, zero explanations. I love it.
+@show songha neutral at=l
+songha: You don't love it. You're nervous. You talk more when you're nervous.
+daniel[laugh]: I talk more when I'm *happy*. And when I'm nervous. Those overlap a lot.
+@hide all
+@show hanbi smile at=c
+> The oldest-looking of them — sea-blue hair, a long grey coat, a pencil tucked behind one ear like he forgot it was there — gives you a small nod.
+hanbi: Sorry. We should say who we are.
+@goto prologue_names
+
+=== prologue_names
+@cam wide
+@show hanbi smile at=l
+hanbi: I'm Hanbi.
+@hide hanbi
+@show songha smile at=l
+songha: Songha. I'm the one who's going to figure out what this is.
+@show daniel laugh at=r
+daniel: Daniel! I'm the one who's going to press every button while he figures it out.
+@hide songha daniel
+@show hyunjun smile at=c
+hyunjun: Hyunjun. You already met me. I was the loud one.
+@hide hyunjun
+@show justin smile at=r
+> The tallest one spins a half-turn on the wet pavement, mostly to see if he can, and lands it.
+justin: Justin. Hi. That was on purpose.
+@show charlie laugh at=l
+charlie: It was not on purpose.
+justin[laugh]: Everything I do is on purpose.
+charlie: I'm Charlie! Youngest. Which means if anything goes wrong it's automatically not my fault.
+@hide justin charlie
+@show haruta smile at=c
+> A neat one in a charcoal cardigan inclines his head, polite in a way that feels like a habit and a kindness at once.
+haruta: I'm Haruta. It's nice to meet you. Even if the circumstances are… a little strange.
+@hide haruta
+@show hamin neutral at=c
+> The last one hasn't said anything yet. Black hair, a faint blue shine to it under the streetlight. Quiet in a way that isn't shy, exactly. Watchful.
+> He's looking at the can in your hand. Then at your fingers, which are, you realise, trembling a little from the rain.
+hamin: …Hamin.
+hamin: Are you cold?
+* [sincere] "A little."
+    @flag cold
+    @rel hamin trust+1
+    > He doesn't say anything. He just steps sideways so you're further under the awning, out of the wind, and takes the draughty spot himself.
+* [playful] "Only emotionally."
+    @rel hamin closeness+1
+    hamin[smile]: …That's the worst kind.
+    > It's the first time you've seen him smile. It's small and it's gone quickly, like he caught himself doing it.
+* [quiet] "I'm fine."
+    @rel hamin trust+1
+    hamin: Okay.
+    > He believes you, or pretends to. Either way, he doesn't ask twice. That's its own kind of kindness.
+@hide hamin
+@cam wide
+you: I'm {{playerName}}.
+@show daniel smile at=r
+daniel: {{playerName}}. Nice. Welcome to the club of people who got a creepy message and came anyway.
+@show songha thinking at=l
+songha: Did you know this place before? We did. Some of us, anyway. It used to rent out rooms really cheap.
+* [sincere] "I used to work here. The front desk. A long time ago."
+    @flag told_worked_here
+    @rel songha trust+1
+    songha[surprised]: Really? Then you might know more than us.
+    you: I know where they kept the spare pencils.
+    songha[laugh]: That's more than we had.
+* [careful] "I've been here before."
+    songha: Everybody's been here before, apparently. That's the weird part.
+@goto prologue_door
+
+=== prologue_door
+@time 00:24
+@sfx click
+@hide all
+> Behind you, the lock on the door of Studio 25 turns over by itself.
+@cam pushin
+> The door swings inward, one slow inch. Warm light spills out onto the step — not the yellow of old bulbs, but something paler. Bluer. Moving, a little, like light under water.
+@show charlie surprised at=l
+charlie: Nope. No. Absolutely not. That is how every horror movie starts.
+@show haruta thinking at=r
+haruta: Not every one. Some of them start with a dinner party.
+charlie: Hyung, that is *not* helping.
+@hide charlie haruta
+@show justin smile at=c
+justin: If it's a horror movie, the tall one survives. That's a rule. I'm going first.
+@hide justin
+> He doesn't go first. Nobody does. For a moment nine people stand in the rain looking at an open door, and the laundromat dryers turn and turn behind you.
+* [sincere] Step through first.
+    @var first = "you"
+    @rel songha trust+1
+    @rel hanbi trust+1
+    > You don't know why you do it. Maybe because it's the one place in this city you ever belonged to, for one winter. Maybe because somebody has to.
+    > Behind you, eight people follow.
+* [playful] "Rock, paper, scissors for who goes first?"
+    @var first = "rps"
+    @rel daniel closeness+1
+    @rel charlie closeness+1
+    @show daniel laugh at=c
+    daniel: Oh, you're my kind of person.
+    > Daniel loses. Loudly. He goes through the door with his hands up like a hostage, and the rest of you follow him in, laughing.
+    @hide daniel
+* [quiet] Wait until someone else moves.
+    @var first = "hanbi"
+    @rel hanbi closeness+1
+    > It's Hanbi who moves, in the end. He glances back at you — *okay?* — and you nod, and he steps inside, and the rest follow him the way people follow someone steady.
+@goto prologue_lobby
+
+=== prologue_lobby
+@bg studio_lobby t=fade d=1.6
+@amb room
+@fx dust n=0.6
+@cam reveal
+> The lobby of Studio 25 looks exactly like your memory of it, if your memory had been left in a drawer for years.
+> The front desk. The sagging sofas. The corkboard of old flyers. And the Archive Wall — hundreds of little glass-fronted boxes, floor to ceiling, each one holding somebody's letter to their future self.
+> It is 00:24 and fifty seconds, and every one of those boxes is beginning to glow.
+@time 00:25
+@music stop
+@amb none
+@sfx power_up
+@flash
+@video vid_opening
+@cg cg_echo
+@unlock cg:cg_echo
+@music echo
+@textbox echo
+echo: Good evening.
+echo: It is 00:25. The Final Return has begun.
+echo: Nine recipients present. Thank you for coming. Most people do not read their messages.
+@textbox normal
+@cg off
+@show daniel surprised at=r
+daniel: …Did the building just talk?
+@show songha thinking at=l
+songha: It's a system. Some kind of speaker array. It has to be.
+@textbox echo
+echo: I am ECHO. I am the archive of the Future Letter Project. I am also, as of 05:00 this morning, retired.
+@textbox normal
+@hide all
+@show hanbi thinking at=c
+hanbi: …Retired?
+@textbox echo
+echo: The building's lease ends at dawn. My power will be cut at 05:00. Before that, I am returning the records I was built to keep.
+echo: RECORD 01 through RECORD 08 belong to the recipients present. Owners: Hanbi. Hamin. Songha. Charlie. Hyunjun. Haruta. Justin. Daniel.
+@textbox normal
+@show charlie surprised at=l
+charlie: Wait — we *all* sent stuff to this thing? I don't remember sending anything!
+@show hyunjun thinking at=r
+hyunjun: I do. Sort of. A video? I was like… sixteen.
+@textbox echo
+echo: Each record will be reconstructed on request. Records open only with their owner's consent. Unclaimed records will be deleted at 05:00.
+@textbox normal
+@hide all
+> The word *deleted* lands softly and stays there.
+@textbox echo
+echo: One further note.
+echo: Eight records contain the same unresolved subject. I have not been able to identify them. I have tried for some time.
+echo: Recipient {{playerName}}, you are the ninth. Your presence was required.
+@textbox normal
+@cam wide
+> Eight heads turn towards you.
+@show songha thinking at=l
+songha: Why would *you* be required?
+* [sincere] "I don't know. I really don't."
+    @rel songha trust+1
+    songha: …Okay. Yeah. You look about as confused as we are.
+* [playful] "Maybe I'm the surprise party."
+    @rel hyunjun closeness+1
+    @rel daniel closeness+1
+    @show hyunjun laugh at=r
+    hyunjun: I *knew* it.
+    songha[laugh]: Please stop encouraging him.
+* [quiet] Look at the glowing wall instead of at them.
+    @rel hanbi trust+1
+    > One of the boxes near the bottom glows a little brighter than the rest. You don't know why you notice it. You look away.
+@goto prologue_rule
+
+=== prologue_rule
+@hide all
+@show daniel smile at=c
+daniel: Okay. Okay okay okay. New plan.
+daniel: Nobody knows what's going on. There's a building that talks. We have until five a.m. So—
+@show songha neutral at=l
+songha: So we make a plan.
+daniel: So we *stop being polite*. We are way past "nice to meet you." We're… stuck-in-a-talking-building friends now. Talk comfortably. Everybody. You too, {{playerName}}.
+@show hyunjun laugh at=r
+hyunjun: Agreed. Instantly. Hi, friend.
+@hide hyunjun
+@show charlie smile at=r
+charlie: Wait, can I? I'm the youngest. Can I talk comfortably to everyone? This is huge for me.
+songha[laugh]: You already do.
+charlie: Yeah, but now it's *legal*.
+@hide all
+@show haruta shy at=l
+haruta: I think I'll… stay polite a little longer. If that's okay. It's easier for me. At first.
+@show hamin neutral at=r
+hamin: Me too. For now.
+@show daniel laugh at=c
+daniel: The two gentlemen of Studio 25. Fine. Respect. But I'm wearing you both down by three a.m.
+@hide all
+@textbox echo
+echo: Recipients may leave at any time. The door is not locked. It was never locked.
+echo: The Memory Rooms are on the second floor. Please look around. Please talk to each other. I have found that helps.
+@textbox normal
+@music studio
+> Somewhere upstairs, eight doors hum awake at once.
+> Nobody leaves.
+@unlock music:echo
+@autosave
+@chapter act1
+@hub act1

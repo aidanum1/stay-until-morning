@@ -1,0 +1,32 @@
+{
+  "character": "daniel",
+  "canonicalAsset": "assets/characters/daniel/identity/canonical.webp",
+  "status": "LOCKED v6 (gpt_image_2_5 high, photo-anchored, mature; 2026-09-29)",
+  "visualNotes": [
+    "prism / aurora / soft neon"
+  ],
+  "hairNotes": [
+    "warm golden-blonde (ginger-blonde)",
+    "tousled soft curls with volume on top"
+  ],
+  "faceNotes": [
+    "bright confident face, mischievous grin"
+  ],
+  "bodyNotes": [
+    "average, animated posture"
+  ],
+  "outfit": "iridescent windbreaker over lavender hoodie, wide cargo pants, chunky sneakers, prism pendant",
+  "generationMethod": "gpt_image_2_5 quality=high 9:16; image_references = producer-uploaded public profile photo; prompt v6 in production/ART_PROMPTS.md. Expression variants use image_references = [canonical job id, reference photo].",
+  "doNotChange": [
+    "hair colour",
+    "hair silhouette",
+    "outfit",
+    "face structure",
+    "colour motif"
+  ],
+  "sources": "research/characters/daniel.md (public basis) + research/CHARACTER_BIBLE.md (fiction)",
+  "jobs": {
+    "canonical": "cfacdfd8-32c7-4c5b-80ae-980a6ee72176",
+    "referencePhotoMediaId": "7dfdeaa8-f329-4017-a666-27edd5d4350e"
+  }
+}
